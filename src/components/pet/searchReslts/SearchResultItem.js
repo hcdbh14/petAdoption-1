@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { breedMap } from '../../../util/breedMap'
+import { breedMap } from '../../../util/petMap'
 import { getAge } from '../../../util/functions'
 
 const SearchResultItem = (props) => {
