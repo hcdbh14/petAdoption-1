@@ -1,0 +1,50 @@
+//  Reset ALL style for normalize ///
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* set the box size in all elements inherit */
+  box-sizing: inherit;
+  direction: rtl;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  //make font-size to be 10px 62.5% * 16 = 10
+  //so now rem = 10px -> easy to calculate margin/paddin/etc...
+  font-size: 62.5%;
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px, 12 / 16 = 75%
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px, 9 / 16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px, 8 / 16 = 50%
+  }
+
+  //no need since both phone and tablet-prt 50%
+  // @include respond(phone) {
+  //     font-size: 43.75%;
+  // }
+}
+
+body {
+  /* set the box size in all elements to border-box thanks to *{} */
+  box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: $color-primary-light;
+  color: $color-white;
+}
