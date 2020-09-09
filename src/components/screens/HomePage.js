@@ -19,7 +19,7 @@ const HomePage = () => {
     return (
         <div>
             <h1>Homepage</h1>
-            <button onClick={handleClick}>ADD PET</button>
+            {/* <button onClick={handleClick}>ADD PET</button> */}
             <SearchSection />
             <PetsToAdoptSection />
             <AboutSection />
