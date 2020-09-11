@@ -1,6 +1,5 @@
 import { petsTypes } from './petsTypes'
-
-import db from '../../config/firebase'
+import db from '../../config/firebase';
 import { buildQuery } from '../../util/functions';
 
 export const clearSearchResults = () => {
@@ -8,6 +7,7 @@ export const clearSearchResults = () => {
         type: petsTypes.CLEAR_SEARCH_RESULTS,
     };
 }
+
 export const fetchPets = (search) => {
     return async (dispatch) => {
         try {
@@ -33,6 +33,7 @@ export const setSearchInputs = (searchInputs) => {
         searchInputs
     };
 }
+
 export const fetchPet = (id) => {
     return async (dispatch) => {
         dispatch(fetchPetsStart())
@@ -52,6 +53,7 @@ export const fetchPet = (id) => {
         }
     }
 }
+
 export const fetchPetsStart = () => {
     return { type: petsTypes.SEARCH_PETS_START };
 }
