@@ -1,13 +1,10 @@
 import { authTypes } from './authTypes';
-import { firebaseApp, auth } from '../../config/firebase';
+import { auth } from '../../config/firebase';
 
 export const signIn = (email, password) => async dispatch => {
-  debugger
-  try {
-    let temp = auth
-    console.log(temp)
 
-    temp.signInWithEmailAndPassword(email, password)
+  try {
+    auth.signInWithEmailAndPassword(email, password)
       .then(() => {
         console.log('success');
         dispatch(signInSuccess());
