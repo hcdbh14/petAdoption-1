@@ -3,20 +3,17 @@ import { auth } from '../../config/firebase';
 
 export const signIn = (email, password) => async dispatch => {
 
-  try {
-    auth.signInWithEmailAndPassword(email, password)
-      .then(() => {
-        console.log('success');
-        dispatch(signInSuccess());
-      })
-      .catch(() => {
-        console.log('fail');
-        dispatch(signInFail("login failed"));
-      });
-  } catch (err) {
-    dispatch(signInFail(err));
-  }
-};
+  auth.signInWithEmailAndPassword(email, password)
+    .then(() => {
+      console.log('success');
+      dispatch(signInSuccess());
+    })
+    .catch((err) => {
+      console.log(err.code);
+      console.log(err.message);
+      dispatch(signInFail(err.message));
+    });
+}
 
 
 export const signInSuccess = () => {
