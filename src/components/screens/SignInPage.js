@@ -8,7 +8,9 @@ const SignInPage = () => {
 
     return (
         <div>
-            <h1 onClick = {dispatch(signIn('kennnkuro15@gmail.com', 'tt123456' ,))} >SignIn</h1>
+            <h1>SignIn</h1>
+            <h1 onClick = {() => dispatch(signIn('kennnkuro15@gmail.com', 'tt123456'))}> send</h1>
+         
         </div>
     )
 }
