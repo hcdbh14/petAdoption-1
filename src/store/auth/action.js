@@ -1,15 +1,17 @@
 import { authTypes } from './authTypes';
+import firebase from '../../config/firebase';
 
-export const signin = (email, password, callback) => async dispatch => {
+export const signIn = (email, password) => async dispatch => {
     try {
       firebase
         .auth()
         .signInWithEmailAndPassword(email, password)
         .then(() => {
+          console.log('success');
           dispatch(signInSuccess());
-          callback();
         })
         .catch(() => {
+          console.log('fail');
           dispatch(signInFail("login failed"));
         });
     } catch (err) {
