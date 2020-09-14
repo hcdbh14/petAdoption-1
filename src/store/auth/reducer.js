@@ -1,8 +1,8 @@
 import { authTypes } from './authTypes';
 
 const initialState = {
-    email = '',
-    password = ''
+    email: '',
+    password: ''
 };
 
 const authReducer = (state = initialState, action) => {
@@ -16,3 +16,5 @@ const authReducer = (state = initialState, action) => {
             return state;
     }
 }
+
+export default authReducer;
