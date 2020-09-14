@@ -1,8 +1,7 @@
 import { petsTypes } from './petsTypes'
-import { firebaseApp } from '../../config/firebase';
+import { firestore } from '../../config/firebase';
 import { buildQuery } from '../../util/functions';
 
-const firestore = firebaseApp.firestore()
 export const clearSearchResults = () => {
     return {
         type: petsTypes.CLEAR_SEARCH_RESULTS,
