@@ -1,7 +1,8 @@
 import { petsTypes } from './petsTypes'
-import db from '../../config/firebase';
+import { firebaseApp } from '../../config/firebase';
 import { buildQuery } from '../../util/functions';
 
+const firestore = firebaseApp.firestore()
 export const clearSearchResults = () => {
     return {
         type: petsTypes.CLEAR_SEARCH_RESULTS,
@@ -12,7 +13,7 @@ export const fetchPets = (search) => {
     return async (dispatch) => {
         try {
             dispatch(fetchPetsStart());
-            let query = db.collection('Cards_Data')
+            let query = firestore.collection('Cards_Data')
             query = buildQuery(query, search)
 
             query.get()
@@ -38,7 +39,7 @@ export const fetchPet = (id) => {
     return async (dispatch) => {
         dispatch(fetchPetsStart())
         try {
-            db.collection('Cards_Data')
+            firestore.collection('Cards_Data')
                 .doc(id).get().then(function (doc) {
                     if (doc.exists) {
                         const pet = doc.data()

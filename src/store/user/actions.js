@@ -1,10 +1,11 @@
 import { userTypes } from './userTypes'
 // import axios from 'axios';
 
-import db from '../../config/firebase';
+import { firebaseApp } from '../../config/firebase';
 import { buildQuery } from '../../util/functions';
 
-let queryPet = db.collection('Cards_Data')
+const firestore = firebaseApp.firestore()
+let queryPet = firestore.collection('Cards_Data')
 
 export const setInput = (input) => {
     return {
