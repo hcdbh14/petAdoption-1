@@ -15,15 +15,19 @@ const SignInPage = () => {
 
     const [form, setform] = useState({
         email: '',
-        password: ''
+        password: '',
+        isPassShow: false
     })
 
     const handleChange = (event) => {
-        const { name, value } = event.target
-        setform({
-            ...form,
-            [name]: value
-        })
+        // const { name, value } = event.target
+        // setform({
+        //     ...form,
+        //     [name]: value
+        // })
+
+        const { name, value, type, checked } = event.target
+        type === "checkbox" ? setform({ ...form, [name]: checked }) : setform({ ...form, [name]: value })
         console.log([name], value)
     }
 
@@ -55,15 +59,26 @@ const SignInPage = () => {
                 />
 
                 <input
-                    type="password"
+                    type={form.isPassShow ? "text" : "password"}
                     value={form.password}
                     name="password"
                     placeholder="password"
                     onChange={handleChange}
                 />
 
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="isPassShow"
+                        checked={form.isPassShow}
+                        onChange={handleChange}
+                    /> show password
+                </label>
+
+
             </form>
-            
+
             {authState.loggedIn ? <h3 onClick={handleSignOut}>sign out</h3> : null}
         </div>
     )
