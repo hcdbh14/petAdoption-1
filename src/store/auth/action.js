@@ -15,6 +15,21 @@ export const signIn = (email, password) => async dispatch => {
     });
 }
 
+export const signOut = () => async dispatch => {
+  
+  auth.signOut()
+  .then(() => {
+    console.log('signed out');
+    dispatch(signOutSuccess());
+  })
+  .catch((err) => {
+    console.log(err.code);
+    console.log(err.message);
+    dispatch(signOutFail(err.message));
+  })
+};
+
+
 
 export const signInSuccess = () => {
   return {
@@ -25,6 +40,19 @@ export const signInSuccess = () => {
 export const signInFail = (error) => {
   return {
     type: authTypes.SIGNIN_ERROR,
+    error
+  };
+}
+
+export const signOutSuccess = () => {
+  return {
+    type: authTypes.SIGNOUT_SUCCESS,
+  };
+}
+
+export const signOutFail = (error) => {
+  return {
+    type: authTypes.SIGNOUT_ERROR,
     error
   };
 }
