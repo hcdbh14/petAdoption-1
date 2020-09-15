@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { signIn, signOut } from '../../store/auth/action'
 import { useSelector, useDispatch } from 'react-redux';
+import Form from '../layout/form/Form';
 
 const SignInPage = () => {
     const authState = useSelector(state => state.authReducer);
@@ -20,15 +21,8 @@ const SignInPage = () => {
     })
 
     const handleChange = (event) => {
-        // const { name, value } = event.target
-        // setform({
-        //     ...form,
-        //     [name]: value
-        // })
-
         const { name, value, type, checked } = event.target
         type === "checkbox" ? setform({ ...form, [name]: checked }) : setform({ ...form, [name]: value })
-        console.log([name], value)
     }
 
     const handleSubmit = () => {
@@ -44,40 +38,10 @@ const SignInPage = () => {
             <h1>SignIn</h1>
             <h1 onClick={handleSubmit}> send</h1>
 
-
             <h3>is signin :</h3>
             {authState.loggedIn ? <h3>true</h3> : error}
 
-
-            <form>
-                <input
-                    type="text"
-                    value={form.email}
-                    name="email"
-                    placeholder="email"
-                    onChange={handleChange}
-                />
-
-                <input
-                    type={form.isPassShow ? "text" : "password"}
-                    value={form.password}
-                    name="password"
-                    placeholder="password"
-                    onChange={handleChange}
-                />
-
-
-                <label>
-                    <input
-                        type="checkbox"
-                        name="isPassShow"
-                        checked={form.isPassShow}
-                        onChange={handleChange}
-                    /> show password
-                </label>
-
-
-            </form>
+            <Form handleChange={handleChange} state={form} />
 
             {authState.loggedIn ? <h3 onClick={handleSignOut}>sign out</h3> : null}
         </div>
