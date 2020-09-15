@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { signIn } from '../../store/auth/action'
-import { signOut } from '../../store/auth/action'
+import { signIn, signOut } from '../../store/auth/action'
 import { useSelector, useDispatch } from 'react-redux';
 
 const SignInPage = () => {
