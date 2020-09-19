@@ -9,6 +9,9 @@ const SignInLinks = () => {
                 <Link to={ROUTES.SIGN_IN} className="navigation__list__link">Sign In</Link>
             </li>
             <li>
+                <Link to={ROUTES.SIGN_UP} className="navigation__list__link">Register</Link>
+            </li>
+            <li>
                 <Link to={ROUTES.HOME} className="navigation__list__link">Home</Link>
             </li>
             <li>

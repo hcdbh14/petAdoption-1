@@ -17,7 +17,8 @@ const SignInPage = () => {
     const [form, setform] = useState({
         email: '',
         password: '',
-        isPassShow: false
+        isPassShow: false,
+        isRegister: false
     })
 
     const handleChange = (event) => {

@@ -13,7 +13,7 @@ export const signIn = (email, password) => async dispatch => {
       console.log(err.message);
       dispatch(signInFail(err.message));
     });
-}
+};
 
 export const signOut = () => async dispatch => {
   
@@ -29,6 +29,20 @@ export const signOut = () => async dispatch => {
   })
 };
 
+
+export const register = (email, password) => async dispatch => {
+
+  auth.createUserWithEmailAndPassword(email, password)
+  .then(() => {
+    console.log('success');
+    dispatch(registerSuccess());
+  })
+  .catch((err) => {
+    console.log(err.code);
+    console.log(err.message);
+    dispatch(registerFail(err.message));
+  });
+};
 
 
 export const signInSuccess = () => {
@@ -53,6 +67,19 @@ export const signOutSuccess = () => {
 export const signOutFail = (error) => {
   return {
     type: authTypes.SIGNOUT_ERROR,
+    error
+  };
+}
+
+export const registerSuccess = () => {
+  return {
+    type: authTypes.REGISTER_SUCCESS,
+  };
+}
+
+export const registerFail = (error) => {
+  return {
+    type: authTypes.REGISTER_ERROR,
     error
   };
 }

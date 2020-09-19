@@ -19,6 +19,12 @@ const authReducer = (state = initialState, action) => {
 
         case authTypes.SIGNOUT_ERROR:
             return { ...state, loggedIn: true, error: action.error }
+        
+        case authTypes.REGISTER_SUCCESS:
+            return { ...state, registered: true }
+
+        case authTypes.REGISTER_ERROR:
+            return { ...state, registered: false, error: action.error }
 
         default:
             return state;
