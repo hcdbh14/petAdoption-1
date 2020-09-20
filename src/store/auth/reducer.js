@@ -26,6 +26,12 @@ const authReducer = (state = initialState, action) => {
         case authTypes.REGISTER_ERROR:
             return { ...state, registered: false, error: action.error }
 
+        case authTypes.VERIFICATION_SUCCESS:
+            return { ...state, sentEmail: true }
+        
+        case authTypes.VERIFICATION_ERROR:
+            return { ...state, sentEmail: false, error: action.error }
+
         default:
             return state;
     }

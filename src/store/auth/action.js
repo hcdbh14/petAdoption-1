@@ -44,6 +44,21 @@ export const register = (email, password) => async dispatch => {
   });
 };
 
+export const sendEmailVerification = () => async dispatch => {
+
+    auth.currentUser.sendEmailVerification
+    .then(() => {
+      console.log('send email verification')
+      dispatch(sendEmailSuccess());
+    })
+    
+    .catch((err) => {
+      console.log(err.code);
+      console.log(err.message);
+      dispatch(sendEmailFail(err.message));
+    });
+};
+
 
 export const signInSuccess = () => {
   return {
@@ -82,4 +97,16 @@ export const registerFail = (error) => {
     type: authTypes.REGISTER_ERROR,
     error
   };
+}
+
+export const sendEmailSuccess = () => {
+  return {
+    type: authTypes.VERIFICATION_SUCCESS
+  };
+}
+
+export const sendEmailFail = (error) => {
+    return {
+      type: authTypes.VERIFICATION_ERROR
+    };
 }
