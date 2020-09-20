@@ -46,12 +46,12 @@ export const register = (email, password) => async dispatch => {
 
 export const sendEmailVerification = () => async dispatch => {
 
-    auth.currentUser.sendEmailVerification
+    auth.currentUser.sendEmailVerification()
     .then(() => {
       console.log('send email verification')
       dispatch(sendEmailSuccess());
     })
-    
+
     .catch((err) => {
       console.log(err.code);
       console.log(err.message);
