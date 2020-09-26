@@ -35,6 +35,7 @@ export const register = (email, password) => async dispatch => {
   auth.createUserWithEmailAndPassword(email, password)
   .then(() => {
     console.log('success');
+    sendEmailVerification();
     dispatch(registerSuccess());
   })
   .catch((err) => {
