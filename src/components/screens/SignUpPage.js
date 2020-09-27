@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { register, signOut, sendEmailVerification } from '../../store/auth/action'
+import { register, signOut, sendEmailVerification, checkIfUserVerified } from '../../store/auth/action'
 import { useSelector, useDispatch } from 'react-redux';
 import Form from '../layout/form/Form';
 
@@ -42,6 +42,10 @@ const SignUpPage = () => {
         dispatch(sendEmailVerification())
     }
 
+    const handleUserVerifiedCheck = () => {
+        dispatch(checkIfUserVerified())
+    }
+
     return (
         <div>
             <h1>Register</h1>
@@ -54,6 +58,7 @@ const SignUpPage = () => {
 
             {authState.registered ? <h3 onClick={handleSignOut}>sign out</h3> : null}
             {authState.registered ? <h3 onClick={handleEmailVerification}>Send email verification</h3> : null}
+            {authState.verified ? <h3 onClick={handleUserVerifiedCheck}>User email is verified</h3> : <h3 onClick={handleUserVerifiedCheck}>User email is not verified</h3>}
         </div>
     )
 }
