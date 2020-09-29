@@ -118,6 +118,9 @@ export const signOutFail = (error) => {
 export const registerSuccess = (email, name) => {
   const userUid = auth.currentUser.uid;
 
+  auth.currentUser.reload();
+  auth.currentUser.sendEmailVerification();
+
   firestore.collection("Users_Data").doc(userUid).set({
     name: name,
     email: email,
