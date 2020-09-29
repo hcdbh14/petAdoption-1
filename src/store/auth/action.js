@@ -35,7 +35,6 @@ export const register = (email, password) => async dispatch => {
   auth.createUserWithEmailAndPassword(email, password)
   .then(() => {
     console.log('success');
-    sendEmailVerification();
     dispatch(registerSuccess());
   })
   .catch((err) => {
@@ -44,6 +43,7 @@ export const register = (email, password) => async dispatch => {
     dispatch(registerFail(err.message));
   });
 };
+
 
 export const sendEmailVerification = () => async dispatch => {
 
@@ -59,6 +59,32 @@ export const sendEmailVerification = () => async dispatch => {
       dispatch(sendEmailFail(err.message));
     });
 };
+
+
+
+
+export const checkIfUserVerified = () => async dispatch => {
+
+  auth.currentUser.reload()
+  .then(() => {
+    if (auth.currentUser.emailVerified == true) {
+      console.log(auth.currentUser.emailVerified)
+      console.log('user is verified')
+      dispatch(userVerified());
+    } else {
+      console.log(auth.currentUser.emailVerified)
+      console.log('user is not verified')
+      dispatch(userNotVerified());
+    }
+  })
+  .catch((err) => {
+    console.log(err.code);
+    console.log(err.message);
+    console.log('failed to reload user profile')
+    dispatch(userNotVerified());
+  })
+};
+
 
 
 export const signInSuccess = () => {
@@ -88,6 +114,7 @@ export const signOutFail = (error) => {
 }
 
 export const registerSuccess = () => {
+
   return {
     type: authTypes.REGISTER_SUCCESS,
   };
@@ -110,4 +137,16 @@ export const sendEmailFail = (error) => {
     return {
       type: authTypes.VERIFICATION_ERROR
     };
+}
+
+export const userVerified = () => {
+  return {
+    type: authTypes.USER_VERIFIED
+  };
+}
+
+export const userNotVerified = () => {
+  return {
+    type: authTypes.USER_NOT_VERIFIED
+  };
 }
