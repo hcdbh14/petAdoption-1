@@ -27,7 +27,8 @@ const Form = (props) => {
             {state.isRegister ? (
                 <Input
                     type={"text"}
-                    value={state.personName} name={"your name"}
+                    value={state.name}
+                    name="name"
                     placeholder={"type your name here"}
                     handleChange={handleChange}
                     error={"name must have at least 2 digits"}

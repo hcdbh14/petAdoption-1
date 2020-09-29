@@ -19,6 +19,7 @@ const SignUpPage = () => {
     const [form, setform] = useState({
         email: '',
         password: '',
+        name: '',
         isPassShow: false,
         isRegister: true
     })
@@ -31,7 +32,7 @@ const SignUpPage = () => {
 
     // TODO: add name save in DB
     const handleSubmit = () => {
-        dispatch(register(form.email, form.password))
+        dispatch(register(form.email, form.password, form.name))
     }
 
     const handleSignOut = () => {
