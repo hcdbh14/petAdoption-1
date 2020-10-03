@@ -4,7 +4,6 @@ import { fetchUsers, postPet } from '../../store/user/actions'
 import SearchSection from '../layout/homePage/SearchSection';
 import PetsToAdoptSection from '../layout/homePage/PetsToAdoptSection';
 import AboutSection from '../layout/homePage/AboutSection';
-import Carousel from '../layout/carousel/Carousel';
 const HomePage = () => {
     const userState = useSelector(state => state.userReducer);
     const dispatch = useDispatch();
@@ -23,8 +22,7 @@ const HomePage = () => {
             {/* <button onClick={handleClick}>ADD PET</button> */}
             <SearchSection />
             <PetsToAdoptSection />
-            <AboutSection />
-            <Carousel />
+            {/* <AboutSection /> */}
         </div>
     )
 }
