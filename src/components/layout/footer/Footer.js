@@ -1,7 +1,4 @@
 import React from 'react'
-import './Footer.css';
-import '../row/Row.css';
-import '../list/List.css';
 import Navigation from '../Navigation';
 
 const Footer = () => {
@@ -9,7 +6,6 @@ const Footer = () => {
         <div className="footer">
             <div className="container">
                 <div className="rows">
-
 
                     <div className="colum">
                         <ul className="footer-list">
@@ -20,7 +16,6 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Colum2 */}
                     <div className="colum">
                         <ul className="footer-list" >
                             <li>נהלי האימוץ</li>
