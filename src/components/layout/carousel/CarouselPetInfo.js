@@ -7,8 +7,8 @@ const CarouselPetInfo = (props) => {
     return (
         <div className="carousel__item__info">
             <h2 className="white">{pet.name}  {pet.age} שנים</h2>
-            <p>{pet.goodWords}</p>
-            <p>{region}</p>
+            <p className="carousel__item__paragraph">{pet.goodWords}</p>
+            <p className="carousel__item__paragraph"> {region}</p>
         </div>
     )
 }

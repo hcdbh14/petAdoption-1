@@ -15,28 +15,37 @@
     top: 50%;
     transform: translate(0%, -50%);
     font-size: 5rem;
-    margin: auto 0;
+    margin: auto;
   }
   &__item {
-    width: 30rem;
+    width: 43rem;
 
     &__imageFrame {
-      border: 5px solid lightcoral;
-      background: $color-grey-dark-2;
+      //   background-image: url(../../images/frame.png);
+      height: 32rem;
       text-align: center;
       overflow: auto;
       z-index: 10;
+      position: absolute;
     }
 
     &__image {
-      height: 20rem;
-      object-fit: cover;
+      display: block;
       margin: auto;
+      padding: 1rem 0;
+      height: 31rem;
+      object-fit: cover;
       z-index: 5;
+
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
     }
 
     &__info {
-      background: #4ed2e6;
+      background: $color-primary;
       border-radius: 1rem;
       padding: 5rem 3rem 1rem;
       width: fit-content;
@@ -44,6 +53,13 @@
       margin: auto;
       margin-top: -3rem;
       z-index: 0;
+    }
+
+    &__paragraph {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 2rem;
+      line-height: 2.4rem;
     }
   }
 }
