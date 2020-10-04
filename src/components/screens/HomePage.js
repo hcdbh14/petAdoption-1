@@ -22,7 +22,7 @@ const HomePage = () => {
             {/* <button onClick={handleClick}>ADD PET</button> */}
             <SearchSection />
             <PetsToAdoptSection />
-            <AboutSection />
+            {/* <AboutSection /> */}
         </div>
     )
 }

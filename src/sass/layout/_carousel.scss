@@ -1,0 +1,65 @@
+.carousel {
+  position: relative;
+
+  display: flex;
+  place-content: space-evenly;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(209, 209, 209, 1) 40%
+  );
+  height: 40rem;
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-size: 5rem;
+    margin: auto;
+  }
+  &__item {
+    width: 43rem;
+
+    &__imageFrame {
+      //   background-image: url(../../images/frame.png);
+      height: 32rem;
+      text-align: center;
+      overflow: auto;
+      z-index: 10;
+      position: absolute;
+    }
+
+    &__image {
+      display: block;
+      margin: auto;
+      padding: 1rem 0;
+      height: 31rem;
+      object-fit: cover;
+      z-index: 5;
+
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+
+    &__info {
+      background: $color-primary;
+      border-radius: 1rem;
+      padding: 5rem 3rem 1rem;
+      width: fit-content;
+      min-width: 25rem;
+      margin: auto;
+      margin-top: -3rem;
+      z-index: 0;
+    }
+
+    &__paragraph {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 2rem;
+      line-height: 2.4rem;
+    }
+  }
+}
