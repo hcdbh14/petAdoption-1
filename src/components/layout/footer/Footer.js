@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className="footer-container">
             <div className="footer">
-                <div className="container">
+                <div className="content">
                     <div className="rows">
 
                         <div className="colum">
@@ -18,7 +18,7 @@ const Footer = () => {
                         </div>
 
                         <div className="colum">
-                            <ul className="footer-list" >
+                            <ul className="footer-list">
                                 <li>נהלי האימוץ</li>
                                 <li>עיקור וסירוס חתולי רחוב</li>
                                 <li>תרומות</li>
