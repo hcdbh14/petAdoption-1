@@ -3,7 +3,7 @@ import Navigation from '../Navigation';
 
 const Footer = () => {
     return (
-        <div className="background-footer">
+        <div className="footer-container">
             <div className="footer">
                 <div className="container">
                     <div className="rows">
