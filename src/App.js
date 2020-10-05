@@ -33,7 +33,7 @@ function App() {
       <Route exact path={ROUTES.SearchResults} component={SearchResultsPage} />
 
       <hr />
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }

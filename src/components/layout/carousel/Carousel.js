@@ -29,12 +29,12 @@ const Carousel = (props) => {
 
     return (
         <div className="carousel">
-            <div onClick={() => { handleArrowClick("LEFT") }}>
-                <span className="carousel__arrow">&rarr;</span>
+            <div onClick={() => { handleArrowClick("LEFT") }} className="carousel__arrow">
+                <span >&rarr;</span>
             </div>
             {petsShow}
-            <div onClick={() => { handleArrowClick("RIGHT") }}>
-                <span className="carousel__arrow"> &larr;</span>
+            <div onClick={() => { handleArrowClick("RIGHT") }} className="carousel__arrow">
+                <span > &larr;</span>
             </div>
         </div>
     )
