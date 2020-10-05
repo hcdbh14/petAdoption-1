@@ -5,7 +5,6 @@ const Footer = () => {
     return (
         <div className="footer-container">
             <div className="footer">
-                <div className="content">
                     <div className="rows">
 
                         <div className="colum">
@@ -27,7 +26,6 @@ const Footer = () => {
                         </div>
 
                     </div>
-                </div>
             </div>
         </div>
     )

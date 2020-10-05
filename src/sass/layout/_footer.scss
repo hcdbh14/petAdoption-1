@@ -1,8 +1,9 @@
 .footer {
     margin: auto;
-    width: 1920px;
+    width: 69%;
+    max-width: 1920px;
     height: 583px;
-    background: url(/images/footer-background-with-icon.png);
+    background-image: url(/images/footer-background-with-icon.png);
     background-repeat: no-repeat;
 }
 
@@ -31,4 +32,23 @@
 .rows .colum {
     display: inline-block;
     padding: 3em;
+}
+
+@media (max-width: 2400px) {
+    .footer {
+        background-image: none;
+    }
+}
+
+@media (max-width: 1555px) {
+    .footer-container {
+        height: 850px;
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 700px) {
+    .footer-list {
+        padding-right: 0px;
+    }
 }
