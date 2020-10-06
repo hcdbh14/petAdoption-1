@@ -1,11 +1,10 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { breedMap } from '../../util/petMap'
 import { getAge } from '../../util/functions'
 const PetDemography = () => {
 
     const petsState = useSelector(state => state.petsReducer);
-    const dispatch = useDispatch();
 
     const type = breedMap[petsState.currentPet.type];
     const ageText = getAge(petsState.currentPet.age)
@@ -13,16 +12,16 @@ const PetDemography = () => {
         <div>
             <ul>
                 <li>
-                    <a>{type}</a>
+                    {type}
                 </li>
                 <li>
-                    <a>{ageText}</a>
+                    {ageText}
                 </li>
                 <li>
-                    <a>{petsState.currentPet.region}</a>
+                    {petsState.currentPet.region}
                 </li>
                 <li>
-                    <a>{petsState.currentPet.number}</a>
+                    {petsState.currentPet.number}
                 </li>
             </ul>
         </div>

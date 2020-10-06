@@ -4,12 +4,10 @@ const CarouselPetImage = (props) => {
 
     const getNonZeroRandomNumberWithMathRound = () => {
         var random = Math.round(Math.random() * 15) - 7;
-        console.log(random)
         if (random > 7)
             random = 7
         if (random < -7)
             random = -7
-        // console.log(random)
 
         return `${random}deg`;
     }
