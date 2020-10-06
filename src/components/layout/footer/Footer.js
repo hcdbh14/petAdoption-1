@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className="footer-container">
             <div className="footer">
-                
+
                 <div className="rows">
 
                     <div className="colum">
@@ -29,9 +29,18 @@ const Footer = () => {
                 </div>
 
                 <div className="socialPlaformButtons">
-                    <img className="socialButton" src='/images/twitter.png' alt="Twitter" />
-                    <img className="socialButton" src='/images/instagram.png' alt="Instagram" />
-                    <img className="socialButton" src='/images/facebook.png' alt="Facebook" />
+
+
+                    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
+                        <input type="image" className="socialButton" src='/images/twitter.png' alt="Twitter" />
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href="http://www.instgram.com/">
+                        <input type="image" className="socialButton" src='/images/instagram.png' alt="Instagram" />
+                    </a>
+
+                    <a target="_blank" rel="noopener noreferrer" href="http://www.facebook.com/">
+                        <input type="image" className="socialButton" src='/images/facebook.png' alt="Facebook" />
+                    </a>
                 </div>
 
             </div>
