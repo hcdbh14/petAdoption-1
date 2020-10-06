@@ -19,12 +19,6 @@
     width: 43rem;
 
     &__imageFrame {
-      //   background-image: url(../../images/frame.png);
-      //   height: 32rem;
-      //   text-align: center;
-      //   overflow: auto;
-      //   z-index: 10;
-      //   position: absolute;
     }
 
     &__image {
@@ -62,6 +56,9 @@
   }
 }
 
+.like {
+  font-size: 5rem;
+}
 .middle {
 }
 .edge {

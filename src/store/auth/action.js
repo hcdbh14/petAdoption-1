@@ -69,7 +69,7 @@ export const checkIfUserVerified = () => async dispatch => {
 
   auth.currentUser.reload()
     .then(() => {
-      if (auth.currentUser.emailVerified == true) {
+      if (auth.currentUser.emailVerified === true) {
         console.log(auth.currentUser.emailVerified)
         console.log('user is verified')
         dispatch(userVerified());

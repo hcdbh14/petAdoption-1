@@ -24,7 +24,6 @@ function App() {
       <hr />
       <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
       <Route path={ROUTES.SIGN_IN} component={SignInPage} />
-      {/* <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} /> */}
       <Route exact path={ROUTES.HOME} component={HomePage} />
       <Route path={ROUTES.PET} component={PetPage} />
       <Route path={ROUTES.ACCOUNT} component={AccountPage} />

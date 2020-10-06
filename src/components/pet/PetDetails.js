@@ -1,9 +1,8 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const PetDetails = () => {
     const petsState = useSelector(state => state.petsReducer);
-    const dispatch = useDispatch();
 
     const vaccineCheckbox = (
         petsState.currentPet.vaccinated ? <input type="checkbox" disabled checked /> : <input type="checkbox" disabled />

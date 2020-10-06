@@ -3,7 +3,7 @@ import PetImage from '../pet/PetImage';
 import PetDemography from '../pet/PetDemography';
 import PetDetails from '../pet/PetDetails';
 import { fetchPet } from '../../store/pets/action'
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 const PetPage = () => {
     const dispatch = useDispatch();
 

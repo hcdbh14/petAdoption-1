@@ -23,16 +23,16 @@ const SearchResultItem = (props) => {
             <div>
                 <ul>
                     <li>
-                        <a>{type}</a>
+                        {type}
                     </li>
                     <li>
-                        <a>{ageText}</a>
+                        {ageText}
                     </li>
                     <li>
-                        <a>{regionText}</a>
+                        {regionText}
                     </li>
                     <li>
-                        <a>{props.pet.number}</a>
+                        {props.pet.number}
                     </li>
                 </ul>
             </div>
