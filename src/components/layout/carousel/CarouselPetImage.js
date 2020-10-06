@@ -15,7 +15,7 @@ const CarouselPetImage = (props) => {
     }
     const style = { transform: `rotate(${getNonZeroRandomNumberWithMathRound()})` }
     return (
-        <div className="" style={style}>
+        <div className="carousel__item__imageFrame" style={style}>
             {/* <img src="../../../images/frame.png" alt="image frame" className="carousel__item__imageFrame" /> */}
             <img src={props.image} alt="petImage" className="carousel__item__image" />
         </div>

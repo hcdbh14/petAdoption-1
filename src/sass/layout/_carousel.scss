@@ -8,13 +8,11 @@
     rgba(255, 255, 255, 1) 40%,
     rgba(209, 209, 209, 1) 40%
   );
-  height: 40rem;
+  height: 55rem;
 
   &__arrow {
-    position: absolute;
-    top: 50%;
-    transform: translate(0%, -50%);
     font-size: 5rem;
+    padding: 0 2rem;
     margin: auto;
   }
   &__item {
@@ -22,11 +20,11 @@
 
     &__imageFrame {
       //   background-image: url(../../images/frame.png);
-      height: 32rem;
-      text-align: center;
-      overflow: auto;
-      z-index: 10;
-      position: absolute;
+      //   height: 32rem;
+      //   text-align: center;
+      //   overflow: auto;
+      //   z-index: 10;
+      //   position: absolute;
     }
 
     &__image {
@@ -47,9 +45,9 @@
     &__info {
       background: $color-primary;
       border-radius: 1rem;
-      padding: 5rem 3rem 1rem;
+      padding: 5rem 2.7rem 2.7rem;
       width: fit-content;
-      min-width: 25rem;
+      min-width: 33rem;
       margin: auto;
       margin-top: -3rem;
       z-index: 0;
@@ -61,5 +59,13 @@
       font-size: 2rem;
       line-height: 2.4rem;
     }
+  }
+}
+
+.middle {
+}
+.edge {
+  @include respond(phone) {
+    display: none;
   }
 }
