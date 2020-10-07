@@ -44,25 +44,26 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
+
+
+                    <div className="logo-and-social-colum">
+
+                        <img src="/images/footer-background-with-icon.png" alt="footer-logo" className="logo-image"></img>
+
+                        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
+                            <input type="image" className="socialButton" src='/images/twitter.png' alt="Twitter" />
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" href="http://www.instgram.com/">
+                            <input type="image" className="socialButton" src='/images/instagram.png' alt="Instagram" />
+                        </a>
+
+                        <a target="_blank" rel="noopener noreferrer" href="http://www.facebook.com/">
+                            <input type="image" className="socialButton" src='/images/facebook.png' alt="Facebook" />
+                        </a>
+
+                    </div>
                 </div>
-
-                <div className="socialPlaformButtons">
-
-
-                    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
-                        <input type="image" className="socialButton" src='/images/twitter.png' alt="Twitter" />
-                    </a>
-                    <a target="_blank" rel="noopener noreferrer" href="http://www.instgram.com/">
-                        <input type="image" className="socialButton" src='/images/instagram.png' alt="Instagram" />
-                    </a>
-
-                    <a target="_blank" rel="noopener noreferrer" href="http://www.facebook.com/">
-                        <input type="image" className="socialButton" src='/images/facebook.png' alt="Facebook" />
-                    </a>
-                </div>
-
             </div>
-
         </div>
     )
 }
