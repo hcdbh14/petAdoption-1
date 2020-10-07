@@ -1,6 +1,5 @@
 import { petsTypes } from './petsTypes';
 import { petData } from '../../mockdata/pet'
-import { SearchResults } from '../../mockdata/searchResults';
 const initialState = {
     searchResults: [],
     searchInputs: {
