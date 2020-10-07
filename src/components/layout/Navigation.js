@@ -30,7 +30,7 @@ const Navigation = () => {
                         <Link to={ROUTES.SIGN_IN} className="header__nav__list-link">נהלי האימוץ</Link>
                     </li>
                     <li>
-                        <Link to={ROUTES.SIGN_UP} className="header__nav__list-link">מוקד אבידות ומציאות</Link>
+                        <Link to={ROUTES.SIGN_UP} className="header__nav__list-link">אבידות ומציאות</Link>
                     </li>
                 </ul>
             </div>
