@@ -20,13 +20,22 @@
     margin: auto;
     color: $color-white;
     list-style: none;
+    padding-right: 80px;
+}
+
+.footer-button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    margin: auto;
+    color: $color-white;
+    list-style: none;
     font-family: Rubik;
     font-style: normal;
     font-weight: 500;
-    font-size: 30px;
-    line-height: 65px;
+    font-size: 28px;
+    line-height: 40px;
     padding-top: 30px;
-    padding-right: 80px;
 }
 
 .rows .colum {
@@ -72,10 +81,10 @@
 }
 
 @media (max-width: 576px) {
-    .footer-list {
+    .footer-button {
         font-weight: 250;
-        font-size: 15px;
-        line-height: 32.5px;
+        font-size: 18px;
+        line-height: 20px;
     }
 
     .socialPlaformButtons {

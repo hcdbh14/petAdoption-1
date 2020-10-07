@@ -11,19 +11,37 @@ const Footer = () => {
 
                     <div className="colum">
                         <ul className="footer-list">
-                            <li>צור קשר</li>
-                            <li>מוקד אבידות ומציאות</li>
-                            <li>מידע למאמצים</li>
-                            <li>מידע למוסרים בע״ח לאימוץ</li>
+                            <li>
+                                <button className="footer-button">צור קשר</button>
+                            </li>
+                            <li>
+                                <button className="footer-button">מוקד אבידות ומציאות</button>
+                            </li>
+                            <li>
+                                <button className="footer-button">מידע למאמצים</button>
+                            </li>
+                            <li>
+                                <button className="footer-button">מידע למוסרים בע״ח לאימוץ</button>
+                            </li>
                         </ul>
                     </div>
 
                     <div className="colum">
                         <ul className="footer-list">
-                            <li>נהלי האימוץ</li>
-                            <li>עיקור וסירוס חתולי רחוב</li>
-                            <li>תרומות</li>
-                            <li>התנדבות</li>
+                            <li>
+                                <button className="footer-button">נהלי האימוץ</button>
+
+                            </li>
+                            <li>
+                                <button className="footer-button">עיקור וסירוס חתולי רחוב</button>
+                            </li>
+
+                            <li>
+                                <button className="footer-button">תרומות</button>
+                            </li>
+                            <li>
+                                <button className="footer-button">התנדבות</button>
+                            </li>
                         </ul>
                     </div>
                 </div>
