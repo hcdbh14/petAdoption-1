@@ -6,11 +6,11 @@ import FavIconEmpty from '../ui/icons/FavIconEmpty';
 const CarouselPetImage = (props) => {
 
     const getNonZeroRandomNumberWithMathRound = () => {
-        var random = Math.round(Math.random() * 15) - 7;
-        if (random > 7)
-            random = 7
-        if (random < -7)
-            random = -7
+        var random = Math.round(Math.random() * 10) - 5;
+        if (random > 5)
+            random = 5
+        if (random < -5)
+            random = -5
 
         return `${random}deg`;
     }
