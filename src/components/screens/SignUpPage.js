@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { register, signOut, sendEmailVerification, checkIfUserVerified } from '../../store/auth/action'
+import { register, signOut, sendEmailVerification, checkIfUserVerified, signInAnonymously } from '../../store/auth/action'
 import { useSelector, useDispatch } from 'react-redux';
 import Form from '../layout/form/Form';
 
@@ -30,9 +30,12 @@ const SignUpPage = () => {
         type === "checkbox" ? setform({ ...form, [name]: checked }) : setform({ ...form, [name]: value })
     }
 
-    // TODO: add name save in DB
     const handleSubmit = () => {
         dispatch(register(form.email, form.password, form.name))
+    }
+
+    const handleAnonymousSignIn = () => {
+        dispatch(signInAnonymously())
     }
 
     const handleSignOut = () => {
@@ -50,7 +53,7 @@ const SignUpPage = () => {
     return (
         <div>
             <h1>Register</h1>
-            <h1 onClick={handleSubmit}> send</h1>
+            <h1 onClick={handleAnonymousSignIn}> send</h1>
 
             <h3>is register :</h3>
             {authState.registered ? <h3>true</h3> : error}
