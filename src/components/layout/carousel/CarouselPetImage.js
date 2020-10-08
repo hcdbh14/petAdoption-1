@@ -1,5 +1,8 @@
 import React from 'react'
-
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavIcon from '../ui/icons/FavIcon';
+import FavIconEmpty from '../ui/icons/FavIconEmpty';
 const CarouselPetImage = (props) => {
 
     const getNonZeroRandomNumberWithMathRound = () => {
@@ -16,6 +19,9 @@ const CarouselPetImage = (props) => {
         <div className="carousel__item__imageFrame" style={style}>
             {/* <img src="../../../images/frame.png" alt="image frame" className="carousel__item__imageFrame" /> */}
             <img src={props.image} alt="petImage" className="carousel__item__image" />
+            <FavIcon />
+            {/* <FavIconEmpty /> */}
+
         </div>
     )
 }
