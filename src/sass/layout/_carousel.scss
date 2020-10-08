@@ -16,18 +16,19 @@
     margin: auto;
   }
   &__item {
-    width: 43rem;
+    width: 46rem;
 
     &__imageFrame {
     }
 
     &__image {
+      position: relative;
       display: block;
       margin: auto;
-      padding: 1rem 0;
-      height: 31rem;
+      height: 33rem;
       object-fit: cover;
       z-index: 5;
+      border: 1rem solid #6c4638;
 
       &::after {
         content: "";

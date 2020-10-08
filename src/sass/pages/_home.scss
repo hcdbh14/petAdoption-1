@@ -5,3 +5,29 @@
     color: #000;
   }
 }
+
+.main {
+  &__title {
+    padding-top: 6rem;
+    text-align: center;
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 59px;
+  }
+
+  &__image {
+    width: 100vw;
+  }
+  &__text {
+    text-align: center;
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3rem;
+    line-height: 53px;
+  }
+}
