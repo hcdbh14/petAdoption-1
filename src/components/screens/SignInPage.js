@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import { signIn, signOut } from '../../store/auth/action'
 import { useSelector, useDispatch } from 'react-redux';
 import Form from '../layout/form/Form';
+import { likePet, getLikedPets, dislikePet } from '../../util/LikeManager';
 
 const SignInPage = () => {
+    
     const authState = useSelector(state => state.authReducer);
     const dispatch = useDispatch();
 
@@ -31,13 +33,24 @@ const SignInPage = () => {
     }
 
     const handleSignOut = () => {
-        dispatch(signOut())
+        signOut();
     }
-    //'kennnkuro15@gmail.com', 'tt123456'
+
+    const handleLikePet = () => {
+        likePet("5RM3F4kdVHQsK5yn3haoeNCBW0o1");
+    }
+
+    const handleDislikePet = () => {
+        dislikePet("5RM3F4kdVHQsK5yn3haoeNCBW0o1");
+    }
+
     return (
         <div>
-            <h1>SignIn</h1>
-            <h1 onClick={handleSubmit}> send</h1>
+            <h1 onClick={getLikedPets}> getLikedPets</h1>
+
+            <h1 onClick={handleLikePet}> likePet</h1>
+
+            <h1 onClick={handleDislikePet}> dislikePet</h1>
 
             <h3>is signin :</h3>
             {authState.loggedIn ? <h3>true</h3> : error}
@@ -50,3 +63,4 @@ const SignInPage = () => {
 }
 
 export default SignInPage
+

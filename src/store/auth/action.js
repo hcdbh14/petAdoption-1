@@ -88,8 +88,21 @@ export const checkIfUserVerified = () => async dispatch => {
 };
 
 
+export const signInAnonymously = () => {
+  auth.signInAnonymously()
+  .then(() => {
+    console.log("success")
+  })
+  .catch((err) => {
+    console.log(err.code);
+    console.log(err.message);
+    console.log('failed to sign user')
+  })
+}
 
-export const signInSuccess = (email, name) => {
+
+
+export const signInSuccess = () => {
   return {
     type: authTypes.SIGNIN_SUCCESS,
   };
@@ -164,3 +177,6 @@ export const userNotVerified = () => {
     type: authTypes.USER_NOT_VERIFIED
   };
 }
+
+
+
