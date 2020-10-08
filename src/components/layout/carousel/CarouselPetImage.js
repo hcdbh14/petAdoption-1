@@ -1,12 +1,10 @@
 import React from 'react'
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavIcon from '../ui/icons/FavIcon';
 import FavIconEmpty from '../ui/icons/FavIconEmpty';
 const CarouselPetImage = (props) => {
 
     const getNonZeroRandomNumberWithMathRound = () => {
-        var random = Math.round(Math.random() * 10) - 5;
+        let random = Math.round(Math.random() * 10) - 5;
         if (random > 5)
             random = 5
         if (random < -5)
