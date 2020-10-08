@@ -7,17 +7,12 @@ const FavIconEmpty = (props) => {
     return (
         <IconButton aria-label="add to favorites" color="secondary" onClick={props.clicked} >
             <FavoriteBorderIcon style={{
-                fontSize: '4rem',
                 animation: 'fadeIn  1s',
-                // zIndex: '1000',
-                // position: 'absolute',
-                // fontSize: '7rem',
-                // color: 'red',
-                // background: 'white',
-                // borderRadius: '50%',
-                // padding: '1rem',
-                // bottom: '0',
-                // right: '50%',
+                zIndex: '1000',
+                position: 'absolute',
+                background: 'white',
+                bottom: '-6%',
+                right: '18%',
             }} />
         </IconButton>
 
@@ -25,3 +20,4 @@ const FavIconEmpty = (props) => {
 }
 
 export default FavIconEmpty
+
