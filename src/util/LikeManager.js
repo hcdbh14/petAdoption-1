@@ -22,7 +22,7 @@ export const likePet = (petId) => {
     var likedPetsList = getLikedPets();
 
     if (likedPetsList.includes(petId) === false) {
-        
+
         likedPetsList.push(petId);
         localStorage.setItem('likedPets', JSON.stringify(likedPetsList));
         var petRef = firestore.collection("Cards_Data").doc(petId);
@@ -30,28 +30,27 @@ export const likePet = (petId) => {
         if (auth.currentUser) {
             petRef.update({ likeCount: increment });
         } else {
-            signInAnonymously();
-            petRef.update({ likeCount: increment });
+            signInAnonymously(petRef);
         }
     }
 };
 
 
-export const dislikePet = (petId) => {
+export const unlikePet = (petId) => {
 
     var likedPetsList = getLikedPets();
 
     if (likedPetsList.includes(petId) === true) {
-        
+
         var index = likedPetsList.indexOf(petId);
 
         if (index > -1) {
             likedPetsList.splice(index, 1);
         }
         localStorage.setItem('likedPets', JSON.stringify(likedPetsList));
-        
 
-        if(auth.currentUser) {
+
+        if (auth.currentUser) {
             var petRef = firestore.collection("Cards_Data").doc(petId);
             petRef.update({ likeCount: decrement });
         }

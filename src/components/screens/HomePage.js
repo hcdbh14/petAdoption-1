@@ -10,6 +10,7 @@ const HomePage = () => {
         display: 'inline-block'
     }
     return (
+        
         <div className="main">
             <div className="main__title">
                 <h1 style={style}>אמצו אותי גם אני</h1> <h1 style={styleColored}>רוצה בית</h1>
@@ -24,6 +25,7 @@ const HomePage = () => {
             </div>
 
             <SearchSection />
+
             <PetsToAdoptSection />
             <AboutSection />
         </div >

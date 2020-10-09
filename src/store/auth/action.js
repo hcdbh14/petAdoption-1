@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 import { authTypes } from './authTypes';
 import { auth, firebaseApp } from '../../config/firebase';
 const firestore = firebaseApp.firestore()
@@ -88,10 +89,11 @@ export const checkIfUserVerified = () => async dispatch => {
 };
 
 
-export const signInAnonymously = () => {
+export const signInAnonymously = (petRef) => {
   auth.signInAnonymously()
   .then(() => {
     console.log("success")
+    petRef.update({ likeCount: firebase.firestore.FieldValue.increment(1) });
   })
   .catch((err) => {
     console.log(err.code);
