@@ -8,13 +8,9 @@ const FavIcon = (props) => {
         <IconButton aria-label="add to favorites" color="secondary" onClick={props.clicked} style={{
             zIndex: '1000',
             position: 'absolute',
-            fontSize: '7rem',
-            color: 'red',
             background: 'white',
-            borderRadius: '50%',
-            padding: '1rem',
-            bottom: '0',
-            right: '150%',
+            bottom: '-6%',
+            right: '18%',
         }}>
             <FavoriteIcon style={{
                 fontSize: '4rem',
