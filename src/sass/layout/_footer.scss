@@ -33,7 +33,7 @@
     font-family: Rubik;
     font-style: normal;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 30px;
     line-height: 40px;
     padding-top: 30px;
 }
@@ -59,6 +59,7 @@
     height: 63px;
     border: 15px solid $color-primary;
     border-radius: 30px;
+    outline: none;
     background-size: contain;
     background: $color-primary;
 }
