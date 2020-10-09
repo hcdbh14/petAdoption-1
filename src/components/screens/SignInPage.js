@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { signIn, signOut } from '../../store/auth/action'
 import { useSelector, useDispatch } from 'react-redux';
 import Form from '../layout/form/Form';
-import { likePet, getLikedPets, dislikePet } from '../../util/LikeManager';
+import { likePet, getLikedPets, unlikePet } from '../../util/LikeManager';
 
 const SignInPage = () => {
     
@@ -40,8 +40,8 @@ const SignInPage = () => {
         likePet("5RM3F4kdVHQsK5yn3haoeNCBW0o1");
     }
 
-    const handleDislikePet = () => {
-        dislikePet("5RM3F4kdVHQsK5yn3haoeNCBW0o1");
+    const handleUnlikePet = () => {
+        unlikePet("5RM3F4kdVHQsK5yn3haoeNCBW0o1");
     }
 
     return (
@@ -50,7 +50,7 @@ const SignInPage = () => {
 
             <h1 onClick={handleLikePet}> likePet</h1>
 
-            <h1 onClick={handleDislikePet}> dislikePet</h1>
+            <h1 onClick={handleUnlikePet}> dislikePet</h1>
 
             <h3>is signin :</h3>
             {authState.loggedIn ? <h3>true</h3> : error}

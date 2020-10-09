@@ -30,14 +30,13 @@ export const likePet = (petId) => {
         if (auth.currentUser) {
             petRef.update({ likeCount: increment });
         } else {
-            signInAnonymously();
-            petRef.update({ likeCount: increment });
+            signInAnonymously(petRef);
         }
     }
 };
 
 
-export const dislikePet = (petId) => {
+export const unlikePet = (petId) => {
 
     var likedPetsList = getLikedPets();
 
