@@ -17,6 +17,43 @@
     font-size: 2rem;
     line-height: 59px;
   }
+  &__responsibility {
+    margin: auto;
+    padding-top: 10rem;
+    text-align: center;
+    font-family: Rubik;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 5.9rem;
+
+    &__images {
+      width: 90vw;
+      display: flex;
+      margin: auto;
+    }
+
+    &-center {
+      width: 33%;
+      object-fit: contain;
+      animation: moveInTop 0.5s;
+      animation-fill-mode: backwards;
+      animation-delay: 0.3s;
+    }
+    &-right {
+      width: 33%;
+      object-fit: contain;
+      animation: moveInRight 1s;
+      animation-fill-mode: backwards;
+      animation-delay: 1s;
+    }
+    &-left {
+      width: 33%;
+      object-fit: contain;
+      animation: moveInLeft 1s;
+      animation-fill-mode: backwards;
+      animation-delay: 1s;
+    }
+  }
 
   &__image {
     width: 100vw;

@@ -7,7 +7,7 @@ const CarouselItem = (props) => {
     const edge = i % 2 === 0 ? "edge" : "middle"
     return (
         <div className={`carousel__item ${edge}`}>
-            <CarouselPetImage image={petPosition.pet.images} />
+            <CarouselPetImage image={petPosition.pet.images} id={i} />
             <CarouselPetInfo pet={petPosition.pet} />
         </div>
     )

@@ -1,5 +1,5 @@
 .navigation {
-  display: non;
+  display: none;
   @include respond(tab-port) {
     &__checkbox {
       display: none;
