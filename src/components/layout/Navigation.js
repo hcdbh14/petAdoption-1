@@ -35,7 +35,7 @@ const Navigation = () => {
             <div className="header__nav__right">
                 <ul className="header__nav__list">
                     <li>
-                        <Link to={ROUTES.SIGN_IN} className="header__nav__list-link">צוק קשר</Link>
+                        <Link to={ROUTES.SIGN_IN} className="header__nav__list-link">צור קשר</Link>
                     </li>
                     <li>
                         <Link to={ROUTES.SIGN_UP} className="header__nav__list-link">מידע למאמצים</Link>
