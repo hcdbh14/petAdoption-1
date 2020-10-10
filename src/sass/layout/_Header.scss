@@ -39,6 +39,7 @@
       width: 28rem;
       top: -9%;
       left: 50%;
+      outline: none;
       transform: translate(-50%, 0%);
 
       @include respond(tab-port) {
