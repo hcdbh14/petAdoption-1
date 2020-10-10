@@ -40,13 +40,13 @@
     }
     &-right {
       animation: moveInRight 1s;
-      animation-delay: 1s;
+      animation-delay: 0.8s;
 
       @include responsibility;
     }
     &-left {
       animation: moveInLeft 1s;
-      animation-delay: 1s;
+      animation-delay: 0.8s;
 
       @include responsibility;
     }
