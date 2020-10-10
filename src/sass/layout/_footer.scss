@@ -36,6 +36,10 @@
     font-size: 30px;
     line-height: 40px;
     padding-top: 30px;
+
+    &:hover {
+        color: $color-primary;
+      }
 }
 
 .rows .colum {
@@ -62,6 +66,15 @@
     outline: none;
     background-size: contain;
     background: $color-primary;
+
+    &:hover {
+        border: 15px solid $color-primary-light;
+        border-radius: 30px;
+        outline: none;
+        background-size: contain;
+        background: $color-primary-light;
+        transition: 0.1s;
+      }
 }
 
 @media (max-width: 112.5em) {
