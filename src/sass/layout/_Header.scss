@@ -71,8 +71,6 @@
 
         &:hover {
           color: $color-black;
-          // color: $color-grey-light-2;
-          // background: rgba($color-primary-light, 0.65);
         }
 
         @include respond(tab-land) {
