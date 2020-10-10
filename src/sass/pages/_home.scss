@@ -33,25 +33,22 @@
     }
 
     &-center {
-      width: 33%;
-      object-fit: contain;
       animation: moveInTop 0.5s;
-      animation-fill-mode: backwards;
       animation-delay: 0.3s;
+
+      @include responsibility;
     }
     &-right {
-      width: 33%;
-      object-fit: contain;
       animation: moveInRight 1s;
-      animation-fill-mode: backwards;
       animation-delay: 1s;
+
+      @include responsibility;
     }
     &-left {
-      width: 33%;
-      object-fit: contain;
       animation: moveInLeft 1s;
-      animation-fill-mode: backwards;
       animation-delay: 1s;
+
+      @include responsibility;
     }
   }
 
