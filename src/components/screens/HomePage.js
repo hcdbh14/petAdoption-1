@@ -17,10 +17,9 @@ const HomePage = () => {
         <div className="main">
             <AdoptMeSection styleColored={styleColored} style={style} />
             <Responsibility styleColored={styleColored} style={style} />
-            <SearchSection />
+            {/* <SearchSection /> */}
             <PetsToAdoptSection />
 
-            <AboutSection />
         </div >
     )
 }
