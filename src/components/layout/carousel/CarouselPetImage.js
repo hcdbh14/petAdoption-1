@@ -13,10 +13,17 @@ const CarouselPetImage = (props) => {
         return `${random}deg`;
     }
     const style = { transform: `rotate(${getNonZeroRandomNumberWithMathRound()})` }
+
+
+    var img = document.getElementById(`image-${props.id}`);
+    //or however you get a handle to the IMG
+    // var width = img.clientWidth;
+    // var height = img.clientHeight;
+    console.log(img)
     return (
         <div className="carousel__item__imageFrame" style={style}>
             {/* <img src="../../../images/frame.png" alt="image frame" className="carousel__item__imageFrame" /> */}
-            <img src={props.image} alt="petImage" className="carousel__item__image" />
+            <img src={props.image} alt="petImage" className="carousel__item__image" id={`image-${props.id}`} />
             <FavIcon />
             {/* <FavIconEmpty /> */}
 

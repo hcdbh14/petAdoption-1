@@ -2,6 +2,7 @@ import React from 'react'
 import Navigation from '../Navigation';
 import { Link } from 'react-router-dom';
 import HeaderImage from './HeaderImage';
+import HeaderToggle from './HeaderToggle';
 
 
 const Header = () => {
@@ -13,7 +14,7 @@ const Header = () => {
                 <img src="../../images/logo.png" alt="Logo" className="header__nav__logo" />
 
             </div>
-
+            <HeaderToggle />
         </div>
     )
 }

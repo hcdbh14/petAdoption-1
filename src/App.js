@@ -28,10 +28,7 @@ function App() {
       <Route path={ROUTES.PET} component={PetPage} />
       <Route path={ROUTES.ACCOUNT} component={AccountPage} />
       <Route path={ROUTES.ADMIN} component={AdminPage} />
-
       <Route exact path={ROUTES.SearchResults} component={SearchResultsPage} />
-
-      <hr />
       <Footer />
     </Router>
   );

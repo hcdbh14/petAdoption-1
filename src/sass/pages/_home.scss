@@ -17,6 +17,40 @@
     font-size: 2rem;
     line-height: 59px;
   }
+  &__responsibility {
+    margin: auto;
+    padding-top: 10rem;
+    text-align: center;
+    font-family: Rubik;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 5.9rem;
+
+    &__images {
+      width: 90vw;
+      display: flex;
+      margin: auto;
+    }
+
+    &-center {
+      animation: moveInTop 0.5s;
+      animation-delay: 0.3s;
+
+      @include responsibility;
+    }
+    &-right {
+      animation: moveInRight 1s;
+      animation-delay: 0.8s;
+
+      @include responsibility;
+    }
+    &-left {
+      animation: moveInLeft 1s;
+      animation-delay: 0.8s;
+
+      @include responsibility;
+    }
+  }
 
   &__image {
     width: 100vw;

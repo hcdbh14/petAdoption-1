@@ -2,12 +2,18 @@
   display: flex;
   flex-direction: column;
 
+  &__image {
+    object-fit: contain;
+  }
   &__mainImage {
-    // background-image: url(../../images//headerImage.png);
-    // background-size: cover;
-    // background-position: top;
-    // position: relative;
-    // background-attachment: fixed;
+    background-image: url(../../images//headerImage.png);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    background-attachment: fixed;
+    height: 34vw;
+    width: 100vw;
   }
 
   &__nav {
@@ -34,6 +40,10 @@
       top: -9%;
       left: 50%;
       transform: translate(-50%, 0%);
+
+      @include respond(tab-port) {
+        display: none;
+      }
     }
     &__left {
       width: 40%;
@@ -67,6 +77,10 @@
           //   font-size: 2rem;
         }
       }
+    }
+
+    @include respond(tab-port) {
+      display: none;
     }
   }
 }
