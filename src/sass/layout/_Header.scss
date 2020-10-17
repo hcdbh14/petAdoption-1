@@ -39,6 +39,7 @@
       width: 28rem;
       top: -9%;
       left: 50%;
+      outline: none;
       transform: translate(-50%, 0%);
 
       @include respond(tab-port) {
@@ -69,8 +70,7 @@
         transition: 0.3s all;
 
         &:hover {
-          color: $color-grey-light-2;
-          background: rgba($color-primary-light, 0.65);
+          color: $color-black;
         }
 
         @include respond(tab-land) {
