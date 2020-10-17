@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { register, signOut, sendEmailVerification, checkIfUserVerified, signInAnonymously, googleSignIn } from '../../store/auth/action'
+import { register, signOut, sendEmailVerification, checkIfUserVerified, signInAnonymously, googleSignIn, facebookSignIn } from '../../store/auth/action'
 import { useSelector, useDispatch } from 'react-redux';
 import Form from '../layout/form/Form';
 
@@ -54,11 +54,16 @@ const SignUpPage = () => {
         dispatch(googleSignIn())
     }
 
+    const handleFacebookSignIn = () => {
+        dispatch(facebookSignIn())
+    }
+
     return (
         <div>
             <h1>Register</h1>
             <h1 onClick={handleAnonymousSignIn}> send</h1>
             <h1 onClick={handleGoogleSignIn}> google sign in</h1>
+            <h1 onClick={handleFacebookSignIn}> facebook sign in</h1>
 
             <h3>is register :</h3>
             {authState.registered ? <h3>true</h3> : error}

@@ -4,6 +4,31 @@ import { auth, firebaseApp } from '../../config/firebase';
 const firestore = firebaseApp.firestore()
 
 
+export const facebookSignIn = () => async dispatch => {
+
+  var provider = new firebase.auth.FacebookAuthProvider();
+
+  auth.signInWithPopup(provider).then(function(result) {
+    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+    var token = result.credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    console.log('success');
+    dispatch(signInSuccess());
+    // ...
+  }).catch(function(err) {
+    // Handle Errors here.
+    var errorCode = err.code;
+    var errorMessage = err.message;
+    // The email of the user's account used.
+    var email = err.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = err.credential;
+    dispatch(signInFail(err.message));
+    // ...
+  });
+  }
+
 export const googleSignIn = () => async dispatch => {
 
   var provider = new firebase.auth.GoogleAuthProvider();
