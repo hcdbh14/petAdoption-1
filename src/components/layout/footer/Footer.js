@@ -51,7 +51,7 @@ const Footer = () => {
                         <img src="/images/footer-background-with-icon.png" alt="footer-logo" className="logo-image"></img>
 
                         <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
-                            <input type="image" className="socialButton" src='/images/twitter.png' alt="Twitter" />
+                            <input type="image" className="socialButton socialButton--bird" src='/images/twitter.png' alt="Twitter" />
                         </a>
                         <a target="_blank" rel="noopener noreferrer" href="http://www.instgram.com/">
                             <input type="image" className="socialButton" src='/images/instagram.png' alt="Instagram" />

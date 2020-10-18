@@ -19,6 +19,7 @@
 
 .footer-list {
     margin: auto;
+
     color: $color-white;
     list-style: none;
 }
@@ -76,7 +77,13 @@
         transition: 0.1s;
         transform: scale(1.1);
       }
+
+      &--bird {
+        @extend .socialButton;
+        margin-right: 0;
+      }
 }
+
 
 @media (max-width: 112.5em) {
     .footer-button {
@@ -107,8 +114,16 @@
 
 @media (max-width: 37.5em) {
     .logo-and-social-colum {
-        display: none;
-    }
+    
+     width: 100%;
+     margin: auto;
+     float: none;
+
+}
+
+  .logo-image {
+      display: none;
+  }
 
     .footer-button {
         font-weight: 250;
