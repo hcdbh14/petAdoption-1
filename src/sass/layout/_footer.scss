@@ -1,9 +1,10 @@
 .footer {
     margin: auto;
-    width: 80%;
+    width: 100%;
     max-width: 1920px;
     height: 583px;
     background-size: 1600px;
+    background: $color-footer-dark;
     background-repeat: no-repeat;
 }
 
@@ -19,7 +20,6 @@
 
 .footer-list {
     margin: auto;
-
     color: $color-white;
     list-style: none;
 }
@@ -40,7 +40,7 @@
 
     &:hover {
         color: $color-primary;
-      }
+    }
 }
 
 .rows .colum {
@@ -56,6 +56,7 @@
     width: 30%;
     text-align: middle;
     float: left;
+    background-color: $color-footer-dark;
 }
 
 .socialButton {
@@ -76,28 +77,33 @@
         background: $color-primary-light;
         transition: 0.1s;
         transform: scale(1.1);
-      }
+    }
 
-      &--bird {
+    &--bird {
         @extend .socialButton;
         margin-right: 0;
-      }
+    }
 }
 
-
 @media (max-width: 112.5em) {
+    .footer-list {
+        margin-right: -20px;
+        padding-right: 0px;
+    }
+
     .footer-button {
-        font-size: 1.2vw;
+        font-size: 2vw;
     }
 }
 
 @media (max-width: 56.25em) {
     .footer-container {
-        height: 850px;
+        height: auto;
         padding-right: 0px;
     }
 
     .footer-list {
+        margin-right: 0px;
         padding-right: 0px;
     }
 
@@ -107,27 +113,26 @@
         border-radius: 30px;
     }
 
-    .footer-button {
-        font-size: 1.5vw;
-    }
-}
-
-@media (max-width: 37.5em) {
     .logo-and-social-colum {
-    
-     width: 100%;
-     margin: auto;
-     float: none;
+        width: 100%;
+        margin: auto;
+        float: none;
+    }
 
-}
-
-  .logo-image {
-      display: none;
-  }
+    .logo-image {
+        display: none;
+    }
 
     .footer-button {
         font-weight: 250;
         font-size: 18px;
         line-height: 20px;
+    }
+}
+
+@media (max-width: 37.5em) {
+    
+    .logo-and-social-colum {
+        padding-bottom: 25px;
     }
 }
