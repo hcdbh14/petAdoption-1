@@ -48,19 +48,16 @@ const Footer = () => {
 
                     <div className="logo-and-social-colum">
 
-                        <img src="/images/footer-background-with-icon.png" alt="footer-logo" className="logo-image"></img>
-
+                        <img src={require('../../../images/footer-background-with-icon.png')} alt="footer-logo" className="logo-image"></img>
                         <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
-                            <input type="image" className="socialButton socialButton--bird" src='/images/twitter.png' alt="Twitter" />
+                            <input type="image" className="socialButton socialButton--bird" src={require('../../../images/twitter.png')} alt="Twitter" />
                         </a>
                         <a target="_blank" rel="noopener noreferrer" href="http://www.instgram.com/">
-                            <input type="image" className="socialButton" src='/images/instagram.png' alt="Instagram" />
+                            <input type="image" className="socialButton" src={require('../../../images/instagram.png')} alt="Instagram" />
                         </a>
-
                         <a target="_blank" rel="noopener noreferrer" href="http://www.facebook.com/">
-                            <input type="image" className="socialButton" src='/images/facebook.png' alt="Facebook" />
+                            <input type="image" className="socialButton" src={require('../../../images/facebook.png')} alt="Facebook" />
                         </a>
-
                     </div>
                 </div>
             </div>
