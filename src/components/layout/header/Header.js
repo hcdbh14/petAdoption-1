@@ -12,7 +12,7 @@ const Header = () => {
             <div className="header__nav__container">
                 <Navigation />
                 <Link to={ROUTES.HOME} className="navigation__link">
-                    <img src="../../images/logo.png" alt="Logo" className="header__nav__logo"></img>
+                    <img src={require('../../../images/logo.png')} alt="Logo" className="header__nav__logo"></img>
                 </Link>
             </div>
             <HeaderToggle />

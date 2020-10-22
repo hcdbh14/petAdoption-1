@@ -26,9 +26,9 @@ const Responsibility = (props) => {
             <h1 style={styleColored}>קחו אחריות</h1> <h1 style={style}>לפני שלוקחים...</h1>
             {scrollHieght.reachedResponsibility ?
                 <div className="main__responsibility__images" >
-                    <img src="../../../images/responsibility-right.png" alt="responsibility text" className="main__responsibility-right" />
-                    <img src="../../../images/responsibility.png" alt="pet image" className="main__responsibility-center" />
-                    <img src="../../../images/responsibility-left.png" alt="responsibility text" className="main__responsibility-left" />
+                    <img src={require('../../../images/responsibility-right.png')} alt="responsibility text" className="main__responsibility-right" />
+                    <img src={require('../../../images/responsibility.png')} alt="pet image" className="main__responsibility-center" />
+                    <img src={require('../../../images/responsibility-left.png')} alt="responsibility text" className="main__responsibility-left" />
                 </div> :
                 null}
         </div>
