@@ -4,31 +4,6 @@ import { Link } from 'react-router-dom';
 import * as ROUTES from '../constants/routes';
 import SignInLinks from './SignInLinks';
 const Navigation = () => {
-    // const [scrollHieght, setscrollHieght] = useState({ navOnTop: false })
-    // useEffect(() => {
-    //     window.addEventListener('scroll', makeSticky);
-
-    //     return () => {
-    //         window.removeEventListener('scroll', makeSticky);
-
-    //     }
-    // }, [scrollHieght])
-    // const makeSticky = (e) => {
-    //     let element = e.target.scrollingElement
-    //     let headerImage = document.getElementsByClassName("header__image");
-
-    //     var position = element.getBoundingClientRect();
-
-    //     // checking whether fully visible
-
-    //     if (element.scrollTop <= headerImage[0].height) {
-    //         setscrollHieght({ navOnTop: false })
-    //     }
-    //     else {
-    //         setscrollHieght({ navOnTop: true })
-    //     }
-    // }
-
     return (
         <div className="header__nav" >
 
