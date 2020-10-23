@@ -37,7 +37,7 @@ const Responsibility = (props) => {
             {scrollHieght.reachedResponsibility ?
                 <div className="responsibility" >
                     <ResponsibilitySide side={"right"} imageArray={imageArray} textArray={textRightArray} />
-                    <img src={require('../../../images/responsibility.png')} alt="pet image" className="responsibility-centerImage" />
+                    <img src={require('../../../images/responsibility.png')} alt="pet image" className="responsibility__centerImage" />
                     <ResponsibilitySide side={"left"} imageArray={imageArray} textArray={textLeftArray} />
                 </div> :
                 null}

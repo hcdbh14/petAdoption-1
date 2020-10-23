@@ -68,12 +68,16 @@
     margin: auto;
   }
 
-  &__center {
+  &__centerImage {
     animation: moveInTop 0.5s;
     animation-delay: 0.3s;
 
     @include responsibility;
     width: 30%;
+    @media (max-width: 66em) {
+      // chose design for small devices
+      display: none;
+    }
   }
 
   &__right {
@@ -84,7 +88,7 @@
       flex-direction: row-reverse;
       align-items: flex-start;
 
-      animation: moveInRight 1s;
+      animation: moveInRight 0.7s;
       animation-delay: 0.5s;
       animation-fill-mode: backwards;
 
@@ -101,7 +105,7 @@
       flex-direction: row-reverse;
       align-items: center;
 
-      animation: moveInRight 1s;
+      animation: moveInRight 0.7s;
       animation-delay: 1s;
       animation-fill-mode: backwards;
 
@@ -114,7 +118,7 @@
       flex-direction: row-reverse;
       align-items: flex-end;
 
-      animation: moveInRight 1s;
+      animation: moveInRight 0.7s;
       animation-delay: 1.5s;
       animation-fill-mode: backwards;
 
@@ -136,7 +140,7 @@
     &-top {
       display: flex;
       align-items: flex-start;
-      animation: moveInLeft 1s;
+      animation: moveInLeft 0.7s;
       animation-delay: 0.5s;
       animation-fill-mode: backwards;
 
@@ -152,7 +156,7 @@
     &-center {
       display: flex;
       align-items: center;
-      animation: moveInLeft 1s;
+      animation: moveInLeft 0.7s;
       animation-delay: 1s;
       animation-fill-mode: backwards;
 
@@ -164,7 +168,7 @@
     &-bottom {
       display: flex;
       align-items: flex-end;
-      animation: moveInLeft 1s;
+      animation: moveInLeft 0.7s;
       animation-delay: 1.5s;
       animation-fill-mode: backwards;
 
