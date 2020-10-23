@@ -17,40 +17,6 @@
     font-size: 2rem;
     line-height: 59px;
   }
-  &__responsibility {
-    margin: auto;
-    padding-top: 10rem;
-    text-align: center;
-    font-family: Rubik;
-    font-style: normal;
-    font-size: 2rem;
-    line-height: 5.9rem;
-
-    &__images {
-      width: 90vw;
-      display: flex;
-      margin: auto;
-    }
-
-    &-center {
-      animation: moveInTop 0.5s;
-      animation-delay: 0.3s;
-
-      @include responsibility;
-    }
-    &-right {
-      animation: moveInRight 1s;
-      animation-delay: 0.8s;
-
-      @include responsibility;
-    }
-    &-left {
-      animation: moveInLeft 1s;
-      animation-delay: 0.8s;
-
-      @include responsibility;
-    }
-  }
 
   &__image {
     width: 100vw;
@@ -63,5 +29,157 @@
     font-weight: normal;
     font-size: 3rem;
     line-height: 53px;
+  }
+}
+
+.responsibility {
+  margin: auto;
+  padding-top: 10rem;
+  text-align: center;
+  font-family: Rubik;
+  font-style: normal;
+  font-size: 3rem;
+  line-height: 5.9rem;
+  display: flex;
+
+  @media (max-width: 100em) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 91.25em) {
+    font-size: 2rem;
+  }
+  @media (max-width: 69.7em) {
+    font-size: 1.8rem;
+  }
+
+  &__title {
+    text-align: center;
+    padding-top: 6rem;
+    text-align: center;
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 59px;
+  }
+  &__info {
+    display: flex;
+    margin: auto;
+  }
+
+  &__center {
+    animation: moveInTop 0.5s;
+    animation-delay: 0.3s;
+
+    @include responsibility;
+    width: 30%;
+  }
+
+  &__right {
+    @include responsibility;
+
+    &-top {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+
+      animation: moveInRight 1s;
+      animation-delay: 0.5s;
+      animation-fill-mode: backwards;
+
+      &-image {
+        padding-right: 5rem;
+      }
+      &-text {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &-center {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+
+      animation: moveInRight 1s;
+      animation-delay: 1s;
+      animation-fill-mode: backwards;
+
+      &-image {
+        padding-right: 8rem;
+      }
+    }
+    &-bottom {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-end;
+
+      animation: moveInRight 1s;
+      animation-delay: 1.5s;
+      animation-fill-mode: backwards;
+
+      &-image {
+        padding-right: 4rem;
+      }
+
+      &-text {
+        margin-bottom: -3rem;
+      }
+    }
+  }
+
+  &__left {
+    width: 33%;
+
+    @include responsibility;
+
+    &-top {
+      display: flex;
+      align-items: flex-start;
+      animation: moveInLeft 1s;
+      animation-delay: 0.5s;
+      animation-fill-mode: backwards;
+
+      &-image {
+        padding-right: 5rem;
+        transform: rotateY(180deg);
+      }
+      &-text {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &-center {
+      display: flex;
+      align-items: center;
+      animation: moveInLeft 1s;
+      animation-delay: 1s;
+      animation-fill-mode: backwards;
+
+      &-image {
+        padding-right: 8rem;
+        transform: rotateY(180deg);
+      }
+    }
+    &-bottom {
+      display: flex;
+      align-items: flex-end;
+      animation: moveInLeft 1s;
+      animation-delay: 1.5s;
+      animation-fill-mode: backwards;
+
+      &-image {
+        transform: rotateY(180deg);
+      }
+
+      &-text {
+        margin-bottom: -3rem;
+      }
+    }
+  }
+
+  &-centerImage {
+    object-fit: contain;
+    width: 30%;
   }
 }
