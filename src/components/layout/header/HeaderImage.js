@@ -14,6 +14,9 @@ const HeaderImage = () => {
     return (
         <div className="header__mainImage">
 
+
+            {/*  temporary search container - might change or removed in near future */}
+{/* 
             <input type="image" className="login-button" src={require('../../../images/login-icon.png')} alt="login-button" />
 
             <div className="search-container" style={searchState.searchToggle == true ? { width: "50vw", height: "200px" } : { width: "4vw", height: "60x" }} >
@@ -34,7 +37,7 @@ const HeaderImage = () => {
                         {searchState.searchChoice == 3 ? <h3>shelters</h3> : null}
                     </div>
                     : null}
-            </div>
+            </div> */}
         </div>
     )
 }
