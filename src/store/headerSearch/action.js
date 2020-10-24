@@ -11,6 +11,11 @@ export const switchSearchCategory = (searchChoice) => {
             return { type: searchTypes.OTHER_ANIMALS }
         case 3:
             return { type: searchTypes.SHELTERS }
+        case 4:
+            return { type: searchTypes.TOGGLE_OPEN }
+        case 5:
+            return { type: searchTypes.TOGGLE_CLOSE }
+
         default:
             return { type: searchTypes.DOGS }
     }

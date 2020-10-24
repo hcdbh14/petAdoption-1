@@ -1,4 +1,6 @@
 export const searchTypes = {
+    TOGGLE_OPEN: "TOGGLE_OPEN",
+    TOGGLE_CLOSE: "TOGGLE_CLOSE",
     DOGS: "DOGS",
     CATS: "CATS",
     OTHER_ANIMALS: "OTHER_ANIMALS",

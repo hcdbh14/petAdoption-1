@@ -29,6 +29,7 @@
     background-color: transparent;
     outline: none;
     margin: auto;
+    cursor: pointer;
     color: $color-white;
     list-style: none;
     font-family: Rubik;
@@ -36,7 +37,7 @@
     font-weight: 500;
     font-size: 30px;
     line-height: 40px;
-    padding-top: 30px;
+    margin-top: 30px;
 
     &:hover {
         color: $color-primary;
@@ -54,6 +55,7 @@
 
 .logo-and-social-colum {
     width: 30%;
+    margin-left: 25px;
     text-align: middle;
     float: left;
     background-color: $color-footer-dark;
