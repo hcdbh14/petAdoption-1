@@ -12,6 +12,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@mixin responsibility {
+  width: 35%;
+  object-fit: contain;
+  animation-fill-mode: backwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
 //Media query manager
 /*
