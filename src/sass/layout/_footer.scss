@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
-    max-width: 1920px;
-    height: 583px;
+    // max-width: 1920px;
+    height: 600px;
     background-size: 1600px;
     background: $color-footer-dark;
     background-repeat: no-repeat;
@@ -10,7 +10,7 @@
 .footer-container {
     display: block;
     width: 100%;
-    text-align: right;
+    text-align: center;
     bottom: 0;
     left: 0;
     background: $color-footer-dark;
@@ -58,6 +58,7 @@
 .logo-image {
     width: 100%;
     height: 20vw;
+    max-height: 500px;
     background-image: url(../../images/footer-background-with-icon.png);
     background-size: contain;
     background-repeat: no-repeat;
