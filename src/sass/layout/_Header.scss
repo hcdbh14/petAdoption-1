@@ -27,6 +27,8 @@
     // border-bottom-right-radius: 50%;
     clip-path: polygon(0% 0%, 0% 72%, 50% 100%, 100% 72%, 100% 0%);
 
+    transition: 0.5s;
+
     &__container {
       position: relative;
     }
@@ -41,7 +43,7 @@
       left: 50%;
       outline: none;
       transform: translate(-50%, 0%);
-
+      transition: 0.5s;
       @include respond(tab-port) {
         display: none;
       }
@@ -67,7 +69,7 @@
         font-size: 2.5rem;
         line-height: 4.7rem;
         padding: 10rem 3rem;
-        transition: 0.3s all;
+        transition: 0.3s all 0.5s;
 
         &:hover {
           color: $color-black;
@@ -117,9 +119,8 @@
 // .search-container:hover {
 //   width: 50vw;
 //   height: 200px;
-  
-// }
 
+// }
 
 .search-category-button {
   border: none;
