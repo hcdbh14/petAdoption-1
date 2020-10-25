@@ -26,7 +26,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="colum">
+                    <div className="colum colum--left">
                         <ul className="footer-list">
                             <li>
                                 <button className="footer-button">נהלי האימוץ</button>
@@ -47,8 +47,8 @@ const Footer = () => {
 
 
                     <div className="logo-and-social-colum">
-
-                        <img src={require('../../../images/footer-background-with-icon.png')} alt="footer-logo" className="logo-image"></img>
+                        <div className="logo-image"></div>
+                        {/* <img src={require('../../../images/footer-background-with-icon.png')} alt="footer-logo" className="logo-image"></img> */}
                         <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
                             <input type="image" className="socialButton socialButton--bird" src={require('../../../images/twitter.png')} alt="Twitter" />
                         </a>
