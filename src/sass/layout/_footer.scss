@@ -133,6 +133,7 @@
         width: 54px;
         height: 53px;
         border-radius: 30px;
+        margin-top: 15px;
     }
 
     .logo-and-social-colum {
@@ -146,6 +147,8 @@
         background-image: url(../../images/logo-mobile.png);
         background-repeat: no-repeat;
         background-position: bottom;
+        height: 30vw;
+        margin-bottom: 30px;
     }
 
     .footer-list {
@@ -166,7 +169,6 @@
 
     .logo-image {
         height: 40vw;
-        margin-bottom: 30px;
     }
 
     .socialButton {
