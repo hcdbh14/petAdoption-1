@@ -3,6 +3,10 @@
     height: 600px;
     background: $color-footer-dark;
     background-repeat: no-repeat;
+
+    @include respond(tab-port) {
+        height: auto;
+    }
 }
 
 .footer-container {
@@ -11,6 +15,11 @@
     text-align: center;
     background: $color-footer-dark;
     margin-top: 50px;
+
+    @include respond(tab-port) {
+        height: auto;
+        padding-right: 0px;
+    }
 }
 
 .footer-list {
@@ -18,6 +27,17 @@
     color: $color-white;
     list-style: none;
     text-align: right;
+
+    @include respond(normal-desktop) {
+        margin-right: -20px;
+        padding-right: 0px;
+    }
+
+    @include respond(tab-port) {
+        margin-right: 0px;
+        padding-right: 0px;
+        display: none;
+    }
 }
 
 .footer-button {
@@ -38,6 +58,16 @@
     &:hover {
         color: $color-primary;
     }
+
+    @include respond(normal-desktop) {
+        font-size: 2vw;
+    }
+
+    @include respond(tab-port) {
+        font-weight: 250;
+        font-size: 18px;
+        line-height: 20px;
+    }
 }
 
 .colum {
@@ -50,6 +80,15 @@
         @extend .colum;
         margin-left: 0px;
     }
+
+    @include respond(normal-desktop) {
+        margin-right: 50px;
+        margin-left: 10px;
+    }
+
+    @include respond(tab-port) {
+        display: none;
+    }
 }
 
 .logo-image {
@@ -60,6 +99,18 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include respond(tab-port) {
+        background-image: url(../../images/logo-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 30vw;
+        margin-bottom: 30px;
+    }
+
+    @include respond(phone) {
+        height: 40vw;
+    }
 }
 
 .logo-and-social-colum {
@@ -69,6 +120,22 @@
     text-align: center;
     // float: left;
     background-color: $color-footer-dark;
+
+    @include respond(normal-desktop) {
+        margin-left: 25px;
+    }
+
+    @include respond(tab-port) {
+        width: 50%;
+        margin: auto;
+        float: none;
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+
+    @include respond(phone) {
+        padding-bottom: 100px;
+    }
 }
 
 .socialButton {
@@ -95,91 +162,15 @@
         @extend .socialButton;
         margin-right: 0;
     }
-}
 
-@media (max-width: 112.5em) {
-    .footer-list {
-        margin-right: -20px;
-        padding-right: 0px;
-    }
-
-    .logo-and-social-colum {
-        margin-left: 25px;
-    }
-
-    .footer-button {
-        font-size: 2vw;
-    }
-
-    .colum {
-        margin-right: 50px;
-        margin-left: 10px;
-    }
-}
-
-@media (max-width: 56.25em) {
-    .footer {
-        height: auto;
-    }
-    .footer-container {
-        height: auto;
-        padding-right: 0px;
-    }
-
-    .footer-list {
-        margin-right: 0px;
-        padding-right: 0px;
-    }
-
-    .socialButton {
+    @include respond(tab-port) {
         width: 54px;
         height: 53px;
         border-radius: 30px;
         margin-top: 15px;
     }
 
-    .logo-and-social-colum {
-        width: 50%;
-        margin: auto;
-        float: none;
-
-        padding-top: 50px;
-        padding-bottom: 25px;
-    }
-
-    .colum {
-        display: none;
-    }
-
-    .logo-image {
-        background-image: url(../../images/logo-mobile.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 30vw;
-        margin-bottom: 30px;
-    }
-
-    .footer-list {
-        display: none;
-    }
-
-    .footer-button {
-        font-weight: 250;
-        font-size: 18px;
-        line-height: 20px;
-    }
-}
-
-@media (max-width: 37.5em) {
-    .logo-and-social-colum {
-        padding-bottom: 100px;
-    }
-
-    .logo-image {
-        height: 40vw;
-    }
-
-    .socialButton {
+    @include respond(phone) {
         width: 43px;
         height: 42px;
         border-radius: 20px;
