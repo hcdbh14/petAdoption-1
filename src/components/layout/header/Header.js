@@ -33,6 +33,9 @@ const Header = () => {
     const stickyPadding = { paddingBottom: '14rem' }
     return (
         <div className="header" style={scrollHieght.navOnTop ? stickyPadding : null}>
+
+            <img src={require('../../../images/footer-background-with-icon.png')} alt="logo" className="header__mobileLogo" />
+
             <HeaderImage />
             <div className="header__nav__container" style={scrollHieght.navOnTop ? stickyStyleContainer : null}>
                 <Navigation />

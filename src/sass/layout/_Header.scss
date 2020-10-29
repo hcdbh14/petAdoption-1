@@ -14,6 +14,16 @@
     background-attachment: fixed;
     height: 34vw;
     width: 100vw;
+    @include respond(tab-port) {
+      background-attachment: inherit;
+      height: 50vh;
+      background-size: cover;
+    }
+  }
+  &__mobileLogo {
+    width: 45vw;
+    margin: auto;
+    margin-top: 10rem;
   }
 
   &__nav {
@@ -21,7 +31,6 @@
     position: relative;
     place-content: space-between;
     background: $color-primary;
-    border: 1px solid $color-primary-light;
     height: 14rem;
     // border-bottom-left-radius: 50%;
     // border-bottom-right-radius: 50%;
@@ -31,10 +40,19 @@
 
     &__container {
       position: relative;
+      @include respond(tab-port) {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 10rem;
+      }
     }
     &__right {
       width: 40%;
       padding-top: 3.5rem;
+      @include respond(tab-port) {
+        display: none;
+      }
     }
     &__logo {
       position: absolute;
@@ -51,6 +69,9 @@
     &__left {
       width: 40%;
       padding-top: 3.5rem;
+      @include respond(tab-port) {
+        display: none;
+      }
     }
 
     &__list {
@@ -76,13 +97,17 @@
         }
 
         @include respond(tab-land) {
-          //   font-size: 2rem;
+          font-size: 2rem;
         }
       }
     }
 
     @include respond(tab-port) {
-      display: none;
+      // display: none;
+      background: rgba($color-footer-dark, 0.9);
+      clip-path: none;
+
+      height: 10rem;
     }
   }
 }
