@@ -21,9 +21,13 @@
     }
   }
   &__mobileLogo {
-    width: 45vw;
-    margin: auto;
-    margin-top: 10rem;
+    display: none;
+    @include respond(tab-port) {
+      display: block;
+      width: 45vw;
+      margin: auto;
+      margin-top: 10rem;
+    }
   }
 
   &__nav {
