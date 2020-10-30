@@ -28,8 +28,10 @@
       height: 33rem;
       object-fit: cover;
       z-index: 5;
-      border: 1rem solid #6c4638;
-
+      border: 2rem solid transparent; 
+      border-image: url(../../images/wooden-texture.jpg) 40;
+      border-image-repeat: inherit;
+   
       &::after {
         content: "";
         display: table;
