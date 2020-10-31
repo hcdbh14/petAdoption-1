@@ -16,12 +16,13 @@
     font-weight: 500;
     font-size: 2rem;
     line-height: 59px;
-    
-
   }
 
   &__image {
-    width: 100vw;
+    width: 90vw;
+    max-width: 1920px;
+    display: flex;
+    margin: auto;
   }
   &__text {
     text-align: center;
@@ -35,7 +36,7 @@
 }
 
 .responsibility {
-  max-width: 80vw;
+  max-width: 1920px;
   margin: auto;
   padding-top: 10rem;
   text-align: center;
@@ -63,7 +64,7 @@
     font-family: Rubik;
     font-style: normal;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.7rem;
     line-height: 59px;
   }
   &__info {
