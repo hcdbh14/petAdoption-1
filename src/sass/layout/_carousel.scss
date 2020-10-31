@@ -1,11 +1,20 @@
 .carousel {
-  position: relative;
-
+  position: relative;    align-items: center;
   display: flex;
   place-content: space-evenly;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 40%, $color-grey-carousel 40%);
-  height: 55rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, $color-grey-carousel 40%);
+  height: 35vw;
+  border-bottom: 10vw solid $color-grey-carousel;
 
+  @include respond(normal-desktop) {
+    height: 40vw;
+    border-bottom: 15vw solid $color-grey-carousel;
+}
+
+  @include respond(tab-land) {
+    height: 60vw;
+}
+  
   &__arrow {
     font-size: 5rem;
     padding: 0 2rem;
@@ -13,8 +22,10 @@
   }
 
   &__item {
-    width: 46rem;
-
+    width: fit-content;
+    padding-right: 5vw;
+    padding-left: 5vw;
+   
     &__imageFrame {
     }
 
@@ -22,7 +33,7 @@
       position: relative;
       display: block;
       margin: auto;
-      height: 33rem;
+      height: 17vw;
       object-fit: cover;
       z-index: 5;
       border: 2rem solid transparent;
@@ -44,8 +55,7 @@
       background-size: 10rem;
       border-radius: 1rem;
       padding: 5rem 2.7rem 2.7rem;
-      width: 35rem;
-      margin: auto;
+      width: 13vw;
       margin-top: -3rem;
       z-index: 0;
     }
