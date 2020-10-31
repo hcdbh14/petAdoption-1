@@ -3,11 +3,7 @@
 
   display: flex;
   place-content: space-evenly;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 40%,
-    $color-grey-carousel 40%
-  );
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 40%, $color-grey-carousel 40%);
   height: 55rem;
 
   &__arrow {
@@ -15,6 +11,7 @@
     padding: 0 2rem;
     margin: auto;
   }
+
   &__item {
     width: 46rem;
 
@@ -28,10 +25,10 @@
       height: 33rem;
       object-fit: cover;
       z-index: 5;
-      border: 2rem solid transparent; 
+      border: 2rem solid transparent;
       border-image: url(../../images/wooden-texture.jpg) 40;
       border-image-repeat: inherit;
-   
+
       &::after {
         content: "";
         display: table;
