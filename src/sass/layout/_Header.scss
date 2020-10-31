@@ -22,11 +22,11 @@
     place-content: space-between;
     background: $color-primary;
     border: 1px solid $color-primary-light;
-    height: 14rem;
+    height: 12rem;
     // border-bottom-left-radius: 50%;
     // border-bottom-right-radius: 50%;
     clip-path: polygon(0% 0%, 0% 72%, 50% 100%, 100% 72%, 100% 0%);
-
+    
     &__container {
       position: relative;
     }
@@ -36,7 +36,7 @@
     }
     &__logo {
       position: absolute;
-      width: 28rem;
+      width: 23rem;
       top: -9%;
       left: 50%;
       outline: none;
@@ -64,8 +64,8 @@
         font-family: Rubik;
         font-style: normal;
         font-weight: 500;
-        font-size: 2.5rem;
-        line-height: 4.7rem;
+        font-size: 2.4rem;
+        line-height: 2.5rem;
         padding: 10rem 3rem;
         transition: 0.3s all;
 

@@ -5,7 +5,7 @@ const AdoptMeSection = (props) => {
     return (
         <>
             <div className="main__title">
-                <h1 style={style}>אמצו אותי גם אני</h1> <h1 style={styleColored}>רוצה בית</h1>
+                <h2 style={style}>אמצו אותי גם אני</h2> <h2 style={styleColored}>רוצה בית</h2>
             </div>
 
             <img src={require('../../../images/mainImage.png')} alt="pet with owner" className="main__image" />
