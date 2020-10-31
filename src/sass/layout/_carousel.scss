@@ -24,6 +24,7 @@
       display: block;
       margin: auto;
       height: 20vw;
+      max-height: 400px;
       object-fit: cover;
       z-index: 5;
       border: 1.4rem solid transparent;
@@ -46,6 +47,7 @@
       border-radius: 1.2rem;
       padding: 2.5rem 1rem 1rem;
       width: 16vw;
+      max-height: 400px;
       margin-top: -3rem;
       z-index: 0;
     }
@@ -63,7 +65,6 @@
   color: $color-grey-light-2;
   color: #ececec;
   font-size: 3rem;
-
   font-weight: 500;
   text-overflow: ellipsis;
   max-width: 170px;
