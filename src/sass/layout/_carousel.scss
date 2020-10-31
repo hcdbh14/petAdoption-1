@@ -1,34 +1,35 @@
 .carousel {
   position: relative;
-
+  align-items: center;
   display: flex;
   place-content: space-evenly;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 40%,
-    $color-grey-carousel 40%
-  );
-  height: 55rem;
-
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, $color-grey-carousel 40%);
+  height: 30vw;
+  border-bottom: 10vw solid $color-grey-carousel;
+  
   &__arrow {
-    font-size: 5rem;
-    padding: 0 2rem;
+    height: 60px;
+    width: 60px;
+    padding: 10px;
     margin: auto;
   }
-  &__item {
-    width: 46rem;
 
-    &__imageFrame {
-    }
+  &__item {
+    width: fit-content;
+    padding-right: 3.5vw;
+    padding-left: 3.5vw;
 
     &__image {
       position: relative;
       display: block;
       margin: auto;
-      height: 33rem;
+      height: 20vw;
+      max-height: 400px;
       object-fit: cover;
       z-index: 5;
-      border: 1rem solid #6c4638;
+      border: 1.4rem solid transparent;
+      border-image: url(../../images/wood.jpg) 40;
+      border-image-repeat: inherit;
 
       &::after {
         content: "";
@@ -39,11 +40,14 @@
 
     &__info {
       background: $color-primary;
-      border-radius: 1rem;
-      padding: 5rem 2.7rem 2.7rem;
-      width: fit-content;
-      min-width: 33rem;
-      margin: auto;
+      background-image: url(../../images/paw.png);
+      background-size: 7rem;
+      background-repeat: no-repeat;
+      border-top: 30px solid $color-primary;
+      border-radius: 1.2rem;
+      padding: 2.5rem 1rem 1rem;
+      width: 16vw;
+      max-height: 400px;
       margin-top: -3rem;
       z-index: 0;
     }
@@ -51,19 +55,49 @@
     &__paragraph {
       font-style: normal;
       font-weight: normal;
-      font-size: 2rem;
-      line-height: 2.4rem;
+      font-size: 1.6rem;
+      line-height: 2rem;
     }
   }
+}
+
+.name-and-age {
+  color: $color-grey-light-2;
+  color: #ececec;
+  font-size: 3rem;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  max-width: 170px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.5rem;
 }
 
 .like {
   font-size: 5rem;
 }
-.middle {
-}
+
 .edge {
   @include respond(phone) {
     display: none;
   }
+}
+
+.pets-section-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 75px;
+}
+.pets-section-text-title {
+  font-size: 3.5rem;
+}
+
+.small-paw {
+  height: auto;
+  width: 25px;
+  margin-right: 10px;
+  align-items: center;
 }
