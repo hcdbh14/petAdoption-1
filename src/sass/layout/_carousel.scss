@@ -13,32 +13,30 @@
   }
 
   @include respond(tab-land) {
-    height: 60vw;
+    height: 50vw;
   }
 
   &__arrow {
-    font-size: 5rem;
-    padding: 0 2rem;
+    height: 60px;
+    width: 60px;
+    padding: 10px;
     margin: auto;
   }
 
   &__item {
     width: fit-content;
-    padding-right: 5vw;
-    padding-left: 5vw;
-
-    &__imageFrame {
-    }
+    padding-right: 3.5vw;
+    padding-left: 3.5vw;
 
     &__image {
       position: relative;
       display: block;
       margin: auto;
-      height: 17vw;
+      height: 20vw;
       object-fit: cover;
       z-index: 5;
-      border: 2rem solid transparent;
-      border-image: url(../../images/wooden-texture.jpg) 40;
+      border: 1.4rem solid transparent;
+      border-image: url(../../images/wood.jpg) 40;
       border-image-repeat: inherit;
 
       &::after {
@@ -51,12 +49,12 @@
     &__info {
       background: $color-primary;
       background-image: url(../../images/paw.png);
+      background-size: 7rem;
       background-repeat: no-repeat;
       border-top: 30px solid $color-primary;
-      background-size: 10rem;
-      border-radius: 1rem;
-      padding: 5rem 2.7rem 2.7rem;
-      width: 13vw;
+      border-radius: 1.2rem;
+      padding: 2.5rem 1rem 1rem;
+      width: 16vw;
       margin-top: -3rem;
       z-index: 0;
     }
@@ -64,8 +62,8 @@
     &__paragraph {
       font-style: normal;
       font-weight: normal;
-      font-size: 2rem;
-      line-height: 2.4rem;
+      font-size: 1.6rem;
+      line-height: 2rem;
     }
   }
 }
@@ -74,10 +72,13 @@
   color: $color-grey-light-2;
   color: #ececec;
   font-size: 3rem;
-  line-height: 3.6rem;
+
   font-weight: 500;
   text-overflow: ellipsis;
-  max-width: 300px;
+  max-width: 170px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.5rem;
 }
 
 .like {
@@ -98,15 +99,15 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 125px;
+  margin: 50px;
 }
 .pets-section-text-title {
-  font-size: 5rem;
+  font-size: 3.5rem;
 }
 
 .small-paw {
   height: auto;
-  width: 50px;
+  width: 25px;
   margin-right: 10px;
   align-items: center;
 }
