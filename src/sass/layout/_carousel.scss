@@ -1,5 +1,6 @@
 .carousel {
-  position: relative;    align-items: center;
+  position: relative;
+  align-items: center;
   display: flex;
   place-content: space-evenly;
   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, $color-grey-carousel 40%);
@@ -9,12 +10,12 @@
   @include respond(normal-desktop) {
     height: 40vw;
     border-bottom: 15vw solid $color-grey-carousel;
-}
+  }
 
   @include respond(tab-land) {
     height: 60vw;
-}
-  
+  }
+
   &__arrow {
     font-size: 5rem;
     padding: 0 2rem;
@@ -25,7 +26,7 @@
     width: fit-content;
     padding-right: 5vw;
     padding-left: 5vw;
-   
+
     &__imageFrame {
     }
 
@@ -90,4 +91,22 @@
   @include respond(phone) {
     display: none;
   }
+}
+
+.pets-section-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 125px;
+}
+.pets-section-text-title {
+  font-size: 5rem;
+}
+
+.small-paw {
+  height: auto;
+  width: 50px;
+  margin-right: 10px;
+  align-items: center;
 }

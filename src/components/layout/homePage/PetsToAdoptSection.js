@@ -5,7 +5,10 @@ import { carouselPets } from '../../../mockdata/carouselPets'
 const PetsToAdoptSection = () => {
     return (
         <div className="pets-section">
-            <h2 className="pets-section__title"> החיות שלנו</h2>
+            <div className="pets-section-title">
+                <h2 className="pets-section-text-title"> החיות שלנו</h2>
+                <img src={require('../../../images/small-paw.png')} alt="paw" className="small-paw" />
+            </div>
             <Carousel carouselPets={carouselPets} />
         </div>
     )
