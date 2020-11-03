@@ -29,13 +29,9 @@ const Carousel = (props) => {
 
     return (
         <div className="carousel">
-            <div onClick={() => { handleArrowClick("LEFT") }} className="carousel__arrow">
-                <span >&rarr;</span>
-            </div>
+            <img src={require('../../../images/right-arrow.png')} className="carousel__arrow" onClick={() => { handleArrowClick("RIGHT") }} alt="right-arrow" />
             {petsShow}
-            <div onClick={() => { handleArrowClick("RIGHT") }} className="carousel__arrow">
-                <span > &larr;</span>
-            </div>
+            <img src={require('../../../images/left-arrow.png')} className="carousel__arrow" onClick={() => { handleArrowClick("RIGHT") }} alt="right-arrow" />
         </div>
     )
 }
