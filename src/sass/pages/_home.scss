@@ -21,7 +21,10 @@
   }
 
   &__image {
-    width: 100vw;
+    width: 90vw;
+    max-width: 1920px;
+    display: flex;
+    margin: auto;
   }
   &__text {
     text-align: center;
@@ -189,3 +192,9 @@
     width: 30%;
   }
 }
+
+
+
+
+
+
