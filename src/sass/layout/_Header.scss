@@ -14,6 +14,20 @@
     background-attachment: fixed;
     height: 34vw;
     width: 100vw;
+    @include respond(tab-port) {
+      background-attachment: inherit;
+      height: 50vh;
+      background-size: cover;
+    }
+  }
+  &__mobileLogo {
+    display: none;
+    @include respond(tab-port) {
+      display: block;
+      width: 45vw;
+      margin: auto;
+      margin-top: 10rem;
+    }
   }
 
   &__nav {
@@ -21,18 +35,28 @@
     position: relative;
     place-content: space-between;
     background: $color-primary;
-    border: 1px solid $color-primary-light;
-    height: 12rem;
+    height: 14rem;
     // border-bottom-left-radius: 50%;
     // border-bottom-right-radius: 50%;
     clip-path: polygon(0% 0%, 0% 72%, 50% 100%, 100% 72%, 100% 0%);
-    
+
+    transition: 0.5s;
+
     &__container {
       position: relative;
+      @include respond(tab-port) {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 10rem;
+      }
     }
     &__right {
       width: 40%;
       padding-top: 3.5rem;
+      @include respond(tab-port) {
+        display: none;
+      }
     }
     &__logo {
       position: absolute;
@@ -41,7 +65,7 @@
       left: 50%;
       outline: none;
       transform: translate(-50%, 0%);
-
+      transition: 0.5s;
       @include respond(tab-port) {
         display: none;
       }
@@ -49,6 +73,9 @@
     &__left {
       width: 40%;
       padding-top: 3.5rem;
+      @include respond(tab-port) {
+        display: none;
+      }
     }
 
     &__list {
@@ -67,20 +94,24 @@
         font-size: 2.4rem;
         line-height: 2.5rem;
         padding: 10rem 3rem;
-        transition: 0.3s all;
+        transition: 0.3s all 0.5s;
 
         &:hover {
           color: $color-black;
         }
 
         @include respond(tab-land) {
-          //   font-size: 2rem;
+          font-size: 2rem;
         }
       }
     }
 
     @include respond(tab-port) {
-      display: none;
+      // display: none;
+      background: rgba($color-footer-dark, 0.9);
+      clip-path: none;
+
+      height: 10rem;
     }
   }
 }
@@ -117,9 +148,8 @@
 // .search-container:hover {
 //   width: 50vw;
 //   height: 200px;
-  
-// }
 
+// }
 
 .search-category-button {
   border: none;

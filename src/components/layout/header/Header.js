@@ -24,16 +24,20 @@ const Header = () => {
             setscrollHieght({ navOnTop: true })
     }
 
-    const stickyStyle = {
+    const stickyStyleContainer = {
         position: "fixed",
         width: "100vw",
         zIndex: '99999'
     }
+
     const stickyPadding = { paddingBottom: '14rem' }
     return (
         <div className="header" style={scrollHieght.navOnTop ? stickyPadding : null}>
+
+            <img src={require('../../../images/footer-background-with-icon.png')} alt="logo" className="header__mobileLogo" />
+
             <HeaderImage />
-            <div className="header__nav__container" style={scrollHieght.navOnTop ? stickyStyle : null}>
+            <div className="header__nav__container" style={scrollHieght.navOnTop ? stickyStyleContainer : null}>
                 <Navigation />
                 <Link to={ROUTES.HOME} className="navigation__link">
                     <img src={require('../../../images/logo.png')} alt="Logo" className="header__nav__logo" />
