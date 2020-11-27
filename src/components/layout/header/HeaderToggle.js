@@ -23,7 +23,7 @@ const HeaderToggle = () => {
                         <Link to={ROUTES.SIGN_IN} className="navigation__link">נהלי האימוץ</Link>
                     </li>
                     <li class="navigation__item">
-                        <Link to={ROUTES.SIGN_UP} className="navigation__link">אבידות ומציאות</Link>
+                        <Link to={ROUTES.SEARCH} className="navigation__link">אבידות ומציאות</Link>
                     </li>
                 </ul>
             </nav>

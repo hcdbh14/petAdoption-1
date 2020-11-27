@@ -24,7 +24,7 @@ const Navigation = () => {
                         <Link to={ROUTES.SIGN_IN} className="header__nav__list-link">נהלי האימוץ</Link>
                     </li>
                     <li>
-                        <Link to={ROUTES.SIGN_UP} className="header__nav__list-link">אבידות ומציאות</Link>
+                        <Link to={ROUTES.SEARCH} className="header__nav__list-link">חיפוש חיות לאימוץ</Link>
                     </li>
                 </ul>
             </div>
