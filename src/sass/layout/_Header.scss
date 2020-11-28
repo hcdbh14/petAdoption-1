@@ -38,11 +38,12 @@
     height: 14rem;
     // border-bottom-left-radius: 50%;
     // border-bottom-right-radius: 50%;
-    clip-path: polygon(0% 0%, 0% 72%, 50% 100%, 100% 72%, 100% 0%);
+    clip-path: polygon(0% 0%, 0% 72%, 50% 87%, 100% 72%, 100% 0%);
 
     transition: 0.5s;
 
     &__container {
+     
       position: relative;
       @include respond(tab-port) {
         position: fixed;
@@ -61,7 +62,7 @@
     &__logo {
       position: absolute;
       width: 23rem;
-      top: -9%;
+      top: -7%;
       left: 50%;
       outline: none;
       transform: translate(-50%, 0%);
@@ -94,10 +95,10 @@
         font-size: 2.4rem;
         line-height: 2.5rem;
         padding: 10rem 3rem;
-        transition: 0.3s all 0.5s;
 
         &:hover {
           color: $color-black;
+          transition: 0.5s;
         }
 
         @include respond(tab-land) {
@@ -116,9 +117,9 @@
   }
 }
 .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+  // position: fixed;
+  // top: 0;
+  // width: 100%;
 }
 
 .login-button {

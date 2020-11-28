@@ -10,6 +10,7 @@ import SignInPage from './components/screens/SignInPage';
 import HomePage from './components/screens/HomePage';
 import AccountPage from './components/screens/AccountPage';
 import AdminPage from './components/screens/AdminPage';
+import SearchPage from './components/screens/SearchPage';
 import * as ROUTES from './components/constants/routes';
 import Header from './components/layout/header/Header';
 import Footer from './components/layout/footer/Footer';
@@ -27,6 +28,7 @@ function App() {
       <Route path={ROUTES.PET} component={PetPage} />
       <Route path={ROUTES.ACCOUNT} component={AccountPage} />
       <Route path={ROUTES.ADMIN} component={AdminPage} />
+      <Route path={ROUTES.SEARCH} component={SearchPage} />
       <Route exact path={ROUTES.SearchResults} component={SearchResultsPage} />
       <Footer />
     </Router>
