@@ -1,30 +1,10 @@
 import React from 'react'
+import SearchTitle from './SearchTitle';
 
 const Search = () => {
     return (
         <div className="search">
-            <div className="search__title">
-                <p>נמצאו 100 </p>
-                <div class="dropdown">
-                    <button class="dropbtn">חיות</button>
-                    <div class="dropdown-content">
-                        <a href="#">חיות</a>
-                        <a href="#">כלבים</a>
-                        <a href="#">חתולים</a>
-                    </div>
-                </div>
-                <p> שמחכות לאימוץ באזור</p>
-                <div class="dropdown">
-                    <button class="dropbtn">כל בארץ</button>
-                    <div class="dropdown-content">
-                        <a href="#">כל בארץ</a>
-                        <a href="#">צפון</a>
-                        <a href="#">מרכז</a>
-                        <a href="#">דרום</a>
-                    </div>
-                </div>
-            </div>
-
+            <SearchTitle />
             <div className="search__box">
                 <div className="search__box__advanced">
                     <p className="search__box__advanced__title">חיפוש מתקדם</p>
