@@ -1,6 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 
 const Collapsible = (props) => {
+
+    const initialState = {
+        searchOptions: [
+            { type: "byName", opened: false },
+            { type: "byRace", opened: false },
+            { type: "byArea", opened: false },
+            { type: "byGender", opened: false },
+            { type: "byAge", opened: false }
+        ]
+    }
+    const [state, setState] = useState(initialState)
+    
+    const expandOrCollapse = (index) => {
+        let tmp = state.searchOptions;
+        console.log(index);
+        console.log(tmp[index].opened);
+        tmp[index].opened = !tmp[index].opened;
+        setState({ searchOptions: tmp });
+    }
+
     return (
         <div className="search__section__advanced">
             <p className="search__section__advanced__title">חיפוש מתקדם</p>
@@ -11,10 +32,10 @@ const Collapsible = (props) => {
                 <div class="collapsible-content">
                     <div class="content-inner">
                         <div class="wrap">
-                            <div class="name-search">
+                            <div class="name-search" onClick={() => expandOrCollapse(0)} >
                                 <input type="text" class="searchTerm" placeholder="ספלאנק" />
                                 <img src={require('../../../images/search-icon.png')} alt="Logo" className="searchButton" />
-                                
+
                             </div>
                             <button class="update-button">חיפוש</button>
                         </div>
