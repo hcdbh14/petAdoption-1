@@ -2,8 +2,8 @@ import React from 'react'
 
 const Collapsible = (props) => {
     return (
-        <div className="search__options__advanced">
-            <p className="search__options__advanced__title">חיפוש מתקדם</p>
+        <div className="search__section__advanced">
+            <p className="search__section__advanced__title">חיפוש מתקדם</p>
 
             <div class="wrap-collabsible">
                 <input id="collapsible1" class="toggle" type="checkbox" />

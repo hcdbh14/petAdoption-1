@@ -8,14 +8,17 @@
 
 // @import "components/mainBtn";
 
-@import "layout/header";
-@import "layout/navigation";
+@import "pages/home";
 // @import "layout/grid";
-@import "layout/footer";
-@import "layout/carousel";
+
 // @import "layout/navigation";
 
-@import "pages/home";
+
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/footer";
+@import "layout/carousel";
 @import "pages/search";
 @import "layout/dropDown";
 @import "layout/collapsible";
+@import "layout/petCard";

@@ -1,0 +1,71 @@
+.pets {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1260px;
+}
+
+.pet-card {
+    outline: none;
+    border: none;
+    text-align: right;
+    cursor: pointer;
+    height: auto;
+    width: 250.5px;
+    background-color: white;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    transition: box-shadow 0.3s;
+    margin-right: 50px;
+    margin-top: 50px;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.pet-preview-image {
+    height: 243.5px;
+    width: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.pet-name-preview {
+    line-height: 50px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    padding-right: 20px;
+    color: $color-primary;
+}
+
+.pet-heart-preview {
+    height: 20px;
+    width: 20px;
+}
+
+.description-preview {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+.pet-desc-preview {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+.pet-goodWords-preview {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: gray;
+}
