@@ -2,14 +2,36 @@
     width: 100%;
     height: 500px;
     margin-top: 300px;
+    margin-bottom: 300px;
     margin-right: 131px;
 
     &__blueTitle {
         font-family: Rubik;
         font-style: normal;
         font-weight: bold;
-        font-size: 70px;
+        font-size: 4.375rem;
         line-height: 83px;
+        margin-bottom: 40px;
         color: $color-primary;
+    }
+
+    &__paragraph {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.5rem;
+        line-height: 47px;
+        text-align: right;
+    }
+
+    &__orangeTitle {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 4.375rem;
+        line-height: 83px;
+        text-align: right;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        color: #FA8E2B;
     }
 }
