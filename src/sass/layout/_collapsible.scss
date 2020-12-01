@@ -1,0 +1,151 @@
+input[type="checkbox"] {
+  display: none;
+}
+.wrap-collabsible {
+  margin: 1.2rem 0;
+
+  border-bottom: 2.5px solid lightgray;
+}
+.lbl-toggle {
+  display: block;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+  color: black;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle::before {
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.7rem;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-out;
+}
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.15s ease-in-out;
+}
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 350px;
+}
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.collapsible-content .content-inner {
+
+  padding: 0.5rem 1rem;
+}
+.collapsible-content p {
+  margin-bottom: 0;
+}
+
+.filterButton {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  margin: auto;
+  cursor: pointer;
+  color: black;
+ 
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  width: 100%;
+  padding: 15px;
+
+  &:hover {
+    background-color: lightgray;
+  }
+}
+
+
+
+
+.name-search {
+  width: 100%;
+  border: 3px solid #d8d8d8;
+  background-color: #e5e5e5;
+  border-radius: 5px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.searchTerm {
+  background-color: transparent;
+  width: 80%;
+  float: right;
+  border: none;
+
+  padding: 15px;
+  padding-top: 20px;
+  height: 36px;
+  outline: none;
+  color: black;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.searchButton {
+  height: auto;
+  width: 6%;
+  border: none;
+  padding-top: 10px;
+  margin-right: 20px;
+  height: 36px;
+
+  background: white;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  background: transparent;
+}
+
+
+.update-button {
+  display: flex;
+  margin-bottom: 25px;
+  width: 90%;
+  margin-top: 50px;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11px;
+  border: none;
+  text-align: left;
+  text-decoration: none;
+  padding: 11px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 2px 3px rgba(0,0,0,.11);
+  transition: all .1s ease-out;
+  cursor: pointer;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  background-image: url(../../images/long-left-arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  &:hover {
+    background-color: $color-primary;
+  }
+}
