@@ -7,29 +7,15 @@ import "slick-carousel/slick/slick-theme.css";
 const Carousel = (props) => {
     const { carouselPets } = props;
 
-    const getNonZeroRandomNumberWithMathRound = () => {
-        let random = Math.round(Math.random() * 10) - 5;
-        if (random > 5)
-            random = 5
-        if (random < -5)
-            random = -5
-        return `${random}deg`;
-    }
-
-    const slide = carouselPets.map((pet, i) => {
-        let deg = getNonZeroRandomNumberWithMathRound()
-        return < CarouselItem petPosition={pet} i={i} key={i} deg={deg} />
-    })
-
     var settings = {
-        autoplay: true,
+        autoplay: false,
         speed: 2000,
         autoplaySpeed: 2000,
         cssEase: "linear",
         pauseOnHover: true,
 
         arrows: false,
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
@@ -63,6 +49,10 @@ const Carousel = (props) => {
             }
         ]
     };
+
+    const slide = carouselPets.map((pet, i) => {
+        return < CarouselItem petPosition={pet} i={i} key={i} />
+    })
     return (
         <div className="carousel">
             <Slider {...settings} style={{ direction: "ltr" }}>

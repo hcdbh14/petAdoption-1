@@ -12,11 +12,11 @@ const HeaderImage = () => {
     }
 
     return (
-        <div className="header__mainImage">
+        <div className="main__shoutout">
 
 
             {/*  temporary search container - might change or removed in near future */}
-{/* 
+            {/* 
             <input type="image" className="login-button" src={require('../../../images/login-icon.png')} alt="login-button" />
 
             <div className="search-container" style={searchState.searchToggle == true ? { width: "50vw", height: "200px" } : { width: "4vw", height: "60x" }} >

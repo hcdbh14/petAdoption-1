@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 const CarouselPetInfo = (props) => {
     const { pet } = props;
 
@@ -11,7 +10,6 @@ const CarouselPetInfo = (props) => {
     // )
     return (
         <div className="carousel__item__info">
-
             <h2 className="name-and-age">{pet.name}  {pet.age} שנים</h2>
             <p className="carousel__item__paragraph">{pet.goodWords}</p>
             <p className="carousel__item__paragraph"> {region}</p>
