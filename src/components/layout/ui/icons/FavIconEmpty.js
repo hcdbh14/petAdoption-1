@@ -5,14 +5,17 @@ import IconButton from '@material-ui/core/IconButton';
 const FavIconEmpty = (props) => {
 
     return (
-        <IconButton aria-label="add to favorites" color="secondary" onClick={props.clicked} >
+        <IconButton aria-label="add to favorites" color="secondary" onClick={props.clicked} style={{
+            zIndex: '1000',
+            position: 'absolute',
+            background: 'white',
+            top: '65%',
+            right: '30%',
+            zIndex: "2"
+        }}>
             <FavoriteBorderIcon style={{
                 animation: 'fadeIn  1s',
-                zIndex: '1000',
-                position: 'absolute',
-                background: 'white',
-                bottom: '-6%',
-                right: '18%',
+                fontSize: '4rem',
             }} />
         </IconButton>
 

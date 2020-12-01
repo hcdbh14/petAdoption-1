@@ -1,25 +1,16 @@
 .header {
+  height: 14rem;
+  width: 100vw;
+  align-items: center;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  padding: 1rem 6rem;
+  background: #fff;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+  z-index: 10;
 
-  &__image {
-    object-fit: contain;
-  }
-  &__mainImage {
-    background-image: url(../../images//headerImage.png);
-    background-size: contain;
-    background-position: top;
-    background-repeat: no-repeat;
-    position: relative;
-    background-attachment: fixed;
-    height: 34vw;
-    width: 100vw;
-    @include respond(tab-port) {
-      background-attachment: inherit;
-      height: 50vh;
-      background-size: cover;
-    }
-  }
   &__mobileLogo {
     display: none;
     @include respond(tab-port) {
@@ -32,19 +23,18 @@
 
   &__nav {
     display: flex;
-    position: relative;
+    top: 0;
+    left: 0;
     place-content: space-between;
-    background: $color-primary;
-    height: 14rem;
-    // border-bottom-left-radius: 50%;
-    // border-bottom-right-radius: 50%;
-    clip-path: polygon(0% 0%, 0% 72%, 50% 87%, 100% 72%, 100% 0%);
-
-    transition: 0.5s;
+    align-items: center;
+    z-index: 1;
 
     &__container {
-     
-      position: relative;
+      height: fit-content;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+
       @include respond(tab-port) {
         position: fixed;
         top: 0;
@@ -88,17 +78,18 @@
 
       &-link {
         text-decoration: none;
-        color: #fff;
+        color: $color-black-main;
         font-family: Rubik;
         font-style: normal;
         font-weight: 500;
-        font-size: 2.4rem;
+        font-size: 2rem;
         line-height: 2.5rem;
-        padding: 10rem 3rem;
+        padding: 5.5rem 3rem;
+        margin: 0 2rem;
 
         &:hover {
-          color: $color-black;
-          transition: 0.5s;
+          color: $color-primary;
+          transition: 0.2s;
         }
 
         @include respond(tab-land) {
@@ -116,11 +107,6 @@
     }
   }
 }
-.sticky {
-  // position: fixed;
-  // top: 0;
-  // width: 100%;
-}
 
 .login-button {
   height: 2vw;
@@ -129,39 +115,57 @@
   margin-right: 60px;
 }
 
-.search-container {
-  margin-top: -55px;
-  margin-right: 140px;
-  background-color: wheat;
-  height: 60px;
-  width: 4vw;
-  transition: width 600ms ease-out, height 600ms ease-out;
+.searchBar {
+  width: 18%;
+  min-width: 20rem;
+  max-width: 31rem;
+  height: 5rem;
+  background: $color-black-main;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+  transition: all 0.3s;
+  &:hover {
+    transform: translate(0.2rem, -0.15rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
 }
 
-.search-button {
-  height: 50px;
-  width: 2.2vw;
-  background-size: contain;
-  background-image: url(../../images/search-icon.png);
-  background-repeat: no-repeat;
-}
-
-// .search-container:hover {
-//   width: 50vw;
-//   height: 200px;
-
+// .search-container {
+//   margin-top: -55px;
+//   margin-right: 140px;
+//   background-color: wheat;
+//   height: 60px;
+//   width: 4vw;
+//   transition: width 600ms ease-out, height 600ms ease-out;
 // }
 
-.search-category-button {
-  border: none;
-  background-color: transparent;
-  outline: none;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
+// .search-button {
+//   height: 50px;
+//   width: 2.2vw;
+//   background-size: contain;
+//   background-image: url(../../images/search-icon.png);
+//   background-repeat: no-repeat;
+// }
+
+// // .search-container:hover {
+// //   width: 50vw;
+// //   height: 200px;
+
+// // }
+
+// .search-category-button {
+//   border: none;
+//   background-color: transparent;
+//   outline: none;
+//   color: black;
+//   padding: 15px 32px;
+//   text-align: center;
+//   text-decoration: none;
+//   display: inline-block;
+//   font-size: 16px;
+//   margin: 4px 2px;
+//   cursor: pointer;
+// }
