@@ -14,7 +14,7 @@ const Navigation = () => {
                     <Link to={ROUTES.SIGN_UP} className="header__nav__list-link">חיות אחרות</Link>
                 </li>
                 <li>
-                    <Link to={ROUTES.SIGN_IN} className="header__nav__list-link">אודות</Link>
+                    <Link to={ROUTES.ABOUT} className="header__nav__list-link">אודות</Link>
                 </li>
                 <li>
                     <Link to={ROUTES.SEARCH} className="header__nav__list-link">צור קשר</Link>
