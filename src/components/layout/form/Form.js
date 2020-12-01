@@ -5,6 +5,7 @@ import Input from '../ui/Input';
 
 const Form = (props) => {
     const { state, handleChange } = props
+
     return (
         <form>
             <Input
