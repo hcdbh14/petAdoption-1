@@ -1,8 +1,15 @@
-import React, { useState } from 'react'
-
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { addNameFitler, addRaceFitler, addAreaFitler, addGenderFitler, addAgeFitler } from '../../../store/filter/action';
 
 const Collapsible = (props) => {
+    const dispatch = useDispatch();
 
+    const state = useSelector(state => state.filterReducer);
+
+    const handleNameFilter  = () =>  {
+       dispatch(addNameFitler("test"));
+    }
     const initialState = {
         searchOptions: [
             { type: "byName", opened: false },
@@ -12,15 +19,17 @@ const Collapsible = (props) => {
             { type: "byAge", opened: false }
         ]
     }
-    const [state, setState] = useState(initialState)
+
     
-    const expandOrCollapse = (index) => {
-        let tmp = state.searchOptions;
-        console.log(index);
-        console.log(tmp[index].opened);
-        tmp[index].opened = !tmp[index].opened;
-        setState({ searchOptions: tmp });
-    }
+    // const [state, setState] = useState(initialState)
+    
+    // const expandOrCollapse = (index) => {
+    //     let tmp = state.searchOptions;
+    //     console.log(index);
+    //     console.log(tmp[index].opened);
+    //     tmp[index].opened = !tmp[index].opened;
+    //     setState({ searchOptions: tmp });
+    // }
 
     return (
         <div className="search__section__advanced">
@@ -32,7 +41,7 @@ const Collapsible = (props) => {
                 <div class="collapsible-content">
                     <div class="content-inner">
                         <div class="wrap">
-                            <div class="name-search" onClick={() => expandOrCollapse(0)} >
+                            <div class="name-search" onClick={handleNameFilter} >
                                 <input type="text" class="searchTerm" placeholder="ספלאנק" />
                                 <img src={require('../../../images/search-icon.png')} alt="Logo" className="searchButton" />
 
