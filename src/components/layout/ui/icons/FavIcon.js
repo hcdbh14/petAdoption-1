@@ -9,8 +9,9 @@ const FavIcon = (props) => {
             zIndex: '1000',
             position: 'absolute',
             background: 'white',
-            bottom: '-6%',
-            right: '18%',
+            top: '65%',
+            right: '30%',
+            zIndex: "2"
         }}>
             <FavoriteIcon style={{
                 fontSize: '4rem',
