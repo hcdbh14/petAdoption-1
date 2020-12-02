@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { register, signOut, sendEmailVerification, checkIfUserVerified, signInAnonymously, googleSignIn, facebookSignIn } from '../../store/auth/action'
 import { useSelector, useDispatch } from 'react-redux';
-import Form from '../layout/form/Form';
+import Form from '../layout/contact/contactUs';
 
 const SignUpPage = () => {
 
