@@ -1,12 +1,14 @@
 .about {
-    width: 100%;
-    margin-top: 300px;
-    padding-bottom: 500px;
-    padding-right: 131px;
-    background-image: url(../../images/women-and-dog.svg);
-    background-size: 100% ;
-    background-repeat: no-repeat;
-    background-position: bottom;
+    &__container {
+        width: 100%;
+        background-image: url(../../images/women-and-dog.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        margin-top: 300px;
+        padding-right: 131px;
+        padding-bottom: 500px;
+    }
 
     &__blueTitle {
         font-family: Rubik;

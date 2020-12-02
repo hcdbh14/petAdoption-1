@@ -1,0 +1,133 @@
+.contact {
+    display: flex;
+    height: 822px;
+    width: 100%;
+    background-image: url(../../images/contact-us-background.svg);
+    background-position: left, right top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__formSide {
+        width: 75%;
+    }
+
+    &__animalSide {
+        width: 25%;
+        margin: auto;
+    }
+
+    &__title {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 70px;
+        line-height: 83px;
+        padding-top: 64px;
+        margin-right: 45.04px;
+        color: $color-primary;
+    }
+
+    &__textFieldTitle {
+        width: 6%;
+        height: 84px;
+        background: rgba(122, 122, 122, 0.7);
+        padding-right: 15px;
+        outline: none;
+        border: none;
+        color: $color-white;
+        font-size: 1.5em;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        margin-right: 2%;
+        margin-top: 80px;
+    }
+
+    &__textField {
+        width: 24%;
+        height: 84px;
+        background: rgba(122, 122, 122, 0.7);
+        margin-top: 80px;
+        outline: none;
+        border: none;
+        color: $color-white;
+        font-size: 1.5em;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    &__textFieldTitleBig {
+        width: 100%;
+        height: 60px;
+        background: rgba(122, 122, 122, 0.7);
+        padding-right: 15px;
+        outline: none;
+        border: none;
+        color: $color-white;
+        font-size: 1.5em;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        margin-right: 45.04px;
+
+        margin-top: 80px;
+    }
+
+    &__textFieldBig {
+        width: 100%;
+        height: 164px;
+        background: rgba(122, 122, 122, 0.7);
+        outline: none;
+        border: none;
+        color: $color-white;
+        font-size: 1.5em;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        margin-right: 45.04px;
+        padding-right: 45.04px;
+        resize: none;
+    }
+
+    &__dogAndCat {
+        position: relative;
+        width: 740px;
+        z-index: 100;
+    }
+
+    &__textFieldTitleFirst {
+        width: 5.5%;
+        height: 84px;
+        background: rgba(122, 122, 122, 0.7);
+        padding-right: 15px;
+        outline: none;
+        border: none;
+        color: $color-white;
+        font-size: 1.5em;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        margin-right: 45.04px;
+        margin-top: 80px;
+    }
+
+    &__send {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        width: 219.2px;
+        height: 50px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        color: $color-white;
+        background: #fa8e2b;
+        border: 1px solid #fa8e2b;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+        border-radius: 20px;
+        margin-top: 50px;
+        margin-right: 45.04px;
+    }
+}
