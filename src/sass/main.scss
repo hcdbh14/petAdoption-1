@@ -24,3 +24,7 @@
 @import "layout/dropDown";
 @import "layout/collapsible";
 @import "layout/petCard";
+
+html, body {
+    overflow-x: hidden;
+}
