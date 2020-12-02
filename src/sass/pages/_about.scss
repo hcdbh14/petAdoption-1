@@ -1,9 +1,12 @@
 .about {
     width: 100%;
-    height: 500px;
     margin-top: 300px;
-    margin-bottom: 300px;
-    margin-right: 131px;
+    padding-bottom: 500px;
+    padding-right: 131px;
+    background-image: url(../../images/women-and-dog.svg);
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    background-position: bottom;
 
     &__blueTitle {
         font-family: Rubik;
@@ -16,8 +19,9 @@
     }
 
     &__paragraph {
+        font-family: Rubik;
         font-style: normal;
-        font-weight: normal;
+        font-weight: 400;
         font-size: 2.5rem;
         line-height: 47px;
         text-align: right;
@@ -32,6 +36,6 @@
         text-align: right;
         margin-top: 50px;
         margin-bottom: 40px;
-        color: #FA8E2B;
+        color: $color-secondary-dark;
     }
 }
