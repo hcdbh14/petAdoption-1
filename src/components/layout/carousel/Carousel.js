@@ -8,9 +8,9 @@ const Carousel = (props) => {
     const { carouselPets } = props;
 
     var settings = {
-        autoplay: false,
+        autoplay: true,
         speed: 2000,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 4000,
         cssEase: "linear",
         pauseOnHover: true,
 

@@ -32,7 +32,7 @@ const Responsibility = (props) => {
     return (
         <div className="main__responsibility">
             <div className="responsibility__title">
-                <h1 style={styleColored} >קחו אחריות</h1> <h1 style={style}>לפני שלוקחים...</h1>
+                <h2 style={styleColored} >קחו אחריות</h2> <h2 style={style}>לפני שלוקחים...</h2>
             </div>
             {scrollHieght.reachedResponsibility ?
                 <div className="responsibility" >

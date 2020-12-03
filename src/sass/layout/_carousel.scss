@@ -22,6 +22,11 @@
     padding-left: 3.5vw;
     margin: auto;
     text-align: -webkit-center;
+    transition: all 0.3s;
+    &:hover {
+      filter: drop-shadow(0 0 0.5rem $color-primary-dark);
+      cursor: pointer;
+    }
 
     &__image {
       display: block;
