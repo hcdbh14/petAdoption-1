@@ -13,7 +13,7 @@
         @include respond(tab-port) {
             padding-right: 10px;
             background-image: url(../../images/women-and-dog-mobile.svg);
-            background-size: cover;
+            background-size: contain;
         }
     }
 
