@@ -13,19 +13,22 @@
         background-size: cover;
     }
 
+    
     &__formSide {
-        width: 100%;
+        width: 75%;
 
         @include respond(normal-desktop) {
+            width: 100%;
             text-align: center;
         }
     }
 
     &__animalSide {
-        width: 100%;
+        width: 25%;
         margin: auto;
 
         @include respond(normal-desktop) {
+            width: 100%;
             text-align: center;
         }
     }
@@ -214,7 +217,7 @@
 
         @include respond(normal-desktop) {
             float: right;
-            margin-right: 20px;
+            margin-bottom: 50px;
         }
     }
 
