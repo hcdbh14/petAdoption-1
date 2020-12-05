@@ -1,4 +1,5 @@
 .about {
+
     &__container {
         width: 100%;
         background-image: url(../../images/women-and-dog.svg);
@@ -8,6 +9,12 @@
         margin-top: 300px;
         padding-right: 131px;
         padding-bottom: 500px;
+
+        @include respond(tab-port) {
+            padding-right: 10px;
+            background-image: url(../../images/women-and-dog-mobile.svg);
+            background-size: cover;
+        }
     }
 
     &__blueTitle {
@@ -39,5 +46,6 @@
         margin-top: 50px;
         margin-bottom: 40px;
         color: $color-secondary-dark;
+
     }
 }
