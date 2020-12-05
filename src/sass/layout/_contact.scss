@@ -1,6 +1,6 @@
 .contact {
     display: flex;
-    height: 822px;
+    height: auto;
     width: 100%;
     background-image: url(../../images/contact-us-background.svg);
     background-position: left, right top;
@@ -215,10 +215,10 @@
         border-radius: 20px;
         margin-top: 50px;
         margin-right: 45.04px;
+        margin-bottom: 50px;
 
         @include respond(normal-desktop) {
             float: right;
-            margin-bottom: 50px;
         }
     }
 
