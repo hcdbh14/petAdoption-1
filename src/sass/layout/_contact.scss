@@ -192,6 +192,7 @@
 
         @include respond(phone) {
             font-size: 14px;
+            font-weight: 400;
             padding-right: 1px;
             width: 7%;
        }
