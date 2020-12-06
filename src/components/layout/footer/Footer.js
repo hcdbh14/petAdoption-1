@@ -21,7 +21,7 @@ const Footer = () => {
                                 <button className="footer-button">מידע למאמצים</button>
                             </li>
                             <li>
-                                <button className="footer-button">מידע למוסרים בע״ח לאימוץ</button>
+                                <button className="footer-button">מידע לוסרים</button>
                             </li>
                         </ul>
                     </div>
@@ -48,7 +48,6 @@ const Footer = () => {
 
                     <div className="logo-and-social-colum">
                         <div className="logo-image"></div>
-                        {/* <img src={require('../../../images/footer-background-with-icon.png')} alt="footer-logo" className="logo-image"></img> */}
                         <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
                             <input type="image" className="socialButton socialButton--bird" src={require('../../../images/twitter.png')} alt="Twitter" />
                         </a>
