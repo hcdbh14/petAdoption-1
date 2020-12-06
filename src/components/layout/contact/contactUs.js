@@ -29,6 +29,8 @@ const conctactUs = (props) => {
             <div className="contact__animalSide">
                 <img src={require('../../../images/dog-and-cat.svg')} className="contact__dogAndCat" />
             </div>
+            <br />
+            <div className="contact__white-box" />
         </div>
     )
 }

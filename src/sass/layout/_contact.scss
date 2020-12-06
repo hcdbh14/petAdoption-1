@@ -1,30 +1,55 @@
 .contact {
     display: flex;
-    height: 822px;
+    height: auto;
     width: 100%;
     background-image: url(../../images/contact-us-background.svg);
     background-position: left, right top;
     background-size: cover;
     background-repeat: no-repeat;
 
+    @include respond(normal-desktop) {
+        height: auto;
+        display: block;
+        background-size: cover;
+    }
+
+    
     &__formSide {
         width: 75%;
+
+        @include respond(normal-desktop) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__animalSide {
         width: 25%;
         margin: auto;
+
+        @include respond(normal-desktop) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__title {
         font-family: Rubik;
         font-style: normal;
         font-weight: bold;
-        font-size: 70px;
+        font-size: 4.375rem;
         line-height: 83px;
         padding-top: 64px;
         margin-right: 45.04px;
         color: $color-primary;
+
+        @include respond(normal-desktop) {
+            margin-right: auto;
+        }
+
+        @include respond(phone) {
+            font-size: 35px;
+       }
     }
 
     &__textFieldTitle {
@@ -41,6 +66,18 @@
         font-weight: bold;
         margin-right: 2%;
         margin-top: 80px;
+
+        @include respond(normal-desktop) {
+            margin-right: 5px;
+            padding-right: 5px;
+        }
+
+        @include respond(phone) {
+            font-size: 14px;
+            padding-right: 1px;
+            width: 7%;
+            font-weight: 400;
+       }
     }
 
     &__textField {
@@ -55,6 +92,15 @@
         font-family: Rubik;
         font-style: normal;
         font-weight: bold;
+
+        @include respond(normal-desktop) {
+            width: 25%;
+        }
+
+        @include respond(phone) {
+            font-size: 14px;
+            font-weight: 400;
+       }
     }
 
     &__textFieldTitleBig {
@@ -70,8 +116,17 @@
         font-style: normal;
         font-weight: bold;
         margin-right: 45.04px;
-
         margin-top: 80px;
+        
+        @include respond(normal-desktop) {
+            width: 95%;
+            margin-right: 5px;
+        }
+
+        @include respond(phone) {
+            font-size: 14px;
+            font-weight: 400;
+       }
     }
 
     &__textFieldBig {
@@ -88,12 +143,31 @@
         margin-right: 45.04px;
         padding-right: 45.04px;
         resize: none;
+
+        @include respond(normal-desktop) {
+            width: 95%;
+            margin-right: 5px;
+            padding-right: 15px;
+        }
+
+        @include respond(phone) {
+            font-size: 14px;
+            font-weight: 400;
+       }
     }
 
     &__dogAndCat {
         position: relative;
         width: 740px;
         z-index: 1;
+
+        @include respond(normal-desktop) {
+            margin-bottom: -65px;
+        }
+
+        @include respond(phone) {
+             width: 100%;
+        }
     }
 
     &__textFieldTitleFirst {
@@ -110,6 +184,18 @@
         font-weight: bold;
         margin-right: 45.04px;
         margin-top: 80px;
+
+        @include respond(normal-desktop) {
+            margin-right: auto;
+            padding-right: 5px;
+        }
+
+        @include respond(phone) {
+            font-size: 14px;
+            font-weight: 400;
+            padding-right: 1px;
+            width: 7%;
+       }
     }
 
     &__send {
@@ -129,5 +215,21 @@
         border-radius: 20px;
         margin-top: 50px;
         margin-right: 45.04px;
+        margin-bottom: 80px;
+
+        @include respond(normal-desktop) {
+            float: right;
+        }
+    }
+
+    &__white-box {
+        display: none;
+
+        @include respond(normal-desktop) {
+            display: block;
+            height: 50px;
+            width: 100%;
+            background-color: $color-white;
+        }
     }
 }
