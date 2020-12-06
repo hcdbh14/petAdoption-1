@@ -94,10 +94,10 @@
 
     @include responsibility;
     width: 30%;
-    @media (max-width: 66em) {
-      // chose design for small devices
-      display: none;
-    }
+    //   @media (max-width: 66em) {
+    // chose design for small devices
+    //    display: none;
+    //  }
   }
 
   &__right {
@@ -114,9 +114,19 @@
 
       &-image {
         padding-right: 5rem;
+
+        @include respond(tab-port) {
+          width: 5rem;
+          padding-right: 1rem;
+        }
       }
       &-text {
+        transition: all 0.5s;
+
         margin-bottom: 3rem;
+        &:hover {
+          transform: scale(1.15);
+        }
       }
     }
 
@@ -131,6 +141,16 @@
 
       &-image {
         padding-right: 8rem;
+        @include respond(tab-port) {
+          width: 5rem;
+          padding-right: 1rem;
+        }
+      }
+      &-text {
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.15);
+        }
       }
     }
     &-bottom {
@@ -144,10 +164,18 @@
 
       &-image {
         padding-right: 4rem;
+        @include respond(tab-port) {
+          width: 5rem;
+          padding-right: 1rem;
+        }
       }
 
       &-text {
         margin-bottom: -3rem;
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.15);
+        }
       }
     }
   }
@@ -167,9 +195,17 @@
       &-image {
         padding-right: 5rem;
         transform: rotateY(180deg);
+        @include respond(tab-port) {
+          width: 5rem;
+          padding-right: 1rem;
+        }
       }
       &-text {
         margin-bottom: 3rem;
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.15);
+        }
       }
     }
 
@@ -183,6 +219,16 @@
       &-image {
         padding-right: 8rem;
         transform: rotateY(180deg);
+        @include respond(tab-port) {
+          width: 5rem;
+          padding-right: 1rem;
+        }
+      }
+      &-text {
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.15);
+        }
       }
     }
     &-bottom {
@@ -194,10 +240,18 @@
 
       &-image {
         transform: rotateY(180deg);
+        @include respond(tab-port) {
+          width: 5rem;
+          padding: 0;
+        }
       }
 
       &-text {
         margin-bottom: -3rem;
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.15);
+        }
       }
     }
   }
