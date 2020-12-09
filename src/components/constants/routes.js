@@ -8,3 +8,4 @@ export const ADMIN = '/admin';
 export const PASSWORD_FORGET = '/pw-forget';
 export const SearchResults = '/results';
 export const SEARCH = '/search';
+export const CONTACT = '/contact';

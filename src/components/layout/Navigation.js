@@ -17,7 +17,7 @@ const Navigation = () => {
                     <Link to={ROUTES.ABOUT} className="header__nav__list-link">אודות</Link>
                 </li>
                 <li>
-                    <Link to={ROUTES.SEARCH} className="header__nav__list-link">צור קשר</Link>
+                    <Link to={ROUTES.CONTACT} className="header__nav__list-link">צור קשר</Link>
                 </li>
             </ul>
         </div>
