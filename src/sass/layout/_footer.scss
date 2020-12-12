@@ -3,9 +3,8 @@
     height: auto;
     background: $color-footer-dark;
     background-repeat: no-repeat;
-    padding-bottom: 25px;
-    padding-top: 5vw;
-    padding-bottom: 5vw;
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
 }
 
 .footer-container {
@@ -26,7 +25,7 @@
     color: $color-white;
     list-style: none;
     text-align: right;
-   
+
     @include respond(normal-desktop) {
         margin-right: -20px;
         padding-right: 0px;
@@ -52,7 +51,7 @@
     font-weight: 500;
     font-size: 1.875rem;
     line-height: 40px;
-     margin-top: 30px;
+    margin-top: 30px;
 
     &:hover {
         color: $color-primary;
@@ -64,21 +63,16 @@
 }
 
 .colum {
-    margin-left: 200px;
+    margin-left: 5vw;
     display: inline-block;
     vertical-align: top;
     padding: 3em;
-    
+
     &--left {
         @extend .colum;
-        margin-left: 0px;
+        margin-left: 5vw;
     }
-
-    @include respond(normal-desktop) {
-        margin-right: 50px;
-        margin-left: 10px;
-    }
-
+    
     @include respond(tab-port) {
         display: none;
     }
@@ -92,8 +86,8 @@
 
 .logo-image {
     width: 100%;
-    height: 17vw;
-    max-height: 500px;
+    max-width: 400px;
+    height: 14vw;
     background-image: url(../../images/footer-icon.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -114,6 +108,7 @@
 .logo-and-social-colum {
     display: inline-block;
     width: 30%;
+    max-width: 400px;
     text-align: center;
 
     @include respond(normal-desktop) {
@@ -134,17 +129,12 @@
 }
 
 .socialButton {
-
-            width: 44px;
-        height: 43px;
-        border-radius: 30px;
-        margin-top: 15px;
-
+   
+    width: 44px;
+    height: 43px;
+    border-radius: 30px;
     margin-right: 20px;
-    // width: 64px;
-    // height: 63px;
     border: 8px solid $color-primary;
-    // border-radius: 30px;
     outline: none;
     background-size: contain;
     background: $color-primary;
@@ -163,13 +153,6 @@
         @extend .socialButton;
         margin-right: 0;
     }
-
-    // @include respond(tab-port) {
-    //     width: 54px;
-    //     height: 53px;
-    //     border-radius: 30px;
-    //     margin-top: 15px;
-    // }
 
     @include respond(phone) {
         width: 43px;
