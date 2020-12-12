@@ -8,7 +8,7 @@ const CarouselItem = (props) => {
     return (
         <div className={`carousel__item`}>
             <CarouselPetImage image={petPosition.pet.images} id={i} />
-            <FavIcon />
+            {/* <FavIcon /> */}
             {/* <FavIconEmpty /> */}
             <CarouselPetInfo pet={petPosition.pet} />
         </div>

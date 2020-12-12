@@ -77,7 +77,8 @@ input:checked + label + .content {
     font-size: 2rem;
   }
   @media (max-width: 69.7em) {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    justify-content: space-between;
   }
 
   &__title {
@@ -101,10 +102,13 @@ input:checked + label + .content {
 
     @include responsibility;
     width: 30%;
-    //   @media (max-width: 66em) {
-    // chose design for small devices
-    //    display: none;
-    //  }
+    @include respond(phone) {
+      position: absolute;
+      left: 50%;
+      transform: translate(-57%, -3px);
+      width: 32rem;
+      backface-visibility: hidden;
+    }
   }
 
   &__right {
@@ -125,6 +129,7 @@ input:checked + label + .content {
         @include respond(tab-port) {
           width: 5rem;
           padding-right: 1rem;
+          padding-top: 2rem;
         }
       }
       &-text {
@@ -133,6 +138,9 @@ input:checked + label + .content {
         margin-bottom: 3rem;
         &:hover {
           transform: scale(1.15);
+        }
+
+        @include respond(phone) {
         }
       }
     }
@@ -158,6 +166,9 @@ input:checked + label + .content {
         &:hover {
           transform: scale(1.15);
         }
+
+        @include respond(phone) {
+        }
       }
     }
     &-bottom {
@@ -173,7 +184,10 @@ input:checked + label + .content {
         padding-right: 4rem;
         @include respond(tab-port) {
           width: 5rem;
-          padding-right: 1rem;
+          padding: 0;
+        }
+        @include respond(phone) {
+          padding-bottom: 5rem;
         }
       }
 
@@ -182,6 +196,10 @@ input:checked + label + .content {
         transition: all 0.5s;
         &:hover {
           transform: scale(1.15);
+        }
+
+        @include respond(phone) {
+          margin-bottom: 0rem;
         }
       }
     }
@@ -205,6 +223,7 @@ input:checked + label + .content {
         @include respond(tab-port) {
           width: 5rem;
           padding-right: 1rem;
+          padding-top: 2rem;
         }
       }
       &-text {
@@ -212,6 +231,9 @@ input:checked + label + .content {
         transition: all 0.5s;
         &:hover {
           transform: scale(1.15);
+        }
+
+        @include respond(phone) {
         }
       }
     }
@@ -236,6 +258,9 @@ input:checked + label + .content {
         &:hover {
           transform: scale(1.15);
         }
+
+        @include respond(phone) {
+        }
       }
     }
     &-bottom {
@@ -251,6 +276,9 @@ input:checked + label + .content {
           width: 5rem;
           padding: 0;
         }
+        @include respond(phone) {
+          padding-bottom: 5rem;
+        }
       }
 
       &-text {
@@ -258,6 +286,10 @@ input:checked + label + .content {
         transition: all 0.5s;
         &:hover {
           transform: scale(1.15);
+        }
+
+        @include respond(phone) {
+          margin-bottom: 0rem;
         }
       }
     }

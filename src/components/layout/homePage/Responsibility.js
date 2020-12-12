@@ -8,8 +8,8 @@ import arrBottom from '../../../images/arrBottom.png';
 const Responsibility = (props) => {
     const { styleColored, style } = props;
     const imageArray = [arrTop, arrCenter, arrBottom];
-    const textRightArray = ['צריך לטייל איתי', 'לחנך אותי', 'לקחת מדי פעם לוטרינר'];
-    const textLeftArray = ['צריך להאכיל', 'לשחק איתי', 'לאהוב אותי כמו שאני אותך'];
+    const textRightArray = ['לטייל איתי', 'לחנך אותי', 'לקחת לוטרינר'];
+    const textLeftArray = ['להאכיל', 'לשחק איתי', 'לאהוב אותי'];
 
     const [scrollHieght, setscrollHieght] = useState({ reachedResponsibility: false })
     useEffect(() => {

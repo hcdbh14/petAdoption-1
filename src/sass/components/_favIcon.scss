@@ -1,0 +1,14 @@
+.favIcon {
+  position: absolute !important;
+  background: white !important;
+  bottom: -20px;
+  right: 30%;
+  z-index: 2;
+  transform: translate(0.2rem, -0.15rem);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.6);
+
+  @include respond(phone) {
+    bottom: -55%;
+    right: 73%;
+  }
+}

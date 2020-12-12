@@ -8,7 +8,7 @@ const Carousel = (props) => {
     const { carouselPets } = props;
 
     var settings = {
-        autoplay: true,
+        autoplay: false,
         speed: 2000,
         autoplaySpeed: 4000,
         cssEase: "linear",
@@ -41,7 +41,7 @@ const Carousel = (props) => {
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
