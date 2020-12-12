@@ -51,6 +51,13 @@
     line-height: 53px;
   }
 }
+//ACCORDION CSS NO JS TRICK
+input + label + .content {
+  display: none;
+}
+input:checked + label + .content {
+  display: block;
+}
 
 .responsibility {
   max-width: 1;
