@@ -11,7 +11,7 @@ const AdoptMeSection = (props) => {
     return (
         <>
             <div className="main__title">
-                <h2 style={style}>אמצו אותי גם אני</h2> <h2 style={styleColored}>רוצה בית</h2>
+                <h2 style={style}>אמצו אותי גם אני</h2> <h2 className="blue-text" style={styleColored}>רוצה בית</h2>
             </div>
 
             <img src={require('../../../images/mainImage.png')} alt="pet with owner" className="main__image" />
@@ -26,10 +26,10 @@ const AdoptMeSection = (props) => {
                 {!isExpand && <button onClick={handleClick}>V</button>} */}
 
 
-                <input type="checkbox" id="title1" />
-                <label for="title1">מאות בעלי חיים מחכים לכם לאימוץ בסניפי עמותת תנו לחיות לחיות ברחבי הארץ.</label>
+                <input type="checkbox" id="title" />
+                <label for="title">מאות בעלי חיים מחכים לכם לאימוץ בסניפי עמותת תנו לחיות לחיות ברחבי הארץ.</label>
 
-                <div class="content">
+                <div className="content">
                     <p>בחרו את בעל החיים הרצוי, ובעזרת סינונים השונים תוכלו למקד את החיפוש</p>
                     <p>ולמצוא את החיה המתאימה לכם לאימוץ.</p>
                 </div>

@@ -2,7 +2,8 @@ import React from 'react'
 import Navigation from '../Navigation'
 import HeaderToggle from './HeaderToggle';
 import SearchBar from '../ui/SearchBar';
-import Loggo from '../ui/Loggo';
+import Logo from '../ui/Logo';
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -37,7 +38,9 @@ const Header = () => {
             <div className="header__nav__container">
                 <Navigation />
             </div>
-            <Loggo />
+            <Link to="/">
+                <Logo withText={true} withImage={true} />
+            </Link>
             <HeaderToggle />
         </div>
     )

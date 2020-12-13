@@ -54,7 +54,7 @@
 
     &__info {
       background: $color-primary;
-      background-image: url(../../images/paw.png);
+      background-image: url(../../images/paw-light.svg);
       background-size: 7rem;
       background-repeat: no-repeat;
       border-top: 30px solid $color-primary;
@@ -71,6 +71,7 @@
       @include respond(phone) {
         padding: 0 1rem 1rem;
         margin-bottom: 5rem;
+        background-image: none;
       }
     }
 

@@ -53,7 +53,10 @@
 }
 //ACCORDION CSS NO JS TRICK
 input + label + .content {
-  display: none;
+  display: block;
+  @media (max-width: 69.7em) {
+    display: none;
+  }
 }
 input:checked + label + .content {
   display: block;
