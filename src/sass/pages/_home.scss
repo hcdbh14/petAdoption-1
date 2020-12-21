@@ -51,6 +51,16 @@
     line-height: 53px;
   }
 }
+//ACCORDION CSS NO JS TRICK
+input + label + .content {
+  display: block;
+  @media (max-width: 69.7em) {
+    display: none;
+  }
+}
+input:checked + label + .content {
+  display: block;
+}
 
 .responsibility {
   max-width: 1;
@@ -70,7 +80,8 @@
     font-size: 2rem;
   }
   @media (max-width: 69.7em) {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    justify-content: space-between;
   }
 
   &__title {
@@ -94,9 +105,12 @@
 
     @include responsibility;
     width: 30%;
-    @media (max-width: 66em) {
-      // chose design for small devices
-      display: none;
+    @include respond(phone) {
+      position: absolute;
+      left: 50%;
+      transform: translate(-57%, -3px);
+      width: 32rem;
+      backface-visibility: hidden;
     }
   }
 
@@ -114,9 +128,23 @@
 
       &-image {
         padding-right: 5rem;
+
+        @include respond(tab-port) {
+          width: 5rem;
+          padding-right: 1rem;
+          padding-top: 2rem;
+        }
       }
       &-text {
+        transition: all 0.5s;
+
         margin-bottom: 3rem;
+        &:hover {
+          transform: scale(1.15);
+        }
+
+        @include respond(phone) {
+        }
       }
     }
 
@@ -131,6 +159,19 @@
 
       &-image {
         padding-right: 8rem;
+        @include respond(tab-port) {
+          width: 5rem;
+          padding-right: 1rem;
+        }
+      }
+      &-text {
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.15);
+        }
+
+        @include respond(phone) {
+        }
       }
     }
     &-bottom {
@@ -144,10 +185,25 @@
 
       &-image {
         padding-right: 4rem;
+        @include respond(tab-port) {
+          width: 5rem;
+          padding: 0;
+        }
+        @include respond(phone) {
+          padding-bottom: 5rem;
+        }
       }
 
       &-text {
         margin-bottom: -3rem;
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.15);
+        }
+
+        @include respond(phone) {
+          margin-bottom: 0rem;
+        }
       }
     }
   }
@@ -167,9 +223,21 @@
       &-image {
         padding-right: 5rem;
         transform: rotateY(180deg);
+        @include respond(tab-port) {
+          width: 5rem;
+          padding-right: 1rem;
+          padding-top: 2rem;
+        }
       }
       &-text {
         margin-bottom: 3rem;
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.15);
+        }
+
+        @include respond(phone) {
+        }
       }
     }
 
@@ -183,6 +251,19 @@
       &-image {
         padding-right: 8rem;
         transform: rotateY(180deg);
+        @include respond(tab-port) {
+          width: 5rem;
+          padding-right: 1rem;
+        }
+      }
+      &-text {
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.15);
+        }
+
+        @include respond(phone) {
+        }
       }
     }
     &-bottom {
@@ -194,10 +275,25 @@
 
       &-image {
         transform: rotateY(180deg);
+        @include respond(tab-port) {
+          width: 5rem;
+          padding: 0;
+        }
+        @include respond(phone) {
+          padding-bottom: 5rem;
+        }
       }
 
       &-text {
         margin-bottom: -3rem;
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.15);
+        }
+
+        @include respond(phone) {
+          margin-bottom: 0rem;
+        }
       }
     }
   }
@@ -205,5 +301,34 @@
   &-centerImage {
     object-fit: contain;
     width: 30%;
+  }
+}
+
+.pets-section_more-pets {
+  background: #fa8e2b;
+  display: flex;
+  width: 20rem;
+  height: 6rem;
+  border: 1px solid #fa8e2b;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+  border-radius: 20px;
+  margin: 2rem auto 5rem;
+  font-size: 2.5rem;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s;
+  backface-visibility: hidden;
+
+  &:hover {
+    @include buttonHover;
+  }
+
+  & a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
   }
 }

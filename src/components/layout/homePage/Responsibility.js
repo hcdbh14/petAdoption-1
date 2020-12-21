@@ -8,8 +8,8 @@ import arrBottom from '../../../images/arrBottom.png';
 const Responsibility = (props) => {
     const { styleColored, style } = props;
     const imageArray = [arrTop, arrCenter, arrBottom];
-    const textRightArray = ['צריך לטייל איתי', 'לחנך אותי', 'לקחת מדי פעם לוטרינר'];
-    const textLeftArray = ['צריך להאכיל', 'לשחק איתי', 'לאהוב אותי כמו שאני אותך'];
+    const textRightArray = ['לטייל איתי', 'לחנך אותי', 'לקחת לוטרינר'];
+    const textLeftArray = ['להאכיל', 'לשחק איתי', 'לאהוב אותי'];
 
     const [scrollHieght, setscrollHieght] = useState({ reachedResponsibility: false })
     useEffect(() => {
@@ -22,7 +22,7 @@ const Responsibility = (props) => {
     const handleScroll = e => {
         let element = e.target.scrollingElement
         let responsibility = document.getElementsByClassName("main__responsibility");
-        if (element.scrollTop >= responsibility[0].clientHeight) {
+        if (element.scrollTop >= responsibility[0].clientHeight || document.documentElement.clientWidth < 700) {
             setscrollHieght({ reachedResponsibility: true })
         }
         else {
@@ -32,7 +32,7 @@ const Responsibility = (props) => {
     return (
         <div className="main__responsibility">
             <div className="responsibility__title">
-                <h1 style={styleColored} >קחו אחריות</h1> <h1 style={style}>לפני שלוקחים...</h1>
+                <h2 className="orange-text" style={styleColored} >קחו אחריות</h2> <h2 style={style}>לפני שלוקחים...</h2>
             </div>
             {scrollHieght.reachedResponsibility ?
                 <div className="responsibility" >

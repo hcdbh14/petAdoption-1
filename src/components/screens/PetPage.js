@@ -6,12 +6,9 @@ import { fetchPet } from '../../store/pets/action'
 import { useDispatch } from 'react-redux';
 const PetPage = () => {
     const dispatch = useDispatch();
-
     useEffect(() => {
-
         dispatch(fetchPet("J4LqW0qyh5UGoiZJ9GisJVqZ6GJ3"))
         return () => {
-
         }
     }, [])
     return (

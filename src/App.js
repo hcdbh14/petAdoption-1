@@ -1,5 +1,4 @@
 import React from 'react';
-// import logo from './logo.svg';
 import {
   BrowserRouter as Router,
   Route,
@@ -15,6 +14,7 @@ import Header from './components/layout/header/Header';
 import Footer from './components/layout/footer/Footer';
 import PetPage from './components/screens/PetPage';
 import SearchResultsPage from './components/screens/SearchResultsPage';
+import ContactUs from './components/layout/ui/contactUs/ContactUs';
 
 function App() {
 
@@ -29,6 +29,7 @@ function App() {
       <Route path={ROUTES.ABOUT} component={AboutPage} />
       <Route path={ROUTES.CONTACT} component={ContactPage} />
       <Route exact path={ROUTES.SearchResults} component={SearchResultsPage} />
+      <ContactUs />
       <Footer />
     </Router>
   );

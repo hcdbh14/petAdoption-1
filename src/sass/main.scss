@@ -13,7 +13,6 @@
 
 // @import "layout/navigation";
 
-
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/footer";
@@ -26,6 +25,8 @@
 @import "layout/petCard";
 @import "layout/gang";
 
-html, body {
-    overflow-x: hidden;
+html,
+body {
+  overflow-x: hidden;
 }
+
