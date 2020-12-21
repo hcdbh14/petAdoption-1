@@ -1,6 +1,8 @@
 @import "abstract/mixins";
 @import "abstract/variables";
 
+@import "components/favIcon";
+
 @import "base/animations";
 @import "base/base";
 @import "base/typogrophy";
@@ -29,4 +31,3 @@ html,
 body {
   overflow-x: hidden;
 }
-
