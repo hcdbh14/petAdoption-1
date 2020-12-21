@@ -6,7 +6,7 @@
 @import "base/typogrophy";
 @import "base/utilities";
 
-@import "components/favIcon";
+// @import "components/mainBtn";
 
 @import "pages/home";
 // @import "layout/grid";
@@ -16,9 +16,16 @@
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/footer";
+@import "layout/contact";
 @import "layout/carousel";
+@import "pages/about";
 @import "pages/search";
 @import "layout/dropDown";
 @import "layout/collapsible";
 @import "layout/petCard";
-@import "layout/contactUs";
+@import "layout/gang";
+
+html,
+body {
+  overflow-x: hidden;
+}
