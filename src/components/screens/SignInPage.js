@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { signIn, signOut } from '../../store/auth/action'
 import { useSelector, useDispatch } from 'react-redux';
-import Form from '../layout/form/Form';
+import Form from '../layout/contact/contactUs';
 import { likePet, getLikedPets, unlikePet } from '../../util/LikeManager';
 
 const SignInPage = () => {

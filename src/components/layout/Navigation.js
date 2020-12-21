@@ -8,16 +8,16 @@ const Navigation = () => {
         <div className="header__nav" >
             <ul className="header__nav__list">
                 <li>
-                    <Link to={ROUTES.SIGN_IN} className="header__nav__list-link">ראשי</Link>
+                    <Link to={ROUTES.HOME} className="header__nav__list-link">ראשי</Link>
                 </li>
                 <li>
-                    <Link to={ROUTES.SIGN_UP} className="header__nav__list-link">חיות אחרות</Link>
+                    <Link to={ROUTES.SEARCH} className="header__nav__list-link">כל החיות</Link>
                 </li>
                 <li>
-                    <Link to={ROUTES.SIGN_IN} className="header__nav__list-link">אודות</Link>
+                    <Link to={ROUTES.ABOUT} className="header__nav__list-link">אודות</Link>
                 </li>
                 <li>
-                    <Link to={ROUTES.SEARCH} className="header__nav__list-link">צור קשר</Link>
+                    <Link to={ROUTES.CONTACT} className="header__nav__list-link">צור קשר</Link>
                 </li>
             </ul>
         </div>

@@ -1,0 +1,51 @@
+.about {
+
+    &__container {
+        width: 100%;
+        background-image: url(../../images/women-and-dog.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        margin-top: 300px;
+        padding-right: 131px;
+        padding-bottom: 500px;
+
+        @include respond(tab-port) {
+            padding-right: 10px;
+            background-image: url(../../images/women-and-dog-mobile.svg);
+            background-size: contain;
+        }
+    }
+
+    &__blueTitle {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 4.375rem;
+        line-height: 83px;
+        margin-bottom: 40px;
+        color: $color-primary;
+    }
+
+    &__paragraph {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.5rem;
+        line-height: 47px;
+        text-align: right;
+    }
+
+    &__orangeTitle {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 4.375rem;
+        line-height: 83px;
+        text-align: right;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        color: $color-secondary-dark;
+
+    }
+}

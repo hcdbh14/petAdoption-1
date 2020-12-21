@@ -3,7 +3,8 @@
     height: auto;
     background: $color-footer-dark;
     background-repeat: no-repeat;
-    padding-bottom: 25px;
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
 }
 
 .footer-container {
@@ -24,7 +25,7 @@
     color: $color-white;
     list-style: none;
     text-align: right;
-   
+
     @include respond(normal-desktop) {
         margin-right: -20px;
         padding-right: 0px;
@@ -48,7 +49,7 @@
     font-family: Rubik;
     font-style: normal;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 40px;
     margin-top: 30px;
 
@@ -56,49 +57,43 @@
         color: $color-primary;
     }
 
-    @include respond(normal-desktop) {
-        font-size: 1.5vw;
-    }
-
     @include respond(tab-port) {
-        font-weight: 250;
-        font-size: 18px;
         line-height: 20px;
     }
 }
 
 .colum {
-    margin-left: 200px;
+    margin-left: 5vw;
     display: inline-block;
     vertical-align: top;
     padding: 3em;
-    
+
     &--left {
         @extend .colum;
-        margin-left: 0px;
+        margin-left: 5vw;
     }
-
-    @include respond(normal-desktop) {
-        margin-right: 50px;
-        margin-left: 10px;
-    }
-
+    
     @include respond(tab-port) {
         display: none;
     }
 }
 
+.rows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo-image {
     width: 100%;
-    height: 20vw;
-    max-height: 500px;
-    background-image: url(../../images/footer-background-with-icon.png);
+    max-width: 400px;
+    height: 14vw;
+    background-image: url(../../images/footer-icon.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
     @include respond(tab-port) {
-        background-image: url(../../images/logo-mobile.png);
         background-repeat: no-repeat;
         background-position: center;
         height: 30vw;
@@ -113,9 +108,8 @@
 .logo-and-social-colum {
     display: inline-block;
     width: 30%;
-    margin-left: 100px;
+    max-width: 400px;
     text-align: center;
-    background-color: $color-footer-dark;
 
     @include respond(normal-desktop) {
         margin-left: 25px;
@@ -135,17 +129,12 @@
 }
 
 .socialButton {
-
-            width: 44px;
-        height: 43px;
-        border-radius: 30px;
-        margin-top: 15px;
-
+   
+    width: 44px;
+    height: 43px;
+    border-radius: 30px;
     margin-right: 20px;
-    // width: 64px;
-    // height: 63px;
     border: 8px solid $color-primary;
-    // border-radius: 30px;
     outline: none;
     background-size: contain;
     background: $color-primary;
@@ -164,13 +153,6 @@
         @extend .socialButton;
         margin-right: 0;
     }
-
-    // @include respond(tab-port) {
-    //     width: 54px;
-    //     height: 53px;
-    //     border-radius: 30px;
-    //     margin-top: 15px;
-    // }
 
     @include respond(phone) {
         width: 43px;
