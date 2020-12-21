@@ -123,7 +123,7 @@ input:checked + label + .content {
       align-items: flex-start;
 
       animation: moveInRight 0.7s;
-      animation-delay: 0.5s;
+      animation-delay: 0.3s;
       animation-fill-mode: backwards;
 
       &-image {
@@ -154,7 +154,7 @@ input:checked + label + .content {
       align-items: center;
 
       animation: moveInRight 0.7s;
-      animation-delay: 1s;
+      animation-delay: 0.6s;
       animation-fill-mode: backwards;
 
       &-image {
@@ -180,7 +180,7 @@ input:checked + label + .content {
       align-items: flex-end;
 
       animation: moveInRight 0.7s;
-      animation-delay: 1.5s;
+      animation-delay: 0.9s;
       animation-fill-mode: backwards;
 
       &-image {
@@ -217,7 +217,7 @@ input:checked + label + .content {
       display: flex;
       align-items: flex-start;
       animation: moveInLeft 0.7s;
-      animation-delay: 0.5s;
+      animation-delay: 0.3s;
       animation-fill-mode: backwards;
 
       &-image {
@@ -245,7 +245,7 @@ input:checked + label + .content {
       display: flex;
       align-items: center;
       animation: moveInLeft 0.7s;
-      animation-delay: 1s;
+      animation-delay: 0.6s;
       animation-fill-mode: backwards;
 
       &-image {
@@ -270,7 +270,7 @@ input:checked + label + .content {
       display: flex;
       align-items: flex-end;
       animation: moveInLeft 0.7s;
-      animation-delay: 1.5s;
+      animation-delay: 0.9s;
       animation-fill-mode: backwards;
 
       &-image {
