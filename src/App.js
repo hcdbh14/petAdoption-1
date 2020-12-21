@@ -29,7 +29,6 @@ function App() {
       <Route path={ROUTES.ABOUT} component={AboutPage} />
       <Route path={ROUTES.CONTACT} component={ContactPage} />
       <Route exact path={ROUTES.SearchResults} component={SearchResultsPage} />
-      <ContactUs />
       <Footer />
     </Router>
   );
