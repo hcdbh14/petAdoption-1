@@ -22,7 +22,7 @@ const Responsibility = (props) => {
     const handleScroll = e => {
         let element = e.target.scrollingElement
         let responsibility = document.getElementsByClassName("main__responsibility");
-        if (element.scrollTop >= responsibility[0].clientHeight) {
+        if (element.scrollTop >= responsibility[0].clientHeight || document.documentElement.clientWidth < 700) {
             setscrollHieght({ reachedResponsibility: true })
         }
         else {

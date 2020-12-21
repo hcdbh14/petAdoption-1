@@ -8,24 +8,21 @@ const decrement = firebase.firestore.FieldValue.increment(-1);
 
 export const getLikedPets = () => {
 
-    var likedPets = localStorage.getItem('likedPets');
-    console.log(likedPets);
-    var likedPetsList = (likedPets) ? JSON.parse(likedPets) : [];
-    console.log(likedPetsList);
-
+    let likedPets = localStorage.getItem('likedPets');
+    let likedPetsList = (likedPets) ? JSON.parse(likedPets) : [];
     return likedPetsList;
 };
 
 
 export const likePet = (petId) => {
 
-    var likedPetsList = getLikedPets();
+    let likedPetsList = getLikedPets();
 
     if (likedPetsList.includes(petId) === false) {
 
         likedPetsList.push(petId);
         localStorage.setItem('likedPets', JSON.stringify(likedPetsList));
-        var petRef = firestore.collection("Cards_Data").doc(petId);
+        let petRef = firestore.collection("Cards_Data").doc(petId);
 
         if (auth.currentUser) {
             petRef.update({ likeCount: increment });
@@ -38,11 +35,11 @@ export const likePet = (petId) => {
 
 export const unlikePet = (petId) => {
 
-    var likedPetsList = getLikedPets();
+    let likedPetsList = getLikedPets();
 
     if (likedPetsList.includes(petId) === true) {
 
-        var index = likedPetsList.indexOf(petId);
+        let index = likedPetsList.indexOf(petId);
 
         if (index > -1) {
             likedPetsList.splice(index, 1);
@@ -51,7 +48,7 @@ export const unlikePet = (petId) => {
 
 
         if (auth.currentUser) {
-            var petRef = firestore.collection("Cards_Data").doc(petId);
+            let petRef = firestore.collection("Cards_Data").doc(petId);
             petRef.update({ likeCount: decrement });
         }
     }

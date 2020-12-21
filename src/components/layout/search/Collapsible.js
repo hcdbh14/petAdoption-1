@@ -13,7 +13,7 @@ const Collapsible = (props) => {
         ]
     }
     const [state, setState] = useState(initialState)
-    
+
     const expandOrCollapse = (index) => {
         let tmp = state.searchOptions;
         console.log(index);

@@ -5,7 +5,6 @@ const AdoptMeSection = (props) => {
 
     const [isExpand, setIsExpand] = useState(false)
     const handleClick = () => {
-        console.log(!isExpand)
         setIsExpand(!isExpand)
     }
     return (
