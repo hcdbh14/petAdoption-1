@@ -14,7 +14,6 @@ import Header from './components/layout/header/Header';
 import Footer from './components/layout/footer/Footer';
 import PetPage from './components/screens/PetPage';
 import SearchResultsPage from './components/screens/SearchResultsPage';
-import ContactUs from './components/layout/ui/contactUs/ContactUs';
 
 function App() {
 
