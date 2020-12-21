@@ -8,31 +8,17 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 35px;
-  }
 
-  &__section {
-    background-color: #f2f2f2;
-    text-align: center;
-    height: 500px;
-    width: 80%;
-    margin-right: 10%;
-    margin-left: 10%;
+    &__text {
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: 500;
+      font-size:  3.125rem;
+    }
 
-    &__advanced {
-      float: right;
-      height: 50px;
-      width: 20%;
-   
-      &__title {
-        font-family: Rubik;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 35px;
-      }
+    &__image {
+      width: 46.09px;
+      height: 39px;
     }
   }
 }
