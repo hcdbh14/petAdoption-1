@@ -15,9 +15,10 @@ const HomePage = () => {
 
         <div className="main">
             <HeaderImage />
-            <AdoptMeSection styleColored={styleColored} style={style} />
             <Responsibility styleColored={styleColored} style={style} />
             <PetsToAdoptSection />
+            <AdoptMeSection styleColored={styleColored} style={style} />
+
         </div >
 
     )

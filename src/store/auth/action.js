@@ -8,7 +8,7 @@ export const facebookSignIn = () => async dispatch => {
 
   var provider = new firebase.auth.FacebookAuthProvider();
 
-  auth.signInWithPopup(provider).then(function(result) {
+  auth.signInWithPopup(provider).then(function (result) {
     // This gives you a Facebook Access Token. You can use it to access the Facebook API.
     var token = result.credential.accessToken;
     // The signed-in user info.
@@ -16,7 +16,7 @@ export const facebookSignIn = () => async dispatch => {
     console.log('success');
     dispatch(signInSuccess());
     // ...
-  }).catch(function(err) {
+  }).catch(function (err) {
     // Handle Errors here.
     var errorCode = err.code;
     var errorMessage = err.message;
@@ -27,13 +27,13 @@ export const facebookSignIn = () => async dispatch => {
     dispatch(signInFail(err.message));
     // ...
   });
-  }
+}
 
 export const googleSignIn = () => async dispatch => {
 
   var provider = new firebase.auth.GoogleAuthProvider();
 
-  auth.signInWithPopup(provider).then(function(result) {
+  auth.signInWithPopup(provider).then(function (result) {
     // This gives you a Google Access Token. You can use it to access the Google API.
     var token = result.credential.accessToken;
     // The signed-in user info.
@@ -42,17 +42,17 @@ export const googleSignIn = () => async dispatch => {
     dispatch(signInSuccess());
     // ...
   })
-  .catch(function(err) {
-    // Handle Errors here.
-    var errorCode = err.code;
-    var errorMessage = err.message;
-    // The email of the user's account used.
-    var email = err.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = err.credential;
-    dispatch(signInFail(err.message));
-    // ...
-  });
+    .catch(function (err) {
+      // Handle Errors here.
+      var errorCode = err.code;
+      var errorMessage = err.message;
+      // The email of the user's account used.
+      var email = err.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = err.credential;
+      dispatch(signInFail(err.message));
+      // ...
+    });
 };
 
 export const signIn = (email, password) => async dispatch => {
@@ -142,15 +142,15 @@ export const checkIfUserVerified = () => async dispatch => {
 
 export const signInAnonymously = (petRef) => {
   auth.signInAnonymously()
-  .then(() => {
-    console.log("success")
-    petRef.update({ likeCount: firebase.firestore.FieldValue.increment(1) });
-  })
-  .catch((err) => {
-    console.log(err.code);
-    console.log(err.message);
-    console.log('failed to sign user')
-  })
+    .then(() => {
+      console.log("success")
+      petRef.update({ likeCount: firebase.firestore.FieldValue.increment(1) });
+    })
+    .catch((err) => {
+      console.log(err.code);
+      console.log(err.message);
+      console.log('failed to sign user')
+    })
 }
 
 
