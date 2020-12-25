@@ -29,6 +29,7 @@
   }
 
   &__nav {
+    
     display: flex;
     top: 0;
     left: 0;
@@ -40,10 +41,11 @@
     }
 
     &__container {
+  
       height: fit-content;
-      display: contents;
-      left: 50%;
-      transform: translate(-50%, 0);
+      
+      // right: 50%;
+      // transform: translate(50%, 0);
 
       @include respond(tab-port) {
         position: fixed;
@@ -74,11 +76,12 @@
     }
 
     &__list {
+      width: 75vw;
       display: flex;
-      justify-content: space-around;
+      justify-content: right;
       list-style-type: none;
       margin: 0;
-      text-align: center;
+      text-align: right;
 
       &-link {
         text-decoration: none;
@@ -86,7 +89,7 @@
         font-family: Rubik;
         font-style: normal;
         font-weight: 500;
-        font-size: 1.8rem;
+        font-size: 2.5rem;
         line-height: 2.5rem;
         padding: 5.5rem 3rem;
         margin: 0 2rem;
@@ -102,13 +105,6 @@
       }
     }
   }
-}
-
-.login-button {
-  height: 2vw;
-  width: 2vw;
-  margin-top: 30px;
-  margin-right: 60px;
 }
 
 .searchBar {
