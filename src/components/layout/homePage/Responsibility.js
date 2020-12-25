@@ -11,36 +11,59 @@ const Responsibility = (props) => {
     const textRightArray = ['לטייל איתי', 'לחנך אותי', 'לקחת לוטרינר'];
     const textLeftArray = ['להאכיל', 'לשחק איתי', 'לאהוב אותי'];
 
-    const [scrollHieght, setscrollHieght] = useState({ reachedResponsibility: false })
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
         }
-    }, [scrollHieght])
+    }, [])
 
     const handleScroll = e => {
-        let element = e.target.scrollingElement
-        let responsibility = document.getElementsByClassName("main__responsibility");
-        if (element.scrollTop >= responsibility[0].clientHeight || document.documentElement.clientWidth < 700) {
-            setscrollHieght({ reachedResponsibility: true })
-        }
-        else {
-            setscrollHieght({ reachedResponsibility: false })
-        }
+        const isElementInViewport = el => {
+            const pixFromElementTop = 1;
+            let rect = el.getBoundingClientRect();
+            return (
+                (rect.top + pixFromElementTop <= 0 && rect.bottom >= 0) ||
+                (rect.bottom + pixFromElementTop >=
+                    (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.top + pixFromElementTop <=
+                    (window.innerHeight || document.documentElement.clientHeight)) ||
+                (rect.top + pixFromElementTop >= 0 &&
+                    rect.bottom + pixFromElementTop <=
+                    (window.innerHeight || document.documentElement.clientHeight))
+            );
+        };
+        let scroll =
+            window.requestAnimationFrame ||
+            // IE Fallback
+            function (callback) {
+                window.setTimeout(callback, 1000 / 60);
+            };
+        let elementsToShow = document.querySelectorAll(".show-on-scroll");
+        const loop = () => {
+            Array.prototype.forEach.call(elementsToShow, function (element) {
+                if (isElementInViewport(element)) {
+                    element.classList.add("is-visible");
+                } else {
+                    element.classList.remove("is-visible");
+                }
+            });
+            scroll(loop);
+        };
+        loop();
     }
+
+
     return (
-        <div className="main__responsibility">
+        <div className="responsibility-section">
             <div className="responsibility__title">
                 <h2 className="orange-text" style={styleColored} >קחו אחריות</h2> <h2 style={style}>לפני שלוקחים...</h2>
             </div>
-            {scrollHieght.reachedResponsibility ?
-                <div className="responsibility" >
-                    <ResponsibilitySide side={"right"} imageArray={imageArray} textArray={textRightArray} />
-                    <img src={require('../../../images/responsibility.png')} alt="pet image" className="responsibility__centerImage" />
-                    <ResponsibilitySide side={"left"} imageArray={imageArray} textArray={textLeftArray} />
-                </div> :
-                null}
+            <div className="responsibility show-on-scroll" >
+                <ResponsibilitySide side={"right"} imageArray={imageArray} textArray={textRightArray} />
+                <img src={require('../../../images/responsibility.png')} alt="pet image" className="responsibility__centerImage show-on-scroll" />
+                <ResponsibilitySide side={"left"} imageArray={imageArray} textArray={textLeftArray} />
+            </div>
         </div>
     )
 }
