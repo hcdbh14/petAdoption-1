@@ -103,6 +103,9 @@ input:checked + label + .content {
   font-size: 3rem;
   line-height: 5.9rem;
   display: flex;
+  @include respond(phone) {
+    padding-top: 3rem;
+  }
 
   // &-section {
   //   transform: translateY(40%);
@@ -154,9 +157,13 @@ input:checked + label + .content {
     @include respond(phone) {
       position: absolute;
       left: 50%;
-      transform: translate(-57%, -3px);
+      transform: translate(-58%, 7%);
       width: 32rem;
       backface-visibility: hidden;
+
+      &.is-visible {
+        animation: none;
+      }
     }
   }
 
