@@ -13,17 +13,18 @@ const HeaderToggle = () => {
 
             <nav class="navigation__nav">
                 <ul class="navigation__list">
-                    <li class="navigation__item">
-                        <Link to={ROUTES.SIGN_IN} className="navigation__link">צוק קשר</Link>
+
+                    <li>
+                        <Link to={ROUTES.HOME} className="navigation__link">ראשי</Link>
                     </li>
-                    <li class="navigation__item">
-                        <Link to={ROUTES.SIGN_UP} className="navigation__link">מידע למאמצים</Link>
+                    <li>
+                        <Link to={ROUTES.SEARCH} className="navigation__link">כל החיות</Link>
                     </li>
-                    <li class="navigation__item">
-                        <Link to={ROUTES.SIGN_IN} className="navigation__link">נהלי האימוץ</Link>
+                    <li>
+                        <Link to={ROUTES.ABOUT} className="navigation__link">אודות</Link>
                     </li>
-                    <li class="navigation__item">
-                        <Link to={ROUTES.SEARCH} className="navigation__link">אבידות ומציאות</Link>
+                    <li>
+                        <Link to={ROUTES.CONTACT} className="navigation__link">צור קשר</Link>
                     </li>
                 </ul>
             </nav>
