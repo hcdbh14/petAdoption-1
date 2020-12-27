@@ -18,6 +18,7 @@ const SearchSection = () => {
         size: '',
         race: ''
     })
+    
     useEffect(() => {
         dispatch(clearSearchResults())
         setsearchPetState(petsState.searchInputs)

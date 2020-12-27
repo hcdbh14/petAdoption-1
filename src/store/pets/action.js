@@ -1,29 +1,52 @@
-import { petsTypes } from './petsTypes'
-import { firestore } from '../../config/firebase';
-import { buildQuery } from '../../util/functions';
+import axios from '../../config/axios';
+import { petsTypes } from './petsTypes';
 
-export const clearSearchResults = () => {
-    return {
-        type: petsTypes.CLEAR_SEARCH_RESULTS,
-    };
-}
 
-export const fetchPets = (search) => {
-    return async (dispatch) => {
-        try {
-            dispatch(fetchPetsStart());
-            let query = firestore.collection('Cards_Data')
-            query = buildQuery(query, search)
 
-            query.get()
-                .then(querySnapshot => {
-                    const data = querySnapshot.docs.map(doc => doc.data());
-                    dispatch(fetchPetsSuccess(data));
-                });
-
-        } catch (err) {
-            dispatch(fetchPetsFail(err))
+export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGroup, needCount) => {
+    var count = 0
+    var urlPath = "/notices"
+    var countUrlPath = "/notices/count"
+    return (dispatch) => {
+        dispatch(fetchPetsStart)
+        if(petType !== "" || region !== "" || gender !== "" || ageGroup !== "") {
+            urlPath += "/filter"
+            countUrlPath += "/filter"
         }
+        if (needCount) {
+            axios.get(countUrlPath, 
+                { params: { 
+                    petType: petType,
+                    region: region,
+                    gender: gender,
+                    ageGroup: ageGroup
+                } }).then(response => {
+                     count = response.data.count
+                })
+        }
+        axios.get(urlPath, 
+        { params: { 
+            pageNumber: pageNumber,
+            pageSize: pageSize,
+            petType: petType,
+            region: region,
+            gender: gender,
+            ageGroup: ageGroup
+        } })
+
+            .then(response => {
+                const pets = response.data
+                if (needCount) {
+                    dispatch(fetchPetsAndCountSuccess(pets, count))
+                } else {
+                    dispatch(fetchPetsSuccess(pets))
+                }
+            })
+            .catch(error => {
+                const err = error.message
+                console.log(err)
+                dispatch(fetchPetsFail(err))
+            })
     }
 }
 
@@ -32,26 +55,6 @@ export const setSearchInputs = (searchInputs) => {
         type: petsTypes.SET_SEARCH_INPUTS,
         searchInputs
     };
-}
-
-export const fetchPet = (id) => {
-    return async (dispatch) => {
-        dispatch(fetchPetsStart())
-        try {
-            firestore.collection('Cards_Data')
-                .doc(id).get().then(function (doc) {
-                    if (doc.exists) {
-                        const pet = doc.data()
-                        dispatch(fetchPetSuccess(pet))
-                    } else {
-                        console.log("No such document!");
-                    }
-                })
-        } catch (err) {
-            dispatch(fetchPetsFail(err))
-            console.log(err.message);
-        }
-    }
 }
 
 export const fetchPetsStart = () => {
@@ -65,6 +68,14 @@ export const fetchPetsFail = (err) => {
     };
 }
 
+export const fetchPetsAndCountSuccess = (pets, count) => {
+    return {
+        type: petsTypes.SEARCH_PETS_AND_COUNT_SUCCESS,
+        count,
+        pets
+    };
+}
+
 export const fetchPetsSuccess = (pets) => {
     return {
         type: petsTypes.SEARCH_PETS_SUCCESS,
@@ -72,9 +83,3 @@ export const fetchPetsSuccess = (pets) => {
     };
 }
 
-export const fetchPetSuccess = (pet) => {
-    return {
-        type: petsTypes.SEARCH_PET_SUCCESS,
-        pet
-    };
-}

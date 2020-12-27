@@ -28,9 +28,9 @@ export const addGenderFitler = (text) => {
     };
 }
 
-export const addAgeFitler = (ageNum) => {
+export const addAgeFitler = (ageGroup) => {
     return {
         type: filterTypes.BY_AGE,
-        input: ageNum
+        input: ageGroup
     };
 }

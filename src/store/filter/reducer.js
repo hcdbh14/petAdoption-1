@@ -1,12 +1,11 @@
 import { filterTypes } from './filterTypes';
 
 const initialState = {
-
     name: "",
     race: "",
     area: "",
     gender: "",
-    age: 0,
+    ageGroup: "",
     filters: [
         { type: "byName", on: false },
         { type: "byRace", on: false },
@@ -39,7 +38,7 @@ const filterReducer = (state = initialState, action) => {
         
         case filterTypes.BY_AGE:
             state.filters[4].on = !state.filters[4].on;
-            return { ...state, age: action.input }
+            return { ...state, ageGroup: action.input }
 
         default:
             return state;
