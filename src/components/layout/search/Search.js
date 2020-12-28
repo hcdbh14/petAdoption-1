@@ -22,6 +22,7 @@ const Search = () => {
                     <p>{pet.region}</p>
                     <p>{pet.gender}</p>
                     <p>{pet.ageGroup}</p>
+                    <img src={`data:image/png;base64, ${pet.image}`} />
                     <br />
                     <br />
                 </div>)
@@ -43,8 +44,8 @@ const Search = () => {
         <div className="search">
             <petsList />
             <Title />
-        <h1>pets count is {petsState.count}</h1>
-        <h1>Number of pages we need {Math.trunc((petsState.count + 9 - 1) / 9)}</h1>
+            <h1>pets count is {petsState.count}</h1>
+            <h1>Number of pages we need {Math.trunc((petsState.count + 9 - 1) / 9)}</h1>
             <div class="select">
                 <select ref={(input) => pageNumber = input}>
                     <option value="0">pageNumber</option>
@@ -62,7 +63,7 @@ const Search = () => {
 
                 <select ref={(input) => petType = input}>
                     <option value="">סוג חיה</option>
-                    <option value= "dog">כלב</option>
+                    <option value="dog">כלב</option>
                     <option value="cat">חתול</option>
                     <option value="other">אחר</option>
                 </select>
