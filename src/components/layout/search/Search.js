@@ -9,15 +9,8 @@ const Search = () => {
             loadPets()
         }, []) 
 
- 
-    
-    var needCount = false
     var pageNumber = ""
     var pageSize = ""
-    var petType = ""
-    var region = ""
-    var gender = ""
-    var ageGroup = ""
     const dispatch = useDispatch();
     const petsState = useSelector(state => state.petsReducer);
 
@@ -44,18 +37,13 @@ const Search = () => {
         } 
     }
 
-    const fetchPetsClick = () => {
-        if (petsState.pageNum === 0) {
-            needCount = true
-        } else {
-            needCount = false
-        }
-        dispatch(fetchPets(pageNumber.value, pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, needCount))
+    const handleSearchClick = () => {
+        dispatch(fetchPets(pageNumber.value, pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true))
     }
 
     const moveToNextPage = (chosenPageNum) => {
 
-        dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, needCount))
+        dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
     }
 
     const petTypeHandleChange = (pickedValue) => {
@@ -133,7 +121,7 @@ const Search = () => {
                             </select>
                         </div>
 
-                        <button onClick={fetchPetsClick}>fetchPets</button>
+                        <button onClick={handleSearchClick}>fetchPets</button>
 
                         <p>
                             {petsList}
