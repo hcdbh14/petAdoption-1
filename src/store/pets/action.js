@@ -80,3 +80,10 @@ export const fetchPetsSuccess = (pets) => {
     };
 }
 
+    export const updateFilter = () => {
+        return {
+            type: petsTypes.SEARCH_PETS_UPDATE_FILTER
+            
+        };
+}
+

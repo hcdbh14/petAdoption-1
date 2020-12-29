@@ -5,11 +5,12 @@ const initialState = {
     pageNum: 0,
     searchResults: [],
     searchInputs: {
-        type: '',
+        petType: '',
         region: '',
         gender: '',
         ageGroup: ''
     },
+    reload: false,
     loading: false,
     error: ""
 };
@@ -28,7 +29,10 @@ const petReducer = (state = initialState, action) => {
 
         case petsTypes.SEARCH_PETS_AND_COUNT_SUCCESS:
             return { ...state, loading: false, searchResults: action.pets, count: action.count, pageNum: action.pageNum }
-            
+        
+        case petsTypes.SEARCH_PETS_UPDATE_FILTER:
+            return { ...state, reload: true}
+
         default:
             return state;
     }

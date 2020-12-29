@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Title from './Title';
-import { fetchPets } from '../../../store/pets/action';
+import { fetchPets, updateFilter } from '../../../store/pets/action';
 
 const Search = () => {
+    
+        useEffect(()=>{
+            loadPets()
+        }, []) 
 
+ 
+    
     var needCount = false
     var pageNumber = ""
     var pageSize = ""
@@ -32,6 +38,11 @@ const Search = () => {
             <div> No pets yet</div>
         )
 
+    const loadPets = () => {
+        if (petsState.count === 0 || petsState.reload) {
+            dispatch(fetchPets(pageNumber.value, pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true))
+        } 
+    }
 
     const fetchPetsClick = () => {
         if (petsState.pageNum === 0) {
@@ -39,12 +50,32 @@ const Search = () => {
         } else {
             needCount = false
         }
-        dispatch(fetchPets(pageNumber.value, pageSize.value, petType.value, region.value, gender.value, ageGroup.value, needCount))
+        dispatch(fetchPets(pageNumber.value, pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, needCount))
     }
 
     const moveToNextPage = (chosenPageNum) => {
 
-        dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, petType.value, region.value, gender.value, ageGroup.value, needCount))
+        dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, needCount))
+    }
+
+    const petTypeHandleChange = (pickedValue) => {
+        petsState.searchInputs.petType = pickedValue.target.value
+        dispatch(updateFilter())
+    }
+
+    const regionHandleChange = (pickedValue) => {
+        petsState.searchInputs.region = pickedValue.target.value
+        dispatch(updateFilter())
+    }
+
+    const genderHandleChange = (pickedValue) => {
+        petsState.searchInputs.gender = pickedValue.target.value
+        dispatch(updateFilter())
+    }
+
+    const ageGroupHandleChange = (pickedValue) => {
+        petsState.searchInputs.ageGroup = pickedValue.target.value
+        dispatch(updateFilter())
     }
 
     return (
@@ -73,27 +104,28 @@ const Search = () => {
                                 <option value="4">4</option>
                             </select>
 
-                            <select ref={(input) => petType = input}>
+                            <select value={petsState.searchInputs.petType} onChange={petTypeHandleChange}>
                                 <option value="">סוג חיה</option>
                                 <option value="dog">כלב</option>
                                 <option value="cat">חתול</option>
                                 <option value="other">אחר</option>
                             </select>
 
-                            <select ref={(input) => region = input}>
+                            <select value={petsState.searchInputs.region} onChange={regionHandleChange}>
                                 <option value="">אזור</option>
                                 <option value="north">צפון</option>
                                 <option value="center">מרכז</option>
                                 <option value="south">דרום</option>
                             </select>
 
-                            <select ref={(input) => gender = input}>
+                            <select value={petsState.searchInputs.gender} onChange={genderHandleChange}>
                                 <option value="">מין</option>
                                 <option value="male">זכר</option>
                                 <option value="female">נקבה</option>
                             </select>
 
-                            <select ref={(input) => ageGroup = input}>
+        
+                            <select value={petsState.searchInputs.ageGroup} onChange={ageGroupHandleChange}>
                                 <option value="">גיל</option>
                                 <option value="young">צעיר</option>
                                 <option value="adult">בוגר</option>
