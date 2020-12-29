@@ -48,8 +48,7 @@
       font-style: normal;
       font-weight: 500;
       font-size: 2vw;
-      // line-height: 47px;
-      color: $color-white;
+      color: $color-black;
       @include respond(phone) {
         display: none;
       }

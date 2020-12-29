@@ -32,8 +32,10 @@ const HomePageSearch = () => {
 
     return (
         <div className="miniSearch">
-            <h2 className="miniSearch__title">חיפוש חיות</h2>
-            <div>
+
+            <div className="test">
+                <h2 className="miniSearch__title">חיפוש חיות</h2>
+
 
                 <select className="miniSearch__dropdown" value={petsState.searchInputs.petType} onChange={petTypeHandleChange}>
                     <option value="">סוג חיה</option>
@@ -61,14 +63,19 @@ const HomePageSearch = () => {
                     <option value="adult">בוגר</option>
                     <option value="elder">מבוגר</option>
                 </select>
-            </div>
+
 
                 <Link to={SEARCH}>
                     <button className="miniSearch__button" type="button">חיפוש</button>
                 </Link>
-
-
+            </div>
+            <div className="miniSearch__animalSide">
+                <img src={require('../../../images/dog-and-cat.svg')} className="contact__dogAndCat" />
+            </div>
+            <br />
+            <div className="miniSearch__white-box" />
         </div>
+
     )
 }
 
