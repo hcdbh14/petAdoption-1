@@ -8,7 +8,7 @@ export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGrou
     var urlPath = "/notices"
     var countUrlPath = "/notices/count"
     return (dispatch) => {
-        dispatch(fetchPetsStart)
+        dispatch(fetchPetsStart())
         if(petType !== "" || region !== "" || gender !== "" || ageGroup !== "") {
             urlPath += "/filter"
             countUrlPath += "/filter"
@@ -37,7 +37,8 @@ export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGrou
             .then(response => {
                 const pets = response.data
                 if (needCount) {
-                    dispatch(fetchPetsAndCountSuccess(pets, count))
+                    const pageNum = Math.trunc((count + 9 - 1) / 9)
+                    dispatch(fetchPetsAndCountSuccess(pets, count, pageNum))
                 } else {
                     dispatch(fetchPetsSuccess(pets))
                 }
@@ -50,14 +51,9 @@ export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGrou
     }
 }
 
-export const setSearchInputs = (searchInputs) => {
-    return {
-        type: petsTypes.SET_SEARCH_INPUTS,
-        searchInputs
-    };
-}
 
 export const fetchPetsStart = () => {
+    
     return { type: petsTypes.SEARCH_PETS_START };
 }
 
@@ -68,11 +64,12 @@ export const fetchPetsFail = (err) => {
     };
 }
 
-export const fetchPetsAndCountSuccess = (pets, count) => {
+export const fetchPetsAndCountSuccess = (pets, count, pageNum) => {
     return {
         type: petsTypes.SEARCH_PETS_AND_COUNT_SUCCESS,
+        pets,
         count,
-        pets
+        pageNum
     };
 }
 

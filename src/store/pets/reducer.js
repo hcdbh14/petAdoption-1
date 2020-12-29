@@ -1,8 +1,8 @@
 import { petsTypes } from './petsTypes';
-import { petData } from '../../mockdata/pet'
 
 const initialState = {
     count: 0,
+    pageNum: 0,
     searchResults: [],
     searchInputs: {
         type: '',
@@ -27,7 +27,7 @@ const petReducer = (state = initialState, action) => {
             return { ...state, loading: false, searchResults: action.pets }
 
         case petsTypes.SEARCH_PETS_AND_COUNT_SUCCESS:
-            return { ...state, loading: false, searchResults: action.pets, count: action.count }
+            return { ...state, loading: false, searchResults: action.pets, count: action.count, pageNum: action.pageNum }
             
         default:
             return state;
