@@ -50,6 +50,7 @@
       font-size: 2vw;
       // line-height: 47px;
       color: $color-white;
+
       @include respond(phone) {
         display: none;
       }
@@ -64,22 +65,26 @@
     font-weight: 500;
     font-size: 2rem;
     line-height: 59px;
+
+    @include respond(phone) {
+      font-size: 1.5rem;
+    }
   }
 
   &__image {
-    width: 90vw;
-    max-width: 1920px;
-    display: flex;
-    margin: auto;
+    width: 70vw;
+    margin-right: 15vw;
   }
+
   &__text {
     text-align: center;
-
     font-family: Rubik;
     font-style: normal;
     font-weight: normal;
     font-size: 2.5rem;
     line-height: 53px;
+    padding: 6vw 0;
+    color: $color-white;
   }
 }
 //ACCORDION CSS NO JS TRICK
@@ -103,6 +108,9 @@ input:checked + label + .content {
   font-size: 3rem;
   line-height: 5.9rem;
   display: flex;
+  @include respond(phone) {
+    padding-top: 3rem;
+  }
 
   // &-section {
   //   transform: translateY(40%);
@@ -154,9 +162,13 @@ input:checked + label + .content {
     @include respond(phone) {
       position: absolute;
       left: 50%;
-      transform: translate(-57%, -3px);
+      transform: translate(-58%, 7%);
       width: 32rem;
       backface-visibility: hidden;
+
+      &.is-visible {
+        animation: none;
+      }
     }
   }
 
@@ -390,5 +402,19 @@ input:checked + label + .content {
     font-family: Rubik;
     font-style: normal;
     font-weight: 500;
+  }
+}
+
+.adoptMe-section {
+  position: relative;
+  margin-top: 12vw;
+  background-image: url("../../images/contact-us-background.svg");
+  background-position-y: -2vw;
+
+  &__topImage {
+    position: absolute;
+    top: -17.5vw;
+  }
+  &__work-with-us {
   }
 }

@@ -5,7 +5,7 @@ import Responsibility from '../layout/homePage/Responsibility';
 import HeaderImage from '../layout/header/HeaderImage';
 const HomePage = () => {
     const styleColored = {
-        display: 'inline-block', marginRight: '2rem'
+        display: 'inline-block', marginRight: '1rem'
     }
     const style = {
         display: 'inline-block'

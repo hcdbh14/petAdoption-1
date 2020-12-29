@@ -17,23 +17,22 @@
       left: 6rem;
       border-radius: 50%;
       z-index: 2000;
-      //box-shadow: 0 1rem 3rem rgba($color-black, 0.3);
       cursor: pointer;
-      // text-align: center;
 
       @include respond(tab-port) {
-        top: 3rem;
+        top: 4.5rem;
         left: 5.6rem;
       }
 
       @include respond(phone) {
-        top: 2.8rem;
-        left: 3.8rem;
+        top: 4rem;
+        left: 4rem;
       }
     }
 
     &__background {
       z-index: 1000;
+      opacity: 0;
       height: 4.5rem;
       width: 4.5rem;
       border-radius: 50%;
@@ -45,7 +44,7 @@
         $color-primary-dark
       );
 
-      transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+      transition: all 0.6s cubic-bezier(0.86, 0, 0.07, 1);
 
       @include respond(tab-port) {
         top: 2.5rem;

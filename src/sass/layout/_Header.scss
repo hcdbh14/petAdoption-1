@@ -12,7 +12,7 @@
   z-index: 10;
   @include respond(tab-port) {
     // display: none;
-    background: rgba($color-footer-dark, 0.9);
+    background: $color-footer-dark;
     clip-path: none;
 
     height: 14rem;
@@ -29,7 +29,6 @@
   }
 
   &__nav {
-    
     display: flex;
     top: 0;
     left: 0;
@@ -41,9 +40,8 @@
     }
 
     &__container {
-  
       height: fit-content;
-      
+
       // right: 50%;
       // transform: translate(50%, 0);
 
@@ -51,7 +49,7 @@
         position: fixed;
         top: 0;
         width: 100vw;
-        height: 10rem;
+        height: 14rem;
       }
     }
     &__right {

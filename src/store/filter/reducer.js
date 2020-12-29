@@ -20,10 +20,10 @@ const initialState = {
 const filterReducer = (state = initialState, action) => {
 
     switch (action.type) {
- 
+
         case filterTypes.BY_NAME:
             state.filters[0].on = !state.filters[0].on;
-            return { ...state, name: action.input}
+            return { ...state, name: action.input }
 
         case filterTypes.BY_RACE:
             state.filters[1].on = !state.filters[1].on;
@@ -36,7 +36,7 @@ const filterReducer = (state = initialState, action) => {
         case filterTypes.BY_GENDER:
             state.filters[3].on = !state.filters[3].on;
             return { ...state, gender: action.input }
-        
+
         case filterTypes.BY_AGE:
             state.filters[4].on = !state.filters[4].on;
             return { ...state, age: action.input }
