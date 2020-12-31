@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import ResponsibilitySide from './ResponsibilitySide';
-
 import arrTop from '../../../images/arrTop.png';
 import arrCenter from '../../../images/arrCenter.png';
 import arrBottom from '../../../images/arrBottom.png';

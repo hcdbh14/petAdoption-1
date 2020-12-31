@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Title from './Title';
 import MiniSearch from './MiniSearch';
-import { fetchPets, updateFilter } from '../../../store/pets/action';
+import { fetchPets } from '../../../store/pets/action';
 
 const Search = () => {
     
@@ -49,7 +48,6 @@ const Search = () => {
 
     return (
         <div className="search">
-            <Title />
             <MiniSearch />
             {petsState.error !== "" ?
                 <h1>error</h1>

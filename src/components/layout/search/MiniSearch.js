@@ -79,7 +79,7 @@ const MiniSearch = () => {
                 }
             </div>
             <div className="miniSearch__animalSide">
-                <img src={require('../../../images/search-dog.png')} className="miniSearch__animalSide__image" />
+                <img src={require('../../../images/search-dog.png')} className="miniSearch__animalSide__image" alt="כלב מרחרח" />
             </div>
             <br />
             <div className="miniSearch__white-box" />

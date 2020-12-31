@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactUs from '../layout/contact/contactUs';
+import ContactUs from '../layout/contact/ContactUs';
 
 const AboutPage = () => {
     return (
