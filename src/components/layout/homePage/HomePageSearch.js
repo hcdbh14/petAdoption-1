@@ -70,12 +70,11 @@ const HomePageSearch = () => {
                 </Link>
             </div>
             <div className="miniSearch__animalSide">
-                <img src={require('../../../images/dog-and-cat.svg')} className="contact__dogAndCat" />
+                <img src={require('../../../images/search-dog.png')} className="miniSearch__animalSide__image" />
             </div>
             <br />
             <div className="miniSearch__white-box" />
         </div>
-
     )
 }
 
