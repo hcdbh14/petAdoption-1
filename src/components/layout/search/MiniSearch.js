@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { updateFilter } from '../../../store/pets/action';
+import { fetchPets, updateFilter } from '../../../store/pets/action';
 import { Link } from 'react-router-dom';
 import { SEARCH } from '../../constants/routes';
 
@@ -28,6 +28,12 @@ const MiniSearch = () => {
     const ageGroupHandleChange = (pickedValue) => {
         petsState.searchInputs.ageGroup = pickedValue.target.value
         dispatch(updateFilter())
+    }
+
+    const loadPets = () => {
+        if (petsState.count === 0 || petsState.reload) {
+            dispatch(fetchPets(0, 9, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true))
+        }
     }
 
     return (
@@ -64,10 +70,13 @@ const MiniSearch = () => {
                     <option value="elder">מבוגר</option>
                 </select>
 
-
-                <Link to={SEARCH}>
-                    <button className="miniSearch__button" type="button">חיפוש</button>
-                </Link>
+                {window.location.href.includes(SEARCH) ?
+                    <button className="miniSearch__button" type="button" onClick={loadPets}>חיפוש</button>
+                    :
+                    <Link to={SEARCH}>
+                        <button className="miniSearch__button" type="button">חיפוש</button>
+                    </Link>
+                }
             </div>
             <div className="miniSearch__animalSide">
                 <img src={require('../../../images/search-dog.png')} className="miniSearch__animalSide__image" />
