@@ -17,7 +17,6 @@ const HomePage = () => {
         <div className="main">
             <HeaderImage />
             <MiniSearch />
-            <AdoptMeSection styleColored={styleColored} style={style} />
             <Responsibility styleColored={styleColored} style={style} />
             <PetsToAdoptSection />
             <AdoptMeSection styleColored={styleColored} style={style} />
