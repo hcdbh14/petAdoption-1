@@ -4,7 +4,7 @@ import { updateFilter } from '../../../store/pets/action';
 import { Link } from 'react-router-dom';
 import { SEARCH } from '../../constants/routes';
 
-const HomePageSearch = () => {
+const MiniSearch = () => {
 
     const dispatch = useDispatch();
     const petsState = useSelector(state => state.petsReducer);
@@ -78,4 +78,4 @@ const HomePageSearch = () => {
     )
 }
 
-export default HomePageSearch
+export default MiniSearch

@@ -2,7 +2,7 @@ import React from 'react'
 import PetsToAdoptSection from '../layout/homePage/PetsToAdoptSection';
 import AdoptMeSection from '../layout/homePage/AdoptMeSection';
 import Responsibility from '../layout/homePage/Responsibility';
-import HomePageSearch from '../layout/homePage/HomePageSearch';
+import MiniSearch from '../layout/search/MiniSearch';
 import HeaderImage from '../layout/header/HeaderImage';
 const HomePage = () => {
     const styleColored = {
@@ -16,7 +16,7 @@ const HomePage = () => {
 
         <div className="main">
             <HeaderImage />
-            <HomePageSearch />
+            <MiniSearch />
             <AdoptMeSection styleColored={styleColored} style={style} />
             <Responsibility styleColored={styleColored} style={style} />
             <PetsToAdoptSection />
