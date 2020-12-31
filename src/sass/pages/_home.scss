@@ -49,7 +49,6 @@
       font-weight: 500;
       font-size: 2vw;
       color: $color-black;
-      color: $color-white;
 
       @include respond(phone) {
         display: none;
