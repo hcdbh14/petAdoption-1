@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ContactUs = () => {
+const Contact = () => {
 
     return (
         <div className="contact">
@@ -20,14 +20,14 @@ const ContactUs = () => {
                 <input type="text" className="contact__textFieldTitleBig" value="הודעה:" disabled />
                 <br />
                 <div>
-                    <textarea name="textarea" className="contact__textFieldBig" type="text" name="name" />
+                    <textarea name="textarea" className="contact__textFieldBig" type="text" />
 
                 </div>
                 <button class="contact__send">שלח</button>
             </div>
 
             <div className="contact__animalSide">
-                <img src={require('../../../images/dog-and-cat.svg')} className="contact__dogAndCat" />
+                <img src={require('../../../images/dog-and-cat.svg')} className="contact__dogAndCat" alt="כלב וחתול נחים" />
             </div>
             <br />
             <div className="contact__white-box" />
@@ -35,4 +35,4 @@ const ContactUs = () => {
     )
 }
 
-export default ContactUs
+export default Contact

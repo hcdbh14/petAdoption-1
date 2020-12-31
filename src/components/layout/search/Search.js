@@ -7,7 +7,7 @@ const Search = () => {
     
         useEffect(()=>{
             loadPets()
-        }, []) 
+        }) 
 
     var pageNumber = ""
     var pageSize = ""
@@ -22,7 +22,7 @@ const Search = () => {
                     <p>{pet.region}</p>
                     <p>{pet.gender}</p>
                     <p>{pet.ageGroup}</p>
-                    <img src={`data:image/png;base64, ${pet.image}`} />
+                    <img src={`data:image/png;base64, ${pet.image}`} alt="תמונת פרופיל חיה" />
                     <br />
                     <br />
                 </div>)

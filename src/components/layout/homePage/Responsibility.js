@@ -60,7 +60,7 @@ const Responsibility = (props) => {
             </div>
             <div className="responsibility show-on-scroll" >
                 <ResponsibilitySide side={"right"} imageArray={imageArray} textArray={textRightArray} />
-                <img src={require('../../../images/responsibility.png')} alt="pet image" className="responsibility__centerImage show-on-scroll" />
+                <img src={require('../../../images/responsibility.png')} alt="קבוצה של כלבים וחתולים" className="responsibility__centerImage show-on-scroll" />
                 <ResponsibilitySide side={"left"} imageArray={imageArray} textArray={textLeftArray} />
             </div>
         </div>

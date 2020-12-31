@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactUs from '../layout/contact/ContactUs';
+import Contact from '../layout/contact/Contact';
 
 const AboutPage = () => {
     return (
@@ -20,7 +20,7 @@ const AboutPage = () => {
                 שיכניס לכם טונות של אושר לחיים.
             </p>
             </div>
-            <ContactUs />
+            <Contact />
         </div >
     )
 }
