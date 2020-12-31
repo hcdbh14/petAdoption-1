@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-
 import * as ROUTES from '../constants/routes';
-import SignInLinks from './SignInLinks';
 const Navigation = () => {
     return (
         <div className="header__nav" >

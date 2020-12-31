@@ -49,6 +49,8 @@
       font-weight: 500;
       font-size: 2vw;
       color: $color-black;
+      color: $color-white;
+
       @include respond(phone) {
         display: none;
       }
@@ -63,22 +65,26 @@
     font-weight: 500;
     font-size: 2rem;
     line-height: 59px;
+
+    @include respond(phone) {
+      font-size: 1.5rem;
+    }
   }
 
   &__image {
-    width: 90vw;
-    max-width: 1920px;
-    display: flex;
-    margin: auto;
+    width: 70vw;
+    margin-right: 15vw;
   }
+
   &__text {
     text-align: center;
-
     font-family: Rubik;
     font-style: normal;
     font-weight: normal;
     font-size: 2.5rem;
     line-height: 53px;
+    padding: 6vw 0;
+    color: $color-white;
   }
 }
 //ACCORDION CSS NO JS TRICK
@@ -102,6 +108,20 @@ input:checked + label + .content {
   font-size: 3rem;
   line-height: 5.9rem;
   display: flex;
+  @include respond(phone) {
+    padding-top: 3rem;
+  }
+
+  // &-section {
+  //   transform: translateY(40%);
+  //   opacity: 0;
+  //   transition: all 0.5s;
+  //   will-change: transform opacity;
+  //   &.is-visible {
+  //     transform: translateY(0%);
+  //     opacity: 1;
+  //   }
+  // }
 
   @media (max-width: 100em) {
     font-size: 2.5rem;
@@ -130,17 +150,25 @@ input:checked + label + .content {
   }
 
   &__centerImage {
-    animation: moveInTop 0.5s;
-    animation-delay: 0.3s;
+    &.is-visible {
+      animation: moveInTop 0.5s;
+      animation-delay: 0.3s;
+      animation-fill-mode: backwards;
+      backface-visibility: hidden;
+    }
 
     @include responsibility;
     width: 30%;
     @include respond(phone) {
       position: absolute;
       left: 50%;
-      transform: translate(-57%, -3px);
+      transform: translate(-58%, 7%);
       width: 32rem;
       backface-visibility: hidden;
+
+      &.is-visible {
+        animation: none;
+      }
     }
   }
 
@@ -151,10 +179,11 @@ input:checked + label + .content {
       display: flex;
       flex-direction: row-reverse;
       align-items: flex-start;
-
-      animation: moveInRight 0.7s;
-      animation-delay: 0.3s;
-      animation-fill-mode: backwards;
+      &.is-visible {
+        animation: moveInRight 0.7s;
+        animation-delay: 0.3s;
+        animation-fill-mode: backwards;
+      }
 
       &-image {
         padding-right: 5rem;
@@ -183,9 +212,11 @@ input:checked + label + .content {
       flex-direction: row-reverse;
       align-items: center;
 
-      animation: moveInRight 0.7s;
-      animation-delay: 0.6s;
-      animation-fill-mode: backwards;
+      &.is-visible {
+        animation: moveInRight 0.7s;
+        animation-delay: 0.6s;
+        animation-fill-mode: backwards;
+      }
 
       &-image {
         padding-right: 8rem;
@@ -209,9 +240,11 @@ input:checked + label + .content {
       flex-direction: row-reverse;
       align-items: flex-end;
 
-      animation: moveInRight 0.7s;
-      animation-delay: 0.9s;
-      animation-fill-mode: backwards;
+      &.is-visible {
+        animation: moveInRight 0.7s;
+        animation-delay: 0.9s;
+        animation-fill-mode: backwards;
+      }
 
       &-image {
         padding-right: 4rem;
@@ -246,9 +279,12 @@ input:checked + label + .content {
     &-top {
       display: flex;
       align-items: flex-start;
-      animation: moveInLeft 0.7s;
-      animation-delay: 0.3s;
-      animation-fill-mode: backwards;
+
+      &.is-visible {
+        animation: moveInLeft 0.7s;
+        animation-delay: 0.3s;
+        animation-fill-mode: backwards;
+      }
 
       &-image {
         padding-right: 5rem;
@@ -274,9 +310,12 @@ input:checked + label + .content {
     &-center {
       display: flex;
       align-items: center;
-      animation: moveInLeft 0.7s;
-      animation-delay: 0.6s;
-      animation-fill-mode: backwards;
+
+      &.is-visible {
+        animation: moveInLeft 0.7s;
+        animation-delay: 0.6s;
+        animation-fill-mode: backwards;
+      }
 
       &-image {
         padding-right: 8rem;
@@ -299,9 +338,12 @@ input:checked + label + .content {
     &-bottom {
       display: flex;
       align-items: flex-end;
-      animation: moveInLeft 0.7s;
-      animation-delay: 0.9s;
-      animation-fill-mode: backwards;
+
+      &.is-visible {
+        animation: moveInLeft 0.7s;
+        animation-delay: 0.9s;
+        animation-fill-mode: backwards;
+      }
 
       &-image {
         transform: rotateY(180deg);
@@ -360,5 +402,19 @@ input:checked + label + .content {
     font-family: Rubik;
     font-style: normal;
     font-weight: 500;
+  }
+}
+
+.adoptMe-section {
+  position: relative;
+  margin-top: 12vw;
+  background-image: url("../../images/contact-us-background.svg");
+  background-position-y: -2vw;
+
+  &__topImage {
+    position: absolute;
+    top: -17.5vw;
+  }
+  &__work-with-us {
   }
 }
