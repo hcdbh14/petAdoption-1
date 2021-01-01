@@ -2,12 +2,16 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import MiniSearch from './MiniSearch';
 import { fetchPets } from '../../../store/pets/action';
+import PetCard from '../pet/petCard';
 
 const Search = () => {
     
-        useEffect(()=>{
-            loadPets()
-        }) 
+    const loadPets = () => {
+        if (petsState.count === 0 || petsState.reload) {
+            dispatch(fetchPets(pageNumber.value, pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true))
+        } 
+    }
+    useEffect(loadPets, [])
 
     var pageNumber = ""
     var pageSize = ""
@@ -31,11 +35,6 @@ const Search = () => {
             <div> No pets yet</div>
         )
 
-    const loadPets = () => {
-        if (petsState.count === 0 || petsState.reload) {
-            dispatch(fetchPets(pageNumber.value, pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true))
-        } 
-    }
 
     const handleSearchClick = () => {
         dispatch(fetchPets(pageNumber.value, pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true))
@@ -49,6 +48,7 @@ const Search = () => {
     return (
         <div className="search">
             <MiniSearch />
+            <PetCard />
             {petsState.error !== "" ?
                 <h1>error</h1>
                 : (petsState.loading ?

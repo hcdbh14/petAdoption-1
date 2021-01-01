@@ -1,0 +1,62 @@
+.petCard {
+
+    width: 377px;
+    height: 633px;
+    background: #ffffff;
+    box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+    &__image {
+    }
+
+    &__name {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 36px;
+        color: #56bed1;
+    }
+
+    &__goodWords {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 36px;
+        color: #56bed1;
+    }
+
+    &__region {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 30px;
+        color: $color-black;
+    }
+
+    &__age {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 30px;
+        color: $color-black;
+    }
+
+    &__detailsButton {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+        color: $color-white;
+        width: 202px;
+        height: 50px;
+        background: $color-secondary;
+        border: 1px solid $color-secondary;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+        border-radius: 20px;
+    }
+}
