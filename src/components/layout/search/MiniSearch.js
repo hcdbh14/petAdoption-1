@@ -44,27 +44,27 @@ const MiniSearch = () => {
 
 
                 <select className="miniSearch__dropdown" value={petsState.searchInputs.petType} onChange={petTypeHandleChange}>
-                    <option value="">סוג חיה</option>
+                    <option value="">כל סוגי החיות</option>
                     <option value="dog">כלב</option>
                     <option value="cat">חתול</option>
                     <option value="other">אחר</option>
                 </select>
 
                 <select className="miniSearch__dropdown" value={petsState.searchInputs.region} onChange={regionHandleChange}>
-                    <option value="">אזור</option>
+                    <option value="">כל האזורים</option>
                     <option value="north">צפון</option>
                     <option value="center">מרכז</option>
                     <option value="south">דרום</option>
                 </select>
                 <br />
                 <select className="miniSearch__dropdown" value={petsState.searchInputs.gender} onChange={genderHandleChange}>
-                    <option value="">מין</option>
+                    <option value="">זכר ונקבה</option>
                     <option value="male">זכר</option>
                     <option value="female">נקבה</option>
                 </select>
 
                 <select className="miniSearch__dropdown" value={petsState.searchInputs.ageGroup} onChange={ageGroupHandleChange}>
-                    <option value="">גיל</option>
+                    <option value="">כל הגילאים</option>
                     <option value="young">צעיר</option>
                     <option value="adult">בוגר</option>
                     <option value="elder">מבוגר</option>
