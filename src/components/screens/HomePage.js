@@ -6,12 +6,6 @@ import MiniSearch from '../layout/search/MiniSearch';
 import SpotLight from '../layout/spotLight/SpotLight';
 import HeaderImage from '../layout/header/HeaderImage';
 const HomePage = () => {
-    const styleColored = {
-        display: 'inline-block', marginRight: '1rem'
-    }
-    const style = {
-        display: 'inline-block'
-    }
 
     return (
 
@@ -19,9 +13,9 @@ const HomePage = () => {
             <HeaderImage />
             <MiniSearch />
             <SpotLight />
-            <Responsibility styleColored={styleColored} style={style} />
+            <Responsibility />
             <PetsToAdoptSection />
-            <AdoptMeSection styleColored={styleColored} style={style} />
+            <AdoptMeSection />
 
         </div >
 

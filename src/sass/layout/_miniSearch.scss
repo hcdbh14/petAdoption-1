@@ -3,12 +3,20 @@
     height: auto;
     width: 100%;
     text-align: center;
+
+    @include respond(tab-port) {
+       display: inline;
+    }
     
     &__wrapper {
         background:#E7E3D7;
         width: 70vw;
         margin-top: 100px;
         border-radius: 40px;
+        
+        @include respond(tab-port) {
+            width: 100vw;
+        }
     }
 
     &__title {
@@ -21,6 +29,10 @@
         font-size: 5rem;
         line-height: 83px;
         color: $color-primary;
+
+        @include respond(tab-port) {
+            margin-left: 50px;
+        }
     }
 
     &__dropdown {
@@ -53,6 +65,10 @@
         text-overflow: "";
         cursor: pointer;
         z-index: 2;
+
+        @include respond(tab-port) {
+            width: 50vw;
+        }
     }
 
     &__button {
@@ -79,6 +95,10 @@
         border: none;
         cursor: pointer;
         z-index: 2;
+
+        @include respond(tab-port) {
+            margin-left: 45px;
+        }
     }
 
     &__animalSide {
@@ -91,6 +111,14 @@
             width: 100%;
             text-align: center;
         }
+
+        @include respond(tab-port) {    
+            float: left;
+            width: 100%;
+            margin-right: 0vw;
+            margin-left: -20px;
+         }
+
         &__image {
             -webkit-user-drag: none;
             -khtml-user-drag: none;
@@ -99,6 +127,12 @@
             position: relative;
             width: 77vw;
             z-index: 1;
+
+            @include respond(tab-port) {
+                float: left;
+                width: 100vw;
+                margin-right: 0w;
+             }
         }
     }
 }

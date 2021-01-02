@@ -37,9 +37,6 @@ const SpotLight = () => {
 
         
             <div className="spotLight__container">
-            <button className="spotLight__button">
-                    <img src={require('../../../images/spotlight-arrow.svg')} alt="כפתור מעבר לעמוד חיפוש" />
-            </button>
                 {spotLightState.error !== "" ?
                     <h1>error</h1>
                     : (spotLightState.loading ?

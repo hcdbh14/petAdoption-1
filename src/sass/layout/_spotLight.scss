@@ -2,8 +2,14 @@
     margin-top: 200px;
 
     &__titleWrapper {
+        margin-left: -250px;
+        margin-bottom: 50px;
         display: flex;
         justify-content: center;
+
+        @include respond(normal-desktop) {
+            margin-left: 0px;
+        }
     }
 
     &__title {
@@ -13,6 +19,10 @@
         font-size: 60px;
         line-height: 71px;
         color: $color-black;
+
+        @include respond(phone) {
+            font-size: 40px;
+        }
     }
 
     &__titleColored {
@@ -22,19 +32,27 @@
         font-size: 60px;
         line-height: 71px;
         color: #fa8e2b;
+
+        @include respond(phone) {
+            font-size: 40px;
+        }
     }
-    
+
     &__container {
         float: left;
-        width: 70vw;
-        margin-right: 30vw;
+        width: 80vw;
+        margin-right: 20vw;
         height: auto;
         border-radius: 40px;
         background: #e7e3d7;
 
+        @include respond(normal-desktop) {
+            width: 100vw;
+            margin-right: 0vw;
+        }
     }
 
-    &__results {    
+    &__results {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

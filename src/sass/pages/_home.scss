@@ -107,6 +107,35 @@ input:checked + label + .content {
   font-size: 3rem;
   line-height: 5.9rem;
   display: flex;
+
+  &__text {
+    font-family: Rubik;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 71px;
+ 
+
+    @include respond(phone) {
+        font-size: 36px;
+    }
+  }
+
+  &__blue-text {
+    font-family: Rubik;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 71px;
+    color: $color-primary;
+
+    @include respond(phone) {
+      font-size: 36px;
+    }
+  }
+
   @include respond(phone) {
     padding-top: 3rem;
   }
@@ -134,7 +163,9 @@ input:checked + label + .content {
   }
 
   &__title {
-    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
     padding-top: 6rem;
     text-align: center;
     font-family: Rubik;

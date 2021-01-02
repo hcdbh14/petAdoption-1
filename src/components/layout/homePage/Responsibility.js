@@ -4,8 +4,7 @@ import arrTop from '../../../images/arrTop.png';
 import arrCenter from '../../../images/arrCenter.png';
 import arrBottom from '../../../images/arrBottom.png';
 
-const Responsibility = (props) => {
-    const { styleColored, style } = props;
+const Responsibility = () => {
     const imageArray = [arrTop, arrCenter, arrBottom];
     const textRightArray = ['לטייל איתי', 'לחנך אותי', 'לקחת לוטרינר'];
     const textLeftArray = ['להאכיל', 'לשחק איתי', 'לאהוב אותי'];
@@ -56,7 +55,7 @@ const Responsibility = (props) => {
     return (
         <div className="responsibility-section">
             <div className="responsibility__title">
-                <h2 className="orange-text" style={styleColored} >קחו אחריות</h2> <h2 style={style}>לפני שלוקחים...</h2>
+                <h2 className="responsibility__blue-text" >קחו אחריות</h2> <h2 className="responsibility__text">&nbsp;לפני שלוקחים...</h2>
             </div>
             <div className="responsibility show-on-scroll" >
                 <ResponsibilitySide side={"right"} imageArray={imageArray} textArray={textRightArray} />
