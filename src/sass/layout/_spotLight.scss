@@ -25,7 +25,11 @@
     }
 
     &__results {
-        width: 1719px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 68vw;
+        margin-right: 32vw;
         height: 709px;
         background: #e7e3d7;
         border-radius: 40px;

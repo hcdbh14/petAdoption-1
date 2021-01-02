@@ -51,7 +51,6 @@ export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGrou
     }
 }
 
-
 export const fetchPetsStart = () => {
     
     return { type: petsTypes.SEARCH_PETS_START };
@@ -83,7 +82,6 @@ export const fetchPetsSuccess = (pets) => {
     export const updateFilter = () => {
         return {
             type: petsTypes.SEARCH_PETS_UPDATE_FILTER
-            
         };
 }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEARCH } from '../../constants/routes';
 
 const PetCard = ({ name, goodWords, region, age, gender, image }) => {
 
@@ -44,7 +45,7 @@ const PetCard = ({ name, goodWords, region, age, gender, image }) => {
                 <img className="petCard__calendarIcon" src={require('../../../images/calendar.svg')} alt="אייקון של לוח שנה" />
                 {buildAgeDesc()}
             </p>
-            <button className="petCard__detailsButton">פרטים נוספים</button>
+            <button className={window.location.href.includes(SEARCH) ? "petCard__detailsOrange" :"petCard__detailsBlue"}>פרטים נוספים</button>
         </div >
     )
 }
