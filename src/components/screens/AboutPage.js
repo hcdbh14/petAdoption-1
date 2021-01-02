@@ -1,5 +1,6 @@
 import React from 'react';
 import Contact from '../layout/contact/Contact';
+import AdoptMeSection from '../layout/homePage/AdoptMeSection';
 
 const AboutPage = () => {
     return (
@@ -21,6 +22,7 @@ const AboutPage = () => {
             </p>
             </div>
             <Contact />
+            <AdoptMeSection />
         </div >
     )
 }

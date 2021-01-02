@@ -1,0 +1,33 @@
+.spotLight {
+    margin-top: 200px;
+
+    &__titleWrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 71px;
+        color: $color-black;
+    }
+
+    &__titleColored {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 71px;
+        color: #fa8e2b;
+    }
+
+    &__results {
+        width: 1719px;
+        height: 709px;
+        background: #e7e3d7;
+        border-radius: 40px;
+    }
+}

@@ -39,7 +39,7 @@ const MiniSearch = () => {
     return (
         <div className="miniSearch">
 
-            <div className="test">
+            <div className="miniSearch__wrapper">
                 <h2 className="miniSearch__title">חיפוש חיות</h2>
 
 

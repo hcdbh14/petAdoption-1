@@ -134,17 +134,17 @@
     height: 43px;
     border-radius: 30px;
     margin-right: 20px;
-    border: 8px solid $color-primary;
+    border: 8px solid $color-secondary;
     outline: none;
     background-size: contain;
-    background: $color-primary;
+    background: $color-secondary;
 
     &:hover {
-        border: 8px solid $color-primary-light;
+        border: 8px solid $color-secondary-dark;
         border-radius: 30px;
         outline: none;
         background-size: contain;
-        background: $color-primary-light;
+        background: $color-secondary-dark;
         transition: 0.1s;
         transform: scale(1.1);
     }
