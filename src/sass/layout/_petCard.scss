@@ -1,15 +1,33 @@
 .petCard {
-    display: flexbox;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 377px;
-    height: 633px;
-    background: $color-white;
-    box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    margin-right: 5.5vw;
-    margin-left: 5.5vw;
+
+    &__bigMargin {
+        display: flexbox;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 377px;
+        height: 633px;
+        background: $color-white;
+        box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        margin-right: 5.5vw;
+        margin-left: 5.5vw;
+    }
+
+    &__smallMargin {
+        display: flexbox;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 377px;
+        height: 633px;
+        background: $color-white;
+        box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        margin-top: 50px;
+        margin-right: 5.5%;
+        margin-left: 5.5vw;
+    }
 
     &__image {
         margin-top: 25px;
@@ -19,7 +37,7 @@
         border-radius: 10px;
     }
 
-    &__name {
+    &__nameBlue {
         padding-right: 45px;
         text-align: right;
         font-family: Rubik;
@@ -30,7 +48,18 @@
         color: #56bed1;
     }
 
-    &__goodWords {
+    &__nameOrange {
+        padding-right: 45px;
+        text-align: right;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 36px;
+        color: $color-secondary;
+    }
+
+    &__goodWordsBlue {
         padding-right: 45px;
         text-align: right;
         font-family: Rubik;
@@ -39,6 +68,17 @@
         font-size: 30px;
         line-height: 36px;
         color: #56bed1;
+    }
+
+    &__goodWordsOrange {
+        padding-right: 45px;
+        text-align: right;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 36px;
+        color: $color-secondary;
     }
 
     &__region {

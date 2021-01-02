@@ -33,10 +33,10 @@ const PetCard = ({ name, goodWords, region, age, gender, image }) => {
     }
 
     return (
-        <div className="petCard">
+        <div className={window.location.href.includes(SEARCH) ? "petCard__bigMargin" : "petCard__smallMargin"}>
             <img className="petCard__image" src={`data:image/png;base64, ${image}`} alt="תמונת החיה" />
-            <h4 className="petCard__name">{name}</h4>
-            <p className="petCard__goodWords">{goodWords}</p>
+            <h4 className={window.location.href.includes(SEARCH)  ? "petCard__nameBlue" : "petCard__nameOrange"}>{name}</h4>
+            <p className={window.location.href.includes(SEARCH) ? "petCard__goodWordsBlue" : "petCard__goodWordsOrange" }>{goodWords}</p>
             <p className="petCard__region">
                 <img className="petCard__houseIcon" src={require('../../../images/house.svg')} alt="אייקון של אזור" />
                 {translateRegion()}

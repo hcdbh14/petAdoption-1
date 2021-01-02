@@ -35,20 +35,21 @@ const SpotLight = () => {
                 <h2 className="spotLight__titleColored">אמצו&nbsp;</h2> <h2 className="spotLight__title">עכשיו</h2>
             </div>
 
-            <div className="spotLight__results">
-                <div className="search__results">
+        
+            <div className="spotLight__container">
+            <button className="spotLight__button">
+                    <img src={require('../../../images/spotlight-arrow.svg')} alt="כפתור מעבר לעמוד חיפוש" />
+            </button>
+                {spotLightState.error !== "" ?
+                    <h1>error</h1>
+                    : (spotLightState.loading ?
+                        <h1>loading</h1>
+                        :
+                        <div className="spotLight__results">
+                            {spotLightList}
+                        </div>
+                    )}
 
-                    {spotLightState.error !== "" ?
-                        <h1>error</h1>
-                        : (spotLightState.loading ?
-                            <h1>loading</h1>
-                            :
-                            <div>
-                                {spotLightList}
-                            </div>
-                        )}
-
-                </div>
             </div>
         </div >
     )
