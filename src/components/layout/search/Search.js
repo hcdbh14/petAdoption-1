@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import MiniSearch from './MiniSearch';
 import { fetchPets } from '../../../store/pets/action';
@@ -25,7 +25,8 @@ const Search = () => {
 
     useEffect(loadPets, [])
 
-    var pageNumber = ""
+    const [pageNumber, setPageNumber] = useState(0);
+    // var pageNumber = ""
     var pageSize = ""
     const dispatch = useDispatch();
     const petsState = useSelector(state => state.petsReducer);
@@ -43,14 +44,9 @@ const Search = () => {
             <div> No pets yet</div>
         )
 
-
-    const handleSearchClick = () => {
-        dispatch(fetchPets(pageNumber.value, pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true))
-    }
-
     const moveToNextPage = (chosenPageNum) => {
-
-        dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
+        setPageNumber(chosenPageNum)
+        dispatch(fetchPets(pageNumber.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
     }
 
     return (
@@ -66,9 +62,6 @@ const Search = () => {
                         <h1>pets count is {petsState.count}</h1>
                         <h1>Number of pages we need {Math.trunc((petsState.count + 9 - 1) / 9)}</h1>
 
-
-                        <button onClick={handleSearchClick}>fetchPets</button>
-
                         <div className="search__results">
                             {petsList}
                         </div>
@@ -76,7 +69,7 @@ const Search = () => {
                 )}
             <div className="search__pagingWrapper">
                 <img className="search__pageArrow" src={require('../../../images/right-page-arrow.svg')} alt="חץ ימין" />
-                {Array.from(Array(petsState.pageNum)).map((x, i) => <button id={i} onClick={() => moveToNextPage(i)} className="search__pageButton">{i + 1}</button>)}
+                {Array.from(Array(petsState.pageNum)).map((x, i) => <button id={i} onClick={() => moveToNextPage(i)} className= {pageNumber === i ? "search__currentPageButton" : "search__pageButton"}>{i + 1}</button>)}
                 <img className="search__pageArrow" src={require('../../../images/left-page-arrow.svg')} alt="חץ שמאל" />
             </div>
 
