@@ -118,7 +118,7 @@ input:checked + label + .content {
  
 
     @include respond(phone) {
-        font-size: 36px;
+        font-size: 32px;
     }
   }
 
@@ -132,7 +132,7 @@ input:checked + label + .content {
     color: $color-primary;
 
     @include respond(phone) {
-      font-size: 36px;
+      font-size: 32px;
     }
   }
 
