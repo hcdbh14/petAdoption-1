@@ -34,7 +34,7 @@
       font-weight: bold;
       font-size: 4vw;
       line-height: 5vw;
-      color: $color-primary;
+      color: #fa8e2b;
       @include respond(phone) {
         display: none;
       }
@@ -407,12 +407,30 @@ input:checked + label + .content {
 .adoptMe-section {
   position: relative;
   margin-top: 12vw;
-  background-image: url("../../images/contact-us-background.svg");
+  background-image: url("../../images/adopt-background.svg");
   background-position-y: -2vw;
 
   &__topImage {
     position: absolute;
     top: -17.5vw;
+  }
+
+  &__title {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 53px;
+    color: $color-footer-dark;
+  }
+
+  &__content {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 53px;
+    color: $color-footer-dark;
   }
   &__work-with-us {
   }
