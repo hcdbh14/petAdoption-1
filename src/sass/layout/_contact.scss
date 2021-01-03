@@ -75,7 +75,7 @@
       font-size: 14px;
       padding-right: 1px;
       width: 7%;
-      font-weight: $font-weight-400;
+      font-weight: $font-weight-light;
     }
   }
 
@@ -91,14 +91,13 @@
     font-family: Rubik;
     font-style: $font-style-normal;
     font-weight: $font-weight-bold;
-
     @include respond(normal-desktop) {
       width: 25%;
     }
 
     @include respond(phone) {
       font-size: 14px;
-      font-weight: $font-weight-400;
+      font-weight: $font-weight-light;
     }
   }
 
@@ -124,7 +123,7 @@
 
     @include respond(phone) {
       font-size: 14px;
-      font-weight: $font-weight-400;
+      font-weight: $font-weight-light;
     }
   }
 
@@ -151,7 +150,7 @@
 
     @include respond(phone) {
       font-size: 14px;
-      font-weight: $font-weight-400;
+      font-weight: $font-weight-light;
     }
   }
 
@@ -191,7 +190,7 @@
 
     @include respond(phone) {
       font-size: 14px;
-      font-weight: $font-weight-400;
+      font-weight: $font-weight-light;
       padding-right: 1px;
       width: 7%;
     }
