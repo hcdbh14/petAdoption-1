@@ -19,6 +19,7 @@ const Search = () => {
 
     const loadPets = () => {
         if (petsState.count === 0 || petsState.reload) {
+            setPageNumber(0)
             dispatch(fetchPets(pageNumber.value, pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true))
         }
     }
