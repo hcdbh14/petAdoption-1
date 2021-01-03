@@ -13,10 +13,9 @@ const AdoptMeSection = (props) => {
                     <img src={require('../../../images/pets-peeking.png')} alt="pet with owner" className="main__image" />
                 </div>
                 <div className="main__text">
-                    <input type="checkbox" id="title" />
-                    <label for="title">מאות בעלי חיים מחכים לכם לאימוץ בסניפי עמותת תנו לחיות לחיות ברחבי הארץ.</label>
+                    <p className="adoptMe-section__title">מאות בעלי חיים מחכים לכם לאימוץ בסניפי עמותת תנו לחיות לחיות ברחבי הארץ.</p>
 
-                    <div className="content">
+                    <div className="adoptMe-section__content">
                         <p>בחרו את בעל החיים הרצוי, ובעזרת סינונים השונים תוכלו למקד את החיפוש</p>
                         <p>ולמצוא את החיה המתאימה לכם לאימוץ.</p>
                     </div>

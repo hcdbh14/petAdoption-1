@@ -11,7 +11,7 @@
 .main {
   &__shoutout {
     text-align: right;
-    background-image: url(../../images/dog-model.svg);
+    background-image: url(../../images/dog-model.png);
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@
       font-weight: bold;
       font-size: 4vw;
       line-height: 5vw;
-      color: $color-primary;
+      color: #fa8e2b;
       @include respond(phone) {
         display: none;
       }
@@ -48,8 +48,7 @@
       font-style: normal;
       font-weight: 500;
       font-size: 2vw;
-      // line-height: 47px;
-      color: $color-white;
+      color: $color-black;
 
       @include respond(phone) {
         display: none;
@@ -108,6 +107,35 @@ input:checked + label + .content {
   font-size: 3rem;
   line-height: 5.9rem;
   display: flex;
+
+  &__text {
+    font-family: Rubik;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 71px;
+ 
+
+    @include respond(phone) {
+        font-size: 32px;
+    }
+  }
+
+  &__blue-text {
+    font-family: Rubik;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 71px;
+    color: $color-primary;
+
+    @include respond(phone) {
+      font-size: 32px;
+    }
+  }
+
   @include respond(phone) {
     padding-top: 3rem;
   }
@@ -135,7 +163,9 @@ input:checked + label + .content {
   }
 
   &__title {
-    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
     padding-top: 6rem;
     text-align: center;
     font-family: Rubik;
@@ -408,12 +438,30 @@ input:checked + label + .content {
 .adoptMe-section {
   position: relative;
   margin-top: 12vw;
-  background-image: url("../../images/contact-us-background.svg");
+  background-image: url("../../images/adopt-background.svg");
   background-position-y: -2vw;
 
   &__topImage {
     position: absolute;
     top: -17.5vw;
+  }
+
+  &__title {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 53px;
+    color: $color-footer-dark;
+  }
+
+  &__content {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 53px;
+    color: $color-footer-dark;
   }
   &__work-with-us {
   }

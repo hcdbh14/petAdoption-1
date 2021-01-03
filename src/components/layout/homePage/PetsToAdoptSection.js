@@ -1,7 +1,6 @@
 import React from 'react'
 import Carousel from '../carousel/Carousel';
 import { carouselPets } from '../../../mockdata/carouselPets'
-import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 const PetsToAdoptSection = () => {
 
