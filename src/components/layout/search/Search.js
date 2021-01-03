@@ -46,7 +46,35 @@ const Search = () => {
 
     const moveToNextPage = (chosenPageNum) => {
         setPageNumber(chosenPageNum)
-        dispatch(fetchPets(pageNumber.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
+        dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
+    }
+
+    const range = (start, end) => {
+        return Array(end - start + 1).fill().map((_, idx) => start + idx)
+    }
+
+    const decideRange = () => {
+        let start = 0
+        let end = 0
+        let totalPages = parseInt(petsState.pageNum)
+
+        if (pageNumber >= 5) {
+            start = pageNumber - 4
+        } else {
+            if (totalPages < 10) {
+                return [...Array(totalPages).keys()];
+            }
+            return [...Array(10).keys()];
+        }
+
+        if (pageNumber + 4 > totalPages) {
+            console.log()
+            end = totalPages - 1
+        } else {
+            end = pageNumber + 4
+        }
+
+        return range(start, end)
     }
 
     return (
@@ -69,7 +97,7 @@ const Search = () => {
                 )}
             <div className="search__pagingWrapper">
                 <img className="search__pageArrow" src={require('../../../images/right-page-arrow.svg')} alt="חץ ימין" />
-                {Array.from(Array(petsState.pageNum)).map((x, i) => <button id={i} onClick={() => moveToNextPage(i)} className= {pageNumber === i ? "search__currentPageButton" : "search__pageButton"}>{i + 1}</button>)}
+                {decideRange().map((i) => <button id={i} onClick={() => moveToNextPage(i)} className={pageNumber === i ? "search__currentPageButton" : "search__pageButton"}>{i + 1}</button>)}
                 <img className="search__pageArrow" src={require('../../../images/left-page-arrow.svg')} alt="חץ שמאל" />
             </div>
 
