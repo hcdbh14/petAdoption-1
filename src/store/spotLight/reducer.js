@@ -6,7 +6,7 @@ const initialState = {
     error: ""
 };
 
-const petReducer = (state = initialState, action) => {
+const spotLightReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case spotLightTypes.SEARCH_SPOTLIGHT_START:
@@ -22,4 +22,4 @@ const petReducer = (state = initialState, action) => {
             return state;
     }
 }
-export default petReducer;
+export default spotLightReducer;

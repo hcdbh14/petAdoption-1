@@ -8,6 +8,10 @@
   box-sizing: inherit;
   direction: rtl;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 
 html {
   scroll-behavior: smooth;

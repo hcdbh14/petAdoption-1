@@ -30,8 +30,8 @@
       padding-top: 10vw;
       margin-right: 40vw;
       font-family: Rubik;
-      font-style: normal;
-      font-weight: bold;
+      font-style: $font-style-normal;
+      font-weight: $font-weight-bold;
       font-size: 4vw;
       line-height: 5vw;
       color: #fa8e2b;
@@ -45,8 +45,8 @@
       padding-bottom: 15vw;
       margin-right: 40vw;
       font-family: Rubik;
-      font-style: normal;
-      font-weight: 500;
+      font-style: $font-style-normal;
+      font-weight: $font-weight-500;
       font-size: 2vw;
       color: $color-black;
 
@@ -60,8 +60,8 @@
     padding-top: 6rem;
     text-align: center;
     font-family: Rubik;
-    font-style: normal;
-    font-weight: 500;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-500;
     font-size: 2rem;
     line-height: 59px;
 
@@ -78,7 +78,7 @@
   &__text {
     text-align: center;
     font-family: Rubik;
-    font-style: normal;
+    font-style: $font-style-normal;
     font-weight: normal;
     font-size: 2.5rem;
     line-height: 53px;
@@ -103,30 +103,29 @@ input:checked + label + .content {
   padding-top: 10rem;
   text-align: center;
   font-family: Rubik;
-  font-style: normal;
+  font-style: $font-style-normal;
   font-size: 3rem;
   line-height: 5.9rem;
   display: flex;
 
   &__text {
     font-family: Rubik;
-    font-style: normal;
+    font-style: $font-style-normal;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: $font-weight-500;
     font-size: 60px;
     line-height: 71px;
- 
 
     @include respond(phone) {
-        font-size: 32px;
+      font-size: 32px;
     }
   }
 
   &__blue-text {
     font-family: Rubik;
-    font-style: normal;
+    font-style: $font-style-normal;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: $font-weight-500;
     font-size: 60px;
     line-height: 71px;
     color: $color-primary;
@@ -169,8 +168,8 @@ input:checked + label + .content {
     padding-top: 6rem;
     text-align: center;
     font-family: Rubik;
-    font-style: normal;
-    font-weight: 500;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-500;
     font-size: 1.5rem;
     line-height: 59px;
   }
@@ -430,8 +429,8 @@ input:checked + label + .content {
     color: #fff;
     text-decoration: none;
     font-family: Rubik;
-    font-style: normal;
-    font-weight: 500;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-500;
   }
 }
 
@@ -448,8 +447,8 @@ input:checked + label + .content {
 
   &__title {
     font-family: Rubik;
-    font-style: normal;
-    font-weight: 500;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-500;
     font-size: 3rem;
     line-height: 53px;
     color: $color-footer-dark;
@@ -457,8 +456,8 @@ input:checked + label + .content {
 
   &__content {
     font-family: Rubik;
-    font-style: normal;
-    font-weight: 500;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-500;
     font-size: 3rem;
     line-height: 53px;
     color: $color-footer-dark;
