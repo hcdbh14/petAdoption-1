@@ -1,138 +1,139 @@
 .miniSearch {
-    display: flex;
-    height: auto;
-    width: 100%;
-    text-align: center;
+  display: flex;
+  height: auto;
+  width: 100%;
+  text-align: center;
+
+  @include respond(tab-port) {
+    display: inline;
+  }
+
+  &__wrapper {
+    background: #e7e3d7;
+    width: 70vw;
+    margin-top: 100px;
+    border-radius: 40px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    @include respond(tab-port) {
+      width: 100vw;
+    }
+  }
+
+  &__title {
+    margin-left: 75px;
+    margin-bottom: 40px;
+    padding-top: 75px;
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
+    font-size: 5rem;
+    line-height: 83px;
+    color: $color-primary;
 
     @include respond(tab-port) {
-       display: inline;
+      margin-left: 50px;
     }
-    
-    &__wrapper {
-        background:#E7E3D7;
-        width: 70vw;
-        margin-top: 100px;
-        border-radius: 40px;
-        
-        @include respond(tab-port) {
-            width: 100vw;
-        }
+  }
+
+  &__dropdown {
+    position: relative;
+    outline: none;
+    margin: 25px;
+    margin-left: 75px;
+    // width: 449px;
+    width: 25vw;
+    height: 50px;
+    padding-right: 25px;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+    border-radius: 20px;
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    font-size: 2.3rem;
+    line-height: 36px;
+    color: #000000;
+    background-image: url(../../images/dropdown-arrow.svg);
+    background-size: 30px auto;
+    background-repeat: no-repeat;
+    background-position-x: 6%;
+    background-position-y: 50%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: "";
+    cursor: pointer;
+    z-index: 2;
+
+    @include respond(tab-port) {
+      width: 50vw;
     }
+  }
 
-    &__title {
-        margin-left: 75px;
-        margin-bottom: 40px;
-        padding-top: 75px;
-        font-family: Rubik;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 5rem;
-        line-height: 83px;
-        color: $color-primary;
+  &__button {
+    position: relative;
+    margin-left: 75px;
+    text-align: center;
+    vertical-align: middle;
+    // width: 638px;
+    width: 30vw;
+    height: 53.36px;
+    margin-top: 50px;
+    margin-bottom: 75px;
+    background: #fa8e2b;
+    border: 1px solid $color-primary;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+    border-radius: 20px;
+    color: $color-white;
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
+    font-size: 2.3rem;
+    line-height: 36px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
 
-        @include respond(tab-port) {
-            margin-left: 50px;
-        }
+    @include respond(tab-port) {
+      margin-left: 45px;
     }
+  }
 
-    &__dropdown {
-        position: relative;
-        outline: none;
-        margin: 25px;
-        margin-left: 75px;
-        // width: 449px;
-        width: 25vw;
-        height: 50px;
-        padding-right: 25px;
-        background: #ffffff;
-        border: 1px solid #ffffff;
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
-        border-radius: 20px;
-        font-family: Rubik;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 2.3rem;
-        line-height: 36px;
-        color: #000000;
-        background-image: url(../../images/dropdown-arrow.svg);
-        background-size: 30px auto;
-        background-repeat: no-repeat;
-        background-position-x: 6%;
-        background-position-y: 50%;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        text-indent: 1px;
-        text-overflow: "";
-        cursor: pointer;
-        z-index: 2;
+  &__animalSide {
+    width: 25%;
+    margin: auto;
+    margin-bottom: -85px;
+    margin-right: -46vw;
 
-        @include respond(tab-port) {
-            width: 50vw;
-        }
-    }
-
-    &__button {
-        position: relative;
-        margin-left: 75px;
-        text-align: center;
-        vertical-align: middle;
-        // width: 638px;
-        width: 30vw;
-        height: 53.36px;
-        margin-top: 50px;
-        margin-bottom: 75px;
-        background: #FA8E2B;
-        border: 1px solid $color-primary;
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
-        border-radius: 20px;
-        color: $color-white;
-        font-family: Rubik;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 2.3rem;
-        line-height: 36px;
-        outline: none;
-        border: none;
-        cursor: pointer;
-        z-index: 2;
-
-        @include respond(tab-port) {
-            margin-left: 45px;
-        }
+    @include respond(normal-desktop) {
+      width: 100%;
+      text-align: center;
     }
 
-    &__animalSide {
-        width: 25%;
-        margin: auto;
-        margin-bottom: -85px;
-        margin-right: -46vw;
-
-        @include respond(normal-desktop) {
-            width: 100%;
-            text-align: center;
-        }
-
-        @include respond(tab-port) {    
-            float: left;
-            width: 100%;
-            margin-right: 0vw;
-            margin-left: -20px;
-         }
-
-        &__image {
-            -webkit-user-drag: none;
-            -khtml-user-drag: none;
-            -moz-user-drag: none;
-            -o-user-drag: none;
-            position: relative;
-            width: 77vw;
-            z-index: 1;
-
-            @include respond(tab-port) {
-                float: left;
-                width: 100vw;
-                margin-right: 0w;
-             }
-        }
+    @include respond(tab-port) {
+      float: left;
+      width: 100%;
+      margin-right: 0vw;
+      margin-left: -20px;
     }
+
+    &__image {
+      -webkit-user-drag: none;
+      -khtml-user-drag: none;
+      -moz-user-drag: none;
+      -o-user-drag: none;
+      position: relative;
+      width: 77vw;
+      z-index: 1;
+
+      @include respond(tab-port) {
+        float: left;
+        width: 100vw;
+        margin-right: 0w;
+      }
+    }
+  }
 }

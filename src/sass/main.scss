@@ -10,15 +10,9 @@
 @import "layout/navigation";
 @import "layout/footer";
 @import "layout/contact";
-@import "layout/carousel";
 @import "pages/about";
 @import "pages/search";
 @import "layout/gang";
 @import "layout/miniSearch";
 @import "layout/petCard";
 @import "layout/spotLight";
-
-html,
-body {
-  overflow-x: hidden;
-}

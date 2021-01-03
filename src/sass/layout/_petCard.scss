@@ -1,207 +1,204 @@
 .petCard {
+  &__bigMargin {
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 377px;
+    height: 633px;
+    background: $color-white;
+    box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-right: 5.5vw;
+    margin-left: 5.5vw;
 
-    &__bigMargin {
-        display: flexbox;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        width: 377px;
-        height: 633px;
-        background: $color-white;
-        box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.1);
-        border-radius: 20px;
-        margin-right: 5.5vw;
-        margin-left: 5.5vw;
-
-        @include respond(tab-port) {
-            width: 277px;
-            height: 533px;
-        }
+    @include respond(tab-port) {
+      width: 277px;
+      height: 533px;
     }
+  }
 
-    &__smallMargin {
-        display: flexbox;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        width: 377px;
-        height: 633px;
-        background: $color-white;
-        box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.1);
-        border-radius: 20px;
-        margin-top: 50px;
-        margin-right: 5.5%;
-        margin-left: 5.5vw;
+  &__smallMargin {
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 377px;
+    height: 633px;
+    background: $color-white;
+    box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-right: 5.5%;
+    margin-left: 5.5vw;
 
-        @include respond(tab-port) {
-            width: 277px;
-            height: 533px;
-        }
+    @include respond(tab-port) {
+      width: 277px;
+      height: 533px;
     }
+  }
 
-    &__image {
-        margin-top: 25px;
-        object-fit: cover;
-        width: 316px;
-        height: 344px;
-        border-radius: 10px;
+  &__image {
+    margin-top: 25px;
+    object-fit: cover;
+    width: 316px;
+    height: 344px;
+    border-radius: 10px;
 
-        @include respond(tab-port) {
-            width: 216px;
-            height: 233px;
-        }
+    @include respond(tab-port) {
+      width: 216px;
+      height: 233px;
     }
+  }
 
-    &__nameBlue {
-        padding-right: 45px;
-        text-align: right;
-        font-family: Rubik;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 36px;
-        color: #56bed1;
+  &__nameBlue {
+    padding-right: 45px;
+    text-align: right;
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: #56bed1;
 
-        @include respond(tab-port) {
-            font-size: 26px;
-        }
+    @include respond(tab-port) {
+      font-size: 26px;
     }
+  }
 
-    &__nameOrange {
-        padding-right: 45px;
-        text-align: right;
-        font-family: Rubik;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 36px;
-        color: $color-secondary;
+  &__nameOrange {
+    padding-right: 45px;
+    text-align: right;
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: $color-secondary;
 
-        @include respond(tab-port) {
-            font-size: 26px;
-        }
+    @include respond(tab-port) {
+      font-size: 26px;
     }
+  }
 
-    &__goodWordsBlue {
-        padding-right: 45px;
-        text-align: right;
-        font-family: Rubik;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 36px;
-        color: #56bed1;
+  &__goodWordsBlue {
+    padding-right: 45px;
+    text-align: right;
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: #56bed1;
 
-        @include respond(tab-port) {
-            font-size: 26px;
-        }
+    @include respond(tab-port) {
+      font-size: 26px;
     }
+  }
 
-    &__goodWordsOrange {
-        padding-right: 45px;
-        text-align: right;
-        font-family: Rubik;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 36px;
-        color: $color-secondary;
+  &__goodWordsOrange {
+    padding-right: 45px;
+    text-align: right;
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: $color-secondary;
 
-        @include respond(tab-port) {
-            font-size: 26px;
-        }
+    @include respond(tab-port) {
+      font-size: 26px;
     }
+  }
 
-    &__region {
-        padding-right: 55px;
-        text-align: right;
-        font-family: Rubik;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 25px;
-        line-height: 50px;
-        color: $color-black;
-        
-        @include respond(tab-port) {
-            font-size: 22px;
-        }
+  &__region {
+    padding-right: 55px;
+    text-align: right;
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 50px;
+    color: $color-black;
+
+    @include respond(tab-port) {
+      font-size: 22px;
     }
+  }
 
-    &__houseIcon {
-        margin-left: 5px;
+  &__houseIcon {
+    margin-left: 5px;
+  }
+
+  &__age {
+    padding-right: 55px;
+    text-align: right;
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 50px;
+    padding-bottom: 10px;
+    color: $color-black;
+
+    @include respond(tab-port) {
+      font-size: 22px;
     }
+  }
 
-    &__age {
-        padding-right: 55px;
-        text-align: right;
-        font-family: Rubik;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 25px;
-        line-height: 50px;
-        padding-bottom: 10px;
-        color: $color-black;
+  &__calendarIcon {
+    margin-left: 5px;
+  }
 
-        @include respond(tab-port) {
-            font-size: 22px;
-        }
+  &__detailsOrange {
+    margin-left: 125px;
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: $color-white;
+    width: 202px;
+    height: 50px;
+    background: $color-secondary;
+    border: 1px solid $color-secondary;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    @include respond(tab-port) {
+      font-size: 22px;
+      width: 152px;
+      height: 40px;
+      margin-left: 50px;
     }
+  }
 
-    &__calendarIcon {
-        margin-left: 5px;
+  &__detailsBlue {
+    margin-left: 125px;
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: $color-white;
+    width: 202px;
+    height: 50px;
+    background: #56bed1;
+    border: 1px solid #56bed1;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    @include respond(tab-port) {
+      font-size: 22px;
+      width: 152px;
+      height: 40px;
+      margin-left: 50px;
     }
-
-    &__detailsOrange {
-        margin-left: 125px;
-        font-family: Rubik;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 25px;
-        line-height: 30px;
-        color: $color-white;
-        width: 202px;
-        height: 50px;
-        background: $color-secondary;
-        border: 1px solid $color-secondary;
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
-        border-radius: 20px;
-        outline: none;
-        border: none;
-        cursor: pointer;
-
-
-        @include respond(tab-port) {
-            font-size: 22px;
-            width: 152px;
-            height: 40px;
-            margin-left: 50px;
-        }
-    }
-
-    &__detailsBlue {
-        margin-left: 125px;
-        font-family: Rubik;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 25px;
-        line-height: 30px;
-        color: $color-white;
-        width: 202px;
-        height: 50px;
-        background:  #56BED1;
-        border: 1px solid  #56BED1;
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
-        border-radius: 20px;
-        outline: none;
-        border: none;
-        cursor: pointer;
-
-
-        @include respond(tab-port) {
-            font-size: 22px;
-            width: 152px;
-            height: 40px;
-            margin-left: 50px;
-        }
-    }
+  }
 }

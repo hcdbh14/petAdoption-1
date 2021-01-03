@@ -9,30 +9,34 @@ export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGrou
     var countUrlPath = "/notices/count"
     return (dispatch) => {
         dispatch(fetchPetsStart())
-        if(petType !== "" || region !== "" || gender !== "" || ageGroup !== "") {
+        if (petType !== "" || region !== "" || gender !== "" || ageGroup !== "") {
             urlPath += "/filter"
             countUrlPath += "/filter"
         }
         if (needCount) {
-            axios.get(countUrlPath, 
-                { params: { 
+            axios.get(countUrlPath,
+                {
+                    params: {
+                        petType: petType,
+                        region: region,
+                        gender: gender,
+                        ageGroup: ageGroup
+                    }
+                }).then(response => {
+                    count = response.data.count
+                })
+        }
+        axios.get(urlPath,
+            {
+                params: {
+                    pageNumber: pageNumber,
+                    pageSize: pageSize,
                     petType: petType,
                     region: region,
                     gender: gender,
                     ageGroup: ageGroup
-                } }).then(response => {
-                     count = response.data.count
-                })
-        }
-        axios.get(urlPath, 
-        { params: { 
-            pageNumber: pageNumber,
-            pageSize: pageSize,
-            petType: petType,
-            region: region,
-            gender: gender,
-            ageGroup: ageGroup
-        } })
+                }
+            })
 
             .then(response => {
                 const pets = response.data
@@ -52,7 +56,7 @@ export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGrou
 }
 
 export const fetchPetsStart = () => {
-    
+
     return { type: petsTypes.SEARCH_PETS_START };
 }
 
@@ -79,9 +83,9 @@ export const fetchPetsSuccess = (pets) => {
     };
 }
 
-    export const updateFilter = () => {
-        return {
-            type: petsTypes.SEARCH_PETS_UPDATE_FILTER
-        };
+export const updateFilter = () => {
+    return {
+        type: petsTypes.SEARCH_PETS_UPDATE_FILTER
+    };
 }
 

@@ -5,6 +5,8 @@ $color-primary-dark: #2998ff;
 $color-secondary: #fa8e2b;
 $color-secondary-dark: #ff7730;
 
+$color-component-background: #e6e3d7;
+
 $color-brown: #433c3cd9;
 $color-grey-light-2: #ececec;
 $color-footer-dark: #252525;
@@ -12,7 +14,15 @@ $color-footer-dark: #252525;
 $color-white: #ffffff;
 $color-black: #000;
 $color-black-main: #201b22;
+
 //font
+$default-font-family: Rubik;
+$font-style-normal: normal;
+
+$font-weight-normal: 500;
+$font-weight-bold: 600;
+$font-weight-light: 400;
+
 $defaut-font-size: 1.6rem;
 //grid
 $grid-width: 114rem;

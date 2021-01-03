@@ -1,163 +1,162 @@
 .footer {
-    width: 100%;
-    height: auto;
-    background: $color-footer-dark;
-    background-repeat: no-repeat;
-    padding-top: 2.5vw;
-    padding-bottom: 2.5vw;
+  width: 100%;
+  height: auto;
+  background: $color-footer-dark;
+  background-repeat: no-repeat;
+  padding-top: 2.5vw;
+  padding-bottom: 2.5vw;
 }
 
 .footer-container {
-    display: inline;
-    width: 100%;
-    text-align: center;
-    background: $color-footer-dark;
-    margin-top: 50px;
+  display: inline;
+  width: 100%;
+  text-align: center;
+  background: $color-footer-dark;
+  margin-top: 50px;
 
-    @include respond(tab-port) {
-        height: auto;
-        padding-right: 0px;
-    }
+  @include respond(tab-port) {
+    height: auto;
+    padding-right: 0px;
+  }
 }
 
 .footer-list {
-    margin: auto;
-    color: $color-white;
-    list-style: none;
-    text-align: right;
+  margin: auto;
+  color: $color-white;
+  list-style: none;
+  text-align: right;
 
-    @include respond(normal-desktop) {
-        margin-right: -20px;
-        padding-right: 0px;
-    }
+  @include respond(normal-desktop) {
+    margin-right: -20px;
+    padding-right: 0px;
+  }
 
-    @include respond(tab-port) {
-        margin-right: 0px;
-        padding-right: 0px;
-        display: none;
-    }
+  @include respond(tab-port) {
+    margin-right: 0px;
+    padding-right: 0px;
+    display: none;
+  }
 }
 
 .footer-button {
-    border: none;
-    background-color: transparent;
-    outline: none;
-    margin: auto;
-    cursor: pointer;
-    color: $color-white;
-    list-style: none;
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.875rem;
-    line-height: 40px;
-    margin-top: 30px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  margin: auto;
+  cursor: pointer;
+  color: $color-white;
+  list-style: none;
+  font-family: Rubik;
+  font-style: $font-style-normal;
+  font-weight: $font-weight-normal;
+  font-size: 1.875rem;
+  line-height: 40px;
+  margin-top: 30px;
 
-    &:hover {
-        color: $color-primary;
-    }
+  &:hover {
+    color: $color-primary;
+  }
 
-    @include respond(tab-port) {
-        line-height: 20px;
-    }
+  @include respond(tab-port) {
+    line-height: 20px;
+  }
 }
 
 .colum {
-    margin-left: 5vw;
-    display: inline-block;
-    vertical-align: top;
-    padding: 3em;
+  margin-left: 5vw;
+  display: inline-block;
+  vertical-align: top;
+  padding: 3em;
 
-    &--left {
-        @extend .colum;
-        margin-left: 5vw;
-    }
-    
-    @include respond(tab-port) {
-        display: none;
-    }
+  &--left {
+    @extend .colum;
+    margin-left: 5vw;
+  }
+
+  @include respond(tab-port) {
+    display: none;
+  }
 }
 
 .rows {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo-image {
-    width: 100%;
-    max-width: 400px;
-    height: 14vw;
-    background-image: url(../../images/footer-icon.svg);
-    background-size: contain;
+  width: 100%;
+  max-width: 400px;
+  height: 14vw;
+  background-image: url(../../images/footer-icon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include respond(tab-port) {
     background-repeat: no-repeat;
     background-position: center;
+    height: 30vw;
+    margin-bottom: 30px;
+  }
 
-    @include respond(tab-port) {
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 30vw;
-        margin-bottom: 30px;
-    }
-
-    @include respond(phone) {
-        height: 40vw;
-    }
+  @include respond(phone) {
+    height: 40vw;
+  }
 }
 
 .logo-and-social-colum {
-    display: inline-block;
-    width: 30%;
-    max-width: 400px;
-    text-align: center;
+  display: inline-block;
+  width: 30%;
+  max-width: 400px;
+  text-align: center;
 
-    @include respond(normal-desktop) {
-        margin-left: 25px;
-    }
+  @include respond(normal-desktop) {
+    margin-left: 25px;
+  }
 
-    @include respond(tab-port) {
-        width: 50%;
-        margin: auto;
-        float: none;
-        padding-top: 50px;
-        padding-bottom: 25px;
-    }
+  @include respond(tab-port) {
+    width: 50%;
+    margin: auto;
+    float: none;
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
 
-    @include respond(phone) {
-        padding-bottom: 100px;
-    }
+  @include respond(phone) {
+    padding-bottom: 100px;
+  }
 }
 
 .socialButton {
-   
-    width: 44px;
-    height: 43px;
+  width: 44px;
+  height: 43px;
+  border-radius: 30px;
+  margin-right: 20px;
+  border: 8px solid $color-secondary;
+  outline: none;
+  background-size: contain;
+  background: $color-secondary;
+
+  &:hover {
+    border: 8px solid $color-secondary-dark;
     border-radius: 30px;
-    margin-right: 20px;
-    border: 8px solid $color-secondary;
     outline: none;
     background-size: contain;
-    background: $color-secondary;
+    background: $color-secondary-dark;
+    transition: 0.1s;
+    transform: scale(1.1);
+  }
 
-    &:hover {
-        border: 8px solid $color-secondary-dark;
-        border-radius: 30px;
-        outline: none;
-        background-size: contain;
-        background: $color-secondary-dark;
-        transition: 0.1s;
-        transform: scale(1.1);
-    }
+  &--bird {
+    @extend .socialButton;
+    margin-right: 0;
+  }
 
-    &--bird {
-        @extend .socialButton;
-        margin-right: 0;
-    }
-
-    @include respond(phone) {
-        width: 43px;
-        height: 42px;
-        border-radius: 20px;
-        border: 7.5px solid $color-secondary;
-    }
+  @include respond(phone) {
+    width: 43px;
+    height: 42px;
+    border-radius: 20px;
+    border: 7.5px solid $color-secondary;
+  }
 }

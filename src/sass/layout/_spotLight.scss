@@ -1,71 +1,71 @@
 .spotLight {
-    margin-top: 200px;
+  margin-top: 200px;
 
-    &__titleWrapper {
-        margin-left: -250px;
-        margin-bottom: 50px;
-        display: flex;
-        justify-content: center;
+  &__titleWrapper {
+    margin-left: -250px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
 
-        @include respond(normal-desktop) {
-            margin-left: 0px;
-        }
+    @include respond(normal-desktop) {
+      margin-left: 0px;
     }
+  }
 
-    &__title {
-        font-family: Rubik;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 60px;
-        line-height: 71px;
-        color: $color-black;
+  &__title {
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    font-size: 60px;
+    line-height: 71px;
+    color: $color-black;
 
-        @include respond(phone) {
-            font-size: 40px;
-        }
+    @include respond(phone) {
+      font-size: 40px;
     }
+  }
 
-    &__titleColored {
-        font-family: Rubik;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 60px;
-        line-height: 71px;
-        color: #fa8e2b;
+  &__titleColored {
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    font-size: 60px;
+    line-height: 71px;
+    color: #fa8e2b;
 
-        @include respond(phone) {
-            font-size: 40px;
-        }
+    @include respond(phone) {
+      font-size: 40px;
     }
+  }
 
-    &__container {
-        float: left;
-        width: 80vw;
-        margin-right: 20vw;
-        height: auto;
-        border-radius: 40px;
-        background: #e7e3d7;
+  &__container {
+    float: left;
+    width: 80vw;
+    margin-right: 20vw;
+    height: auto;
+    border-radius: 40px;
+    background: #e7e3d7;
 
-        @include respond(normal-desktop) {
-            width: 100vw;
-            margin-right: 0vw;
-        }
+    @include respond(normal-desktop) {
+      width: 100vw;
+      margin-right: 0vw;
     }
+  }
 
-    &__results {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: row;
-        border-radius: 40px;
-    }
+  &__results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 40px;
+  }
 
-    &__button {
-        margin-bottom: -50vh;
-        background: none;
-        outline: none;
-        border: none;
-        cursor: pointer;
-        margin-right: -50px;
-    }
+  &__button {
+    margin-bottom: -50vh;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-right: -50px;
+  }
 }
