@@ -18,8 +18,8 @@
 
   &__blueTitle {
     font-family: Rubik;
-    font-style: normal;
-    font-weight: bold;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
     font-size: 4.375rem;
     line-height: 83px;
     margin-bottom: 40px;
@@ -28,8 +28,8 @@
 
   &__paragraph {
     font-family: Rubik;
-    font-style: normal;
-    font-weight: 400;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-400;
     font-size: 2.5rem;
     line-height: 47px;
     text-align: right;
@@ -37,8 +37,8 @@
 
   &__orangeTitle {
     font-family: Rubik;
-    font-style: normal;
-    font-weight: bold;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
     font-size: 4.375rem;
     line-height: 83px;
     text-align: right;

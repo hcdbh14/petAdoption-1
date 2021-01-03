@@ -1,5 +1,4 @@
 import React from 'react'
-import PetsToAdoptSection from '../layout/homePage/PetsToAdoptSection';
 import AdoptMeSection from '../layout/homePage/AdoptMeSection';
 import Responsibility from '../layout/homePage/Responsibility';
 import MiniSearch from '../layout/search/MiniSearch';
@@ -14,9 +13,7 @@ const HomePage = () => {
             <MiniSearch />
             <SpotLight />
             <Responsibility />
-            <PetsToAdoptSection />
             <AdoptMeSection />
-
         </div >
 
     )

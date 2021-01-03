@@ -11,8 +11,8 @@
 
     &__text {
       font-family: Rubik;
-      font-style: normal;
-      font-weight: 500;
+      font-style: $font-style-normal;
+      font-weight: $font-weight-500;
       font-size: 3.125rem;
 
       &__image {
@@ -40,8 +40,8 @@
   &__pageButton {
     margin: 5px;
     font-family: Rubik;
-    font-style: normal;
-    font-weight: 500;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-500;
     font-size: 30px;
     line-height: 36px;
     color: #ececec;
@@ -57,14 +57,14 @@
   &__currentPageButton {
     margin: 5px;
     font-family: Rubik;
-    font-style: normal;
-    font-weight: 500;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-500;
     font-size: 30px;
     line-height: 36px;
     color: #ececec;
     width: 53px;
     height: 47px;
-    background: #FA8E2B;;
+    background: #fa8e2b;
     border-radius: 15px;
     outline: none;
     border: none;
