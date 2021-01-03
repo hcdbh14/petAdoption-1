@@ -1,71 +1,207 @@
-.pets {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1260px;
-}
+.petCard {
 
-.pet-card {
-    outline: none;
-    border: none;
-    text-align: right;
-    cursor: pointer;
-    height: auto;
-    width: 250.5px;
-    background-color: white;
-    border-radius: 10px;
-    padding-bottom: 15px;
-    transition: box-shadow 0.3s;
-    margin-right: 50px;
-    margin-top: 50px;
+    &__bigMargin {
+        display: flexbox;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 377px;
+        height: 633px;
+        background: $color-white;
+        box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        margin-right: 5.5vw;
+        margin-left: 5.5vw;
 
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        @include respond(tab-port) {
+            width: 277px;
+            height: 533px;
+        }
     }
-}
 
-.pet-preview-image {
-    height: 243.5px;
-    width: 250px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
+    &__smallMargin {
+        display: flexbox;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 377px;
+        height: 633px;
+        background: $color-white;
+        box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        margin-top: 50px;
+        margin-right: 5.5%;
+        margin-left: 5.5vw;
 
-.pet-name-preview {
-    line-height: 50px;
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 32px;
-    padding-right: 20px;
-    color: $color-primary;
-}
+        @include respond(tab-port) {
+            width: 277px;
+            height: 533px;
+        }
+    }
 
-.pet-heart-preview {
-    height: 20px;
-    width: 20px;
-}
+    &__image {
+        margin-top: 25px;
+        object-fit: cover;
+        width: 316px;
+        height: 344px;
+        border-radius: 10px;
 
-.description-preview {
-    display: flex;
-    flex-direction: row;
-    margin-right: 20px;
-}
+        @include respond(tab-port) {
+            width: 216px;
+            height: 233px;
+        }
+    }
 
-.pet-desc-preview {
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    padding-right: 10px;
-}
+    &__nameBlue {
+        padding-right: 45px;
+        text-align: right;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 36px;
+        color: #56bed1;
 
-.pet-goodWords-preview {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: gray;
+        @include respond(tab-port) {
+            font-size: 26px;
+        }
+    }
+
+    &__nameOrange {
+        padding-right: 45px;
+        text-align: right;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 36px;
+        color: $color-secondary;
+
+        @include respond(tab-port) {
+            font-size: 26px;
+        }
+    }
+
+    &__goodWordsBlue {
+        padding-right: 45px;
+        text-align: right;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 36px;
+        color: #56bed1;
+
+        @include respond(tab-port) {
+            font-size: 26px;
+        }
+    }
+
+    &__goodWordsOrange {
+        padding-right: 45px;
+        text-align: right;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 36px;
+        color: $color-secondary;
+
+        @include respond(tab-port) {
+            font-size: 26px;
+        }
+    }
+
+    &__region {
+        padding-right: 55px;
+        text-align: right;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 50px;
+        color: $color-black;
+        
+        @include respond(tab-port) {
+            font-size: 22px;
+        }
+    }
+
+    &__houseIcon {
+        margin-left: 5px;
+    }
+
+    &__age {
+        padding-right: 55px;
+        text-align: right;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 50px;
+        padding-bottom: 10px;
+        color: $color-black;
+
+        @include respond(tab-port) {
+            font-size: 22px;
+        }
+    }
+
+    &__calendarIcon {
+        margin-left: 5px;
+    }
+
+    &__detailsOrange {
+        margin-left: 125px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+        color: $color-white;
+        width: 202px;
+        height: 50px;
+        background: $color-secondary;
+        border: 1px solid $color-secondary;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+
+
+        @include respond(tab-port) {
+            font-size: 22px;
+            width: 152px;
+            height: 40px;
+            margin-left: 50px;
+        }
+    }
+
+    &__detailsBlue {
+        margin-left: 125px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+        color: $color-white;
+        width: 202px;
+        height: 50px;
+        background:  #56BED1;
+        border: 1px solid  #56BED1;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+
+
+        @include respond(tab-port) {
+            font-size: 22px;
+            width: 152px;
+            height: 40px;
+            margin-left: 50px;
+        }
+    }
 }
