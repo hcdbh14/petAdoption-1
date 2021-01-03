@@ -26,7 +26,6 @@ const Search = () => {
     useEffect(loadPets, [])
 
     const [pageNumber, setPageNumber] = useState(0);
-    // var pageNumber = ""
     var pageSize = ""
     const dispatch = useDispatch();
     const petsState = useSelector(state => state.petsReducer);
@@ -47,6 +46,18 @@ const Search = () => {
     const moveToNextPage = (chosenPageNum) => {
         setPageNumber(chosenPageNum)
         dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
+    }
+
+    const moveToStart = () => {
+        setPageNumber(0)
+        dispatch(fetchPets("0", pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
+    }
+
+    const moveToEnd = () => {
+        let lastPage = parseInt(petsState.pageNum)
+        setPageNumber(lastPage - 1)
+        lastPage -= 1
+        dispatch(fetchPets(lastPage.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
     }
 
     const range = (start, end) => {
@@ -96,9 +107,13 @@ const Search = () => {
                     </div>
                 )}
             <div className="search__pagingWrapper">
-                <img className="search__pageArrow" src={require('../../../images/right-page-arrow.svg')} alt="חץ ימין" />
+                <button className="search__fastPageButton" onClick={() => moveToStart()}>
+                    <img className="search__pageArrow" src={require('../../../images/right-page-arrow.svg')} alt="חץ ימין" />
+                </button>
                 {decideRange().map((i) => <button id={i} onClick={() => moveToNextPage(i)} className={pageNumber === i ? "search__currentPageButton" : "search__pageButton"}>{i + 1}</button>)}
-                <img className="search__pageArrow" src={require('../../../images/left-page-arrow.svg')} alt="חץ שמאל" />
+                <button className="search__fastPageButton" onClick={() => moveToEnd()}>
+                    <img className="search__pageArrow" src={require('../../../images/left-page-arrow.svg')} alt="חץ שמאל" />
+                </button>
             </div>
 
             <AdoptMeSection styleColored={styleColored} style={style} />
