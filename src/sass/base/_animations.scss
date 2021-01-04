@@ -80,3 +80,51 @@
     transform: translateX(0);
   }
 }
+
+@keyframes loading {
+  20%,
+  25% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  25%,
+  50% {
+    opacity: 0;
+    filter: blur(1px);
+  }
+
+  50%,
+  70% {
+    opacity: 0;
+    filter: blur(1px);
+  }
+  70%,
+  75% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  75%,
+  100% {
+    opacity: 0;
+  }
+
+  // 0% {
+  // }
+  // 5%,
+  // 25% {
+  //   opacity: 1;
+  // }
+  // 15%,
+  // 35% {
+  //   opacity: 1;
+  // }
+  // 40% {
+  //   opacity: 0;
+  // }
+  // 80% {
+  //   opacity: 1;
+  // }
+  // 95% {
+  //   opacity: 0;
+  // }
+}

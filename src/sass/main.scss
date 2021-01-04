@@ -1,18 +1,23 @@
 @import "abstract/mixins";
 @import "abstract/variables";
+
 @import "components/favIcon";
+@import "components/loading";
+
 @import "base/animations";
 @import "base/base";
 @import "base/typogrophy";
 @import "base/utilities";
-@import "pages/home";
+
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/footer";
 @import "layout/contact";
-@import "pages/about";
-@import "pages/search";
 @import "layout/gang";
 @import "layout/miniSearch";
 @import "layout/petCard";
 @import "layout/spotLight";
+
+@import "pages/about";
+@import "pages/search";
+@import "pages/home";

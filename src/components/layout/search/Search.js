@@ -5,6 +5,7 @@ import { fetchPets } from '../../../store/pets/action';
 import Title from './Title';
 import PetCard from '../pet/petCard';
 import AdoptMeSection from '../homePage/AdoptMeSection'
+import Loading from '../ui/Loading';
 
 const Search = () => {
 
@@ -96,7 +97,7 @@ const Search = () => {
             {petsState.error !== "" ?
                 <h1>error</h1>
                 : (petsState.loading ?
-                    <h1>loading</h1>
+                    <Loading />
                     :
                     <div>
                         <h1>pets count is {petsState.count}</h1>

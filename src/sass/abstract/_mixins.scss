@@ -27,6 +27,13 @@
   cursor: pointer;
 }
 
+@mixin loadingDefault {
+  filter: blur(2px);
+  position: absolute;
+  opacity: 0;
+  transform: rotate(70deg);
+  animation: loading 5.1s infinite forwards;
+}
 //Media query manager
 /*
 0-600px : phone

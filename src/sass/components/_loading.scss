@@ -1,0 +1,54 @@
+.loading {
+  padding: 10rem 55rem;
+
+  &__steps {
+    position: relative;
+    height: 40vh;
+
+    &__paw {
+      &-3 {
+        @include loadingDefault;
+        left: 20%;
+        bottom: 20%;
+        animation-delay: 0.6s;
+      }
+      &-4 {
+        @include loadingDefault;
+        left: 25%;
+        bottom: 40%;
+        animation-delay: 0.9s;
+      }
+      &-5 {
+        @include loadingDefault;
+        left: 40%;
+        bottom: 40%;
+        animation-delay: 1.2s;
+      }
+      &-6 {
+        @include loadingDefault;
+        left: 45%;
+        bottom: 60%;
+        animation-delay: 1.5s;
+      }
+      &-7 {
+        @include loadingDefault;
+        left: 60%;
+        bottom: 60%;
+        animation-delay: 1.8s;
+      }
+      &-8 {
+        @include loadingDefault;
+        left: 65%;
+        bottom: 80%;
+        animation-delay: 2.1s;
+      }
+      &-9 {
+        @include loadingDefault;
+
+        left: 80%;
+        bottom: 80%;
+        animation-delay: 2.4s;
+      }
+    }
+  }
+}
