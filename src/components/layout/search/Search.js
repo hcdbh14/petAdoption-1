@@ -19,6 +19,7 @@ const Search = () => {
 
     const loadPets = () => {
         if (petsState.count === 0 || petsState.reload) {
+            setPageNumber(0)
             dispatch(fetchPets(pageNumber.value, pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true))
         }
     }
@@ -26,7 +27,6 @@ const Search = () => {
     useEffect(loadPets, [])
 
     const [pageNumber, setPageNumber] = useState(0);
-    // var pageNumber = ""
     var pageSize = ""
     const dispatch = useDispatch();
     const petsState = useSelector(state => state.petsReducer);
@@ -46,7 +46,47 @@ const Search = () => {
 
     const moveToNextPage = (chosenPageNum) => {
         setPageNumber(chosenPageNum)
-        dispatch(fetchPets(pageNumber.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
+        dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
+    }
+
+    const moveToStart = () => {
+        setPageNumber(0)
+        dispatch(fetchPets("0", pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
+    }
+
+    const moveToEnd = () => {
+        let lastPage = parseInt(petsState.pageNum)
+        setPageNumber(lastPage - 1)
+        lastPage -= 1
+        dispatch(fetchPets(lastPage.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
+    }
+
+    const range = (start, end) => {
+        return Array(end - start + 1).fill().map((_, idx) => start + idx)
+    }
+
+    const decideRange = () => {
+        let start = 0
+        let end = 0
+        let totalPages = parseInt(petsState.pageNum)
+
+        if (pageNumber >= 5) {
+            start = pageNumber - 4
+        } else {
+            if (totalPages < 10) {
+                return [...Array(totalPages).keys()];
+            }
+            return [...Array(10).keys()];
+        }
+
+        if (pageNumber + 4 > totalPages) {
+            console.log()
+            end = totalPages - 1
+        } else {
+            end = pageNumber + 4
+        }
+
+        return range(start, end)
     }
 
     return (
@@ -68,9 +108,13 @@ const Search = () => {
                     </div>
                 )}
             <div className="search__pagingWrapper">
-                <img className="search__pageArrow" src={require('../../../images/right-page-arrow.svg')} alt="חץ ימין" />
-                {Array.from(Array(petsState.pageNum)).map((x, i) => <button id={i} onClick={() => moveToNextPage(i)} className= {pageNumber === i ? "search__currentPageButton" : "search__pageButton"}>{i + 1}</button>)}
-                <img className="search__pageArrow" src={require('../../../images/left-page-arrow.svg')} alt="חץ שמאל" />
+                <button className="search__fastPageButton" onClick={() => moveToStart()}>
+                    <img className="search__pageArrow" src={require('../../../images/right-page-arrow.svg')} alt="חץ ימין" />
+                </button>
+                {decideRange().map((i) => <button id={i} onClick={() => moveToNextPage(i)} className={pageNumber === i ? "search__currentPageButton" : "search__pageButton"}>{i + 1}</button>)}
+                <button className="search__fastPageButton" onClick={() => moveToEnd()}>
+                    <img className="search__pageArrow" src={require('../../../images/left-page-arrow.svg')} alt="חץ שמאל" />
+                </button>
             </div>
 
             <AdoptMeSection styleColored={styleColored} style={style} />
