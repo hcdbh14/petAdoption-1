@@ -97,7 +97,9 @@ const Search = () => {
             {petsState.error !== "" ?
                 <h1>error</h1>
                 : (petsState.loading ?
+                    <div className="search__results">
                     <Loading />
+                    </div>
                     :
                     <div>
                         <h1>pets count is {petsState.count}</h1>
