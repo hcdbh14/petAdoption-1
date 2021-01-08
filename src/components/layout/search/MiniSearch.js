@@ -45,29 +45,29 @@ const MiniSearch = () => {
 
                 <select className="miniSearch__dropdown" value={petsState.searchInputs.petType} onChange={petTypeHandleChange}>
                     <option value="">כל סוגי החיות</option>
-                    <option value="dog">כלב</option>
-                    <option value="cat">חתול</option>
-                    <option value="other">אחר</option>
+                    <option value="כלב">כלב</option>
+                    <option value="חתול">חתול</option>
+                    <option value="אחר">אחר</option>
                 </select>
 
                 <select className="miniSearch__dropdown" value={petsState.searchInputs.region} onChange={regionHandleChange}>
                     <option value="">כל האזורים</option>
-                    <option value="north">צפון</option>
-                    <option value="center">מרכז</option>
-                    <option value="south">דרום</option>
+                    <option value="צפון">צפון</option>
+                    <option value="מרכז">מרכז</option>
+                    <option value="דרום">דרום</option>
                 </select>
                 <br />
                 <select className="miniSearch__dropdown" value={petsState.searchInputs.gender} onChange={genderHandleChange}>
                     <option value="">זכר ונקבה</option>
-                    <option value="male">זכר</option>
-                    <option value="female">נקבה</option>
+                    <option value="זכר">זכר</option>
+                    <option value="נקבה">נקבה</option>
                 </select>
 
                 <select className="miniSearch__dropdown" value={petsState.searchInputs.ageGroup} onChange={ageGroupHandleChange}>
                     <option value="">כל הגילאים</option>
-                    <option value="young">צעיר</option>
-                    <option value="adult">בוגר</option>
-                    <option value="elder">מבוגר</option>
+                    <option value="צעיר">צעיר</option>
+                    <option value="בוגר">בוגר</option>
+                    <option value="מבוגר">מבוגר</option>
                 </select>
 
                 {window.location.href.includes(SEARCH) ?
