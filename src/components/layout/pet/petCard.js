@@ -21,16 +21,6 @@ const PetCard = ({ name, goodWords, region, age, gender, image, i }) => {
         return maleOrFemale + " " + age + " " + monthsOrYears;
     }
 
-    const translateRegion = () => {
-        if (region === "center") {
-            return "מרכז"
-        } else if (region === "north") {
-            return "צפון"
-        } else {
-            return "דרום"
-        }
-    }
-
     return (
         <div className={window.location.href.includes(SEARCH) ? "petCard__bigMargin" : "petCard__smallMargin"} id={i ? i : null}>
             <img className="petCard__image" src={`data:image/png;base64, ${image}`} alt="תמונת החיה" />
@@ -38,7 +28,7 @@ const PetCard = ({ name, goodWords, region, age, gender, image, i }) => {
             <p className={window.location.href.includes(SEARCH) ? "petCard__goodWordsBlue" : "petCard__goodWordsOrange"}>{goodWords}</p>
             <p className="petCard__region">
                 <img className="petCard__houseIcon" src={require('../../../images/house.svg')} alt="אייקון של אזור" />
-                {translateRegion()}
+                {region}
             </p>
             <p className="petCard__age">
                 <img className="petCard__calendarIcon" src={require('../../../images/calendar.svg')} alt="אייקון של לוח שנה" />
