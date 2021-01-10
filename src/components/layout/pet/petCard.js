@@ -1,13 +1,13 @@
 import React from 'react';
-import { SEARCH } from '../../constants/routes';
+import { Link } from 'react-router-dom';
+import { SEARCH, DETAILS } from '../../constants/routes';
 
 const PetCard = ({ name, goodWords, region, age, gender, image, i }) => {
     const buildAgeDesc = () => {
-        
+
         var formattedAge = age
         var maleOrFemale = ""
         var monthsOrYears = ""
-
 
         if (gender === "male") {
             maleOrFemale = "בן"
@@ -39,7 +39,9 @@ const PetCard = ({ name, goodWords, region, age, gender, image, i }) => {
                 <img className="petCard__calendarIcon" src={require('../../../images/calendar.svg')} alt="אייקון של לוח שנה" />
                 {buildAgeDesc()}
             </p>
-            <button className={window.location.href.includes(SEARCH) ? "petCard__detailsOrange" : "petCard__detailsBlue"}>פרטים נוספים</button>
+            <Link to={DETAILS}>
+                <button className={window.location.href.includes(SEARCH) ? "petCard__detailsOrange" : "petCard__detailsBlue"}>פרטים נוספים</button>
+            </Link>
         </div >
     )
 }
