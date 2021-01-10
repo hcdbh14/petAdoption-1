@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import MiniSearch from './MiniSearch';
 import { fetchPets } from '../../../store/pets/action';
 import Title from './Title';
-import PetCard from '../pet/petCard';
+import PetCard from '../pet/PetCard';
 import AdoptMeSection from '../homePage/AdoptMeSection'
 import Loading from '../ui/Loading';
 
