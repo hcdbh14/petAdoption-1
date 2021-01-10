@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchSpotLightPets } from '../../../store/spotLight/action';
-import PetCard from '../pet/petCard';
+import PetCard from '../pet/PetCard';
 
 const SpotLight = () => {
 
