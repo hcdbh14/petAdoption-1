@@ -3,8 +3,11 @@ import { SEARCH } from '../../constants/routes';
 
 const PetCard = ({ name, goodWords, region, age, gender, image, i }) => {
     const buildAgeDesc = () => {
+        
+        var formattedAge = age
         var maleOrFemale = ""
         var monthsOrYears = ""
+
 
         if (gender === "male") {
             maleOrFemale = "בן"
@@ -14,11 +17,13 @@ const PetCard = ({ name, goodWords, region, age, gender, image, i }) => {
 
         if (age >= 1) {
             monthsOrYears = "שנים"
+
         } else {
             monthsOrYears = "חודשים"
+            formattedAge = String(age).split(".")[1];
         }
 
-        return maleOrFemale + " " + age + " " + monthsOrYears;
+        return maleOrFemale + " " + formattedAge + " " + monthsOrYears;
     }
 
     return (
