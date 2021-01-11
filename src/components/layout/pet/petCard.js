@@ -18,7 +18,7 @@ const PetCard = ({ pet }) => {
         var maleOrFemale = ""
         var monthsOrYears = ""
 
-        if (pet.gender === "male") {
+        if (pet.gender === "זכר") {
             maleOrFemale = "בן"
         } else {
             maleOrFemale = "בת"

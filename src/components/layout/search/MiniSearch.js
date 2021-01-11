@@ -32,7 +32,7 @@ const MiniSearch = () => {
 
     const loadPets = () => {
         if (petsState.count === 0 || petsState.reload) {
-            dispatch(fetchPets(0, 9, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true))
+            dispatch(fetchPets(0, 12, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true))
         }
     }
 
