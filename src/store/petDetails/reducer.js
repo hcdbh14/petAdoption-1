@@ -1,7 +1,7 @@
 import { detailTypes } from './detailTypes';
 
 const initialState = {
-    petId: null,
+    pet: null,
     images: [],
     shelter: null,
     imagesLoading: false,
@@ -18,7 +18,7 @@ const detailReducer = (state = initialState, action) => {
             return { ...state, images: action.images, shelter: action.shelter, imagesLoading: action.imagesLoading, shelterLoading: action.shelterLoading, error: "" }
 
         case detailTypes.DETAIL_START:
-            return { ...state, petId: action.petId, imagesLoading: action.imagesLoading, shelterLoading: action.shelterLoading, error: "" }
+            return { ...state, pet: action.pet, imagesLoading: action.imagesLoading, shelterLoading: action.shelterLoading, error: "" }
 
         case detailTypes.DETAIL_FAIL:
             return { ...state, imagesLoading: action.imagesLoading, shelterLoading: action.shelterLoading, imagesError: action.imagesError, shelterErrorr: action.shelterErrorr  }

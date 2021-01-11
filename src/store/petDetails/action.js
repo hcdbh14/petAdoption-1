@@ -1,18 +1,19 @@
 // import axios from '../../config/axios';
 import { detailTypes } from './detailTypes';
 
-export const getAdditionalDetails = (petId) => {
+export const getAdditionalDetails = (pet) => {
 
     return (dispatch) => {
-        dispatch(fetchPetDetailStart(petId))
+        console.log(pet)
+        dispatch(fetchPetDetailStart(pet))
     }
 }
 
-export const fetchPetDetailStart = (petId) => {
+export const fetchPetDetailStart = (pet) => {
     const imagesLoading = true
     const shelterLoading = true 
     return { type: detailTypes.DETAIL_START, 
-        petId, 
+        pet, 
         imagesLoading, 
         shelterLoading 
     };

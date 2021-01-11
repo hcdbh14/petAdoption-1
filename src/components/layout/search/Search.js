@@ -36,7 +36,7 @@ const Search = () => {
         petsState.searchResults.map(pet => {
             return (
                 <div key={pet.id}>
-                    <PetCard name={pet.name} goodWords={pet.goodWords} region={pet.region} age={pet.age} gender={pet.gender} image={pet.image} />
+                    <PetCard pet={pet} />
                     <br />
                     <br />
                 </div>)
