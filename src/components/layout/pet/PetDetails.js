@@ -27,15 +27,21 @@ const PetDetails = () => {
             <h1 style={{ color: "black" }}>{detailState.pet.vaccinated}</h1>
             <h1 style={{ color: "black" }}>{detailState.pet.ageGroup}</h1>
             <img className="petCard__image" src={`data:image/png;base64, ${detailState.pet.image}`} alt="תמונת החיה" />
-            {detailState.imagesLoading ?
-                <h1>images loading</h1> :
-                <h1>images Loaded!</h1>
-            }
+            {detailState.imagesError !== "" ?
+                <h1>error</h1>
+                : (detailState.imagesLoading ?
+                    <h1>images loading</h1>
+                    :
+                    <h1>images ready!</h1>
+                )}
 
-            {detailState.shelterLoading ?
-                <h1>shelter loading</h1> :
-                <h1>shelter Loaded!</h1>
-            }
+            {detailState.shelterError !== "" ?
+                <h1>error</h1>
+                : (detailState.shelterLoading ?
+                    <h1>shelter loading</h1>
+                    :
+                    <h1>shelter ready!</h1>
+                )}
         </div >
     )
 }

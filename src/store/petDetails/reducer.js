@@ -7,7 +7,7 @@ const initialState = {
     imagesLoading: false,
     shelterLoading: false,
     imagesError: "",
-    shelterErrorr: ""
+    shelterError: ""
 };
 
 const detailReducer = (state = initialState, action) => {
@@ -15,16 +15,19 @@ const detailReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case detailTypes.DETAIL_IMAGES_SUCCESS:
-            return { ...state, images: action.images, imagesLoading: action.imagesLoading, error: "" }
+            return { ...state, images: action.images, imagesLoading: false }
 
         case detailTypes.DETAIL_SHELTER_SUCCESS:
-            return { ...state, shelter: action.shelter, shelterLoading: action.shelterLoading, error: "" }
+            return { ...state, shelter: action.shelter, shelterLoading: false }
 
         case detailTypes.DETAIL_START:
-            return { ...state, pet: action.pet, imagesLoading: action.imagesLoading, shelterLoading: action.shelterLoading, error: "" }
+            return { ...state, pet: action.pet, imagesLoading: true, shelterLoading: true, imagesError: "", shelterError: "" }
 
-        case detailTypes.DETAIL_FAIL:
-            return { ...state, imagesLoading: action.imagesLoading, shelterLoading: action.shelterLoading, imagesError: action.imagesError, shelterErrorr: action.shelterErrorr }
+        case detailTypes.DETAIL_IMAGES_FAIL:
+            return { ...state, imagesError: action.imagesError, imagesLoading: false }
+
+        case detailTypes.DETAIL_SHELTER_FAIL:
+            return { ...state, shelterError: action.shelterError, shelterLoading: false}
 
         default:
             return state;

@@ -9,7 +9,6 @@ const PetCard = ({ pet }) => {
     const dispatch = useDispatch();
 
     const moveToDetails = () => {
-        console.log(pet)
         dispatch(getAdditionalDetails(pet))
     }
 

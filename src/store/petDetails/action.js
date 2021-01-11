@@ -5,16 +5,21 @@ export const getAdditionalDetails = (pet) => {
     const urlPath = "/notices/pet/images"
     const shelterUrlPath = "/shelters/details"
     return (dispatch) => {
-    dispatch(fetchPetDetailStart(pet))
-    axios.get(urlPath,
-        {
-            params: {
-                noticeId: pet.id
-            }
-        }).then(response => {
-            console.log(response.data)
-            dispatch(imagesSuccess(response.data))
-        })
+        dispatch(fetchPetDetailStart(pet))
+        axios.get(urlPath,
+            {
+                params: {
+                    noticeId: pet.id
+                }
+            }).then(response => {
+                console.log(response.data)
+                dispatch(imagesSuccess(response.data))
+            })
+            .catch(error => {
+                const err = error.message
+                console.log(err)
+                dispatch(imagesFail(err))
+            })
 
         axios.get(shelterUrlPath,
             {
@@ -25,34 +30,47 @@ export const getAdditionalDetails = (pet) => {
                 console.log(response.data)
                 dispatch(shelterSuccess(response.data))
             })
+            .catch(error => {
+                const err = error.message
+                console.log(err)
+                dispatch(shelterFail(err))
+            })
     }
 }
 
 export const fetchPetDetailStart = (pet) => {
-    const imagesLoading = true
-    const shelterLoading = true 
-    return { type: detailTypes.DETAIL_START, 
-        pet, 
-        imagesLoading, 
-        shelterLoading 
+    return {
+        type: detailTypes.DETAIL_START,
+        pet
     };
-}
-
-
-export const shelterSuccess = (shelter) => {
-    const shelterLoading = false 
-    return { type: detailTypes.DETAIL_SHELTER_SUCCESS, 
-        shelter, 
-        shelterLoading 
-    };
-
 }
 
 export const imagesSuccess = (images) => {
-    const imagesLoading = false
-    return { type: detailTypes.DETAIL_IMAGES_SUCCESS, 
-        images, 
-        imagesLoading 
+    return {
+        type: detailTypes.DETAIL_IMAGES_SUCCESS,
+        images
+    };
+}
+
+export const shelterSuccess = (shelter) => {
+    return {
+        type: detailTypes.DETAIL_SHELTER_SUCCESS,
+        shelter
+    };
+}
+
+
+export const imagesFail = (err) => {
+    return {
+        type: detailTypes.DETAIL_IMAGES_FAIL,
+        err
+    };
+}
+
+export const shelterFail = (err) => {
+    return {
+        type: detailTypes.DETAIL_SHELTER_FAIL,
+        err
     };
 }
 
