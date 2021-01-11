@@ -41,7 +41,7 @@ export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGrou
             .then(response => {
                 const pets = response.data
                 if (needCount) {
-                    const pageNum = Math.trunc((count + 9 - 1) / 9)
+                    const pageNum = Math.trunc((count + 12 - 1) / 12)
                     dispatch(fetchPetsAndCountSuccess(pets, count, pageNum))
                 } else {
                     dispatch(fetchPetsSuccess(pets))

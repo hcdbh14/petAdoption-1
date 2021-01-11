@@ -102,9 +102,6 @@ const Search = () => {
                     </div>
                     :
                     <div>
-                        <h1>pets count is {petsState.count}</h1>
-                        <h1>Number of pages we need {Math.trunc((petsState.count + 9 - 1) / 9)}</h1>
-
                         <div className="search__results">
                             {petsList}
                         </div>

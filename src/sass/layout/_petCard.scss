@@ -9,9 +9,15 @@
     background: $color-white;
     box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-    margin-right: 5.5vw;
-    margin-left: 5.5vw;
+    margin-right: 2.66vw;
+    margin-left: 2.7vw;
 
+    @media screen and (max-width: 2000px) {
+      width: 347px;
+      height: 603px;
+      margin-right: 1.5vw;
+      margin-left: 1.5vw;
+    }
     @include respond(tab-port) {
       width: 277px;
       height: 533px;
@@ -45,6 +51,11 @@
     height: 344px;
     border-radius: 10px;
 
+    @media screen and (max-width: 2000px) {
+      width: 296px;
+      height: 324px;
+    }
+
     @include respond(tab-port) {
       width: 216px;
       height: 233px;
@@ -61,6 +72,10 @@
     line-height: 36px;
     color: #56bed1;
 
+    @media screen and (max-width: 2000px) {
+      font-size: 28px;
+    }
+
     @include respond(tab-port) {
       font-size: 26px;
     }
@@ -75,6 +90,10 @@
     font-size: 30px;
     line-height: 36px;
     color: $color-secondary;
+
+    @media screen and (max-width: 2000px) {
+      font-size: 28px;
+    }
 
     @include respond(tab-port) {
       font-size: 26px;
@@ -91,6 +110,10 @@
     line-height: 36px;
     color: #56bed1;
 
+    @media screen and (max-width: 2000px) {
+      font-size: 28px;
+    }
+
     @include respond(tab-port) {
       font-size: 26px;
     }
@@ -105,6 +128,10 @@
     font-size: 30px;
     line-height: 36px;
     color: $color-secondary;
+
+    @media screen and (max-width: 2000px) {
+      font-size: 28px;
+    }
 
     @include respond(tab-port) {
       font-size: 26px;
@@ -121,6 +148,9 @@
     line-height: 50px;
     color: $color-black;
 
+    @media screen and (max-width: 2000px) {
+      font-size: 24px;
+    }
     @include respond(tab-port) {
       font-size: 22px;
     }
@@ -141,6 +171,9 @@
     padding-bottom: 10px;
     color: $color-black;
 
+    @media screen and (max-width: 2000px) {
+      font-size: 24px;
+    }
     @include respond(tab-port) {
       font-size: 22px;
     }
@@ -168,6 +201,14 @@
     border: none;
     cursor: pointer;
 
+    @media screen and (max-width: 2000px) {
+      font-size: 23px;
+      width: 182px;
+      height: 45px;
+
+      margin-left: 90px;
+    }
+
     @include respond(tab-port) {
       font-size: 22px;
       width: 152px;
@@ -193,6 +234,12 @@
     outline: none;
     border: none;
     cursor: pointer;
+
+    @media screen and (max-width: 2000px) {
+      font-size: 23px;
+      width: 182px;
+      height: 45px;
+    }
 
     @include respond(tab-port) {
       font-size: 22px;
