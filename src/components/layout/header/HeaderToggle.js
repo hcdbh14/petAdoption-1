@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-
 import * as ROUTES from '../../constants/routes';
+
 const HeaderToggle = () => {
     return (
         <div class="navigation">
@@ -28,8 +28,6 @@ const HeaderToggle = () => {
                     </li>
                 </ul>
             </nav>
-
-
         </div>
     )
 }

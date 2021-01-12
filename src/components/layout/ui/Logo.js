@@ -1,11 +1,13 @@
-import React from 'react'
-import paw from '../../../images/paw.svg'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Logo = (props) => {
-    const { withImage } = props;
+const Logo = () => { 
+
     return (
         <div className='header__logo'>
-            {withImage && <img src={paw} alt="Logo" className="header__logo-text" />}
+                        <Link to="/">
+            <div alt="לוגו" className="header__logo" />
+            </Link>
         </div>
     )
 }
