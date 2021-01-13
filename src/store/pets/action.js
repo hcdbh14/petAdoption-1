@@ -1,15 +1,13 @@
 import axios from '../../config/axios';
 import { petsTypes } from './petsTypes';
 
-
-
-export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGroup, needCount) => {
+export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGroup, needCount, name) => {
     var count = 0
     var urlPath = "/notices"
     var countUrlPath = "/notices/count"
     return (dispatch) => {
         dispatch(fetchPetsStart())
-        if (petType !== "" || region !== "" || gender !== "" || ageGroup !== "") {
+        if (petType !== "" || region !== "" || gender !== "" || ageGroup !== "" || name !== "") {
             urlPath += "/filter"
             countUrlPath += "/filter"
         }
@@ -20,7 +18,8 @@ export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGrou
                         petType: petType,
                         region: region,
                         gender: gender,
-                        ageGroup: ageGroup
+                        ageGroup: ageGroup,
+                        name: name
                     }
                 }).then(response => {
                     count = response.data.count
@@ -34,7 +33,8 @@ export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGrou
                     petType: petType,
                     region: region,
                     gender: gender,
-                    ageGroup: ageGroup
+                    ageGroup: ageGroup,
+                    name: name
                 }
             })
 

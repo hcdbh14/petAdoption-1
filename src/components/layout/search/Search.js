@@ -12,7 +12,7 @@ const Search = () => {
     const loadPets = () => {
         if (petsState.count === 0 || petsState.reload) {
             setPageNumber(0)
-            dispatch(fetchPets(pageNumber.value, pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true))
+            dispatch(fetchPets(pageNumber.value, pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true, petsState.searchInputs.name))
         }
     }
 
@@ -38,19 +38,19 @@ const Search = () => {
 
     const moveToNextPage = (chosenPageNum) => {
         setPageNumber(chosenPageNum)
-        dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
+        dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
     }
 
     const moveToStart = () => {
         setPageNumber(0)
-        dispatch(fetchPets("0", pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
+        dispatch(fetchPets("0", pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
     }
 
     const moveToEnd = () => {
         let lastPage = parseInt(petsState.pageNum)
         setPageNumber(lastPage - 1)
         lastPage -= 1
-        dispatch(fetchPets(lastPage.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
+        dispatch(fetchPets(lastPage.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
     }
 
     const range = (start, end) => {
