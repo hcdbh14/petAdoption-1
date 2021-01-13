@@ -29,18 +29,11 @@ const PetDetails = () => {
 
     const loadOrSaveState = () => {
         const loadedPet = loadState()
-        
-        if (loadedPet === null) {
+
+        if (detailState.pet !== null) {
             saveState(detailState.pet)
-        } else if (detailState.pet === null) {
+        } else if (detailState.pet === null && loadedPet !== null) {
             dispatch(getAdditionalDetails(loadedPet))
-        }
-        else {
-            if (detailState.pet.id !== loadedPet.id) {
-                saveState(detailState.pet)
-            } else {
-                dispatch(getAdditionalDetails(loadedPet))
-            }
         }
     };
 
