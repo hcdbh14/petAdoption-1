@@ -12,7 +12,6 @@ export const getAdditionalDetails = (pet) => {
                     noticeId: pet.id
                 }
             }).then(response => {
-                console.log(response.data)
                 dispatch(imagesSuccess(response.data))
             })
             .catch(error => {
@@ -27,7 +26,6 @@ export const getAdditionalDetails = (pet) => {
                     shelterId: pet.shelter_id
                 }
             }).then(response => {
-                console.log(response.data)
                 dispatch(shelterSuccess(response.data))
             })
             .catch(error => {

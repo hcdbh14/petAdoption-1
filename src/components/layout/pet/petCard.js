@@ -5,7 +5,7 @@ import { SEARCH, DETAILS } from '../../constants/routes';
 import { getAdditionalDetails } from '../../../store/petDetails/action';
 
 const PetCard = ({ pet }) => {
-    
+
     const dispatch = useDispatch();
 
     const moveToDetails = () => {
@@ -48,6 +48,7 @@ const PetCard = ({ pet }) => {
                 <img className="petCard__calendarIcon" src={require('../../../images/calendar.svg')} alt="אייקון של לוח שנה" />
                 {buildAgeDesc()}
             </p>
+            
             <Link to={DETAILS}>
                 <button className={window.location.href.includes(SEARCH) ? "petCard__detailsOrange" : "petCard__detailsBlue"} onClick={() => moveToDetails()}>פרטים נוספים</button>
             </Link>
