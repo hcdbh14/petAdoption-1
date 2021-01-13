@@ -4,19 +4,10 @@ import MiniSearch from './MiniSearch';
 import { fetchPets } from '../../../store/pets/action';
 import Title from './Title';
 import PetCard from '../pet/PetCard';
-import AdoptMeSection from '../homePage/AdoptMeSection'
+import Shelters from '../homePage/Shelters'
 import Loading from '../ui/Loading';
 
 const Search = () => {
-
-    // remove later
-    const styleColored = {
-        display: 'inline-block', marginRight: '1rem'
-    }
-    const style = {
-        display: 'inline-block'
-    }
-    // remove later
 
     const loadPets = () => {
         if (petsState.count === 0 || petsState.reload) {
@@ -117,7 +108,7 @@ const Search = () => {
                 </button>
             </div>
 
-            <AdoptMeSection styleColored={styleColored} style={style} />
+            <Shelters />
         </div>
     )
 }

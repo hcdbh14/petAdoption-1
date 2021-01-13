@@ -1,5 +1,5 @@
 import React from 'react'
-import AdoptMeSection from '../layout/homePage/AdoptMeSection';
+import Shelters from '../layout/homePage/Shelters';
 import Responsibility from '../layout/homePage/Responsibility';
 import MiniSearch from '../layout/search/MiniSearch';
 import SpotLight from '../layout/spotLight/SpotLight';
@@ -13,7 +13,7 @@ const HomePage = () => {
             <MiniSearch />
             <SpotLight />
             <Responsibility />
-            <AdoptMeSection />
+            <Shelters />
         </div >
 
     )

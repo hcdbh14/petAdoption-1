@@ -1,0 +1,44 @@
+.shelters {
+    text-align: center;
+    position: relative;
+    margin-top: 14vw;
+    background-image: url(../../images/contact-us-background.svg);
+    background-position: left, right top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__rightPeekingImage {
+        position: absolute;
+        top: -14.8vw;
+    }
+
+    &__leftPeekingImage {
+        left: -5vw;
+        position: absolute;
+        top: -14.8vw;
+    }
+
+    &__image {
+        width: 40vw;
+    }
+
+    &__title {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        font-family: Rubik;
+        font-style: $font-style-normal;
+        font-weight: $font-weight-bold;
+        font-size: 5rem;
+        line-height: 53px;
+        color: #56bed1;
+    }
+
+    &__content {
+        font-family: Rubik;
+        font-style: $font-style-normal;
+        font-weight: $font-weight-normal;
+        font-size: 2.8rem;
+        line-height: 53px;
+        color: $color-white;
+    }
+}
