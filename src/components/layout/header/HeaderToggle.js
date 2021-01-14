@@ -1,18 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-
 import * as ROUTES from '../../constants/routes';
+
 const HeaderToggle = () => {
     return (
-        <div class="navigation">
-            <input type="checkbox" class="navigation__checkbox" id="navigation-toggle" />
-            <label for="navigation-toggle" class="navigation__button">
-                <span class="navigation__icon">&nbsp;</span>
+        <div className="navigation">
+            <input type="checkbox" className="navigation__checkbox" id="navigation-toggle" />
+            <label htmlFor="navigation-toggle" className="navigation__button">
+                <span className="navigation__icon">&nbsp;</span>
             </label>
-            <div class="navigation__background">&nbsp;</div>
+            <div className="navigation__background">&nbsp;</div>
 
-            <nav class="navigation__nav">
-                <ul class="navigation__list">
+            <nav className="navigation__nav">
+                <ul className="navigation__list">
 
                     <li>
                         <Link to={ROUTES.HOME} className="navigation__link">ראשי</Link>
@@ -28,8 +28,6 @@ const HeaderToggle = () => {
                     </li>
                 </ul>
             </nav>
-
-
         </div>
     )
 }

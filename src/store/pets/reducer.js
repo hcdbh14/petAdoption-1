@@ -8,7 +8,8 @@ const initialState = {
         petType: '',
         region: '',
         gender: '',
-        ageGroup: ''
+        ageGroup: '',
+        name: ''
     },
     reload: false,
     loading: true,

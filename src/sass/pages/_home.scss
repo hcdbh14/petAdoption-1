@@ -17,7 +17,7 @@
     background-repeat: no-repeat;
     height: 40vw;
     width: 100vw;
-    margin-top: 14rem;
+    margin-top: 9rem;
 
     @include respond(phone) {
       height: 90vh;
@@ -399,69 +399,5 @@ input:checked + label + .content {
     }
   }
 
-  &-centerImage {
-    object-fit: contain;
-    width: 30%;
-  }
 }
 
-.pets-section_more-pets {
-  background: #fa8e2b;
-  display: flex;
-  width: 20rem;
-  height: 6rem;
-  border: 1px solid #fa8e2b;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
-  border-radius: 20px;
-  margin: 2rem auto 5rem;
-  font-size: 2.5rem;
-  justify-content: center;
-  align-items: center;
-
-  transition: all 0.3s;
-  backface-visibility: hidden;
-
-  &:hover {
-    @include buttonHover;
-  }
-
-  & a {
-    color: #fff;
-    text-decoration: none;
-    font-family: Rubik;
-    font-style: $font-style-normal;
-    font-weight: $font-weight-normal;
-  }
-}
-
-.adoptMe-section {
-  position: relative;
-  margin-top: 12vw;
-  background-image: url("../../images/adopt-background.svg");
-  background-position-y: -2vw;
-
-  &__topImage {
-    position: absolute;
-    top: -17.5vw;
-  }
-
-  &__title {
-    font-family: Rubik;
-    font-style: $font-style-normal;
-    font-weight: $font-weight-normal;
-    font-size: 3rem;
-    line-height: 53px;
-    color: $color-footer-dark;
-  }
-
-  &__content {
-    font-family: Rubik;
-    font-style: $font-style-normal;
-    font-weight: $font-weight-normal;
-    font-size: 3rem;
-    line-height: 53px;
-    color: $color-footer-dark;
-  }
-  &__work-with-us {
-  }
-}

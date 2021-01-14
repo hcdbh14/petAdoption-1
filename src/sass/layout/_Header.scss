@@ -1,9 +1,8 @@
 .header {
-  height: 14rem;
   width: 100vw;
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   position: fixed;
   top: 0;
   padding: 1rem 6rem;
@@ -11,44 +10,47 @@
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
   z-index: 10;
   @include respond(tab-port) {
-    // display: none;
     background: $color-footer-dark;
     clip-path: none;
-
     height: 14rem;
   }
 
-  &__mobileLogo {
-    display: none;
+  &__logo {
+    width: 113.87px;
+    height: 92px;
+    background-image: url(../../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media screen and (max-width: 950px) {
+      width: 40px;
+      height: 50px;
+    }
+
     @include respond(tab-port) {
-      display: block;
-      width: 45vw;
-      margin: auto;
-      margin-top: 10rem;
+      margin-top: 50px;
+      width: 113.87px;
+      height: 92px;
+      background-image: url(../../images/logo-mobile.svg);
     }
   }
 
   &__nav {
     display: flex;
     top: 0;
-    left: 0;
     place-content: space-between;
     align-items: center;
     z-index: 1;
+
     @include respond(tab-port) {
       display: none;
     }
 
     &__container {
       height: fit-content;
-
-      // right: 50%;
-      // transform: translate(50%, 0);
-
+      margin-left: auto;
       @include respond(tab-port) {
         position: fixed;
         top: 0;
-        width: 100vw;
         height: 14rem;
       }
     }
@@ -59,22 +61,16 @@
         display: none;
       }
     }
-    &__logo {
-      display: flex;
-      // @include respond(tab-port) {
-      //   display: none;
-      // }
-    }
     &__left {
       width: 40%;
       padding-top: 3.5rem;
+
       @include respond(tab-port) {
         display: none;
       }
     }
 
     &__list {
-      width: 75vw;
       display: flex;
       justify-content: right;
       list-style-type: none;
@@ -106,6 +102,8 @@
 }
 
 .searchBar {
+  align-items: center;
+  display: flex;
   width: 18%;
   min-width: 20rem;
   max-width: 31rem;
@@ -114,12 +112,33 @@
   border-radius: 2rem;
   padding: 1rem 3rem;
 
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
-  transition: all 0.3s;
-  &:hover {
-    @include buttonHover;
-  }
   @include respond(tab-port) {
     display: none;
+  }
+
+  &__textField {
+    width: 90%;
+    font-size: 2rem;
+    color: white;
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    background: $color-black-main;
+    border: none;
+    outline: none;
+  }
+
+  &__submit {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+    transition: all 0.3s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-right: auto;
+    margin-left: -15px;
+    &:hover {
+      @include buttonHover;
+    }
   }
 }
