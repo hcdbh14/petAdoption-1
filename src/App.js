@@ -7,6 +7,7 @@ import HomePage from './components/screens/HomePage';
 import AboutPage from './components/screens/AboutPage';
 import ContactPage from './components/screens/ContactPage';
 import SearchPage from './components/screens/SearchPage';
+import DetailsPage from './components/screens/DetailsPage';
 import * as ROUTES from './components/constants/routes';
 import Header from './components/layout/header/Header';
 import Footer from './components/layout/footer/Footer';
@@ -18,6 +19,7 @@ function App() {
       <Header />
       <Route exact path={ROUTES.HOME} component={HomePage} />
       <Route path={ROUTES.SEARCH} component={SearchPage} />
+      <Route path={ROUTES.DETAILS} component={DetailsPage} />
       <Route path={ROUTES.ABOUT} component={AboutPage} />
       <Route path={ROUTES.CONTACT} component={ContactPage} />
       <Footer />

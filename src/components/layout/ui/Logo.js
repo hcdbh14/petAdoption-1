@@ -1,11 +1,10 @@
-import React from 'react'
-import paw from '../../../images/paw.svg'
+import React from 'react';
 
-const Logo = (props) => {
-    const { withImage } = props;
+const Logo = () => { 
+
     return (
         <div className='header__logo'>
-            {withImage && <img src={paw} alt="Logo" className="header__logo-text" />}
+            <div alt="לוגו" className="header__logo" />
         </div>
     )
 }

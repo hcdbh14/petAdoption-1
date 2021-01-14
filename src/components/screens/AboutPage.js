@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Contact from '../layout/contact/Contact';
-import AdoptMeSection from '../layout/homePage/AdoptMeSection';
 
 const AboutPage = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className="about">
             <div className="about__container">
@@ -22,7 +26,6 @@ const AboutPage = () => {
             </p>
             </div>
             <Contact />
-            <AdoptMeSection />
         </div >
     )
 }

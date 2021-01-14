@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchSpotLightPets } from '../../../store/spotLight/action';
-import PetCard from '../pet/petCard';
+import PetCard from '../pet/PetCard';
 
 const SpotLight = () => {
 
@@ -19,7 +19,7 @@ const SpotLight = () => {
         spotLightState.searchResults.map(pet => {
             return (
                 <div key={pet.id}>
-                    <PetCard name={pet.name} goodWords={pet.goodWords} region={pet.region} age={pet.age} gender={pet.gender} image={pet.image} />
+                    <PetCard pet={pet}/>
                     <br />
                     <br />
                 </div>)

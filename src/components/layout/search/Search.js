@@ -3,25 +3,16 @@ import { useSelector, useDispatch } from 'react-redux';
 import MiniSearch from './MiniSearch';
 import { fetchPets } from '../../../store/pets/action';
 import Title from './Title';
-import PetCard from '../pet/petCard';
-import AdoptMeSection from '../homePage/AdoptMeSection'
+import PetCard from '../pet/PetCard';
+import Shelters from '../homePage/Shelters'
 import Loading from '../ui/Loading';
 
 const Search = () => {
 
-    // remove later
-    const styleColored = {
-        display: 'inline-block', marginRight: '1rem'
-    }
-    const style = {
-        display: 'inline-block'
-    }
-    // remove later
-
     const loadPets = () => {
         if (petsState.count === 0 || petsState.reload) {
             setPageNumber(0)
-            dispatch(fetchPets(pageNumber.value, pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true))
+            dispatch(fetchPets(pageNumber.value, pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true, petsState.searchInputs.name))
         }
     }
 
@@ -36,7 +27,7 @@ const Search = () => {
         petsState.searchResults.map(pet => {
             return (
                 <div key={pet.id}>
-                    <PetCard name={pet.name} goodWords={pet.goodWords} region={pet.region} age={pet.age} gender={pet.gender} image={pet.image} />
+                    <PetCard pet={pet} />
                     <br />
                     <br />
                 </div>)
@@ -47,19 +38,22 @@ const Search = () => {
 
     const moveToNextPage = (chosenPageNum) => {
         setPageNumber(chosenPageNum)
-        dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
+        dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
+        window.scrollTo(0, 500)
     }
 
     const moveToStart = () => {
         setPageNumber(0)
-        dispatch(fetchPets("0", pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
+        dispatch(fetchPets("0", pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
+        window.scrollTo(0, 500)
     }
 
     const moveToEnd = () => {
         let lastPage = parseInt(petsState.pageNum)
         setPageNumber(lastPage - 1)
         lastPage -= 1
-        dispatch(fetchPets(lastPage.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false))
+        dispatch(fetchPets(lastPage.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
+        window.scrollTo(0, 500)
     }
 
     const range = (start, end) => {
@@ -102,9 +96,6 @@ const Search = () => {
                     </div>
                     :
                     <div>
-                        <h1>pets count is {petsState.count}</h1>
-                        <h1>Number of pages we need {Math.trunc((petsState.count + 9 - 1) / 9)}</h1>
-
                         <div className="search__results">
                             {petsList}
                         </div>
@@ -120,7 +111,7 @@ const Search = () => {
                 </button>
             </div>
 
-            <AdoptMeSection styleColored={styleColored} style={style} />
+            <Shelters />
         </div>
     )
 }

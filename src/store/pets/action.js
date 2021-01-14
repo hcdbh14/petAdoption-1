@@ -1,15 +1,13 @@
 import axios from '../../config/axios';
 import { petsTypes } from './petsTypes';
 
-
-
-export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGroup, needCount) => {
+export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGroup, needCount, name) => {
     var count = 0
     var urlPath = "/notices"
     var countUrlPath = "/notices/count"
     return (dispatch) => {
         dispatch(fetchPetsStart())
-        if (petType !== "" || region !== "" || gender !== "" || ageGroup !== "") {
+        if (petType !== "" || region !== "" || gender !== "" || ageGroup !== "" || name !== "") {
             urlPath += "/filter"
             countUrlPath += "/filter"
         }
@@ -20,7 +18,8 @@ export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGrou
                         petType: petType,
                         region: region,
                         gender: gender,
-                        ageGroup: ageGroup
+                        ageGroup: ageGroup,
+                        name: name
                     }
                 }).then(response => {
                     count = response.data.count
@@ -34,14 +33,15 @@ export const fetchPets = (pageNumber, pageSize, petType, region, gender, ageGrou
                     petType: petType,
                     region: region,
                     gender: gender,
-                    ageGroup: ageGroup
+                    ageGroup: ageGroup,
+                    name: name
                 }
             })
 
             .then(response => {
                 const pets = response.data
                 if (needCount) {
-                    const pageNum = Math.trunc((count + 9 - 1) / 9)
+                    const pageNum = Math.trunc((count + 12 - 1) / 12)
                     dispatch(fetchPetsAndCountSuccess(pets, count, pageNum))
                 } else {
                     dispatch(fetchPetsSuccess(pets))
