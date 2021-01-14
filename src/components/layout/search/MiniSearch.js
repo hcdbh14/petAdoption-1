@@ -36,6 +36,7 @@ const MiniSearch = () => {
         if (petsState.count === 0 || petsState.reload) {
             dispatch(fetchPets(0, 12, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true, ""))
         }
+        window.scrollTo(0, 0)
     }
 
     return (

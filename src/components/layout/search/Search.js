@@ -39,11 +39,13 @@ const Search = () => {
     const moveToNextPage = (chosenPageNum) => {
         setPageNumber(chosenPageNum)
         dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
+        window.scrollTo(0, 500)
     }
 
     const moveToStart = () => {
         setPageNumber(0)
         dispatch(fetchPets("0", pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
+        window.scrollTo(0, 500)
     }
 
     const moveToEnd = () => {
@@ -51,6 +53,7 @@ const Search = () => {
         setPageNumber(lastPage - 1)
         lastPage -= 1
         dispatch(fetchPets(lastPage.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
+        window.scrollTo(0, 500)
     }
 
     const range = (start, end) => {

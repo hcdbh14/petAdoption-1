@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import Search from '../layout/search/Search';
 
-const HomePage = () => {
-    
-    return (
+const SearchPage = () => {
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+    return (
         <div className="main">
             <Search />
         </div >
     )
 }
 
-export default HomePage
+export default SearchPage
