@@ -1,6 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const Contact = () => {
+
+    const [contactState, setContactState] = useState(
+        {
+            name: "",
+            email: "",
+            phone: "",
+            message: ""
+        }
+    )
+
+    const handleNameChange = (newText) => {
+        setContactState({...contactState, name: newText.target.value})
+    }
+
+    const handleEmailChange = (newText) => {
+        setContactState({...contactState, email: newText.target.value})
+    }
+
+    const handlePhoneChange = (newText) => {
+        setContactState({...contactState, phone: newText.target.value})
+    }
+
+    const handleMessageChange = (newText) => {
+        setContactState({...contactState, message: newText.target.value})
+    }
+
+    const sendMail = () => {
+        
+    }
 
     return (
         <div className="contact">
@@ -8,22 +37,22 @@ const Contact = () => {
                 <div>
                     <h1 className="contact__title">צור קשר איתנו</h1>
                     <input type="text" className="contact__textFieldTitleFirst" value="שם:" disabled />
-                    <input className="contact__textField" type="text" name="name" />
+                    <input className="contact__textField" type="text" onChange={handleNameChange} />
 
                     <input type="text" className="contact__textFieldTitle" value="מייל:" disabled />
-                    <input className="contact__textField" type="text" name="name" />
+                    <input className="contact__textField" type="text" onChange={handleEmailChange} />
 
                     <input type="text" className="contact__textFieldTitle" value="נייד:" disabled />
-                    <input className="contact__textField" type="text" name="name" />
+                    <input className="contact__textField" type="text" onChange={handlePhoneChange} />
                 </div>
 
                 <input type="text" className="contact__textFieldTitleBig" value="הודעה:" disabled />
                 <br />
                 <div>
-                    <textarea name="textarea" className="contact__textFieldBig" type="text" />
+                    <textarea className="contact__textFieldBig" type="text" onChange={handleMessageChange} />
 
                 </div>
-                <button class="contact__send">שלח</button>
+                <button className="contact__send">שלח</button>
             </div>
 
             <div className="contact__animalSide">
