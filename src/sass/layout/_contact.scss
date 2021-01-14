@@ -52,6 +52,7 @@
   }
 
   &__textFieldTitle {
+    caret-color: transparent;
     width: 6%;
     height: 84px;
     background: rgba(122, 122, 122, 0.7);
@@ -102,6 +103,7 @@
   }
 
   &__textFieldTitleBig {
+
     width: 100%;
     height: 60px;
     background: rgba(122, 122, 122, 0.7);
@@ -169,6 +171,7 @@
   }
 
   &__textFieldTitleFirst {
+    caret-color: transparent;
     width: 5.5%;
     height: 84px;
     background: rgba(122, 122, 122, 0.7);
@@ -196,6 +199,18 @@
     }
   }
 
+  &__sendWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    text-align: right;
+
+    @include respond(normal-desktop) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
   &__send {
     font-family: Rubik;
     font-style: $font-style-normal;
@@ -211,13 +226,32 @@
     border: 1px solid #fa8e2b;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
     border-radius: 20px;
-    margin-top: 50px;
     margin-right: 45.04px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 
-    @include respond(normal-desktop) {
-      float: right;
+    @include respond(tab-land) {
+      margin-right: 0px;
     }
+  }
+
+  &__success {
+    margin-right: 60px;
+    margin-bottom: 40px;
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    font-size: 28px;
+    color: #4BB543;
+  }
+
+  &__error {
+    margin-right: 60px;
+    margin-bottom: 40px;
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    font-size: 28px;
+    color: red;
   }
 
   &__white-box {
