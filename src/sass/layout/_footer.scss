@@ -62,14 +62,14 @@
   }
 }
 
-.colum {
+.column {
   margin-left: 5vw;
   display: inline-block;
   vertical-align: top;
   padding: 3em;
 
   &--left {
-    @extend .colum;
+    @extend .column;
     margin-left: 5vw;
   }
 
@@ -105,7 +105,7 @@
   }
 }
 
-.logo-and-social-colum {
+.logo-and-social-column {
   display: inline-block;
   width: 30%;
   max-width: 400px;

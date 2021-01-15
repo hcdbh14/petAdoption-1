@@ -33,7 +33,7 @@ const Search = () => {
                 </div>)
         })
     ) : (
-            <div> No pets yet</div>
+            <div className="search__noPets"> לא נמצאו חיות לפי הסינון הנוכחי.</div>
         )
 
     const moveToNextPage = (chosenPageNum) => {

@@ -43,11 +43,11 @@ const MiniSearch = () => {
         <div className="miniSearch">
 
             <div className="miniSearch__wrapper">
-                <h2 className="miniSearch__title">חיפוש חיות</h2>
+                <h2 className="miniSearch__title">חיפוש בעלי חיים</h2>
 
 
                 <select className="miniSearch__dropdown" value={petsState.searchInputs.petType} onChange={petTypeHandleChange}>
-                    <option value="">כל סוגי החיות</option>
+                    <option value="">כל הסוגים</option>
                     <option value="כלב">כלב</option>
                     <option value="חתול">חתול</option>
                     <option value="אחר">אחר</option>

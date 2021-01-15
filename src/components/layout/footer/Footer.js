@@ -7,7 +7,7 @@ const Footer = () => {
 
                 <div className="rows">
 
-                    <div className="colum">
+                    <div className="column">
                         <ul className="footer-list">
                             <li>
                                 <button className="footer-button">צור קשר</button>
@@ -24,11 +24,10 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="colum colum--left">
+                    <div className="column column--left">
                         <ul className="footer-list">
                             <li>
                                 <button className="footer-button">נהלי האימוץ</button>
-
                             </li>
                             <li>
                                 <button className="footer-button">עיקור וסירוס חתולי רחוב</button>
@@ -44,7 +43,7 @@ const Footer = () => {
                     </div>
 
 
-                    <div className="logo-and-social-colum">
+                    <div className="logo-and-social-column">
                         <div className="logo-image"></div>
                         <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
                             <input type="image" className="socialButton socialButton--bird" src={require('../../../images/twitter.png')} alt="Twitter" />
