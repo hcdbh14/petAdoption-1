@@ -13,7 +13,9 @@ const Footer = () => {
                                 <button className="footer-button">צור קשר</button>
                             </li>
                             <li>
-                                <button className="footer-button">מוקד אבידות ומציאות</button>
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.sospets.co.il/lostandfound">
+                                    <button className="footer-button">מוקד אבידות ומציאות</button>
+                                </a>
                             </li>
                             <li>
                                 <button className="footer-button">מידע למאמצים</button>
