@@ -7,7 +7,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  @include respond(normal-desktop) {
+  @include respond(big-desktop) {
     height: auto;
     display: block;
     background-size: cover;
@@ -16,7 +16,7 @@
   &__formSide {
     width: 75%;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       width: 100%;
       text-align: center;
     }
@@ -26,7 +26,7 @@
     width: 25%;
     margin: auto;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       width: 100%;
       text-align: center;
     }
@@ -42,7 +42,7 @@
     margin-right: 45.04px;
     color: $color-primary;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       margin-right: auto;
     }
 
@@ -67,7 +67,7 @@
     margin-right: 2%;
     margin-top: 80px;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       margin-right: 5px;
       padding-right: 5px;
     }
@@ -92,7 +92,7 @@
     font-family: Rubik;
     font-style: $font-style-normal;
     font-weight: $font-weight-bold;
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       width: 25%;
     }
 
@@ -118,7 +118,7 @@
     margin-right: 45.04px;
     margin-top: 80px;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       width: 95%;
       margin-right: 5px;
     }
@@ -144,7 +144,7 @@
     padding-right: 45.04px;
     resize: none;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       width: 95%;
       margin-right: 5px;
       padding-right: 15px;
@@ -161,7 +161,7 @@
     width: 740px;
     z-index: 1;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       margin-bottom: -65px;
     }
 
@@ -186,7 +186,7 @@
     margin-right: 45.04px;
     margin-top: 80px;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       margin-right: auto;
       padding-right: 5px;
     }
@@ -205,7 +205,7 @@
     margin-top: 50px;
     text-align: right;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       align-items: center;
       text-align: center;
     }
@@ -257,7 +257,7 @@
   &__white-box {
     display: none;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       display: block;
       height: 50px;
       width: 100%;

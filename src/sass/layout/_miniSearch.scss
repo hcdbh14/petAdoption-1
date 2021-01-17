@@ -108,7 +108,7 @@
     margin-bottom: -85px;
     margin-right: -46vw;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       width: 100%;
       text-align: center;
     }

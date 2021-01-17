@@ -26,7 +26,7 @@
   list-style: none;
   text-align: right;
 
-  @include respond(normal-desktop) {
+  @include respond(big-desktop) {
     margin-right: -20px;
     padding-right: 0px;
   }
@@ -111,7 +111,7 @@
   max-width: 400px;
   text-align: center;
 
-  @include respond(normal-desktop) {
+  @include respond(big-desktop) {
     margin-left: 25px;
   }
 

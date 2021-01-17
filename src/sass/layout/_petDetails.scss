@@ -15,6 +15,15 @@
         height: 1450px;
         background: #ffffff;
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+
+        @include respond(very-big-desktop) {
+            height: auto;
+            margin-top: 50px;
+            margin-right: 100px;
+            padding-right: 50px;
+            max-width: 800px;
+            height: 1450px;
+          }
     }
 
     &__road {
@@ -33,12 +42,21 @@
         font-size: 45px;
         line-height: 53px;
         color: #56bed1;
+
+        @include respond(very-big-desktop) {
+            font-size: 35px;
+          }
     }
 
     &__icon {
         width: 28px;
         height: 28px;
         margin-left: 20px;
+
+        @include respond(very-big-desktop) {
+            width: 25px;
+            height: 25px;
+          }
     }
 
     &__detail {
@@ -50,6 +68,10 @@
         font-size: 40px;
         line-height: 47px;
         color: #000000;
+
+        @include respond(very-big-desktop) {
+            font-size: 30px;
+          }
     }
 
     &__iAm {
@@ -59,6 +81,10 @@
         font-size: 40px;
         line-height: 47px;
         color: #000000;
+
+        @include respond(very-big-desktop) {
+            font-size: 30px;
+          }
     }
 
     &__checkBoxIcon {
@@ -67,6 +93,11 @@
         vertical-align: text-bottom;
         width: 70px;
         height: 70px;
+
+        @include respond(very-big-desktop) {
+            width: 50px;
+            height: 50px;
+          }
     }
 
     &__imageSection {
@@ -76,7 +107,6 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        // background-color: blue;
     }
 
     &__topWrapper {
@@ -89,6 +119,11 @@
         background-repeat: no-repeat;
         background-position-y: top;
         background-position-x: left;
+
+        @include respond(very-big-desktop) {
+            width: 350px;
+            height: 550px;
+          }
     }
 
     &__topImage {
@@ -97,6 +132,11 @@
         height: 488px;
         margin-right: 50px;
         border-radius: 100px;
+
+        @include respond(very-big-desktop) {
+            width: 485px;
+            height: 388px;
+          }
     }
 
     &__middleWrapper {
@@ -104,13 +144,19 @@
         align-self: center;
         display: flex;
         flex-direction: column-reverse;
-        width: 450px;
-        height: 650px;
+        width: 550px;
+        height: 750px;
         background: url(../../images/desc-image-backgroundMiddle.svg);
         background-size: contain;
         background-repeat: no-repeat;
         background-position-y: center;
         background-position-x: right;
+
+        @include respond(very-big-desktop) {
+            margin-left: 0px;
+            width: 450px;
+             height: 450px;
+          }
     }
 
     &__middleImage {
@@ -119,6 +165,11 @@
         width: 531px;
         height: 412px;
         border-radius: 100px;
+
+        @include respond(very-big-desktop) {
+            width: 431px;
+            height: 312px;
+          }
     }
 
     &__bottomImage {
@@ -130,5 +181,12 @@
         width: 600px;
         height: 650px;
         border-radius: 100px;
+
+        @include respond(very-big-desktop) {
+            margin-top: 100px;
+            margin-left: 100px;
+            width: 500px;
+            height: 550px;
+          }
     }
 }

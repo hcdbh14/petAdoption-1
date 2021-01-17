@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       margin-left: 0px;
     }
   }
@@ -46,7 +46,7 @@
     border-radius: 40px;
     background: #e7e3d7;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       width: 100vw;
       margin-right: 0vw;
     }

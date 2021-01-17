@@ -74,14 +74,15 @@ ORDER: Base + typographyy > general layout + grid > page layout > components
     }
   }
 
-  @if $breakpoint==normal-desktop {
-    @media only screen and(max-width: 112.5em) {
+  @if $breakpoint==big-desktop {
+    @media only screen and(min-width: 112.5em) {
       // 1800px
       @content;
     }
   }
-  @if $breakpoint==big-desktop {
-    @media only screen and(min-width: 112.5em) {
+
+  @if $breakpoint==very-big-desktop {
+    @media only screen and(max-width: 125em) {
       // 1800px
       @content;
     }
