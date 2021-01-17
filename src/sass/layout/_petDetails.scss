@@ -1,0 +1,55 @@
+.petDetails {
+    display: flex;
+    width: 100%;
+    padding-top: 500px;
+    background: #e7e3d7;
+
+    &__profile {
+        margin-right: 50px;
+        padding-right: 100px;
+        width: 751px;
+        height: auto;
+        background: #ffffff;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &__title {
+        margin-top: 89px;
+        margin-bottom: 26px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 45px;
+        line-height: 53px;
+        color: #56bed1;
+    }
+
+    &__icon {
+        width: 28px;
+        height: 28px;
+        margin-left: 20px;
+    }
+
+    &__detail {
+        margin-bottom: 26px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: $font-weight-light;
+        font-size: 40px;
+        line-height: 47px;
+        color: #000000;
+    }
+
+    &__iAm {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 47px;
+        color: #000000;
+    }
+
+    &__imageSection {
+        background-color: blue;
+    }
+}
