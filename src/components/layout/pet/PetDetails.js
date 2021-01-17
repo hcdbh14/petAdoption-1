@@ -60,6 +60,22 @@ const PetDetails = () => {
         return maleOrFemale + " " + formattedAge + " " + monthsOrYears;
     }
 
+    const maleOrFemale = (textType) => {
+        if (textType === "vaccinated") {
+            if (detailState.pet.gender === "זכר") {
+                return "אני מחוסן"
+            } else {
+                return "אני מחוסנת"
+            }
+        } else {
+            if (detailState.pet.gender === "זכר") {
+                return "אני מחונך לצרכים"
+            } else {
+                return "אני מחונכת לצרכים"
+            }
+        }
+    }
+
     useEffect(loadOrSaveState, [])
 
 
@@ -98,29 +114,23 @@ const PetDetails = () => {
                         </p>
 
                         <p className="petDetails__iAm">
-                            <img className="petDetails__icon" src={require('../../../images/checked.svg')} style={{ width: '30px', height: '30px' }} alt="מסומן" />
-                            טלפון: {detailState.pet.phoneNumber}
+                            {detailState.pet.vaccinated === 1 ?
+                                <img className="petDetails__checkBoxIcon" src={require('../../../images/checked.png')} alt="מסומן" />
+                                :
+                                <img className="petDetails__checkBoxIcon" src={require('../../../images/notChecked.png')} alt="לא מסומן" />
+                            }
+                            {maleOrFemale("vaccinated")}
                         </p>
 
 
                         <p className="petDetails__iAm">
-                            <img className="petDetails__icon" src={require('../../../images/notChecked.svg')} style={{ width: '30px', height: '30px' }} alt="לא מסומן" />
-                            טלפון: {detailState.pet.phoneNumber}
+                            {detailState.pet.poopTrained === 1 ?
+                                <img className="petDetails__checkBoxIcon" src={require('../../../images/checked.png')} alt="מסומן" />
+                                :
+                                <img className="petDetails__checkBoxIcon" src={require('../../../images/notChecked.png')} alt="לא מסומן" />
+                            }
+                            {maleOrFemale("poopTrained")}
                         </p>
-                        <h1 style={{ color: "black" }}>{detailState.pet.goodWords}</h1>
-                        <h1 style={{ color: "black" }}>{detailState.pet.phoneNumber}</h1>
-                        <h1 style={{ color: "black" }}>{detailState.pet.poopTrained}</h1>
-                        <h1 style={{ color: "black" }}>{detailState.pet.race}</h1>
-                        <h1 style={{ color: "black" }}>{detailState.pet.region}</h1>
-                        <h1 style={{ color: "black" }}>{detailState.pet.size}</h1>
-                        <h1 style={{ color: "black" }}>{detailState.pet.suitables}</h1>
-                        <h1 style={{ color: "black" }}>{detailState.pet.postDate}</h1>
-                        <h1 style={{ color: "black" }}>{detailState.pet.petType}</h1>
-                        <h1 style={{ color: "black" }}>{detailState.pet.shelter_id}</h1>
-                        <h1 style={{ color: "black" }}>{detailState.pet.vaccinated}</h1>
-                        <h1 style={{ color: "black" }}>{detailState.pet.ageGroup}</h1>
-                        <img className="petCard__image" src={`data:image/png;base64, ${detailState.pet.image}`} alt="תמונת החיה" />
-
                         {detailState.imagesError !== "" ?
                             <h1>error</h1>
                             : (detailState.imagesLoading ?
@@ -136,10 +146,25 @@ const PetDetails = () => {
                                 :
                                 <h1>shelter ready!</h1>
                             )}
+                        <img className="petDetails__road" src={require('../../../images/desc-line-road.svg')} alt="שרטוט של דרך" />
                     </div>
 
                     <div className="petDetails__imageSection">
-                        <h1>test</h1>
+                        {detailState.images.length === 0 ?
+                            <div />
+                            :
+                            <div className="petDetails__topWrapper">
+                                <img className="petDetails__topImage" src={`data:image/png;base64, ${detailState.images[0].image}`} alt="תמונת בעל החיים" />
+                            </div>
+                        }
+                        <div className="petDetails__middleWrapper">
+                            <img className="petDetails__middleImage" src={`data:image/png;base64, ${detailState.pet.image}`} alt="תמונת בעל החיים" />
+                        </div>
+                        {detailState.images.length === 0 ?
+                            <div />
+                            :
+                            <img className="petDetails__bottomImage" src={`data:image/png;base64, ${detailState.images[1].image}`} alt="תמונת בעל החיים" />
+                        }
                     </div>
                 </div>
                 :

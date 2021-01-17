@@ -1,16 +1,28 @@
 .petDetails {
     display: flex;
+    height: auto;
     width: 100%;
-    padding-top: 500px;
+    padding-top: 250px;
+    padding-bottom: 800px;
     background: #e7e3d7;
 
     &__profile {
-        margin-right: 50px;
+        margin-top: 150px;
+        margin-right: 250px;
         padding-right: 100px;
-        width: 751px;
+        width: 60%;
+        max-width: 900px;
         height: auto;
         background: #ffffff;
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &__road {
+        position: relative;
+        margin-bottom: -1050px;
+        margin-right: -350px;
+        width: 1400px;
+        z-index: 4;
     }
 
     &__title {
@@ -49,7 +61,74 @@
         color: #000000;
     }
 
+    &__checkBoxIcon {
+        margin-top: 20px;
+        margin-bottom: -10px;
+        vertical-align: text-bottom;
+        width: 70px;
+        height: 70px;
+    }
+
     &__imageSection {
-        background-color: blue;
+        position: relative;
+        z-index: 3;
+        margin-right: -100px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        // background-color: blue;
+    }
+
+    &__topWrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 450px;
+        height: 650px;
+        background: url(../../images/desc-image-backgroundTop.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-y: top;
+        background-position-x: left;
+    }
+
+    &__topImage {
+        object-fit: cover;
+        width: 385px;
+        height: 488px;
+        margin-right: 50px;
+        border-radius: 100px;
+    }
+
+    &__middleWrapper {
+        margin-left: 200px;
+        align-self: center;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 450px;
+        height: 650px;
+        background: url(../../images/desc-image-backgroundMiddle.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: right;
+    }
+
+    &__middleImage {
+        margin-right: -120px;
+        object-fit: cover;
+        width: 431px;
+        height: 412px;
+        border-radius: 100px;
+    }
+
+    &__bottomImage {
+        margin-top: 100px;
+        margin-left: 400px;
+        align-self: center;
+        border: solid white 50px;
+        object-fit: cover;
+        width: 463px;
+        height: 501.83px;
+        border-radius: 100px;
     }
 }
