@@ -31,6 +31,11 @@
         margin-right: -350px;
         width: 1350px;
         z-index: 4;
+
+        @include respond(very-big-desktop) {
+            margin-right: -285px;
+            width: 1250px;
+          }
     }
 
     &__title {
