@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchPets, updateFilter } from '../../../store/pets/action';
 import { Link } from 'react-router-dom';
 import { SEARCH } from '../../constants/routes';
-
+import wave from "../../../images/miniSearchMobile.png"
 const MiniSearch = () => {
 
     const dispatch = useDispatch();
@@ -43,6 +43,7 @@ const MiniSearch = () => {
         <div className="miniSearch">
 
             <div className="miniSearch__wrapper">
+                <img src={wave} alt="wave" className="miniSearch__mobile" />
                 <h2 className="miniSearch__title">חיפוש חיות</h2>
 
 
