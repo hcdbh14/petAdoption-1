@@ -150,16 +150,18 @@ const PetDetails = () => {
                     </div>
 
                     <div className="petDetails__imageSection">
+
+                        <div className="petDetails__topWrapper">
+                            <img className="petDetails__topImage" src={`data:image/png;base64, ${detailState.pet.image}`} alt="תמונת בעל החיים" />
+                        </div>
+
                         {detailState.images.length === 0 ?
                             <div />
                             :
-                            <div className="petDetails__topWrapper">
-                                <img className="petDetails__topImage" src={`data:image/png;base64, ${detailState.images[0].image}`} alt="תמונת בעל החיים" />
+                            <div className="petDetails__middleWrapper">
+                                <img className="petDetails__middleImage" src={`data:image/png;base64, ${detailState.images[0].image}`} alt="תמונת בעל החיים" />
                             </div>
                         }
-                        <div className="petDetails__middleWrapper">
-                            <img className="petDetails__middleImage" src={`data:image/png;base64, ${detailState.pet.image}`} alt="תמונת בעל החיים" />
-                        </div>
                         {detailState.images.length === 0 ?
                             <div />
                             :

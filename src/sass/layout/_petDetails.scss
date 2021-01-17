@@ -11,17 +11,16 @@
         margin-right: 250px;
         padding-right: 100px;
         width: 60%;
-        max-width: 900px;
-        height: auto;
+        max-width: 1200px;
+        height: 1450px;
         background: #ffffff;
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
     }
 
     &__road {
         position: relative;
-        margin-bottom: -1050px;
         margin-right: -350px;
-        width: 1400px;
+        width: 1350px;
         z-index: 4;
     }
 
@@ -44,6 +43,7 @@
 
     &__detail {
         margin-bottom: 26px;
+        margin-left: 25px;
         font-family: Rubik;
         font-style: normal;
         font-weight: $font-weight-light;
@@ -93,7 +93,7 @@
 
     &__topImage {
         object-fit: cover;
-        width: 385px;
+        width: 585px;
         height: 488px;
         margin-right: 50px;
         border-radius: 100px;
@@ -116,19 +116,19 @@
     &__middleImage {
         margin-right: -120px;
         object-fit: cover;
-        width: 431px;
+        width: 531px;
         height: 412px;
         border-radius: 100px;
     }
 
     &__bottomImage {
-        margin-top: 100px;
+        margin-top: 200px;
         margin-left: 400px;
         align-self: center;
         border: solid white 50px;
         object-fit: cover;
-        width: 463px;
-        height: 501.83px;
+        width: 600px;
+        height: 650px;
         border-radius: 100px;
     }
 }
