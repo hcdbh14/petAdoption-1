@@ -5,6 +5,7 @@ import { getAdditionalDetails } from '../../../store/petDetails/action';
 const PetDetails = () => {
 
     var currentImage = -1
+    // const [gallaryIndex, setGallaryIndex] = useState(0);
     const dispatch = useDispatch();
     const detailState = useSelector(state => state.detailReducer);
 
@@ -77,6 +78,11 @@ const PetDetails = () => {
         }
     }
 
+    const setGallaryCount = () => {
+        var gallaryCount = document.getElementById("gallaryCount");
+        gallaryCount.textContent = (currentImage + 2) + "/" + (detailState.images.length + 1)
+    }
+
     const showImageFull = (index) => {
         var modal = document.getElementById("imageViewerId");
         var modalImg = document.getElementById("fullImage");
@@ -91,8 +97,7 @@ const PetDetails = () => {
             modalImg.src = `data:image/png;base64, ` + detailState.images[index].image;
         }
         captionText.innerHTML = detailState.pet.name;
-
-
+        setGallaryCount()
         var span = document.getElementsByClassName("close")[0];
 
         span.onclick = function () {
@@ -101,7 +106,6 @@ const PetDetails = () => {
     };
 
     const nextImage = () => {
-
         var modalImg = document.getElementById("fullImage");
 
         if (detailState.images.length !== currentImage + 1) {
@@ -112,6 +116,7 @@ const PetDetails = () => {
         if (detailState.images.length === currentImage) {
             currentImage = currentImage - 1
         }
+        setGallaryCount()
     }
 
     const previousImage = () => {
@@ -124,6 +129,7 @@ const PetDetails = () => {
             currentImage = - 1
             modalImg.src = `data:image/png;base64, ` + detailState.pet.image;
         }
+        setGallaryCount()
     }
 
     useEffect(loadOrSaveState, [])
@@ -132,14 +138,19 @@ const PetDetails = () => {
     return (
         <>
             <div id="imageViewerId" class="imageViewer">
-                <span class="close">&times;</span>
-                <button onClick={nextImage}>
-                    test
+                <span className="close">&times;</span>
+                <h2 id="gallaryCount" className="numberOfImages">1/1</h2>
+                <div style={{ display: 'flex' }}>
+                    <button className="arrow" onClick={nextImage} >
+                        ➥
                 </button>
-                <img class="imageViewerContent" id="fullImage" alt="תמונה מלאה" />
-                <button onClick={previousImage}>
-                    test
+
+                    <img className="imageViewerContent" id="fullImage" alt="תמונה מלאה" />
+
+                    <button className="arrow" style={{ transform: 'scaleX(-1)' }} onClick={previousImage}>
+                        ➥
                 </button>
+                </div>
                 <div id="caption" />
             </div>
 
