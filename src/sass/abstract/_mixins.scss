@@ -80,11 +80,4 @@ ORDER: Base + typographyy > general layout + grid > page layout > components
       @content;
     }
   }
-
-  @if $breakpoint==very-big-desktop {
-    @media only screen and(max-width: 125em) {
-      // 1800px
-      @content;
-    }
-  }
 }

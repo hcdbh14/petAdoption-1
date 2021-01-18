@@ -3,7 +3,7 @@
     height: auto;
     width: 100%;
     padding-top: 250px;
-    padding-bottom: 800px;
+    padding-bottom: 400px;
     background: #e7e3d7;
 
     &__profile {
@@ -11,18 +11,35 @@
         margin-right: 250px;
         padding-right: 100px;
         width: 60%;
-        max-width: 1200px;
         height: 1450px;
+        max-width: 1200px;
+
         background: #ffffff;
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 
-        @include respond(very-big-desktop) {
+        @media only screen and(max-width: 125em) {
             height: auto;
             margin-top: 50px;
             margin-right: 100px;
             padding-right: 50px;
             max-width: 800px;
             height: 1450px;
+          }
+
+          @media only screen and(max-width: 110em) {
+            margin-top: 40px;
+            margin-right: 80px;
+            padding-right: 40px;
+            max-width: 750px;
+            height: 1250px;
+          }
+
+          @media only screen and(max-width: 95em) {
+            margin-top: 30px;
+            margin-right: 60px;
+            padding-right: 30px;
+            max-width: 700px;
+            height: 1200px;
           }
     }
 
@@ -32,9 +49,19 @@
         width: 1350px;
         z-index: 4;
 
-        @include respond(very-big-desktop) {
+        @media only screen and(max-width: 125em) {
             margin-right: -285px;
             width: 1250px;
+          }
+
+          @media only screen and(max-width: 110em) {
+            margin-right: -255px;
+            width: 1200px;
+          }
+
+          @media only screen and(max-width: 95em) {
+            margin-right: -205px;
+            width: 1150px;
           }
     }
 
@@ -48,8 +75,16 @@
         line-height: 53px;
         color: #56bed1;
 
-        @include respond(very-big-desktop) {
+        @media only screen and(max-width: 125em) {
             font-size: 35px;
+          }
+
+          @media only screen and(max-width: 110em) {
+            font-size: 30px;
+          }
+
+          @media only screen and(max-width: 95em) {
+            font-size: 25px;
           }
     }
 
@@ -58,10 +93,11 @@
         height: 28px;
         margin-left: 20px;
 
-        @include respond(very-big-desktop) {
+        @media only screen and(max-width: 125em) {
             width: 25px;
             height: 25px;
           }
+
     }
 
     &__detail {
@@ -74,8 +110,16 @@
         line-height: 47px;
         color: #000000;
 
-        @include respond(very-big-desktop) {
+        @media only screen and(max-width: 125em) {
             font-size: 30px;
+          }
+
+          @media only screen and(max-width: 110em) {
+            font-size: 25px;
+          }
+
+          @media only screen and(max-width: 95em) {
+            font-size: 20px;
           }
     }
 
@@ -87,8 +131,16 @@
         line-height: 47px;
         color: #000000;
 
-        @include respond(very-big-desktop) {
+        @media only screen and(max-width: 125em) {
             font-size: 30px;
+          }
+
+          @media only screen and(max-width: 110em) {
+            font-size: 25px;
+          }
+
+          @media only screen and(max-width: 95em) {
+            font-size: 22.5px;
           }
     }
 
@@ -99,9 +151,19 @@
         width: 70px;
         height: 70px;
 
-        @include respond(very-big-desktop) {
+        @media only screen and(max-width: 125em) {
             width: 50px;
             height: 50px;
+          }
+
+          @media only screen and(max-width: 110em) {
+            width: 45px;
+            height: 45px;
+          }
+
+          @media only screen and(max-width: 95em) {
+            width: 40px;
+            height: 40px;
           }
     }
 
@@ -125,9 +187,19 @@
         background-position-y: top;
         background-position-x: left;
 
-        @include respond(very-big-desktop) {
+        @media only screen and(max-width: 125em) {
             width: 350px;
             height: 550px;
+          }
+
+          @media only screen and(max-width: 110em) {
+            width: 300px;
+            height: 500px;
+          }
+
+          @media only screen and(max-width: 95em) {
+            width: 250px;
+            height: 450px;
           }
     }
 
@@ -138,9 +210,18 @@
         margin-right: 50px;
         border-radius: 100px;
 
-        @include respond(very-big-desktop) {
+        @media only screen and(max-width: 125em) {
             width: 485px;
             height: 388px;
+          }
+
+          @media only screen and(max-width: 110em) {
+            width: 435px;
+            height: 338px;
+          }
+          @media only screen and(max-width: 95em) {
+            width: 385px;
+            height: 288px;
           }
     }
 
@@ -157,23 +238,43 @@
         background-position-y: center;
         background-position-x: right;
 
-        @include respond(very-big-desktop) {
+        @media only screen and(max-width: 125em) {
             margin-left: 0px;
             width: 450px;
              height: 450px;
           }
+
+          @media only screen and(max-width: 110em) {
+            width: 400px;
+            height: 400px;
+          }
+
+          @media only screen and(max-width: 95em) {
+            width: 350px;
+            height: 350px;
+          }
     }
 
     &__middleImage {
-        margin-right: -120px;
+        // margin-right: -120px;
         object-fit: cover;
         width: 531px;
         height: 412px;
         border-radius: 100px;
 
-        @include respond(very-big-desktop) {
+        @media only screen and(max-width: 125em) {
             width: 431px;
             height: 312px;
+          }
+
+          @media only screen and(max-width: 110em) {
+            width: 381px;
+            height: 262px;
+          }
+
+          @media only screen and(max-width: 95em) {
+            width: 331px;
+            height: 212px;
           }
     }
 
@@ -187,11 +288,28 @@
         height: 650px;
         border-radius: 100px;
 
-        @include respond(very-big-desktop) {
+        @media only screen and(max-width: 125em) {
+          border: solid white 40px;
             margin-top: 100px;
             margin-left: 100px;
             width: 500px;
             height: 550px;
+          }
+
+          @media only screen and(max-width: 110em) {
+            border: solid white 30px;
+            margin-top: 50px;
+            margin-left: 50px;
+            width: 400px;
+            height: 450px;
+          }
+
+          @media only screen and(max-width: 95em) {
+            border: solid white 20px;
+            margin-top: 35px;
+            margin-left: 35px;
+            width: 300px;
+            height: 350px;
           }
     }
 }
