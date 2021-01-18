@@ -76,12 +76,43 @@ const PetDetails = () => {
         }
     }
 
+    const test = () => {
+        var modal = document.getElementById("imageViewerId");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    };
+
     useEffect(loadOrSaveState, [])
 
 
     return (
 
         <>
+            <div id="imageViewerId" class="imageViewer">
+
+                <span class="close">&times;</span>
+
+                <img class="imageViewerContent" id="img01" />
+
+                <div id="caption"></div>
+            </div>
+            
             {detailState.pet !== null ?
                 <div className="petDetails">
                     <div className="petDetails__profile">
@@ -165,9 +196,12 @@ const PetDetails = () => {
                         {detailState.images.length === 0 ?
                             <div />
                             :
-                            <img className="petDetails__bottomImage" src={`data:image/png;base64, ${detailState.images[1].image}`} alt="תמונת בעל החיים" />
+
+                            <img onClick={test} className="petDetails__bottomImage" id="myImg" src={`data:image/png;base64, ${detailState.images[1].image}`} alt="תמונת בעל החיים" />
                         }
                     </div>
+
+
                 </div>
                 :
                 <div />
