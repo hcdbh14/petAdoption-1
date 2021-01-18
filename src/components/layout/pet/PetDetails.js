@@ -76,12 +76,12 @@ const PetDetails = () => {
         }
     }
 
-    const test = () => {
+    const showImageFull = (imageId) => {
         var modal = document.getElementById("imageViewerId");
 
         // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var img = document.getElementById("myImg");
-        var modalImg = document.getElementById("img01");
+        var img = document.getElementById(imageId);
+        var modalImg = document.getElementById("fullImage");
         var captionText = document.getElementById("caption");
         img.onclick = function () {
             modal.style.display = "block";
@@ -105,12 +105,9 @@ const PetDetails = () => {
 
         <>
             <div id="imageViewerId" class="imageViewer">
-
                 <span class="close">&times;</span>
-
-                <img class="imageViewerContent" id="img01" />
-
-                <div id="caption"></div>
+                <img class="imageViewerContent" id="fullImage" alt="תמונה מלאה" />
+                <div id="caption" />
             </div>
             
             {detailState.pet !== null ?
@@ -183,21 +180,21 @@ const PetDetails = () => {
                     <div className="petDetails__imageSection">
 
                         <div className="petDetails__topWrapper">
-                            <img className="petDetails__topImage" src={`data:image/png;base64, ${detailState.pet.image}`} alt="תמונת בעל החיים" />
+                            <img onClick={() => showImageFull("topImage")} id="topImage" className="petDetails__topImage" src={`data:image/png;base64, ${detailState.pet.image}`} alt="תמונת בעל החיים" />
                         </div>
 
                         {detailState.images.length === 0 ?
                             <div />
                             :
                             <div className="petDetails__middleWrapper">
-                                <img className="petDetails__middleImage" src={`data:image/png;base64, ${detailState.images[0].image}`} alt="תמונת בעל החיים" />
+                                <img onClick={() => showImageFull("middleImage")} id="middleImage" className="petDetails__middleImage" src={`data:image/png;base64, ${detailState.images[0].image}`} alt="תמונת בעל החיים" />
                             </div>
                         }
                         {detailState.images.length === 0 ?
                             <div />
                             :
 
-                            <img onClick={test} className="petDetails__bottomImage" id="myImg" src={`data:image/png;base64, ${detailState.images[1].image}`} alt="תמונת בעל החיים" />
+                            <img onClick={() => showImageFull("bottomImage")} id="bottomImage" className="petDetails__bottomImage" src={`data:image/png;base64, ${detailState.images[1].image}`} alt="תמונת בעל החיים" />
                         }
                     </div>
 

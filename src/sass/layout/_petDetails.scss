@@ -185,7 +185,12 @@
     background-repeat: no-repeat;
     background-position-y: top;
     background-position-x: left;
-
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+    
     @media only screen and(max-width: 125em) {
       width: 350px;
       height: 550px;
@@ -236,7 +241,11 @@
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: right;
-
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
     @media only screen and(max-width: 125em) {
       margin-left: 0px;
       width: 450px;
@@ -260,6 +269,7 @@
     width: 431px;
     height: 412px;
     border-radius: 50px;
+ 
 
     @media only screen and(max-width: 125em) {
       width: 331px;
