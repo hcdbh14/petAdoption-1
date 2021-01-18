@@ -5,7 +5,6 @@ import { getAdditionalDetails } from '../../../store/petDetails/action';
 const PetDetails = () => {
 
     var currentImage = -1
-    // const [gallaryIndex, setGallaryIndex] = useState(0);
     const dispatch = useDispatch();
     const detailState = useSelector(state => state.detailReducer);
 
@@ -208,15 +207,15 @@ const PetDetails = () => {
                             : (detailState.images.length === 0 ?
                                 <div />
                                 :
-                                <button className="petDetails__allImagesButton">תמונות נוספות</button>
+                                <button onClick={() => showImageFull(-1)} className="petDetails__allImagesButton">תמונות נוספות</button>
                             )}
 
                         {detailState.shelterError !== "" ?
                             <h1>error</h1>
                             : (detailState.shelterLoading ?
-                                <h1>shelter loading</h1>
+                                <p></p>
                                 :
-                                <h1>shelter ready!</h1>
+                                <p></p>
                             )}
                         <img className="petDetails__road" src={require('../../../images/desc-line-road.svg')} alt="שרטוט של דרך" />
                     </div>
