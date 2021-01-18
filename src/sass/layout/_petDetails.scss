@@ -166,6 +166,42 @@
     }
   }
 
+  &__allImagesButton {
+    margin-top: 75px;
+    width: 200px;
+    height: 50px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    color: #ffffff;
+    background: #eb8071;
+    border: 1px solid #eb8071;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    @media only screen and(max-width: 125em) {
+      width: 180px;
+      height: 50px;
+      font-size: 25px;
+    }
+
+    @media only screen and(max-width: 110em) {
+      width: 160px;
+      height: 40px;
+      font-size: 22px;
+    }
+
+    @media only screen and(max-width: 95em) {
+      width: 140px;
+      font-size: 20px;
+    }
+  }
+
   &__imageSection {
     position: relative;
     z-index: 3;
@@ -190,7 +226,7 @@
     &:hover {
       opacity: 0.7;
     }
-    
+
     @media only screen and(max-width: 125em) {
       width: 350px;
       height: 550px;
@@ -269,7 +305,6 @@
     width: 431px;
     height: 412px;
     border-radius: 50px;
- 
 
     @media only screen and(max-width: 125em) {
       width: 331px;

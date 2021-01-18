@@ -78,8 +78,6 @@ const PetDetails = () => {
 
     const showImageFull = (imageId) => {
         var modal = document.getElementById("imageViewerId");
-
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
         var img = document.getElementById(imageId);
         var modalImg = document.getElementById("fullImage");
         var captionText = document.getElementById("caption");
@@ -89,10 +87,8 @@ const PetDetails = () => {
             captionText.innerHTML = this.alt;
         }
 
-        // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
-        // When the user clicks on <span> (x), close the modal
         span.onclick = function () {
             modal.style.display = "none";
         }
@@ -102,7 +98,6 @@ const PetDetails = () => {
 
 
     return (
-
         <>
             <div id="imageViewerId" class="imageViewer">
                 <span class="close">&times;</span>
@@ -161,10 +156,10 @@ const PetDetails = () => {
                         </p>
                         {detailState.imagesError !== "" ?
                             <h1>error</h1>
-                            : (detailState.imagesLoading ?
-                                <h1>images loading</h1>
+                            : (detailState.images.length === 0 ?
+                                <div />
                                 :
-                                <h1>images ready!</h1>
+                               <button className="petDetails__allImagesButton">תמונות נוספות</button>
                             )}
 
                         {detailState.shelterError !== "" ?
