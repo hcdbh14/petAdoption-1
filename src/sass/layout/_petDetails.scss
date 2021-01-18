@@ -205,22 +205,22 @@
 
     &__topImage {
         object-fit: cover;
-        width: 585px;
+        width: 485px;
         height: 488px;
         margin-right: 50px;
         border-radius: 100px;
 
         @media only screen and(max-width: 125em) {
-            width: 485px;
+            width: 385px;
             height: 388px;
           }
 
           @media only screen and(max-width: 110em) {
-            width: 435px;
+            width: 335px;
             height: 338px;
           }
           @media only screen and(max-width: 95em) {
-            width: 385px;
+            width: 285px;
             height: 288px;
           }
     }
@@ -258,22 +258,22 @@
     &__middleImage {
         // margin-right: -120px;
         object-fit: cover;
-        width: 531px;
+        width: 431px;
         height: 412px;
-        border-radius: 100px;
+        border-radius: 50px;
 
         @media only screen and(max-width: 125em) {
-            width: 431px;
+            width: 331px;
             height: 312px;
           }
 
           @media only screen and(max-width: 110em) {
-            width: 381px;
+            width: 281px;
             height: 262px;
           }
 
           @media only screen and(max-width: 95em) {
-            width: 331px;
+            width: 231px;
             height: 212px;
           }
     }
