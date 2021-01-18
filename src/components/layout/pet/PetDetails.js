@@ -4,6 +4,7 @@ import { getAdditionalDetails } from '../../../store/petDetails/action';
 
 const PetDetails = () => {
 
+    var currentImage = -1
     const dispatch = useDispatch();
     const detailState = useSelector(state => state.detailReducer);
 
@@ -76,18 +77,20 @@ const PetDetails = () => {
         }
     }
 
-    const showImageFull = (imageId, index) => {
+    const showImageFull = (index) => {
         var modal = document.getElementById("imageViewerId");
         var modalImg = document.getElementById("fullImage");
         var captionText = document.getElementById("caption");
 
-            modal.style.display = "block";
-            if (index === -1) {
-                modalImg.src = `data:image/png;base64, ` + detailState.pet.image;
-            } else {
-                modalImg.src = `data:image/png;base64, ` + detailState.images[index].image;
-            }
-            captionText.innerHTML = detailState.pet.name;
+        modal.style.display = "block";
+        if (index === -1) {
+            currentImage = -1
+            modalImg.src = `data:image/png;base64, ` + detailState.pet.image;
+        } else {
+            currentImage = index
+            modalImg.src = `data:image/png;base64, ` + detailState.images[index].image;
+        }
+        captionText.innerHTML = detailState.pet.name;
 
 
         var span = document.getElementsByClassName("close")[0];
@@ -97,6 +100,32 @@ const PetDetails = () => {
         }
     };
 
+    const nextImage = () => {
+
+        var modalImg = document.getElementById("fullImage");
+
+        if (detailState.images.length !== currentImage + 1) {
+            currentImage = currentImage + 1
+            modalImg.src = `data:image/png;base64, ` + detailState.images[currentImage].image;
+        }
+
+        if (detailState.images.length === currentImage) {
+            currentImage = currentImage - 1
+        }
+    }
+
+    const previousImage = () => {
+        var modalImg = document.getElementById("fullImage");
+
+        if (currentImage > 0) {
+            currentImage = currentImage - 1
+            modalImg.src = `data:image/png;base64, ` + detailState.images[currentImage].image;
+        } else {
+            currentImage = - 1
+            modalImg.src = `data:image/png;base64, ` + detailState.pet.image;
+        }
+    }
+
     useEffect(loadOrSaveState, [])
 
 
@@ -104,10 +133,16 @@ const PetDetails = () => {
         <>
             <div id="imageViewerId" class="imageViewer">
                 <span class="close">&times;</span>
+                <button onClick={nextImage}>
+                    test
+                </button>
                 <img class="imageViewerContent" id="fullImage" alt="תמונה מלאה" />
+                <button onClick={previousImage}>
+                    test
+                </button>
                 <div id="caption" />
             </div>
-            
+
             {detailState.pet !== null ?
                 <div className="petDetails">
                     <div className="petDetails__profile">
@@ -162,7 +197,7 @@ const PetDetails = () => {
                             : (detailState.images.length === 0 ?
                                 <div />
                                 :
-                               <button className="petDetails__allImagesButton">תמונות נוספות</button>
+                                <button className="petDetails__allImagesButton">תמונות נוספות</button>
                             )}
 
                         {detailState.shelterError !== "" ?
@@ -178,21 +213,21 @@ const PetDetails = () => {
                     <div className="petDetails__imageSection">
 
                         <div className="petDetails__topWrapper">
-                            <img onClick={() => showImageFull("topImage", -1)} id="topImage" className="petDetails__topImage" src={`data:image/png;base64, ${detailState.pet.image}`} alt="תמונת בעל החיים" />
+                            <img onClick={() => showImageFull(-1)} id="topImage" className="petDetails__topImage" src={`data:image/png;base64, ${detailState.pet.image}`} alt="תמונת בעל החיים" />
                         </div>
 
                         {detailState.images.length === 0 ?
                             <div />
                             :
                             <div className="petDetails__middleWrapper">
-                                <img onClick={() => showImageFull("middleImage", 0)} id="middleImage" className="petDetails__middleImage" src={`data:image/png;base64, ${detailState.images[0].image}`} alt="תמונת בעל החיים" />
+                                <img onClick={() => showImageFull(0)} id="middleImage" className="petDetails__middleImage" src={`data:image/png;base64, ${detailState.images[0].image}`} alt="תמונת בעל החיים" />
                             </div>
                         }
                         {detailState.images.length === 0 ?
                             <div />
                             :
 
-                            <img onClick={() => showImageFull("bottomImage", 1)} id="bottomImage" className="petDetails__bottomImage" src={`data:image/png;base64, ${detailState.images[1].image}`} alt="תמונת בעל החיים" />
+                            <img onClick={() => showImageFull(1)} id="bottomImage" className="petDetails__bottomImage" src={`data:image/png;base64, ${detailState.images[1].image}`} alt="תמונת בעל החיים" />
                         }
                     </div>
 
