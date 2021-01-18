@@ -76,16 +76,19 @@ const PetDetails = () => {
         }
     }
 
-    const showImageFull = (imageId) => {
+    const showImageFull = (imageId, index) => {
         var modal = document.getElementById("imageViewerId");
-        var img = document.getElementById(imageId);
         var modalImg = document.getElementById("fullImage");
         var captionText = document.getElementById("caption");
-        img.onclick = function () {
+
             modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
+            if (index === -1) {
+                modalImg.src = `data:image/png;base64, ` + detailState.pet.image;
+            } else {
+                modalImg.src = `data:image/png;base64, ` + detailState.images[index].image;
+            }
+            captionText.innerHTML = detailState.pet.name;
+
 
         var span = document.getElementsByClassName("close")[0];
 
@@ -175,21 +178,21 @@ const PetDetails = () => {
                     <div className="petDetails__imageSection">
 
                         <div className="petDetails__topWrapper">
-                            <img onClick={() => showImageFull("topImage")} id="topImage" className="petDetails__topImage" src={`data:image/png;base64, ${detailState.pet.image}`} alt="תמונת בעל החיים" />
+                            <img onClick={() => showImageFull("topImage", -1)} id="topImage" className="petDetails__topImage" src={`data:image/png;base64, ${detailState.pet.image}`} alt="תמונת בעל החיים" />
                         </div>
 
                         {detailState.images.length === 0 ?
                             <div />
                             :
                             <div className="petDetails__middleWrapper">
-                                <img onClick={() => showImageFull("middleImage")} id="middleImage" className="petDetails__middleImage" src={`data:image/png;base64, ${detailState.images[0].image}`} alt="תמונת בעל החיים" />
+                                <img onClick={() => showImageFull("middleImage", 0)} id="middleImage" className="petDetails__middleImage" src={`data:image/png;base64, ${detailState.images[0].image}`} alt="תמונת בעל החיים" />
                             </div>
                         }
                         {detailState.images.length === 0 ?
                             <div />
                             :
 
-                            <img onClick={() => showImageFull("bottomImage")} id="bottomImage" className="petDetails__bottomImage" src={`data:image/png;base64, ${detailState.images[1].image}`} alt="תמונת בעל החיים" />
+                            <img onClick={() => showImageFull("bottomImage", 1)} id="bottomImage" className="petDetails__bottomImage" src={`data:image/png;base64, ${detailState.images[1].image}`} alt="תמונת בעל החיים" />
                         }
                     </div>
 
