@@ -37,7 +37,7 @@ const PetCard = ({ pet }) => {
 
     return (
         <div className={window.location.href.includes(SEARCH) ? "petCard__bigMargin" : "petCard__smallMargin"}>
-            <img className="petCard__image" src={`data:image/png;base64, ${pet.image}`} alt="תמונת החיה" />
+            <img className={window.location.href.includes(SEARCH) ?  "petCard__image" : "petCard__spotLightImage"} src={`data:image/png;base64, ${pet.image}`} alt="תמונת החיה" />
             <h4 className={window.location.href.includes(SEARCH) ? "petCard__nameBlue" : "petCard__nameOrange"}>{pet.name}</h4>
             <p className={window.location.href.includes(SEARCH) ? "petCard__goodWordsBlue" : "petCard__goodWordsOrange"}>{pet.goodWords}</p>
             <p className="petCard__region">

@@ -20,28 +20,37 @@
       margin-left: 1.5vw;
     }
     @include respond(tab-port) {
-      width: 177px;
+      width: 200px;
       height: 433px;
     }
   }
 
   &__smallMargin {
     display: flexbox;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     text-align: center;
-    width: 377px;
+    width: 347px;
     height: 633px;
     background: $color-white;
     box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     margin-top: 50px;
-    margin-right: 5.5%;
-    margin-left: 5.5vw;
+    margin-right: 1.5%;
+    margin-left: 1.5vw;
 
-    @include respond(tab-port) {
+    @media screen and (max-width: 2000px) {
+      width: 290px;
+      height: 603px;
+    }
+
+    @media only screen and(max-width: 100em) {
       width: 200px;
       height: 433px;
+    }
+   
+    @include respond(tab-port) {
+       margin: 15px;
     }
   }
 
@@ -56,8 +65,27 @@
       width: 296px;
       height: 324px;
     }
-
+    
     @include respond(tab-port) {
+      margin-top: 10px;
+      width: 170px;
+      height: 233px;
+    }
+  }
+
+  &__spotLightImage {
+    margin-top: 25px;
+    object-fit: cover;
+    width: 316px;
+    height: 344px;
+    border-radius: 10px;
+
+    @media screen and (max-width: 2000px) {
+      width: 256px;
+      height: 304px;
+    }
+
+    @media only screen and(max-width: 100em) {
       margin-top: 10px;
       width: 170px;
       height: 233px;
@@ -79,7 +107,7 @@
     }
 
     @include respond(tab-port) {
-        padding-right: 25px;
+      padding-right: 25px;
       font-size: 22px;
     }
   }
@@ -147,7 +175,7 @@
       font-size: 26px;
     }
 
-    @include respond(tab-port) {
+    @media only screen and(max-width: 100em) {
       display: none;
     }
   }
@@ -234,7 +262,7 @@
   }
 
   &__detailsBlue {
-    margin-left: 125px;
+    margin-left: 90px;
     font-family: Rubik;
     font-style: $font-style-normal;
     font-weight: $font-weight-normal;
@@ -252,12 +280,13 @@
     cursor: pointer;
 
     @media screen and (max-width: 2000px) {
+      margin-left: 50px;
       font-size: 23px;
       width: 182px;
       height: 45px;
     }
 
-    @include respond(tab-port) {
+    @media only screen and(max-width: 100em) {
       font-size: 16px;
       width: 142px;
       height: 30px;
