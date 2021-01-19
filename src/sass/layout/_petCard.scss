@@ -23,6 +23,12 @@
       width: 200px;
       height: 433px;
     }
+
+    @media only screen and(max-width: 30em) {
+      margin: 5px;
+      width: 150px;
+      height: 400px;
+   }
   }
 
   &__spotLight {
@@ -46,12 +52,18 @@
 
     @media only screen and(max-width: 100em) {
       width: 200px;
-      height: 433px;
+      height: 400px;
     }
    
     @include respond(tab-port) {
        margin: 15px;
     }
+
+    @media only screen and(max-width: 30em) {
+      margin: 5px;
+      width: 150px;
+      height: 400px;
+   }
   }
 
   &__image {
@@ -71,6 +83,11 @@
       width: 170px;
       height: 233px;
     }
+
+    @media only screen and(max-width: 30em) {
+      width: 130px;
+      height: 203px;
+   }
   }
 
   &__spotLightImage {
@@ -90,6 +107,11 @@
       width: 170px;
       height: 233px;
     }
+
+    @media only screen and(max-width: 30em) {
+      width: 130px;
+      height: 203px;
+   }
   }
 
   &__nameSearch {
@@ -110,6 +132,11 @@
       padding-right: 25px;
       font-size: 22px;
     }
+
+    @media only screen and(max-width: 30em) {
+      padding-right: 20px;
+      font-size: 20px;
+   }
   }
 
   &__nameSpotLight {
@@ -130,6 +157,11 @@
       padding-right: 25px;
       font-size: 22px;
     }
+
+    @media only screen and(max-width: 30em) {
+      padding-right: 20px;
+      font-size: 20px;
+   }
   }
 
   &__goodWordsBlue {
@@ -198,6 +230,11 @@
       padding-right: 25px;
       font-size: 18px;
     }
+
+    @media only screen and(max-width: 30em) {
+      padding-right: 20px;
+      font-size: 16px;
+   }
   }
 
   &__houseIcon {
@@ -222,6 +259,11 @@
       padding-right: 25px;
       font-size: 18px;
     }
+
+    @media only screen and(max-width: 30em) {
+      padding-right: 20px;
+      font-size: 16px;
+   }
   }
 
   &__calendarIcon {
@@ -259,6 +301,12 @@
       height: 30px;
       margin-left: 25px;
     }
+
+    @media only screen and(max-width: 30em) {
+      font-size: 15px;
+      width: 122px;
+      margin-left: 0px;
+   }
   }
 
   &__detailsSpotLight {
@@ -292,5 +340,10 @@
       height: 30px;
       margin-left: 0px;
     }
+    @media only screen and(max-width: 30em) {
+      font-size: 15px;
+      width: 122px;
+      margin-left: 0px;
+   }
   }
 }

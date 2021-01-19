@@ -14,16 +14,16 @@ const HeaderToggle = () => {
             <nav className="navigation__nav">
                 <ul className="navigation__list">
 
-                    <li>
+                    <li onClick="document.getElementById('navigation-toggle').click()">
                         <Link to={ROUTES.HOME} className="navigation__link">ראשי</Link>
                     </li>
-                    <li>
+                    <li onClick="document.getElementById('navigation-toggle').click()">
                         <Link to={ROUTES.SEARCH} className="navigation__link">כל החיות</Link>
                     </li>
-                    <li>
+                    <li onClick="document.getElementById('navigation-toggle').click()">
                         <Link to={ROUTES.ABOUT} className="navigation__link">אודות</Link>
                     </li>
-                    <li>
+                    <li onClick="document.getElementById('navigation-toggle').click()">
                         <Link to={ROUTES.CONTACT} className="navigation__link">צור קשר</Link>
                     </li>
                 </ul>

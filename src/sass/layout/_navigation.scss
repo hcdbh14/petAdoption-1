@@ -94,7 +94,9 @@
       &:visited {
         display: inline-block;
         font-size: 3rem;
-        font-weight: $font-weight-light;
+        font-family: Rubik;
+        font-style: $font-style-normal;
+        font-weight: $font-weight-normal;
         padding: 1rem 2rem;
         color: $color-white;
         text-decoration: none;
