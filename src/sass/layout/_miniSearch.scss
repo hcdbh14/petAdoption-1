@@ -133,11 +133,6 @@
 
     @include respond(tab-port) {
       display: none;
-      // float: left;
-      // width: 100%;
-      // margin-right: 0vw;
-      // margin-left: -20px;
-      // margin-bottom: 10px;
     }
 
     &__image {
@@ -148,11 +143,6 @@
       position: relative;
       width: 77vw;
       z-index: 1;
-
-      @include respond(tab-port) {
-        // float: left;
-        // width: 100vw;
-      }
     }
   }
 }

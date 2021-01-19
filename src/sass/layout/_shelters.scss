@@ -1,18 +1,19 @@
 .shelters {
+    height: auto;
+    width: 100%;
     margin-top: 150px;
     display: flex;
     flex-direction: column;
     position: relative;
     text-align: center;
     align-items: center;
-    height: auto;
-    width: 100%;
     background-image: url(../../images/contact-us-background.svg);
     background-position: left, right top;
     background-size: cover;
     background-repeat: no-repeat;
 
     &__rightPeekingImage {
+        right: -5vw;
         position: absolute;
         top: -14.8vw;
     }
@@ -25,6 +26,10 @@
 
     &__image {
         width: 40vw;
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
         
         @include respond(phone) {
             display: none;

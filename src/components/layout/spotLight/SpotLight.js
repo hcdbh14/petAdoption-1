@@ -52,7 +52,7 @@ const SpotLight = () => {
                         <div className="spotLight__results">
                             {spotLightList}
 
-                            {recordWidth < 800 ?
+                            {recordWidth < 690 ?
 
                                 <Link to={SEARCH}>
                                     <button className="spotLight__morePets">חיות נוספות</button>

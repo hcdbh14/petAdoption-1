@@ -46,6 +46,10 @@
     margin-top: -1000px;
     width: 1350px;
     z-index: 4;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 
     @media only screen and(max-width: 125em) {
       width: 1250px;

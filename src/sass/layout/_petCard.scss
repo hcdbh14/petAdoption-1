@@ -19,6 +19,7 @@
       margin-right: 1.5vw;
       margin-left: 1.5vw;
     }
+
     @include respond(tab-port) {
       width: 200px;
       height: 433px;
@@ -52,17 +53,17 @@
 
     @media only screen and(max-width: 100em) {
       width: 200px;
-      height: 400px;
+      height: 450px;
     }
    
     @include respond(tab-port) {
+      height: 425px;
        margin: 15px;
     }
 
     @media only screen and(max-width: 30em) {
       margin: 5px;
       width: 150px;
-      height: 400px;
    }
   }
 
