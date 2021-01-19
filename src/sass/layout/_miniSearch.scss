@@ -16,6 +16,9 @@
     border-top-right-radius: 0;
   
     @include respond(tab-port) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
       width: 100vw;
     }
   }
@@ -80,7 +83,6 @@
     margin-left: 75px;
     text-align: center;
     vertical-align: middle;
-    // width: 638px;
     width: 30vw;
     height: 53.36px;
     margin-top: 50px;

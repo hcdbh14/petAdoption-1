@@ -59,7 +59,7 @@ const MiniSearch = () => {
                     <option value="מרכז">מרכז</option>
                     <option value="דרום">דרום</option>
                 </select>
-                <br />
+
                 <select className="miniSearch__dropdown" value={petsState.searchInputs.gender} onChange={genderHandleChange}>
                     <option value="">זכר ונקבה</option>
                     <option value="זכר">זכר</option>
