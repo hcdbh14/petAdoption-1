@@ -47,7 +47,7 @@
     background: #e7e3d7;
 
     @include respond(big-desktop) {
-      width: 100vw;
+      width: 80vw;
       margin-right: 0vw;
     }
   }
