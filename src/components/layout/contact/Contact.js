@@ -73,17 +73,17 @@ const Contact = () => {
     return (
         <div className="contact">
             <div className="contact__formSide">
-                <div>
+
                     <h1 className="contact__title">צור קשר איתנו</h1>
                     <input className="contact__textFieldTitleFirst" defaultValue="שם:" onClick={focusName} />
-                    <input className="contact__textField" id="name" type="text" onChange={handleNameChange} />
+                    <input className="contact__textField" id="name" type="text" placeholder="שם" onChange={handleNameChange} />
 
                     <input className="contact__textFieldTitle" defaultValue="מייל:" onClick={focusEmail} />
-                    <input className="contact__textField" id="email" type="text" onChange={handleEmailChange} />
+                    <input className="contact__textField" id="email" type="text" placeholder="מייל" onChange={handleEmailChange} />
 
                     <input type="text" className="contact__textFieldTitle" defaultValue="נייד:" onClick={focusPhone} />
-                    <input className="contact__textField" id="phone" type="text" onChange={handlePhoneChange} />
-                </div>
+                    <input className="contact__textField" id="phone" type="text" placeholder="נייד" onChange={handlePhoneChange} />
+
 
                 <input type="text" className="contact__textFieldTitleBig" defaultValue="הודעה:" disabled />
                 <br />
