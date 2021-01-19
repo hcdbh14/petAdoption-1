@@ -135,7 +135,7 @@ const PetDetails = () => {
 
 
     return (
-        <>
+        <div style={{ background: '#e7e3d7' }}>
             <div id="imageViewerId" class="imageViewer">
                 <span className="close">&times;</span>
                 <h2 id="gallaryCount" className="numberOfImages">1/1</h2>
@@ -217,7 +217,7 @@ const PetDetails = () => {
                                 :
                                 <p></p>
                             )}
-                        <img className="petDetails__road" src={require('../../../images/desc-line-road.svg')} alt="שרטוט של דרך" />
+
                     </div>
 
                     <div className="petDetails__imageSection">
@@ -246,7 +246,8 @@ const PetDetails = () => {
                 :
                 <div />
             }
-        </>
+            <img className="petDetails__road" src={require('../../../images/desc-line-road.svg')} alt="שרטוט של דרך" />
+        </div>
     )
 }
 

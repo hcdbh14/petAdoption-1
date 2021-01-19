@@ -11,9 +11,8 @@
     margin-right: 250px;
     padding-right: 100px;
     width: 60%;
-    height: 1450px;
+    height: auto;
     max-width: 1200px;
-
     background: #ffffff;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 
@@ -23,7 +22,7 @@
       margin-right: 100px;
       padding-right: 50px;
       max-width: 800px;
-      height: 1450px;
+
     }
 
     @media only screen and(max-width: 110em) {
@@ -31,7 +30,7 @@
       margin-right: 80px;
       padding-right: 40px;
       max-width: 750px;
-      height: 1250px;
+
     }
 
     @media only screen and(max-width: 95em) {
@@ -39,28 +38,26 @@
       margin-right: 60px;
       padding-right: 30px;
       max-width: 700px;
-      height: 1200px;
+
     }
   }
 
   &__road {
     position: relative;
-    margin-right: -350px;
+    margin-top: -1000px;
+    // margin-bottom: 200px;
     width: 1350px;
     z-index: 4;
 
     @media only screen and(max-width: 125em) {
-      margin-right: -285px;
       width: 1250px;
     }
 
     @media only screen and(max-width: 110em) {
-      margin-right: -255px;
       width: 1200px;
     }
 
     @media only screen and(max-width: 95em) {
-      margin-right: -205px;
       width: 1150px;
     }
   }
@@ -123,6 +120,7 @@
   }
 
   &__iAm {
+    margin-bottom: 25px;
     font-family: Rubik;
     font-style: normal;
     font-weight: 500;
@@ -144,7 +142,6 @@
   }
 
   &__checkBoxIcon {
-    margin-top: 20px;
     margin-bottom: -10px;
     vertical-align: text-bottom;
     width: 70px;
@@ -168,6 +165,7 @@
 
   &__allImagesButton {
     margin-top: 75px;
+    margin-bottom: 50px;
     width: 200px;
     height: 50px;
     font-family: Rubik;
