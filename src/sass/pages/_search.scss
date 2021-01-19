@@ -2,6 +2,10 @@
   background: rgba(255, 255, 255, 0.22);
   padding-top: 100px;
 
+  @include respond(tab-port) {
+    padding-top: 200px;
+  }
+
   &__title {
     margin-top: 150px;
     padding-top: 25px;
@@ -85,6 +89,10 @@
     outline: none;
     border: none;
     cursor: pointer;
+
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__pageArrow {
