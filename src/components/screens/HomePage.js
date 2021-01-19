@@ -7,7 +7,7 @@ import HeaderImage from '../layout/header/HeaderImage';
 
 const HomePage = () => {
 
-    const [recordWidth, setRecordWidth] = useState(0)
+    const [recordWidth, setRecordWidth] = useState(window.innerWidth)
 
     window.addEventListener("resize", function () {
         setRecordWidth(window.innerWidth)

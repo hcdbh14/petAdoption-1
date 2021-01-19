@@ -7,7 +7,7 @@ import { fetchSpotLightPets } from '../../../store/spotLight/action';
 
 const SpotLight = () => {
 
-    const [recordWidth, setRecordWidth] = useState(0)
+    const [recordWidth, setRecordWidth] = useState(window.innerWidth)
 
     window.addEventListener("resize", function () {
         setRecordWidth(window.innerWidth)
