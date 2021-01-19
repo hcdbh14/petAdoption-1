@@ -17,14 +17,12 @@
     border-top-right-radius: 0;
   
     @include respond(tab-port) {
-      // display: flex;
       width: 100vw;
       margin-top: -40px;
+      border-radius: 0px;
       align-items: center;
-      // flex-direction: column;
       background: url(../../images/miniSearch-mobile.png);
-
-      background-size: 100% 100%,;
+      background-size: 100% 100%;
       background-repeat: no-repeat;
     }
   }
