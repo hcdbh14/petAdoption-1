@@ -20,10 +20,16 @@
     margin-top: 9rem;
 
     @include respond(phone) {
-      height: 90vh;
+      margin-top: 110px;
+      height: 900px;
       width: 100%;
       background-size: cover;
       background-image: url(../../images/dog-model-mobile.png);
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      vertical-align: middle;
+      justify-content: center;
     }
 
     &__title {
@@ -36,7 +42,10 @@
       line-height: 5vw;
       color: #fa8e2b;
       @include respond(phone) {
-        display: none;
+        font-size: 32px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
       }
     }
 
@@ -51,7 +60,11 @@
       color: $color-black;
 
       @include respond(phone) {
-        display: none;
+        font-size: 18px;
+        margin-bottom: 400px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
       }
     }
   }

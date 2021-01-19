@@ -5,7 +5,6 @@ const HeaderImage = () => {
 
     return (
         <div className="main__shoutout">
-
                  <h2 className="main__shoutout__title">קחו חבר חדש הביתה!</h2>
     
                  <p className="main__shoutout__text">בעלי חיים שממתינים לאימוץ מחכים לכם באתר שלנו.<br />
