@@ -3,6 +3,7 @@
   height: auto;
   width: 100%;
   text-align: center;
+
   @include respond(tab-port) {
     display: inline;
   }
@@ -16,10 +17,15 @@
     border-top-right-radius: 0;
   
     @include respond(tab-port) {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
+      // display: flex;
       width: 100vw;
+      margin-top: -40px;
+      align-items: center;
+      // flex-direction: column;
+      background: url(../../images/miniSearch-mobile.png);
+
+      background-size: 100% 100%,;
+      background-repeat: no-repeat;
     }
   }
 
@@ -35,7 +41,9 @@
     color: $color-primary;
 
     @include respond(tab-port) {
+      margin-top: 10px;
       margin-left: 50px;
+      margin-bottom: 20px;
     }
   }
 
@@ -74,7 +82,10 @@
     }
 
     @include respond(tab-port) {
-      width: 50vw;
+      margin-bottom: 50px;
+      margin-right: auto;
+      margin-left: 25px;
+      width: 40vw;
     }
   }
 
@@ -103,7 +114,11 @@
     z-index: 2;
 
     @include respond(tab-port) {
-      margin-left: 45px;
+      height: 45px;
+      width: 82vw;
+      margin-left: 0px;
+      margin-top: 30px;
+      margin-bottom: 125px;
     }
   }
 
@@ -119,11 +134,12 @@
     }
 
     @include respond(tab-port) {
-      float: left;
-      width: 100%;
-      margin-right: 0vw;
-      margin-left: -20px;
-      margin-bottom: 10px;
+      display: none;
+      // float: left;
+      // width: 100%;
+      // margin-right: 0vw;
+      // margin-left: -20px;
+      // margin-bottom: 10px;
     }
 
     &__image {
@@ -136,8 +152,8 @@
       z-index: 1;
 
       @include respond(tab-port) {
-        float: left;
-        width: 100vw;
+        // float: left;
+        // width: 100vw;
       }
     }
   }
