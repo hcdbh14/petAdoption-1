@@ -36,9 +36,9 @@ const PetCard = ({ pet }) => {
     }
 
     return (
-        <div className={window.location.href.includes(SEARCH) ? "petCard__bigMargin" : "petCard__smallMargin"}>
+        <div className={window.location.href.includes(SEARCH) ? "petCard__search" : "petCard__spotLight"}>
             <img className={window.location.href.includes(SEARCH) ?  "petCard__image" : "petCard__spotLightImage"} src={`data:image/png;base64, ${pet.image}`} alt="תמונת החיה" />
-            <h4 className={window.location.href.includes(SEARCH) ? "petCard__nameBlue" : "petCard__nameOrange"}>{pet.name}</h4>
+            <h4 className={window.location.href.includes(SEARCH) ? "petCard__nameSearch" : "petCard__nameSpotLight"}>{pet.name}</h4>
             <p className={window.location.href.includes(SEARCH) ? "petCard__goodWordsBlue" : "petCard__goodWordsOrange"}>{pet.goodWords}</p>
             <p className="petCard__region">
                 <img className="petCard__houseIcon" src={require('../../../images/house.svg')} alt="אייקון של אזור" />
@@ -50,7 +50,7 @@ const PetCard = ({ pet }) => {
             </p>
             
             <Link to={DETAILS}>
-                <button className={window.location.href.includes(SEARCH) ? "petCard__detailsOrange" : "petCard__detailsBlue"} onClick={() => moveToDetails()}>פרטים נוספים</button>
+                <button className={window.location.href.includes(SEARCH) ? "petCard__detailsSearch" : "petCard__detailsSpotLight"} onClick={() => moveToDetails()}>פרטים נוספים</button>
             </Link>
         </div >
     )

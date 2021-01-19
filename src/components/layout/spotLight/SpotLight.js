@@ -1,9 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import PetCard from '../pet/PetCard';
+import { Link } from 'react-router-dom';
+import { SEARCH } from '../../constants/routes';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchSpotLightPets } from '../../../store/spotLight/action';
-import PetCard from '../pet/PetCard';
 
 const SpotLight = () => {
+
+    const [recordWidth, setRecordWidth] = useState(0)
+
+    window.addEventListener("resize", function () {
+        setRecordWidth(window.innerWidth)
+    });
 
     const loadSpotLight = () => {
         if (spotLightState.searchResults.length === 0) {
@@ -19,7 +27,7 @@ const SpotLight = () => {
         spotLightState.searchResults.map(pet => {
             return (
                 <div key={pet.id}>
-                    <PetCard pet={pet}/>
+                    <PetCard pet={pet} />
                     <br />
                     <br />
                 </div>)
@@ -43,9 +51,20 @@ const SpotLight = () => {
                         :
                         <div className="spotLight__results">
                             {spotLightList}
+
+                            {recordWidth < 800 ?
+
+                                <Link to={SEARCH}>
+                                    <button className="spotLight__morePets">חיות נוספות</button>
+                                </Link>
+
+                                :
+                                <div />
+                            }
                         </div>
                     )}
             </div>
+
         </div >
     )
 }

@@ -1,6 +1,6 @@
 .petCard {
 
-  &__bigMargin {
+  &__search {
     display: flexbox;
     flex-direction: column;
     justify-content: center;
@@ -25,7 +25,7 @@
     }
   }
 
-  &__smallMargin {
+  &__spotLight {
     display: flexbox;
     flex-direction: row;
     justify-content: center;
@@ -92,7 +92,7 @@
     }
   }
 
-  &__nameBlue {
+  &__nameSearch {
     padding-right: 35px;
     text-align: right;
     font-family: Rubik;
@@ -112,7 +112,7 @@
     }
   }
 
-  &__nameOrange {
+  &__nameSpotLight {
     padding-right: 45px;
     text-align: right;
     font-family: Rubik;
@@ -228,7 +228,7 @@
     margin-left: 5px;
   }
 
-  &__detailsOrange {
+  &__detailsSearch{
     margin-left: 125px;
     font-family: Rubik;
     font-style: $font-style-normal;
@@ -238,8 +238,8 @@
     color: $color-white;
     width: 202px;
     height: 50px;
-    background: $color-secondary;
-    border: 1px solid $color-secondary;
+    background: #EB8071;
+    border: 1px solid #EB8071;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
     border-radius: 20px;
     outline: none;
@@ -261,7 +261,7 @@
     }
   }
 
-  &__detailsBlue {
+  &__detailsSpotLight {
     margin-left: 90px;
     font-family: Rubik;
     font-style: $font-style-normal;
@@ -271,8 +271,8 @@
     color: $color-white;
     width: 202px;
     height: 50px;
-    background: #56bed1;
-    border: 1px solid #56bed1;
+    background: #EB8071;
+    border: 1px solid #EB8071;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
     border-radius: 20px;
     outline: none;
