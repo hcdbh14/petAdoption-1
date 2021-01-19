@@ -1,14 +1,24 @@
 .spotLight {
   margin-top: 200px;
 
+  @include respond(tab-port) {
+    padding-top: 45px;
+    margin-top: 100px;
+    background: url(../../images/spotLight-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   &__titleWrapper {
     margin-left: -250px;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
 
-    @include respond(big-desktop) {
-      margin-left: 0px;
+    @include respond(tab-port) {
+      margin-bottom: 25px;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 
@@ -20,7 +30,7 @@
     line-height: 71px;
     color: $color-black;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       font-size: 40px;
     }
   }
@@ -33,7 +43,7 @@
     line-height: 71px;
     color: #fa8e2b;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       font-size: 40px;
     }
   }
@@ -47,13 +57,11 @@
     border-bottom-right-radius: 40px;
     background: #e7e3d7;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       width: 100vw;
+      margin-top: -25px;
       border-top-right-radius: 0px;
       border-bottom-right-radius: 0px;
-      background: url(../../images/spotLight-mobile.png);
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
     }
   }
 

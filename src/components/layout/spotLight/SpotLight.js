@@ -35,7 +35,6 @@ const SpotLight = () => {
                 <h2 className="spotLight__titleColored">אמצו&nbsp;</h2> <h2 className="spotLight__title">עכשיו</h2>
             </div>
 
-        
             <div className="spotLight__container">
                 {spotLightState.error !== "" ?
                     <h1>error</h1>
@@ -46,7 +45,6 @@ const SpotLight = () => {
                             {spotLightList}
                         </div>
                     )}
-
             </div>
         </div >
     )
