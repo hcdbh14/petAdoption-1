@@ -3,7 +3,6 @@
   height: auto;
   width: 100%;
   text-align: center;
-
   @include respond(tab-port) {
     display: inline;
   }
@@ -15,6 +14,7 @@
     border-radius: 40px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
+  
     @include respond(tab-port) {
       width: 100vw;
     }
@@ -38,10 +38,8 @@
 
   &__dropdown { 
     position: relative;
-    outline: none;
     margin: 25px;
     margin-left: 75px;
-    // width: 449px;
     width: 25vw;
     height: 50px;
     padding-right: 25px;
@@ -65,7 +63,12 @@
     text-indent: 1px;
     text-overflow: "";
     cursor: pointer;
+    outline: none;
     z-index: 2;
+
+    @media only screen and(max-width: 128em) {
+      margin-left: 65px;
+    }
 
     @include respond(tab-port) {
       width: 50vw;
@@ -132,7 +135,6 @@
       @include respond(tab-port) {
         float: left;
         width: 100vw;
-        margin-right: 0w;
       }
     }
   }
