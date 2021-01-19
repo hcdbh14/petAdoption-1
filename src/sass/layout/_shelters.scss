@@ -1,7 +1,12 @@
 .shelters {
-    text-align: center;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    margin-top: 14vw;
+    text-align: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
     background-image: url(../../images/contact-us-background.svg);
     background-position: left, right top;
     background-size: cover;

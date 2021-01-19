@@ -15,7 +15,7 @@ const Shelters = () => {
                         <img src={require('../../../images/pets-peeking.png')} alt="pet with owner" className="shelters__image" />
                     </div>
                 }
-                <div className="">
+                <div className="shelters__wrapper">
                     <p className="shelters__title">עמותות שלנו</p>
 
                     <div className="shelters__content">
@@ -24,14 +24,7 @@ const Shelters = () => {
                         <p>ולמצוא את החייה המתאימה לכם לאימוץ.</p>
                     </div>
                 </div>
-                <div className="">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
+
             </div>
         </>
     )
