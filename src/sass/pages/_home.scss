@@ -41,6 +41,7 @@
       font-size: 4vw;
       line-height: 5vw;
       color: #fa8e2b;
+      
       @include respond(tab-port) {
         font-size: 32px;
         margin-right: auto;
@@ -134,14 +135,14 @@ input:checked + label + .content {
     }
   }
 
-  &__blue-text {
+  &__colored-text {
     font-family: Rubik;
     font-style: $font-style-normal;
     font-size: 40px;
     font-weight: $font-weight-normal;
     font-size: 60px;
     line-height: 71px;
-    color: $color-primary;
+    color: #EB8071;
 
     @include respond(phone) {
       font-size: 32px;

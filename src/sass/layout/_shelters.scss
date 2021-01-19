@@ -20,10 +20,10 @@
 
     &__image {
         width: 40vw;
-
+        
         @include respond(phone) {
             display: none;
-        }
+          }
     }
 
     &__title {
