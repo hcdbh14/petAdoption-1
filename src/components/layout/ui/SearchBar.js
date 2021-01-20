@@ -35,8 +35,9 @@ const SearchBar = () => {
     }
 
     const style = ({
+        paddingTop: "5px",
         color: "#fff",
-        fontSize: "3.3rem",
+        fontSize: "3.3rem"
     })
     return (
         <div className="searchBar">
