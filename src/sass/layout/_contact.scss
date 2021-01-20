@@ -70,38 +70,12 @@
     }
   }
 
-  &__textFieldTitle {
-    caret-color: transparent;
-    width: 6%;
-    height: 84px;
-    background: rgba(122, 122, 122, 0.7);
-    padding-right: 15px;
-    outline: none;
-    border: none;
-    color: $color-white;
-    font-size: 1.5em;
-    font-family: Rubik;
-    font-style: $font-style-normal;
-    font-weight: $font-weight-bold;
-    margin-right: 2%;
-    margin-top: 80px;
-
-    @include respond(big-desktop) {
-      margin-right: 5px;
-      padding-right: 5px;
-    }
-
-    @include respond(tab-land) {
-      display: none;
-      font-size: 14px;
-      padding-right: 1px;
-      width: 7%;
-      font-weight: $font-weight-light;
-    }
-  }
 
   &__textField {
-    width: 24%;
+    margin-right: 50px;
+    padding-right: 20px;
+    margin-bottom: 50px;
+    width: 26%;
     height: 84px;
     background: rgba(122, 122, 122, 0.7);
     margin-top: 80px;
@@ -117,43 +91,18 @@
     }
 
     @include respond(tab-land) {
+      margin-top: 25px;
+      margin-bottom: 25px;
       padding-right: 25px;
-      margin-right: 45.04px;
       width: 80%;
       font-size: 18px;
       font-weight: $font-weight-light;
     }
 
-  }
-
-  &__textFieldTitleBig {
-    width: 100%;
-    height: 60px;
-    background: rgba(122, 122, 122, 0.7);
-    padding-right: 15px;
-    outline: none;
-    border: none;
-    color: $color-white;
-    font-size: 1.5em;
-    font-family: Rubik;
-    font-style: $font-style-normal;
-    font-weight: $font-weight-bold;
-    margin-right: 45.04px;
-    margin-top: 80px;
-
-    @include respond(big-desktop) {
-      width: 95%;
-      margin-right: 5px;
-    }
-
-    @include respond(tab-land) {
-      width: 80%;
-      font-size: 18px;
-      font-weight: $font-weight-light;
-    }
   }
 
   &__textFieldBig {
+    padding: 15px;
     width: 100%;
     height: 164px;
     background: rgba(122, 122, 122, 0.7);
@@ -165,24 +114,22 @@
     font-style: $font-style-normal;
     font-weight: $font-weight-bold;
     margin-right: 45.04px;
-    padding-right: 45.04px;
     resize: none;
 
     @include respond(big-desktop) {
-      width: 95%;
-      margin-right: 5px;
-      padding-right: 15px;
+      width: 79%;
+
     }
 
     @include respond(tab-land) {
       width: 80%;
-      padding-right: 25px;
+      margin-top: 25px;
+      margin-bottom: 25px;
       font-size: 18px;
       font-weight: $font-weight-light;
     }
 
     @include respond(tab-port) {
-      margin-top: -21px;
     }
   }
 
@@ -325,7 +272,7 @@
 
   ::placeholder { 
     color: $color-white;
-    opacity: 0; 
+    opacity: 1; 
 
     @include respond(tab-land) {
       opacity: 1; 
