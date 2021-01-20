@@ -105,7 +105,7 @@ const Search = () => {
                 <button className="search__fastPageButton" onClick={() => moveToStart()}>
                     <img className="search__pageArrow" src={require('../../../images/right-page-arrow.svg')} alt="חץ ימין" />
                 </button>
-                {decideRange().map((i) => <button id={i} onClick={() => moveToNextPage(i)} className={pageNumber === i ? "search__currentPageButton" : "search__pageButton"}>{i + 1}</button>)}
+                {decideRange().map((i) => <button key={i} onClick={() => moveToNextPage(i)} className={pageNumber === i ? "search__currentPageButton" : "search__pageButton"}>{i + 1}</button>)}
                 <button className="search__fastPageButton" onClick={() => moveToEnd()}>
                     <img className="search__pageArrow" src={require('../../../images/left-page-arrow.svg')} alt="חץ שמאל" />
                 </button>

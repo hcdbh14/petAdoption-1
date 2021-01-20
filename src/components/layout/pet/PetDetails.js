@@ -7,39 +7,18 @@ const PetDetails = () => {
     var currentImage = -1
     const dispatch = useDispatch();
     const detailState = useSelector(state => state.detailReducer);
-
-    const saveState = (state) => {
-        try {
-            const serializedState = JSON.stringify(state);
-            localStorage.setItem("state", serializedState);
-        } catch (err) {
-            console.log(err);
-        }
-    };
-
-
-    const loadState = () => {
-        try {
-            const serializedState = localStorage.getItem("state");
-            if (!serializedState) return undefined;
-            else return JSON.parse(serializedState);
-        } catch (err) {
-            return null;
-        }
-    };
-
-    const loadOrSaveState = () => {
-        const loadedPet = loadState()
-
-        if (detailState.pet !== null) {
-            saveState(detailState.pet)
-        } else if (detailState.pet === null && loadedPet !== null) {
-            dispatch(getAdditionalDetails(loadedPet))
+    
+    const loadFromLink = () => {
+        if (detailState.pet === null) {
+            let search = window.location.search;
+            let params = new URLSearchParams(search);
+            let id = params.get('id');
+            dispatch(getAdditionalDetails(null, id))
         }
     };
 
     const buildAgeDesc = () => {
-
+        
         var formattedAge = detailState.pet.age
         var maleOrFemale = ""
         var monthsOrYears = ""
@@ -131,12 +110,12 @@ const PetDetails = () => {
         setGallaryCount()
     }
 
-    useEffect(loadOrSaveState, [])
+    useEffect(loadFromLink, [])
 
 
     return (
         <div style={{ background: '#e7e3d7' }}>
-            <div id="imageViewerId" class="imageViewer">
+            <div id="imageViewerId" className="imageViewer">
                 <span className="close">&times;</span>
                 <h2 id="gallaryCount" className="numberOfImages">1/1</h2>
                 <div style={{ display: 'flex' }}>

@@ -49,7 +49,7 @@ const PetCard = ({ pet }) => {
                 {buildAgeDesc()}
             </p>
             
-            <Link to={DETAILS}>
+            <Link to={`${DETAILS}?id=${pet.id}`}>
                 <button className={window.location.href.includes(SEARCH) ? "petCard__detailsSearch" : "petCard__detailsSpotLight"} onClick={() => moveToDetails()}>פרטים נוספים</button>
             </Link>
         </div >
