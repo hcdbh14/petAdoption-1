@@ -5,7 +5,6 @@ import SearchBar from '../ui/SearchBar';
 import Logo from '../ui/Logo';
 import { Link } from 'react-router-dom';
 
-
 const Header = () => {
     
     return (
