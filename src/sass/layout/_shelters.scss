@@ -45,6 +45,11 @@
         font-size: 5rem;
         line-height: 53px;
         color: #56bed1;
+
+        @include respond(tab-port) {
+            padding-top: 50px;
+            padding-bottom: 25px;
+          }
     }
 
     &__content {
@@ -55,5 +60,17 @@
         font-size: 2.8rem;
         line-height: 53px;
         color: $color-white;
+    }
+
+    &__text {
+        display: flex;
+        max-width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+
+        @include respond(tab-port) {
+            font-size: 18px;
+            max-width: 90%;
+          }
     }
 }
