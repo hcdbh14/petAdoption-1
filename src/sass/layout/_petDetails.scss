@@ -3,12 +3,12 @@
   height: auto;
   width: 100%;
   padding-top: 250px;
-  padding-bottom: 400px;
-  background: #e7e3d7;
 
   &__profile {
     margin-top: 150px;
-    margin-right: 250px;
+    margin-bottom: auto;
+    // margin-right: 250px;
+    margin-right: 5vw;
     padding-right: 100px;
     padding-bottom: 40px;
     width: 60%;
@@ -17,29 +17,21 @@
     background: #ffffff;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 
-    @include respond(big-desktop) {
-      margin-right: 2vw;
-    }
 
     @media only screen and(max-width: 125em) {
-      height: auto;
       margin-top: 50px;
-      margin-right: 100px;
       padding-right: 50px;
       max-width: 800px;
     }
 
     @media only screen and(max-width: 110em) {
       margin-top: 40px;
-      margin-right: 80px;
       padding-right: 40px;
       max-width: 750px;
-
     }
 
     @media only screen and(max-width: 95em) {
       margin-top: 30px;
-      margin-right: 60px;
       padding-right: 30px;
       max-width: 700px;
 
@@ -48,17 +40,16 @@
 
   &__road {
     position: relative;
-    margin-top: -1000px;
+    margin-top: -100px;
     width: 1350px;
-    z-index: 4;
+    z-index: 1;
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
 
     @include respond(big-desktop) {
-      margin-top: -500px;
-      width: 80%;
+      width: 70%;
     }
 
     @media only screen and(max-width: 125em) {
