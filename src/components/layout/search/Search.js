@@ -69,7 +69,6 @@ const Search = () => {
         }
 
         if (petsState.currentPage + 4 > totalPages) {
-            console.log()
             end = totalPages - 1
         } else {
             end = petsState.currentPage + 4

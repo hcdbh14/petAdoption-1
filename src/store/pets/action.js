@@ -2,7 +2,6 @@ import axios from '../../config/axios';
 import { petsTypes } from './petsTypes';
 
 export const fetchPets = (pageNumber, pageSize, currentPage, petType, region, gender, ageGroup, needCount, name) => {
-    console.log("action is" + currentPage)
     var count = 0
     var urlPath = "/notices"
     var countUrlPath = "/notices/count"
