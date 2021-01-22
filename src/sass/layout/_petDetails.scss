@@ -10,11 +10,16 @@
     margin-top: 150px;
     margin-right: 250px;
     padding-right: 100px;
+    padding-bottom: 40px;
     width: 60%;
     height: auto;
     max-width: 1200px;
     background: #ffffff;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+
+    @include respond(big-desktop) {
+      margin-right: 2vw;
+    }
 
     @media only screen and(max-width: 125em) {
       height: auto;
@@ -50,6 +55,11 @@
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
+
+    @include respond(big-desktop) {
+      margin-top: -500px;
+      width: 80%;
+    }
 
     @media only screen and(max-width: 125em) {
       width: 1250px;
@@ -88,8 +98,8 @@
   }
 
   &__icon {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     margin-left: 20px;
 
     @media only screen and(max-width: 125em) {
@@ -99,8 +109,9 @@
   }
 
   &__detail {
-    margin-bottom: 26px;
-    margin-left: 25px;
+    margin-bottom: 5px;
+    margin-left: 50px;
+    word-wrap: break-word;
     font-family: Rubik;
     font-style: normal;
     font-weight: $font-weight-light;
@@ -300,7 +311,6 @@
   }
 
   &__middleImage {
-    // margin-right: -120px;
     object-fit: cover;
     width: 461px;
     height: 442px;
