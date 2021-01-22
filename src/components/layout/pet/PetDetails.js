@@ -114,7 +114,7 @@ const PetDetails = () => {
 
 
     return (
-        <div style={{ background: '#e7e3d7', paddingBottom: '150px' }}>
+        <div style={{ background: '#e7e3d7', paddingBottom: '150px'}}>
             <div id="imageViewerId" className="imageViewer">
                 <span className="close">&times;</span>
                 <h2 id="gallaryCount" className="numberOfImages">1/1</h2>
@@ -135,7 +135,7 @@ const PetDetails = () => {
             {detailState.pet !== null ?
                 <div className="petDetails">
                     <div className="petDetails__profile">
-                        <p className="petDetails__title">{detailState.pet.petType}, {detailState.pet.name}</p>
+                        <p className="petDetails__title" style={{ marginBottom: '1vw'}}>{detailState.pet.petType}, {detailState.pet.name}</p>
                         <p className="petDetails__detail">
                             <img className="petDetails__icon" src={require('../../../images/paw-profile.svg')} alt="אייקון של רגל בעל חיים" />
                             {detailState.pet.race}
