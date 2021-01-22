@@ -3,6 +3,7 @@ import { petsTypes } from './petsTypes';
 const initialState = {
     count: 0,
     pageNum: 0,
+    currentPage: 0,
     searchResults: [],
     searchInputs: {
         petType: '',
@@ -26,10 +27,10 @@ const petReducer = (state = initialState, action) => {
             return { ...state, loading: false, error: action.err }
 
         case petsTypes.SEARCH_PETS_SUCCESS:
-            return { ...state, loading: false, searchResults: action.pets }
+            return { ...state, loading: false, searchResults: action.pets, currentPage: action.currentPage }
 
         case petsTypes.SEARCH_PETS_AND_COUNT_SUCCESS:
-            return { ...state, loading: false, searchResults: action.pets, count: action.count, pageNum: action.pageNum }
+            return { ...state, loading: false, searchResults: action.pets, count: action.count, pageNum: action.pageNum, currentPage: action.currentPage }
 
         case petsTypes.SEARCH_PETS_UPDATE_FILTER:
             return { ...state, reload: true }

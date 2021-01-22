@@ -21,7 +21,7 @@ const SearchBar = () => {
         petsState.searchInputs.region = ""
         petsState.searchInputs.gender = ""
         petsState.searchInputs.ageGroup = ""
-        dispatch(fetchPets(0, 12, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true, nameText))
+        dispatch(fetchPets(0, 12, 0, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true, nameText))
         window.scrollTo(0, 500)
     }
 
