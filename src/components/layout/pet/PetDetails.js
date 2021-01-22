@@ -7,7 +7,7 @@ const PetDetails = () => {
     var currentImage = -1
     const dispatch = useDispatch();
     const detailState = useSelector(state => state.detailReducer);
-    
+
     const loadFromLink = () => {
         if (detailState.pet === null) {
             let search = window.location.search;
@@ -18,7 +18,7 @@ const PetDetails = () => {
     };
 
     const buildAgeDesc = () => {
-        
+
         var formattedAge = detailState.pet.age
         var maleOrFemale = ""
         var monthsOrYears = ""
@@ -141,9 +141,14 @@ const PetDetails = () => {
                             {detailState.pet.race}
                         </p>
                         <p className="petDetails__detail">
+                            <img className="petDetails__icon" src={require('../../../images/gender.svg')} alt="אייקון של רגל בעל חיים" />
+                            {detailState.pet.gender}
+                        </p>
+                        <p className="petDetails__detail">
                             <img className="petDetails__icon" src={require('../../../images/cake-profile.svg')} alt="אייקון של עוגה" />
                             {buildAgeDesc()}
                         </p>
+
                         <p className="petDetails__detail">
                             <img className="petDetails__icon" src={require('../../../images/location-profile.svg')} style={{ width: '30px', height: '37px' }} alt="אייקון של מיקום" />
                               אזור:   {detailState.pet.region}
@@ -162,7 +167,7 @@ const PetDetails = () => {
                         <p className="petDetails__detail">
                             {detailState.pet.suitables}
                         </p>
-
+            <div className="petDetails__iAmWrapper">
                         <p className="petDetails__iAm">
                             {detailState.pet.vaccinated === 1 ?
                                 <img className="petDetails__checkBoxIcon" src={require('../../../images/checked.png')} alt="מסומן" />
@@ -181,6 +186,7 @@ const PetDetails = () => {
                             }
                             {maleOrFemale("poopTrained")}
                         </p>
+                        </div>
                         {detailState.imagesError !== "" ?
                             <h1>error</h1>
                             : (detailState.images.length === 0 ?

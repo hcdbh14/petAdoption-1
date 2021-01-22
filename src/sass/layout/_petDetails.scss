@@ -49,7 +49,8 @@
     -o-user-drag: none;
 
     @include respond(big-desktop) {
-      width: 70%;
+      // width: 70%;
+      display: none;
     }
 
     @media only screen and(max-width: 125em) {
@@ -67,13 +68,17 @@
 
   &__title {
     margin-top: 89px;
-    margin-bottom: 26px;
+    margin-bottom: 5px;
     font-family: Rubik;
     font-style: normal;
     font-weight: bold;
     font-size: 45px;
     line-height: 53px;
     color: #56bed1;
+
+    // @include respond(big-desktop) {
+    //   margin-bottom: 15px;
+    // }
 
     @media only screen and(max-width: 125em) {
       font-size: 35px;
@@ -110,6 +115,10 @@
     line-height: 47px;
     color: #000000;
 
+    @include respond(big-desktop) {
+      margin-bottom: 15px;
+    }
+
     @media only screen and(max-width: 125em) {
       font-size: 30px;
     }
@@ -123,8 +132,18 @@
     }
   }
 
+  &__iAmWrapper {
+    margin-top: 50px;
+
+    @include respond(big-desktop) {
+      margin-top: 85px;
+      margin-bottom: 75px;
+    }
+  }
+
+
   &__iAm {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font-family: Rubik;
     font-style: normal;
     font-weight: 500;
