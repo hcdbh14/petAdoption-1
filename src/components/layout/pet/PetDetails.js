@@ -114,7 +114,7 @@ const PetDetails = () => {
 
 
     return (
-        <div style={{ background: '#e7e3d7' }}>
+        <div style={{ background: '#e7e3d7', paddingBottom: '150px' }}>
             <div id="imageViewerId" className="imageViewer">
                 <span className="close">&times;</span>
                 <h2 id="gallaryCount" className="numberOfImages">1/1</h2>
