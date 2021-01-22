@@ -1,9 +1,12 @@
 .loading {
   padding: 10rem 55rem;
-
+  width: 100%;
   &__steps {
     position: relative;
-    height: 40vh;
+    height: 60vh;
+    @include respond(phone) {
+      height: 30vh;
+    }
 
     &__paw {
       &-3 {
@@ -44,7 +47,6 @@
       }
       &-9 {
         @include loadingDefault;
-
         left: 80%;
         bottom: 80%;
         animation-delay: 0.6s;
