@@ -85,7 +85,9 @@
     text-overflow: "";
     cursor: pointer;
     z-index: 2;
-
+    @include respond(big-desktop) {
+      margin: 25px 2rem;
+    }
     @include respond(tab-port) {
       height: auto;
       width: 44vw;

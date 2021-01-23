@@ -43,12 +43,12 @@
     width: 80vw;
     margin-right: 20vw;
     height: auto;
-    border-radius: 40px;
+    border-radius: 0 40px 40px 0;
     background: #e7e3d7;
 
     @include respond(normal-desktop) {
-      width: 100vw;
-      margin-right: 0vw;
+      // width: 100vw;
+      // margin-right: 0vw;
     }
   }
 
