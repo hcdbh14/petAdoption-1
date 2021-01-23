@@ -20,7 +20,7 @@ const HomePage = () => {
         <div className="main">
             <HeaderImage />
             <MiniSearch />
-            {recordWidth < 900 ?
+            {recordWidth <= 900 ?
                 <Responsibility />
                 :
                 <div />
