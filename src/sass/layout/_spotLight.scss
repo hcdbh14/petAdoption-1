@@ -1,14 +1,24 @@
 .spotLight {
   margin-top: 200px;
 
+  @include respond(tab-port) {
+    padding-top: 45px;
+    margin-top: 100px;
+    background: url(../../images/spotLight-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   &__titleWrapper {
     margin-left: -250px;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
 
-    @include respond(normal-desktop) {
-      margin-left: 0px;
+    @media only screen and(max-width: 100em) {
+      margin-bottom: 25px;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 
@@ -20,7 +30,7 @@
     line-height: 71px;
     color: $color-black;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       font-size: 40px;
     }
   }
@@ -33,7 +43,7 @@
     line-height: 71px;
     color: #fa8e2b;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       font-size: 40px;
     }
   }
@@ -49,6 +59,7 @@
     @include respond(normal-desktop) {
       // width: 100vw;
       // margin-right: 0vw;
+
     }
   }
 
@@ -67,5 +78,23 @@
     border: none;
     cursor: pointer;
     margin-right: -50px;
+  }
+
+  &__morePets {
+    margin-bottom: 65px;
+    width: 300px;
+    height: 47px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+    background: #fa8e2b;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.18);
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
   }
 }

@@ -55,7 +55,7 @@ const Responsibility = () => {
     return (
         <div className="responsibility-section">
             <div className="responsibility__title">
-                <h2 className="responsibility__blue-text" >קחו אחריות</h2> <h2 className="responsibility__text">&nbsp;לפני שלוקחים...</h2>
+                <h2 className="responsibility__colored-text" >קחו אחריות</h2> <h2 className="responsibility__text">&nbsp;לפני שלוקחים...</h2>
             </div>
             <div className="responsibility show-on-scroll" >
                 <ResponsibilitySide side={"right"} imageArray={imageArray} textArray={textRightArray} />

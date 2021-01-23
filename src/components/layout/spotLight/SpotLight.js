@@ -1,13 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import PetCard from '../pet/PetCard';
+import { Link } from 'react-router-dom';
+import { SEARCH } from '../../constants/routes';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchSpotLightPets } from '../../../store/spotLight/action';
-import PetCard from '../pet/PetCard';
-import Loading from '../ui/Loading';
 
 const SpotLight = () => {
-    const spotLightState = useSelector(state => state.spotLightReducer);
-    console.log(spotLightState)
-    const { loading, error, searchResults } = spotLightState
+
+    const [recordWidth, setRecordWidth] = useState(window.innerWidth)
+
+    window.addEventListener("resize", function () {
+        setRecordWidth(window.innerWidth)
+    });
+
     const loadSpotLight = () => {
         if (spotLightState.searchResults.length === 0) {
             dispatch(fetchSpotLightPets())
@@ -16,36 +21,50 @@ const SpotLight = () => {
 
     useEffect(loadSpotLight, [])
     const dispatch = useDispatch();
+    const spotLightState = useSelector(state => state.spotLightReducer);
 
-    const spotLightList = searchResults.length > 0 ? (
-        searchResults.map(pet => {
+    const spotLightList = spotLightState.searchResults.length > 0 ? (
+        spotLightState.searchResults.map(pet => {
             return (
                 <div key={pet.id}>
-                    <PetCard pet={pet} loading={loading} />
+                    <PetCard pet={pet} />
                     <br />
                     <br />
                 </div>)
         })
     ) : (
-            <Loading />
+            <div> No pets yet</div>
         )
 
 
     return (
-        <div className="spotLight ">
+        <div className="spotLight">
             <div className="spotLight__titleWrapper">
                 <h2 className="spotLight__titleColored">אמצו&nbsp;</h2> <h2 className="spotLight__title">עכשיו</h2>
             </div>
 
             <div className="spotLight__container">
-                {error !== "" ?
+                {spotLightState.error !== "" ?
                     <h1>error</h1>
-                    :
-                    <div className="spotLight__results">
-                        {spotLightList}
-                    </div>
-                }
+                    : (spotLightState.loading ?
+                        <h1>loading</h1>
+                        :
+                        <div className="spotLight__results">
+                            {spotLightList}
+
+                            {recordWidth < 690 ?
+
+                                <Link to={SEARCH}>
+                                    <button className="spotLight__morePets">חיות נוספות</button>
+                                </Link>
+
+                                :
+                                <div />
+                            }
+                        </div>
+                    )}
             </div>
+
         </div >
     )
 }

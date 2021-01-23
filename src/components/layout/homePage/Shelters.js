@@ -15,23 +15,14 @@ const Shelters = () => {
                         <img src={require('../../../images/pets-peeking.png')} alt="pet with owner" className="shelters__image" />
                     </div>
                 }
-                <div className="">
-                    <p className="shelters__title">עמותות שלנו</p>
-
+                <div className="shelters__wrapper">
+                    <p className="shelters__title">בשיתוף פעולה עם עמותות</p>
+          
                     <div className="shelters__content">
-                        <p>מאות בעלי חיים מחכים לכם לאימוץ בסניפי עמותת תנו לחיות ברחבי הארץ.</p>
-                        <p>בחרו את בעל החיים הרצוי, ובעזרת הסינונים השונים תוכלו למקד את החיפוש</p>
-                        <p>ולמצוא את החייה המתאימה לכם לאימוץ.</p>
+                        <p className="shelters__text">בישראל פועלות מספר לא קטן של עמותות שנועד להגן על הצרכים של חיות מחמד בצורות שונות, בפרט בכל מה שקשור לאימוץ, גידול וטיפול. עמותות אלו פועלות באופן עצמאי, חלקן פועלות על בסיס ארצי, אחרות על בסיס אזורי. באתר נאסוף למאגר את הבעלי חיים שמחכים לאימוץ על מנת לסייע להם למצוא בית.</p>
                     </div>
                 </div>
-                <div className="">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
+
             </div>
         </>
     )

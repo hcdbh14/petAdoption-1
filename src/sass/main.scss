@@ -1,6 +1,7 @@
 @import "abstract/mixins";
 @import "abstract/variables";
 
+@import "components/imageViewer.scss";
 @import "components/contactLoading";
 @import "components/favIcon";
 @import "components/loading";
@@ -10,6 +11,7 @@
 @import "base/typogrophy";
 @import "base/utilities";
 
+@import "layout/petDetails";
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/footer";

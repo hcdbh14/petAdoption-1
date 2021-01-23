@@ -21,8 +21,8 @@ const SearchBar = () => {
         petsState.searchInputs.region = ""
         petsState.searchInputs.gender = ""
         petsState.searchInputs.ageGroup = ""
-        dispatch(fetchPets(0, 12, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true, nameText))
-
+        dispatch(fetchPets(0, 12, 0, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true, nameText))
+        window.scrollTo(0, 500)
     }
 
     const searchByName = () => {
@@ -35,8 +35,9 @@ const SearchBar = () => {
     }
 
     const style = ({
+        paddingTop: "5px",
         color: "#fff",
-        fontSize: "3.3rem",
+        fontSize: "3.3rem"
     })
     return (
         <div className="searchBar">

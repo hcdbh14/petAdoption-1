@@ -21,7 +21,7 @@ const detailReducer = (state = initialState, action) => {
             return { ...state, shelter: action.shelter, shelterLoading: false }
 
         case detailTypes.DETAIL_START:
-            return { ...state, pet: action.pet, imagesLoading: true, shelterLoading: true, imagesError: "", shelterError: "" }
+            return { ...state, pet: action.pet, imagesLoading: true, shelterLoading: true, imagesError: "", shelterError: "", images: [], shelter: null }
 
         case detailTypes.DETAIL_IMAGES_FAIL:
             return { ...state, imagesError: action.imagesError, imagesLoading: false }

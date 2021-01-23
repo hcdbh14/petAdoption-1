@@ -26,7 +26,7 @@
   list-style: none;
   text-align: right;
 
-  @include respond(normal-desktop) {
+  @include respond(big-desktop) {
     margin-right: -20px;
     padding-right: 0px;
   }
@@ -62,14 +62,14 @@
   }
 }
 
-.colum {
+.column {
   margin-left: 5vw;
   display: inline-block;
   vertical-align: top;
   padding: 3em;
 
   &--left {
-    @extend .colum;
+    @extend .column;
     margin-left: 5vw;
   }
 
@@ -105,13 +105,13 @@
   }
 }
 
-.logo-and-social-colum {
+.logo-and-social-column {
   display: inline-block;
   width: 30%;
   max-width: 400px;
   text-align: center;
 
-  @include respond(normal-desktop) {
+  @include respond(big-desktop) {
     margin-left: 25px;
   }
 

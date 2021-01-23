@@ -1,13 +1,19 @@
 .shelters {
-    text-align: center;
+    height: auto;
+    width: 100%;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    margin-top: 14vw;
+    text-align: center;
+    align-items: center;
     background-image: url(../../images/contact-us-background.svg);
     background-position: left, right top;
     background-size: cover;
     background-repeat: no-repeat;
 
     &__rightPeekingImage {
+        right: -5vw;
         position: absolute;
         top: -14.8vw;
     }
@@ -20,6 +26,14 @@
 
     &__image {
         width: 40vw;
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        
+        @include respond(phone) {
+            display: none;
+          }
     }
 
     &__title {
@@ -31,6 +45,11 @@
         font-size: 5rem;
         line-height: 53px;
         color: #56bed1;
+
+        @include respond(tab-port) {
+            padding-top: 50px;
+            padding-bottom: 25px;
+          }
     }
 
     &__content {
@@ -41,5 +60,17 @@
         font-size: 2.8rem;
         line-height: 53px;
         color: $color-white;
+    }
+
+    &__text {
+        display: flex;
+        max-width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+
+        @include respond(tab-port) {
+            font-size: 18px;
+            max-width: 90%;
+          }
     }
 }
