@@ -1,15 +1,15 @@
 import React from 'react';
 
-
 const HeaderImage = () => {
 
     return (
         <div className="main__shoutout">
-
-                 <h2 className="main__shoutout__title">תנו לחיות בית</h2>
+                 <h2 className="main__shoutout__title">קחו חבר חדש הביתה!</h2>
     
-                 <p className="main__shoutout__text">אנחנו נציגי העמותות קוראים לכם, להצטרף אלינו לאימוץ.<br />
-                     כדי שנוכל לעזור גם לכלבים וחתולים למצוא בית.
+                 <p className="main__shoutout__text">בעלי חיים שממתינים לאימוץ מחכים לכם באתר שלנו.<br />
+                 באתר מפורסמות העמותות המטפלות בפריסה ארצית.<br />
+מטרתנו לספק את האפשרות שיום אחד גם <br />
+              להם יהיה בית חם ואוהב.
                  </p>
         </div>
     )

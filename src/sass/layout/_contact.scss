@@ -7,26 +7,42 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  @include respond(normal-desktop) {
+  @include respond(big-desktop) {
     height: auto;
     display: block;
     background-size: cover;
   }
 
-  &__formSide {
-    width: 75%;
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
 
-    @include respond(normal-desktop) {
+  &__formSide {
+
+    width: 75%;
+    @include respond(big-desktop) {
       width: 100%;
       text-align: center;
     }
+
+    @include respond(tab-port) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
   }
+
 
   &__animalSide {
     width: 25%;
     margin: auto;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
+      width: 100%;
+      text-align: center;
+    }
+
+    @include respond(tab-port) {
       width: 100%;
       text-align: center;
     }
@@ -42,46 +58,24 @@
     margin-right: 45.04px;
     color: $color-primary;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       margin-right: auto;
     }
 
-    @include respond(phone) {
+    @include respond(tab-port) {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
       font-size: 35px;
     }
   }
 
-  &__textFieldTitle {
-    caret-color: transparent;
-    width: 6%;
-    height: 84px;
-    background: rgba(122, 122, 122, 0.7);
-    padding-right: 15px;
-    outline: none;
-    border: none;
-    color: $color-white;
-    font-size: 1.5em;
-    font-family: Rubik;
-    font-style: $font-style-normal;
-    font-weight: $font-weight-bold;
-    margin-right: 2%;
-    margin-top: 80px;
-
-    @include respond(normal-desktop) {
-      margin-right: 5px;
-      padding-right: 5px;
-    }
-
-    @include respond(phone) {
-      font-size: 14px;
-      padding-right: 1px;
-      width: 7%;
-      font-weight: $font-weight-light;
-    }
-  }
 
   &__textField {
-    width: 24%;
+    margin-right: 50px;
+    padding-right: 20px;
+    margin-bottom: 50px;
+    width: 26%;
     height: 84px;
     background: rgba(122, 122, 122, 0.7);
     margin-top: 80px;
@@ -92,44 +86,23 @@
     font-family: Rubik;
     font-style: $font-style-normal;
     font-weight: $font-weight-bold;
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       width: 25%;
     }
 
-    @include respond(phone) {
-      font-size: 14px;
+    @include respond(tab-land) {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      padding-right: 25px;
+      width: 80%;
+      font-size: 18px;
       font-weight: $font-weight-light;
     }
-  }
 
-  &__textFieldTitleBig {
-
-    width: 100%;
-    height: 60px;
-    background: rgba(122, 122, 122, 0.7);
-    padding-right: 15px;
-    outline: none;
-    border: none;
-    color: $color-white;
-    font-size: 1.5em;
-    font-family: Rubik;
-    font-style: $font-style-normal;
-    font-weight: $font-weight-bold;
-    margin-right: 45.04px;
-    margin-top: 80px;
-
-    @include respond(normal-desktop) {
-      width: 95%;
-      margin-right: 5px;
-    }
-
-    @include respond(phone) {
-      font-size: 14px;
-      font-weight: $font-weight-light;
-    }
   }
 
   &__textFieldBig {
+    padding: 15px;
     width: 100%;
     height: 164px;
     background: rgba(122, 122, 122, 0.7);
@@ -141,32 +114,22 @@
     font-style: $font-style-normal;
     font-weight: $font-weight-bold;
     margin-right: 45.04px;
-    padding-right: 45.04px;
     resize: none;
 
-    @include respond(normal-desktop) {
-      width: 95%;
-      margin-right: 5px;
-      padding-right: 15px;
+    @include respond(big-desktop) {
+      width: 79%;
+
     }
 
-    @include respond(phone) {
-      font-size: 14px;
+    @include respond(tab-land) {
+      width: 80%;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-size: 18px;
       font-weight: $font-weight-light;
     }
-  }
 
-  &__dogAndCat {
-    position: relative;
-    width: 740px;
-    z-index: 1;
-
-    @include respond(normal-desktop) {
-      margin-bottom: -65px;
-    }
-
-    @include respond(phone) {
-      width: 100%;
+    @include respond(tab-port) {
     }
   }
 
@@ -186,18 +149,35 @@
     margin-right: 45.04px;
     margin-top: 80px;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       margin-right: auto;
       padding-right: 5px;
     }
 
-    @include respond(phone) {
+    @include respond(tab-land) {
+      display: none;
       font-size: 14px;
       font-weight: $font-weight-light;
       padding-right: 1px;
       width: 7%;
     }
   }
+  
+  &__dogAndCat {
+    position: relative;
+    width: 740px;
+    z-index: 1;
+
+    @include respond(big-desktop) {
+      margin-bottom: -65px;
+    }
+
+    @include respond(tab-port) {
+      margin-bottom: -65px;
+      width: 100%;
+    }
+  }
+
 
   &__sendWrapper {
     display: flex;
@@ -205,7 +185,12 @@
     margin-top: 50px;
     text-align: right;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
+      align-items: center;
+      text-align: center;
+    }
+
+    @include respond(tab-land) {
       align-items: center;
       text-align: center;
     }
@@ -230,7 +215,8 @@
     margin-bottom: 40px;
 
     @include respond(tab-land) {
-      margin-right: 0px;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 
@@ -241,7 +227,13 @@
     font-style: $font-style-normal;
     font-weight: $font-weight-normal;
     font-size: 28px;
-    color: #4BB543;
+    color: #4bb543;
+
+    @include respond(tab-land) {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
   }
 
   &__error {
@@ -252,16 +244,54 @@
     font-weight: $font-weight-normal;
     font-size: 28px;
     color: red;
+
+    @include respond(tab-land) {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
   }
 
   &__white-box {
     display: none;
 
-    @include respond(normal-desktop) {
+    @include respond(big-desktop) {
       display: block;
       height: 50px;
       width: 100%;
       background-color: $color-white;
+    }
+
+    @include respond(tab-port) {
+      display: block;
+      height: 50px;
+      width: 100%;
+      background-color: $color-white;
+    }
+  }
+
+  ::placeholder { 
+    color: $color-white;
+    opacity: 1; 
+
+    @include respond(tab-land) {
+      opacity: 1; 
+    }
+  }
+  
+  :-ms-input-placeholder { 
+    color: $color-white;
+    opacity: 0; 
+    @include respond(tab-land) {
+      opacity: 1; 
+    }
+  }
+  
+  ::-ms-input-placeholder {
+    color: $color-white;
+    opacity: 0; 
+    @include respond(tab-land) {
+      opacity: 1; 
     }
   }
 }

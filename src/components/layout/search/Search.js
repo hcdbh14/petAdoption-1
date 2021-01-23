@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import MiniSearch from './MiniSearch';
 import { fetchPets } from '../../../store/pets/action';
@@ -11,14 +11,11 @@ const Search = () => {
 
     const loadPets = () => {
         if (petsState.count === 0 || petsState.reload) {
-            setPageNumber(0)
-            dispatch(fetchPets(pageNumber.value, pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true, petsState.searchInputs.name))
+            dispatch(fetchPets(petsState.currentPage, pageSize.value, petsState.currentPage, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true, petsState.searchInputs.name))
         }
     }
 
     useEffect(loadPets, [])
-
-    const [pageNumber, setPageNumber] = useState(0);
     var pageSize = ""
     const dispatch = useDispatch();
     const petsState = useSelector(state => state.petsReducer);
@@ -33,26 +30,23 @@ const Search = () => {
                 </div>)
         })
     ) : (
-            <div> No pets yet</div>
+            <div className="search__noPets"> לא נמצאו חיות לפי הסינון הנוכחי.</div>
         )
 
     const moveToNextPage = (chosenPageNum) => {
-        setPageNumber(chosenPageNum)
-        dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
+        dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, chosenPageNum,  petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
         window.scrollTo(0, 500)
     }
 
     const moveToStart = () => {
-        setPageNumber(0)
-        dispatch(fetchPets("0", pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
+        dispatch(fetchPets("0", pageSize.value, 0, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
         window.scrollTo(0, 500)
     }
 
     const moveToEnd = () => {
         let lastPage = parseInt(petsState.pageNum)
-        setPageNumber(lastPage - 1)
         lastPage -= 1
-        dispatch(fetchPets(lastPage.toString(), pageSize.value, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
+        dispatch(fetchPets(lastPage.toString(), pageSize.value, lastPage, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
         window.scrollTo(0, 500)
     }
 
@@ -65,8 +59,8 @@ const Search = () => {
         let end = 0
         let totalPages = parseInt(petsState.pageNum)
 
-        if (pageNumber >= 5) {
-            start = pageNumber - 4
+        if (petsState.currentPage >= 5) {
+            start = petsState.currentPage - 4
         } else {
             if (totalPages < 10) {
                 return [...Array(totalPages).keys()];
@@ -74,11 +68,10 @@ const Search = () => {
             return [...Array(10).keys()];
         }
 
-        if (pageNumber + 4 > totalPages) {
-            console.log()
+        if (petsState.currentPage + 4 > totalPages) {
             end = totalPages - 1
         } else {
-            end = pageNumber + 4
+            end = petsState.currentPage + 4
         }
 
         return range(start, end)
@@ -105,7 +98,7 @@ const Search = () => {
                 <button className="search__fastPageButton" onClick={() => moveToStart()}>
                     <img className="search__pageArrow" src={require('../../../images/right-page-arrow.svg')} alt="חץ ימין" />
                 </button>
-                {decideRange().map((i) => <button id={i} onClick={() => moveToNextPage(i)} className={pageNumber === i ? "search__currentPageButton" : "search__pageButton"}>{i + 1}</button>)}
+                {decideRange().map((i) => <button key={i} onClick={() => moveToNextPage(i)} className={petsState.currentPage === i ? "search__currentPageButton" : "search__pageButton"}>{i + 1}</button>)}
                 <button className="search__fastPageButton" onClick={() => moveToEnd()}>
                     <img className="search__pageArrow" src={require('../../../images/left-page-arrow.svg')} alt="חץ שמאל" />
                 </button>

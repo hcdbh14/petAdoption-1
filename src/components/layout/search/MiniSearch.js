@@ -34,20 +34,19 @@ const MiniSearch = () => {
         petsState.searchInputs.name = ""
         dispatch(updateFilter())
         if (petsState.count === 0 || petsState.reload) {
-            dispatch(fetchPets(0, 12, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true, ""))
+            dispatch(fetchPets(0, 12, 0, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true, ""))
         }
         window.scrollTo(0, 0)
     }
 
     return (
         <div className="miniSearch">
-
+            
             <div className="miniSearch__wrapper">
-                <h2 className="miniSearch__title">חיפוש חיות</h2>
-
+                <h2 className="miniSearch__title">חיפוש בעלי חיים</h2>
 
                 <select className="miniSearch__dropdown" value={petsState.searchInputs.petType} onChange={petTypeHandleChange}>
-                    <option value="">כל סוגי החיות</option>
+                    <option value="">כל הסוגים</option>
                     <option value="כלב">כלב</option>
                     <option value="חתול">חתול</option>
                     <option value="אחר">אחר</option>
@@ -59,7 +58,7 @@ const MiniSearch = () => {
                     <option value="מרכז">מרכז</option>
                     <option value="דרום">דרום</option>
                 </select>
-                <br />
+
                 <select className="miniSearch__dropdown" value={petsState.searchInputs.gender} onChange={genderHandleChange}>
                     <option value="">זכר ונקבה</option>
                     <option value="זכר">זכר</option>
