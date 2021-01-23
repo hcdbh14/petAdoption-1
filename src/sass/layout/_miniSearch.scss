@@ -9,6 +9,7 @@
   }
 
   &__wrapper {
+    position: relative;
     background: #e7e3d7;
     width: 70vw;
     margin-top: 100px;
@@ -18,15 +19,23 @@
   
     @include respond(tab-port) {
       width: 100vw;
-      margin-top: -40px;
+      margin-top: 0px;
       border-radius: 0px;
-      align-items: center;
-      background: url(../../images/miniSearch-mobile.png);
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
     }
   }
+  &__mobile {
+    display: none;
+    @include respond(phone) {
+      position: absolute;
+      display: inline-block;
+      right: 0;
+      top: 0;
+      width: 100vw;
+      max-height: 11rem;
+      transform: translateY(-80%);
 
+    }
+  }
   &__title {
     margin-left: 75px;
     margin-bottom: 40px;
@@ -39,13 +48,17 @@
     color: $color-primary;
 
     @include respond(tab-port) {
-      margin-top: 10px;
-      margin-left: 50px;
-      margin-bottom: 20px;
+      margin-left: 0px;
+      padding-top: 0px;
+      margin-bottom: 0;
+      width: 100vw;
+      text-align: right;
+      padding-right: 2rem;
+
     }
   }
 
-  &__dropdown { 
+  &__dropdown {
     position: relative;
     margin: 25px;
     margin-left: 75px;
@@ -74,19 +87,20 @@
     cursor: pointer;
     outline: none;
     z-index: 2;
-
-    @media only screen and(max-width: 128em) {
-      margin-left: 65px;
+    @include respond(big-desktop) {
+      margin: 25px 2rem;
     }
-
     @include respond(tab-port) {
-      background-size: 20px auto;
+      height: auto;
+      width: 44vw;
+      display: inline-block;
+      margin-left: 0;
+      font-size: 2rem;
+      padding: 0.5rem 0;
+      padding-right: 1.5rem;
+      margin: 3rem 1rem;
+      background-size: 2rem auto;
       background-position-x: 10%;
-      background-position-y: 50%;
-      margin-bottom: 50px;
-      margin-right: auto;
-      margin-left: 25px;
-      width: 40vw;
     }
   }
 
@@ -115,11 +129,10 @@
     z-index: 2;
 
     @include respond(tab-port) {
-      height: 45px;
-      width: 82vw;
-      margin-left: 0px;
-      margin-top: 30px;
-      margin-bottom: 125px;
+      width: 95vw;
+      margin: 4rem auto 9rem;
+      height: auto;
+      padding: 0.5rem;
     }
   }
 
