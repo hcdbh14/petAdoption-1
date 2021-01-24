@@ -6,7 +6,7 @@ export const fetchPets = (pageNumber, pageSize, currentPage, petType, region, ge
     var urlPath = "/notices"
     var countUrlPath = "/notices/count"
     return (dispatch) => {
-        dispatch(fetchPetsStart())
+        dispatch(fetchPetsStart(currentPage))
         if (petType !== "" || region !== "" || gender !== "" || ageGroup !== "" || name !== "") {
             urlPath += "/filter"
             countUrlPath += "/filter"
@@ -42,9 +42,9 @@ export const fetchPets = (pageNumber, pageSize, currentPage, petType, region, ge
                 const pets = response.data
                 if (needCount) {
                     const pageNum = Math.trunc((count + 12 - 1) / 12)
-                    dispatch(fetchPetsAndCountSuccess(pets, count, pageNum, currentPage))
+                    dispatch(fetchPetsAndCountSuccess(pets, count, pageNum))
                 } else {
-                    dispatch(fetchPetsSuccess(pets, currentPage))
+                    dispatch(fetchPetsSuccess(pets))
                 }
             })
             .catch(error => {
@@ -55,9 +55,11 @@ export const fetchPets = (pageNumber, pageSize, currentPage, petType, region, ge
     }
 }
 
-export const fetchPetsStart = () => {
+export const fetchPetsStart = (currentPage) => {
 
-    return { type: petsTypes.SEARCH_PETS_START };
+    return { type: petsTypes.SEARCH_PETS_START,
+        currentPage
+     };
 }
 
 export const fetchPetsFail = (err) => {
@@ -67,21 +69,19 @@ export const fetchPetsFail = (err) => {
     };
 }
 
-export const fetchPetsAndCountSuccess = (pets, count, pageNum, currentPage) => {
+export const fetchPetsAndCountSuccess = (pets, count, pageNum) => {
     return {
         type: petsTypes.SEARCH_PETS_AND_COUNT_SUCCESS,
         pets,
         count,
-        pageNum,
-        currentPage
+        pageNum
     };
 }
 
-export const fetchPetsSuccess = (pets, currentPage) => {
+export const fetchPetsSuccess = (pets) => {
     return {
         type: petsTypes.SEARCH_PETS_SUCCESS,
         pets,
-        currentPage
     };
 }
 
