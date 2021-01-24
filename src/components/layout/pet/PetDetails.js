@@ -114,7 +114,7 @@ const PetDetails = () => {
 
 
     return (
-        <div style={{ background: '#e7e3d7', paddingBottom: '150px'}}>
+        <div style={{ background: '#e7e3d7', paddingBottom: '150px' }}>
             <div id="imageViewerId" className="imageViewer">
                 <span className="close">&times;</span>
                 <h2 id="gallaryCount" className="numberOfImages">1/1</h2>
@@ -135,11 +135,16 @@ const PetDetails = () => {
             {detailState.pet !== null ?
                 <div className="petDetails">
                     <div className="petDetails__profile">
-                        <p className="petDetails__title" style={{ marginBottom: '1vw'}}>{detailState.pet.petType}, {detailState.pet.name}</p>
-                        <p className="petDetails__detail">
-                            <img className="petDetails__icon" src={require('../../../images/paw-profile.svg')} alt="אייקון של רגל בעל חיים" />
-                            {detailState.pet.race}
-                        </p>
+                        <p className="petDetails__title" style={{ marginBottom: '1vw' }}>{detailState.pet.petType}, {detailState.pet.name}</p>
+
+                        {detailState.pet.race !== "" ?
+                            <p className="petDetails__detail">
+                                <img className="petDetails__icon" src={require('../../../images/paw-profile.svg')} alt="אייקון של רגל בעל חיים" />
+                                {detailState.pet.race}
+                            </p>
+                            :
+                            <div />
+                        }
                         <p className="petDetails__detail">
                             <img className="petDetails__icon" src={require('../../../images/gender.svg')} alt="אייקון של רגל בעל חיים" />
                             {detailState.pet.gender}
@@ -159,33 +164,46 @@ const PetDetails = () => {
                             טלפון: {detailState.pet.phoneNumber}
                         </p>
 
-                        <p className="petDetails__title">קצת עלי</p>
-                        <p className="petDetails__detail">
-                            {detailState.pet.description}
-                        </p>
-                        <p className="petDetails__title">מתאים ל</p>
-                        <p className="petDetails__detail">
-                            {detailState.pet.suitables}
-                        </p>
-            <div className="petDetails__iAmWrapper">
-                        <p className="petDetails__iAm">
-                            {detailState.pet.vaccinated === 1 ?
-                                <img className="petDetails__checkBoxIcon" src={require('../../../images/checked.png')} alt="מסומן" />
-                                :
-                                <img className="petDetails__checkBoxIcon" src={require('../../../images/notChecked.png')} alt="לא מסומן" />
-                            }
-                            {maleOrFemale("vaccinated")}
-                        </p>
+                        {detailState.pet.description !== "" ?
+                            <div>
+                                <p className="petDetails__title">קצת עלי</p>
+                                <p className="petDetails__detail">
+                                    {detailState.pet.description}
+                                </p>
+                            </div>
+                            :
+                            <div />
+                        }
+
+                        {detailState.pet.suitables !== "" ?
+                            <div>
+                                <p className="petDetails__title">מתאים ל</p>
+                                <p className="petDetails__detail">
+                                    {detailState.pet.suitables}
+                                </p>
+                            </div>
+                            :
+                            <div />
+                        }
+                        <div className="petDetails__iAmWrapper">
+                            <p className="petDetails__iAm">
+                                {detailState.pet.vaccinated === 1 ?
+                                    <img className="petDetails__checkBoxIcon" src={require('../../../images/checked.png')} alt="מסומן" />
+                                    :
+                                    <img className="petDetails__checkBoxIcon" src={require('../../../images/notChecked.png')} alt="לא מסומן" />
+                                }
+                                {maleOrFemale("vaccinated")}
+                            </p>
 
 
-                        <p className="petDetails__iAm">
-                            {detailState.pet.poopTrained === 1 ?
-                                <img className="petDetails__checkBoxIcon" src={require('../../../images/checked.png')} alt="מסומן" />
-                                :
-                                <img className="petDetails__checkBoxIcon" src={require('../../../images/notChecked.png')} alt="לא מסומן" />
-                            }
-                            {maleOrFemale("poopTrained")}
-                        </p>
+                            <p className="petDetails__iAm">
+                                {detailState.pet.poopTrained === 1 ?
+                                    <img className="petDetails__checkBoxIcon" src={require('../../../images/checked.png')} alt="מסומן" />
+                                    :
+                                    <img className="petDetails__checkBoxIcon" src={require('../../../images/notChecked.png')} alt="לא מסומן" />
+                                }
+                                {maleOrFemale("poopTrained")}
+                            </p>
                         </div>
                         {detailState.imagesError !== "" ?
                             <h1>error</h1>
