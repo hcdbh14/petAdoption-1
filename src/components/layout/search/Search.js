@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import MiniSearch from './MiniSearch';
 import { fetchPets } from '../../../store/pets/action';
 import Title from './Title';
-import PetCard from '../pet/PetCard';
+import PetCard from '../pet/petCard';
 import Shelters from '../homePage/Shelters'
 import Loading from '../ui/Loading';
 
@@ -34,7 +34,7 @@ const Search = () => {
         )
 
     const moveToNextPage = (chosenPageNum) => {
-        dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, chosenPageNum,  petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
+        dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, chosenPageNum, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
         window.scrollTo(0, 500)
     }
 
@@ -85,7 +85,7 @@ const Search = () => {
                 <h1>error</h1>
                 : (petsState.loading ?
                     <div className="search__results">
-                    <Loading />
+                        <Loading />
                     </div>
                     :
                     <div>

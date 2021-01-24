@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import PetCard from '../pet/PetCard';
+import PetCard from '../pet/petCard';
 import { Link } from 'react-router-dom';
 import { SEARCH } from '../../constants/routes';
 import { useSelector, useDispatch } from 'react-redux';
