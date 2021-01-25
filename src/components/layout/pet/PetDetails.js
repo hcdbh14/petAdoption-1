@@ -149,6 +149,11 @@ const PetDetails = () => {
                             <img className="petDetails__icon" src={require('../../../images/gender.svg')} alt="אייקון של רגל בעל חיים" />
                             {detailState.pet.gender}
                         </p>
+
+                        <p className="petDetails__detail">
+                            <img className="petDetails__icon" src={require('../../../images/size.svg')} alt="אייקון של גובה" />
+                            {detailState.pet.size}
+                        </p>
                         <p className="petDetails__detail">
                             <img className="petDetails__icon" src={require('../../../images/cake-profile.svg')} alt="אייקון של עוגה" />
                             {buildAgeDesc()}
