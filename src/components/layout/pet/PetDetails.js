@@ -248,7 +248,6 @@ const PetDetails = () => {
                 :
                 <div />
             }
-            <img className="petDetails__road" src={require('../../../images/desc-line-road.svg')} alt="שרטוט של דרך" />
         </div>
     )
 }
