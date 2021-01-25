@@ -149,6 +149,11 @@ const PetDetails = () => {
                             <img className="petDetails__icon" src={require('../../../images/gender.svg')} alt="אייקון של רגל בעל חיים" />
                             {detailState.pet.gender}
                         </p>
+
+                        <p className="petDetails__detail">
+                            <img className="petDetails__icon" src={require('../../../images/size.svg')} alt="אייקון של גובה" />
+                            {detailState.pet.size}
+                        </p>
                         <p className="petDetails__detail">
                             <img className="petDetails__icon" src={require('../../../images/cake-profile.svg')} alt="אייקון של עוגה" />
                             {buildAgeDesc()}
@@ -229,18 +234,17 @@ const PetDetails = () => {
                             <img onClick={() => showImageFull(-1)} id="topImage" className="petDetails__topImage" src={`data:image/png;base64, ${detailState.pet.image}`} alt="תמונת בעל החיים" />
                         </div>
 
-                        {detailState.images.length === 0 ?
-                            <div />
-                            :
+                        {detailState.images.length > 0 ?
                             <div className="petDetails__middleWrapper">
                                 <img onClick={() => showImageFull(0)} id="middleImage" className="petDetails__middleImage" src={`data:image/png;base64, ${detailState.images[0].image}`} alt="תמונת בעל החיים" />
                             </div>
-                        }
-                        {detailState.images.length === 0 ?
-                            <div />
                             :
-
+                            <div />
+                        }
+                        {detailState.images.length > 1 ?
                             <img onClick={() => showImageFull(1)} id="bottomImage" className="petDetails__bottomImage" src={`data:image/png;base64, ${detailState.images[1].image}`} alt="תמונת בעל החיים" />
+                            :
+                            <div />
                         }
                     </div>
 
@@ -249,7 +253,6 @@ const PetDetails = () => {
                 :
                 <div />
             }
-            <img className="petDetails__road" src={require('../../../images/desc-line-road.svg')} alt="שרטוט של דרך" />
         </div>
     )
 }
