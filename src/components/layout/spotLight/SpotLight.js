@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { SEARCH } from '../../constants/routes';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchSpotLightPets } from '../../../store/spotLight/action';
+import Loading from '../ui/Loading';
 
 const SpotLight = () => {
 
@@ -47,7 +48,7 @@ const SpotLight = () => {
                 {spotLightState.error !== "" ?
                     <h1>error</h1>
                     : (spotLightState.loading ?
-                        <h1>loading</h1>
+                        <Loading />
                         :
                         <div className="spotLight__results">
                             {spotLightList}
