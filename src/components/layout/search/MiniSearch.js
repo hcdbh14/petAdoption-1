@@ -41,7 +41,7 @@ const MiniSearch = () => {
 
     return (
         <div className="miniSearch">
-            
+
             <div className="miniSearch__wrapper">
                 <img src={wave} alt="wave" className="miniSearch__mobile" />
                 <h2 className="miniSearch__title">חיפוש חיות</h2>
@@ -84,7 +84,10 @@ const MiniSearch = () => {
                 }
             </div>
             <div className="miniSearch__animalSide">
-                <img src={require('../../../images/search-dog.png')} className="miniSearch__animalSide__image" alt="כלב מרחרח" />
+                <picture>
+                    <source srcSet={require('../../../images/search-dog.webp')} type="image/webp" />
+                    <img src={require('../../../images/search-dog.png')} className="miniSearch__animalSide__image" alt="כלב מרחרח" />
+                </picture>
             </div>
             <br />
             <div className="miniSearch__white-box" />

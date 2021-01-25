@@ -11,13 +11,18 @@
 .main {
   &__shoutout {
     text-align: right;
-    background-image: url(../../images/dog-model.png);
+    background-image: url(../../images/dog-model.webp);
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
     height: 40vw;
     width: 100vw;
     margin-top: 9rem;
+
+    @media not all and (min-resolution:.001dpcm)
+    { @supports (-webkit-appearance:none) {
+      background-image: url(../../images/dog-model.png);
+    }}
 
     @include respond(tab-port) {
       margin-top: 110px;
