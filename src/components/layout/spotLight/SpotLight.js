@@ -16,7 +16,7 @@ const SpotLight = () => {
 
     const loadSpotLight = () => {
         if (spotLightState.searchResults.length === 0) {
-            dispatch(fetchSpotLightPets())
+            //    dispatch(fetchSpotLightPets())
         }
     }
 
@@ -34,7 +34,7 @@ const SpotLight = () => {
                 </div>)
         })
     ) : (
-            <div> No pets yet</div>
+            <Loading />
         )
 
 
