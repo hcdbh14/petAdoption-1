@@ -9,21 +9,22 @@ const PetDetails = () => {
     const detailState = useSelector(state => state.detailReducer);
     const [recordWidth, setRecordWidth] = useState(window.innerWidth)
 
-    window.addEventListener("resize", function () {
+    const renderImage = () => {
         setRecordWidth(window.innerWidth)
-        if (detailState.pet !== null) {
-            if (recordWidth <= 900) {
-                showImageFull(-1);
-            } else {
-                var modal = document.getElementById("imageViewerId");
-                modal.style.display = "none";
-            }
-        }
-    });
+    }
+
+    useEffect(() => {
+        window.addEventListener("resize", renderImage);
+        return () => { window.removeEventListener("resize", renderImage); }
+    }, [])
+
 
     const renderForMobile = () => {
         if (recordWidth <= 900 && detailState.pet !== null) {
             showImageFull(-1);
+        } else {
+            var modal = document.getElementById("imageViewerId");
+            modal.style.display = "none";
         }
     }
     const loadFromLink = () => {
@@ -141,13 +142,13 @@ const PetDetails = () => {
                         <span className="close">&times;</span>
                         <h2 id="gallaryCount" className="numberOfImages">1/1</h2>
                         <div className="gallaryWrapper">
-                     
-                                <button className="arrowRight" onClick={nextImage} >
-                                    <p className="arrowText">➥</p></button>
+
+                            <button className="arrowRight" onClick={nextImage} >
+                                <p className="arrowText">➥</p></button>
                             <img className="imageViewerContent" id="fullImage" alt="תמונה מלאה" />
 
                             <button className="arrowLeft" style={{ transform: 'scaleX(-1)' }} onClick={previousImage}>
-                            <p className="arrowText">➥</p></button>
+                                <p className="arrowText">➥</p></button>
                         </div>
                         <div id="caption" />
                     </div>
