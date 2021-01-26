@@ -140,16 +140,14 @@ const PetDetails = () => {
                     <div id="imageViewerId" className="imageViewer" ref={renderForMobile}>
                         <span className="close">&times;</span>
                         <h2 id="gallaryCount" className="numberOfImages">1/1</h2>
-                        <div style={{ display: 'flex' }}>
-                            <button className="arrowRight" onClick={nextImage} >
-                                ➥
-                    </button>
-
+                        <div className="gallaryWrapper">
+                     
+                                <button className="arrowRight" onClick={nextImage} >
+                                    <p className="arrowText">➥</p></button>
                             <img className="imageViewerContent" id="fullImage" alt="תמונה מלאה" />
-                            
+
                             <button className="arrowLeft" style={{ transform: 'scaleX(-1)' }} onClick={previousImage}>
-                                ➥
-                    </button>
+                            <p className="arrowText">➥</p></button>
                         </div>
                         <div id="caption" />
                     </div>
