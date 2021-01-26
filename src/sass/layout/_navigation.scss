@@ -20,12 +20,11 @@
       cursor: pointer;
 
       @include respond(tab-port) {
-        top: 4.5rem;
+        top: 2rem;
         left: 5.6rem;
       }
 
       @include respond(phone) {
-        top: 4rem;
         left: 4rem;
       }
     }
