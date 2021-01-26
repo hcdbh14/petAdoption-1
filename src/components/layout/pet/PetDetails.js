@@ -248,9 +248,9 @@ const PetDetails = () => {
                                     {maleOrFemale("poopTrained")}
                                 </p>
                             </div>
-                            {detailState.imagesError !== "" ?
+                            {detailState.imagesError !== ""  ?
                                 <h1>error</h1>
-                                : (detailState.images.length === 0 ?
+                                : (detailState.images.length === 0   || recordWidth < 900 ?
                                     <div />
                                     :
                                     <button onClick={() => showImageFull(-1)} className="petDetails__allImagesButton">תמונות נוספות</button>
