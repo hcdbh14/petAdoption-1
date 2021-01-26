@@ -8,6 +8,7 @@ const PetDetails = () => {
     const dispatch = useDispatch();
     const detailState = useSelector(state => state.detailReducer);
     const [recordWidth, setRecordWidth] = useState(window.innerWidth)
+    const [lastImage, setLastImage] = useState(-1)
 
     const renderImage = () => {
         setRecordWidth(window.innerWidth)
@@ -21,7 +22,7 @@ const PetDetails = () => {
 
     const renderForMobile = () => {
         if (recordWidth <= 900 && detailState.pet !== null) {
-            showImageFull(-1);
+                showImageFull(lastImage);
         } else {
             var modal = document.getElementById("imageViewerId");
             modal.style.display = "none";
@@ -104,27 +105,33 @@ const PetDetails = () => {
     };
 
     const nextImage = () => {
+
         var modalImg = document.getElementById("fullImage");
 
         if (detailState.images.length !== currentImage + 1) {
             currentImage = currentImage + 1
+            setLastImage(currentImage)
             modalImg.src = `data:image/png;base64, ` + detailState.images[currentImage].image;
         }
 
         if (detailState.images.length === currentImage) {
             currentImage = currentImage - 1
+            setLastImage(currentImage - 1)
         }
         setGallaryCount()
     }
 
     const previousImage = () => {
+      
         var modalImg = document.getElementById("fullImage");
 
         if (currentImage > 0) {
             currentImage = currentImage - 1
+            setLastImage(currentImage - 1)
             modalImg.src = `data:image/png;base64, ` + detailState.images[currentImage].image;
         } else {
             currentImage = - 1
+            setLastImage(currentImage)
             modalImg.src = `data:image/png;base64, ` + detailState.pet.image;
         }
         setGallaryCount()
