@@ -10,6 +10,16 @@
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9);
+
+  @include respond(tab-port) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 20%;
+    position: relative;
+    background: none;
+    z-index: 1;
+  }
 }
 
 .imageViewerContent {
@@ -29,6 +39,10 @@
   color: #ccc;
   padding: 10px 0;
   height: 150px;
+  
+  @include respond(tab-port) {
+    display: none;
+  }
 }
 
 .imageViewerContent,
@@ -61,6 +75,10 @@
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+
+  @include respond(tab-port) {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -69,15 +87,44 @@
   }
 }
 
-.arrow {
+.arrowRight {
+
   margin-right: auto;
   margin-left: auto;
   font-size: 60px;
+  padding-right: 5px;
   color: $color-white;
   background: none;
   outline: none;
   border: none;
   cursor: pointer;
+  z-index: 500;
+
+  @include respond(tab-port) {
+    font-size: 45px;
+    margin-left: -10vw;
+    background-color:rgba(0,0,0,0.4);
+  }
+}
+
+.arrowLeft {
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 60px;
+  padding-left: 5px;
+  color: $color-white;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  z-index: 500;
+  transform: scaleX(-1);
+
+  @include respond(tab-port) {
+    font-size: 45px;
+    margin-right: -10vw;
+    background-color:rgba(0,0,0,0.4);
+  }
 }
 
 .numberOfImages {
@@ -87,4 +134,8 @@
   margin-bottom: 25px;
   color: $color-white;
   text-align: center;
+
+  @include respond(tab-port) {
+    color: $color-black;
+  }
 }

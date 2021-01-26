@@ -246,10 +246,6 @@
       width: 250px;
       height: 450px;
     }
-
-    @include respond(tab-port) {
-      display: none;
-    }
   }
 
   &__topImage {
@@ -305,10 +301,6 @@
     @media only screen and(max-width: 95em) {
       width: 400px;
       height: 400px;
-    }
-    
-    @include respond(tab-port) {
-      display: none;
     }
   }
 
@@ -371,10 +363,6 @@
       margin-left: 35px;
       width: 300px;
       height: 350px;
-    }
-
-    @include respond(tab-port) {
-      display: none;
     }
   }
 }
