@@ -33,34 +33,6 @@
       margin-top: 30px;
       padding-right: 30px;
       max-width: 700px;
-
-    }
-  }
-
-  &__road {
-    position: relative;
-    margin-top: -100px;
-    width: 1350px;
-    z-index: 1;
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-
-    @include respond(big-desktop) {
-      display: none;
-    }
-
-    @media only screen and(max-width: 125em) {
-      width: 1250px;
-    }
-
-    @media only screen and(max-width: 110em) {
-      width: 1200px;
-    }
-
-    @media only screen and(max-width: 95em) {
-      width: 1150px;
     }
   }
 
