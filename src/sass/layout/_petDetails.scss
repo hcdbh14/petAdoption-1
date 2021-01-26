@@ -7,7 +7,6 @@
   &__profile {
     margin-top: 150px;
     margin-bottom: auto;
-    // margin-right: 250px;
     margin-right: 5vw;
     padding-right: 100px;
     padding-bottom: 40px;
@@ -49,7 +48,6 @@
     -o-user-drag: none;
 
     @include respond(big-desktop) {
-      // width: 70%;
       display: none;
     }
 
@@ -75,10 +73,6 @@
     font-size: 45px;
     line-height: 53px;
     color: #56bed1;
-
-    // @include respond(big-desktop) {
-    //   margin-bottom: 15px;
-    // }
 
     @media only screen and(max-width: 125em) {
       font-size: 35px;
@@ -108,12 +102,12 @@
     margin-bottom: 5px;
     margin-left: 50px;
     word-wrap: break-word;
-    font-family: Rubik;
-    font-style: normal;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
     font-weight: $font-weight-light;
     font-size: 40px;
     line-height: 47px;
-    color: #000000;
+    color: $color-black;
 
     @include respond(big-desktop) {
       margin-bottom: 15px;
@@ -144,12 +138,12 @@
 
   &__iAm {
     margin-bottom: 15px;
-    font-family: Rubik;
-    font-style: normal;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
     font-weight: 500;
     font-size: 40px;
     line-height: 47px;
-    color: #000000;
+    color: $color-black;
 
     @media only screen and(max-width: 125em) {
       font-size: 30px;
@@ -191,12 +185,12 @@
     margin-bottom: 50px;
     width: 200px;
     height: 50px;
-    font-family: Rubik;
-    font-style: normal;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
     font-weight: 500;
     font-size: 25px;
     line-height: 30px;
-    color: #ffffff;
+    color: $color-white;
     background: #eb8071;
     border: 1px solid #eb8071;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
@@ -346,7 +340,7 @@
     margin-top: 200px;
     margin-left: 400px;
     align-self: center;
-    border: solid white 50px;
+    border: solid $color-white 50px;
     object-fit: cover;
     width: 600px;
     height: 650px;
@@ -358,7 +352,7 @@
     }
 
     @media only screen and(max-width: 125em) {
-      border: solid white 40px;
+      border: solid $color-white 40px;
       margin-top: 100px;
       margin-left: 100px;
       width: 500px;
@@ -366,7 +360,7 @@
     }
 
     @media only screen and(max-width: 110em) {
-      border: solid white 30px;
+      border: solid $color-white 30px;
       margin-top: 50px;
       margin-left: 50px;
       width: 400px;
@@ -374,7 +368,7 @@
     }
 
     @media only screen and(max-width: 95em) {
-      border: solid white 20px;
+      border: solid $color-white 20px;
       margin-top: 35px;
       margin-left: 35px;
       width: 300px;

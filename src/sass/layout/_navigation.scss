@@ -94,7 +94,7 @@
       &:visited {
         display: inline-block;
         font-size: 3rem;
-        font-family: Rubik;
+        font-family: $default-font-family;
         font-style: $font-style-normal;
         font-weight: $font-weight-normal;
         padding: 1rem 2rem;
@@ -186,11 +186,7 @@
     &:hover &__icon::before {
       width: 2.5rem;
     }
-
-    // &:hover &__icon::after {
-    //   top: 1.2rem;
-    // }
-
+    
     &__checkbox:checked + &__button &__icon {
       background-color: transparent;
     }
