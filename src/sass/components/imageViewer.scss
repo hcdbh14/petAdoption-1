@@ -118,7 +118,6 @@
     height: 100%;
     position: absolute;
     right: 0;
-    bottom: 50;
     font-size: 45px;
   }
 }
@@ -126,10 +125,10 @@
 .arrowText { 
    background-color:rgba(0,0,0,0.4);
    padding: 5px;
+   margin-bottom: 40px;
 }
 
 .arrowLeft {
-
   margin-right: auto;
   margin-left: auto;
   font-size: 60px;
