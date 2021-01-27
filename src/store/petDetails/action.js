@@ -33,7 +33,7 @@ export const getAdditionalDetails = (pet, id) => {
                         axios.get(shelterUrlPath,
                             {
                                 params: {
-                                    shelterId: response.data.id
+                                    shelterId: response.data.shelter_id
                                 }
                             }).then(response => {
                                 dispatch(shelterSuccess(response.data))

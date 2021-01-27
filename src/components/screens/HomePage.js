@@ -9,13 +9,20 @@ const HomePage = () => {
 
     const [recordWidth, setRecordWidth] = useState(window.innerWidth)
 
-    window.addEventListener("resize", function () {
+    const resize = () => {
         setRecordWidth(window.innerWidth)
-    });
+    }
+
+    useEffect(() => {
+        window.addEventListener("resize", resize);
+        return () => { window.removeEventListener("resize", resize); }
+    }, [])
+
 
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+
     return (
         <div className="main">
             <HeaderImage />

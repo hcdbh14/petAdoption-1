@@ -7,7 +7,13 @@ const ShelterDetails = () => {
 
     return (
         <div className="ShelterDetails">
-            <h2>{detailState.pet.name}</h2>
+            <h2 className="ShelterDetails__title">פרטי העמותה המפרסמת</h2>
+            <div className="ShelterDetails__wrapper">
+                <img className="ShelterDetails__logo" src={`data:image/png;base64, ${detailState.shelter.logo}`} alt="לוגו של העמותה" />
+                <p className="ShelterDetails__name">{detailState.shelter.name}</p>
+           
+                <p className="ShelterDetails__description">{detailState.shelter.description}</p>
+            </div>
         </div >
     )
 }

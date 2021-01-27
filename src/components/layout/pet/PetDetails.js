@@ -257,14 +257,6 @@ const PetDetails = () => {
                                     <button onClick={() => showImageFull(-1)} className="petDetails__allImagesButton">תמונות נוספות</button>
                                 )}
 
-                            {detailState.shelterError !== "" ?
-                                <h1>error</h1>
-                                : (detailState.shelterLoading ?
-                                    <p></p>
-                                    :
-                                    <ShelterDetails />
-                                )}
-
                         </div>
 
                         <div className="petDetails__imageSection">
@@ -287,9 +279,16 @@ const PetDetails = () => {
                             }
                         </div>
 
-
                     </div>
 
+
+                    {detailState.shelterError !== "" ?
+                        <h1>error</h1>
+                        : (detailState.shelter === null  ?
+                            <p></p>
+                            :
+                            <ShelterDetails />
+                        )}
                 </div>
                 :
                 <div />

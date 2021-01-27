@@ -1,0 +1,129 @@
+.ShelterDetails {
+
+    margin-top: 150px;
+    margin-bottom: auto;
+    margin-right: 5vw;
+    padding-right: 100px;
+    padding-bottom: 40px;
+    width: 80%;
+    height: auto;
+    max-width: 1200px;
+    background: $color-white;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+
+    @media only screen and(max-width: 125em) {
+      margin-top: 50px;
+      padding-right: 50px;
+      max-width: 800px;
+    }
+
+    @media only screen and(max-width: 110em) {
+      margin-top: 40px;
+      padding-right: 40px;
+      max-width: 750px;
+    }
+
+    @media only screen and(max-width: 95em) {
+      margin-top: 30px;
+      padding-right: 30px;
+      max-width: 700px;
+    }
+
+    @include respond(tab-port) {
+      width: 90%;
+      margin-top: 0px;
+      margin-left: 5vw;
+    }
+
+    
+    &__wrapper {
+        display: inline;
+    }
+
+    &__title {
+        margin-top: 89px;
+        margin-bottom: 5px;
+        font-family: $default-font-family;
+        font-style: $font-style-normal;
+        font-weight: $font-weight-bold;
+        font-size: 45px;
+        line-height: 53px;
+        color: $color-secondary;
+    
+        @media only screen and(max-width: 125em) {
+          font-size: 35px;
+        }
+    
+        @media only screen and(max-width: 110em) {
+          font-size: 30px;
+        }
+    
+        @media only screen and(max-width: 95em) {
+          font-size: 25px;
+        }
+    
+        @include respond(tab-port) {
+          margin-top: 40px;
+        }
+    }
+
+    &__logo {
+        width: 160px;
+        float: right;
+    }
+
+    &__name {
+
+        margin-bottom: 5px;
+        font-family: $default-font-family;
+        font-style: $font-style-normal;
+        font-weight: $font-weight-bold;
+        font-size: 40px;
+        line-height: 53px;
+        color: #56bed1;
+
+        @media only screen and(max-width: 125em) {
+            font-size: 35px;
+          }
+      
+          @media only screen and(max-width: 110em) {
+            font-size: 32px;
+          }
+      
+          @media only screen and(max-width: 95em) {
+            font-size: 25px;
+          }
+      
+        //   @include respond(tab-port) {
+        //     margin-top: 40px;
+        //   }
+    }
+
+    &__description {
+        margin-bottom: 5px;
+        margin-left: 50px;
+        word-wrap: break-word;
+        font-family: $default-font-family;
+        font-style: $font-style-normal;
+        font-weight: $font-weight-light;
+        font-size: 36px;
+        line-height: 47px;
+        color: $color-black;
+    
+        @include respond(big-desktop) {
+          margin-bottom: 15px;
+        }
+    
+        @media only screen and(max-width: 125em) {
+          font-size: 32px;
+        }
+    
+        @media only screen and(max-width: 110em) {
+          font-size: 28px;
+        }
+    
+        @media only screen and(max-width: 95em) {
+          font-size: 24px;
+        }
+    }
+}
