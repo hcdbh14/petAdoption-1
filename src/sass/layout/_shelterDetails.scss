@@ -12,23 +12,22 @@
     @media only screen and(max-width: 125em) {
       margin-top: 50px;
       padding-right: 50px;
-    //   max-width: 800px;
     }
 
     @media only screen and(max-width: 110em) {
       margin-top: 40px;
       padding-right: 40px;
-    //   max-width: 750px;
     }
 
     @media only screen and(max-width: 95em) {
       margin-top: 30px;
       padding-right: 30px;
-    //   max-width: 700px;
     }
 
     @include respond(tab-port) {
       width: 90%;
+      padding-right: 15px;
+      padding-left: 15px;
       margin-top: 0px;
       margin-left: 5vw;
     }
@@ -95,10 +94,7 @@
           @include respond(tab-port) {
             font-size: 28px;
           }
-      
-        //   @include respond(tab-port) {
-        //     margin-top: 40px;
-        //   }
+
     }
 
     &__description {
@@ -125,6 +121,7 @@
         }
     
         @include respond(tab-port) {
+            margin-left: 0px;
           font-size: 24px;
           text-align: center;
         }
