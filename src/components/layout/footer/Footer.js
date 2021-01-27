@@ -67,10 +67,10 @@ const Footer = () => {
                         <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
                             <input type="image" className="socialButton socialButton--bird" src={require('../../../images/twitter.png')} alt="Twitter" />
                         </a>
-                        <a target="_blank" rel="noopener noreferrer" href="http://www.instgram.com/">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/pet.five/">
                             <input type="image" className="socialButton" src={require('../../../images/instagram.png')} alt="Instagram" />
                         </a>
-                        <a target="_blank" rel="noopener noreferrer" href="http://www.facebook.com/">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/PetFive">
                             <input type="image" className="socialButton" src={require('../../../images/facebook.png')} alt="Facebook" />
                         </a>
                     </div>
