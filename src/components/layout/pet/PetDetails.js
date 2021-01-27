@@ -263,7 +263,7 @@ const PetDetails = () => {
 
                             <div className="petDetails__topWrapper">
                             <img onClick={() => showImageFull(-1)} id="topImage" className="petDetails__topImage" src={`data:image/png;base64, ${detailState.pet.image}`} alt="תמונת בעל החיים" />
-                            {detailState.images.length > 1 ?
+                            {detailState.images.length > 0 ?
                                 <img onClick={() => showImageFull(0)} id="bottomImage" className="petDetails__bottomImage" src={`data:image/png;base64, ${detailState.images[0].image}`} alt="תמונת בעל החיים" />
                                 :
                                 <div />
@@ -271,7 +271,7 @@ const PetDetails = () => {
 
                             </div>
 
-                            {detailState.images.length > 0 ?
+                            {detailState.images.length > 1 ?
                                 <div className="petDetails__middleWrapper">
                                     <img onClick={() => showImageFull(1)} id="middleImage" className="petDetails__middleImage" src={`data:image/png;base64, ${detailState.images[1].image}`} alt="תמונת בעל החיים" />
                                 </div>
