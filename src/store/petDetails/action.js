@@ -16,33 +16,35 @@ export const getAdditionalDetails = (pet, id) => {
                     }
                 }).then(response => {
                     dispatch(fetchPetDetailStart(response.data))
-                        axios.get(imagesUrlPath,
-                            {
-                                params: {
-                                    noticeId: response.data.id
-                                }
-                            }).then(response => {
-                                dispatch(imagesSuccess(response.data))
-                            })
-                            .catch(error => {
-                                const err = error.message
-                                console.log(err)
-                                dispatch(imagesFail(err))
-                            })
+                    axios.get(imagesUrlPath,
+                        {
+                            params: {
+                                noticeId: response.data.id
+                            }
+                        }).then(response => {
+                            dispatch(imagesSuccess(response.data))
+                        })
+                        .catch(error => {
+                            const err = error.message
+                            console.log(err)
+                            dispatch(imagesFail(err))
+                        })
 
-                        axios.get(shelterUrlPath,
-                            {
-                                params: {
-                                    shelterId: response.data.shelter_id
-                                }
-                            }).then(response => {
+                    axios.get(shelterUrlPath,
+                        {
+                            params: {
+                                shelterId: response.data.shelter_id
+                            }
+                        }).then(response => {
+                            if (response.status === 200) {
                                 dispatch(shelterSuccess(response.data))
-                            })
-                            .catch(error => {
-                                const err = error.message
-                                console.log(err)
-                                dispatch(shelterFail(err))
-                            })
+                            }
+                        })
+                        .catch(error => {
+                            const err = error.message
+                            console.log(err)
+                            dispatch(shelterFail(err))
+                        })
                 })
                 .catch(error => {
                     const err = error.message

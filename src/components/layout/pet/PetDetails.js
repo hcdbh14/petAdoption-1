@@ -284,10 +284,11 @@ const PetDetails = () => {
 
                     {detailState.shelterError !== "" ?
                         <h1>error</h1>
-                        : (detailState.shelter === null  ?
-                            <p></p>
-                            :
+                        : (detailState.shelter !== null && detailState.shelterLoading === false  ?
+                       
                             <ShelterDetails />
+                            :
+                            <div />
                         )}
                 </div>
                 :
