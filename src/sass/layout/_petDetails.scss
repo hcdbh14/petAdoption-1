@@ -326,13 +326,13 @@
   }
 
   &__bottomImage {
-    margin-top: 200px;
-    margin-left: 400px;
+    margin-bottom: -500px;
+    margin-left: -1500px;
     align-self: center;
-    border: solid $color-white 50px;
+    border: solid $color-white 45px;
     object-fit: cover;
-    width: 600px;
-    height: 650px;
+    width: 550px;
+    height: 600px;
     border-radius: 100px;
     cursor: pointer;
     transition: 0.3s;
@@ -342,26 +342,26 @@
 
     @media only screen and(max-width: 125em) {
       border: solid $color-white 40px;
-      margin-top: 100px;
-      margin-left: 100px;
-      width: 500px;
-      height: 550px;
+      margin-bottom: -400px;
+      margin-left: -1300px;
+      width: 450px;
+      height: 500px;
     }
 
     @media only screen and(max-width: 110em) {
       border: solid $color-white 30px;
-      margin-top: 50px;
-      margin-left: 50px;
+      margin-bottom: -350px;
+      margin-left: -1200px;
       width: 400px;
       height: 450px;
     }
 
     @media only screen and(max-width: 95em) {
       border: solid $color-white 20px;
-      margin-top: 35px;
-      margin-left: 35px;
-      width: 300px;
-      height: 350px;
+      margin-bottom: -300px;
+      margin-left: -1000px;
+      width: 350px;
+      height: 400px;
     }
   }
 }
