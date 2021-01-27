@@ -54,11 +54,11 @@
         }
     
         @media only screen and(max-width: 110em) {
-          font-size: 30px;
+          font-size: 32px;
         }
     
         @media only screen and(max-width: 95em) {
-          font-size: 25px;
+          font-size: 30px;
         }
     
         @include respond(tab-port) {
@@ -70,6 +70,10 @@
         width: 160px;
         float: right;
         margin-left: 15px;
+
+        @media only screen and(max-width: 95em) {
+            width: 100px;
+          }
     }
 
     &__name {
@@ -88,9 +92,8 @@
           @media only screen and(max-width: 110em) {
             font-size: 32px;
           }
-      
-          @media only screen and(max-width: 95em) {
-            font-size: 25px;
+          @include respond(tab-port) {
+            font-size: 28px;
           }
       
         //   @include respond(tab-port) {
@@ -121,8 +124,9 @@
           font-size: 28px;
         }
     
-        @media only screen and(max-width: 95em) {
+        @include respond(tab-port) {
           font-size: 24px;
+          text-align: center;
         }
     }
 
@@ -151,13 +155,22 @@
         font-size: 30px;
         line-height: 0px;
         color: $color-secondary;
+
+        @include respond(tab-port) {
+            font-size: 24px;
+          }
     }
 
     &__contactInfo {
+        padding-left: 5px;
         margin-top: 25px;
         font-family: $default-font-family;
         font-style: $font-style-normal;
         font-weight: $font-weight-light;
         font-size: 26px;
+
+        @include respond(tab-port) {
+            font-size: 22px;
+          }
     }
 }
