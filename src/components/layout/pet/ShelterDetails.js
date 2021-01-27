@@ -29,16 +29,24 @@ const ShelterDetails = () => {
                             <p className="ShelterDetails__contactInfo">{detailState.shelter.email}</p>
                         </div>
 
-                        <div className="ShelterDetails__contactWrapper">
-                            <p className="ShelterDetails__contactTitle">אתר העמותה</p>
-                            <p className="ShelterDetails__contactInfo">{detailState.shelter.website}</p>
-                        </div>
+                        {detailState.shelter.website !== "" ?
+                            <div className="ShelterDetails__contactWrapper">
+                                <p className="ShelterDetails__contactTitle">אתר העמותה</p>
+                                <p className="ShelterDetails__contactInfo">{detailState.shelter.website}</p>
+                            </div>
+                            :
+                            <div />
+                        }
 
-                        <div className="ShelterDetails__contactWrapper">
-                            <p className="ShelterDetails__contactTitle">רשת חברתית</p>
-                            <p className="ShelterDetails__contactInfo">{detailState.shelter.socialSite}</p>
-                        </div>
+                        {detailState.shelter.socialSite !== "" ?
+                            <div className="ShelterDetails__contactWrapper">
+                                <p className="ShelterDetails__contactTitle">רשת חברתית</p>
+                                <p className="ShelterDetails__contactInfo">{detailState.shelter.socialSite}</p>
+                            </div>
 
+                            :
+                            <div />
+                        }
                         <div className="ShelterDetails__contactWrapper">
                             <p className="ShelterDetails__contactTitle">כתובת</p>
                             <p className="ShelterDetails__contactInfo">{detailState.shelter.address}</p>
