@@ -15,17 +15,22 @@ const Shelters = () => {
                     </div>
                     :
                     <div className="shelters__leftPeekingImage">
-                         <picture>
+                        <picture>
                             <source srcSet={require('../../../images/pets-peeking.webp')} type="image/webp" />
                             <img src={require('../../../images/pets-peeking.png')} alt="pet with owner" className="shelters__image" />
                         </picture>
                     </div>
                 }
-                <div className="shelters__wrapper">
+                <div>
                     <p className="shelters__title">בשיתוף פעולה עם עמותות</p>
 
                     <div className="shelters__content">
                         <p className="shelters__text">בישראל פועלות מספר לא קטן של עמותות שנועד להגן על הצרכים של חיות מחמד בצורות שונות, בפרט בכל מה שקשור לאימוץ, גידול וטיפול. עמותות אלו פועלות באופן עצמאי, חלקן פועלות על בסיס ארצי, אחרות על בסיס אזורי. באתר נאסוף למאגר את הבעלי חיים שמחכים לאימוץ על מנת לסייע להם למצוא בית.</p>
+                    </div>
+
+                    <div className="shelters__logos">
+                        {/* future logos go here */}
+                        {/* <img src={require('../../../images/testLog.jpg')} alt="לוגו של עמותה" className="shelters__logo" /> */}
                     </div>
                 </div>
 
