@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAdditionalDetails } from '../../../store/petDetails/action';
+import ShelterDetails from './ShelterDetails';
 
 const PetDetails = () => {
 
@@ -86,8 +87,10 @@ const PetDetails = () => {
     }
 
     const setGallaryCount = () => {
-        var gallaryCount = document.getElementById("gallaryCount");
-        gallaryCount.textContent = (currentImage + 2) + "/" + (detailState.images.length + 1)
+        if (detailState.images.length !== 0) {
+            var gallaryCount = document.getElementById("gallaryCount");
+            gallaryCount.textContent = (currentImage + 2) + "/" + (detailState.images.length + 1)
+        }
     }
 
     const showImageFull = (index) => {
@@ -105,9 +108,7 @@ const PetDetails = () => {
         }
         captionText.innerHTML = detailState.pet.name;
 
-        if (detailState.images.length !== 0) {
-            setGallaryCount()
-        }
+        setGallaryCount()
         var span = document.getElementsByClassName("close")[0];
 
         span.onclick = function () {
@@ -248,9 +249,9 @@ const PetDetails = () => {
                                     {maleOrFemale("poopTrained")}
                                 </p>
                             </div>
-                            {detailState.imagesError !== ""  ?
+                            {detailState.imagesError !== "" ?
                                 <h1>error</h1>
-                                : (detailState.images.length === 0   || recordWidth < 900 ?
+                                : (detailState.images.length === 0 || recordWidth < 900 ?
                                     <div />
                                     :
                                     <button onClick={() => showImageFull(-1)} className="petDetails__allImagesButton">תמונות נוספות</button>
@@ -261,7 +262,7 @@ const PetDetails = () => {
                                 : (detailState.shelterLoading ?
                                     <p></p>
                                     :
-                                    <p></p>
+                                    <ShelterDetails />
                                 )}
 
                         </div>
