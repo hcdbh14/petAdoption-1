@@ -11,8 +11,36 @@ const ShelterDetails = () => {
             <div className="ShelterDetails__wrapper">
                 <img className="ShelterDetails__logo" src={`data:image/png;base64, ${detailState.shelter.logo}`} alt="לוגו של העמותה" />
                 <p className="ShelterDetails__name">{detailState.shelter.name}</p>
-           
                 <p className="ShelterDetails__description">{detailState.shelter.description}</p>
+            </div>
+            <br />
+            <div className="ShelterDetails__contactInfo">
+
+                <div className="ShelterDetails__contactWrapper">
+                    <p className="ShelterDetails__contactTitle">טלפון</p>
+                    <p className="ShelterDetails__contactInfo">{detailState.shelter.phoneNumber}</p>
+                </div>
+
+
+                <div className="ShelterDetails__contactWrapper">
+                    <p className="ShelterDetails__contactTitle">אימייל</p>
+                    <p className="ShelterDetails__contactInfo">{detailState.shelter.email}</p>
+                </div>
+
+                <div className="ShelterDetails__contactWrapper">
+                    <p className="ShelterDetails__contactTitle">אתר העמותה</p>
+                    <p className="ShelterDetails__contactInfo">{detailState.shelter.website}</p>
+                </div>
+
+                <div className="ShelterDetails__contactWrapper">
+                    <p className="ShelterDetails__contactTitle">רשת חברתית</p>
+                    <p className="ShelterDetails__contactInfo">{detailState.shelter.socialSite}</p>
+                </div>
+
+                <div className="ShelterDetails__contactWrapper">
+                    <p className="ShelterDetails__contactTitle">כתובת</p>
+                    <p className="ShelterDetails__contactInfo">{detailState.shelter.address}</p>
+                </div>
             </div>
         </div >
     )
