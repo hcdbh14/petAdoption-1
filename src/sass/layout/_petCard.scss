@@ -128,7 +128,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     
     @media screen and (max-width: 2000px) {
@@ -159,11 +159,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 
     @media screen and (max-width: 2000px) {
-      font-size: 28px;
+      font-size: 26px;
+      padding-right: 25px;
     }
 
     @include respond(tab-port) {
@@ -190,7 +191,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     @media screen and (max-width: 2000px) {
       font-size: 26px;
@@ -213,11 +214,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 
     @media screen and (max-width: 2000px) {
       font-size: 26px;
+      padding-right: 25px;
     }
 
     @media only screen and(max-width: 100em) {
@@ -236,7 +238,8 @@
     color: $color-black;
 
     @media screen and (max-width: 2000px) {
-      font-size: 24px;
+      font-size: 20px;
+      padding-right: 25px;
     }
     @include respond(tab-port) {
       line-height: 25px;
@@ -266,7 +269,8 @@
     color: $color-black;
 
     @media screen and (max-width: 2000px) {
-      font-size: 24px;
+      font-size: 20px;
+      padding-right: 25px;
     }
     @include respond(tab-port) {
       padding-right: 25px;
