@@ -8,7 +8,7 @@ const ContactPage = () => {
     }, [])
 
     return (
-        <div>
+        <div style={{background: 'white'}}>
             <picture>
                 <source srcSet={require('../../images/pet-gang.webp')} type="image/webp" />
                 <img src={require('../../images/pet-gang.jpg')} className="pet-gang" alt="קבוצה של כלבים חתולים וכל מיני חיות אחרות"  />

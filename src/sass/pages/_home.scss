@@ -9,6 +9,7 @@
 }
 
 .main {
+  background-color: $color-white;
   &__shoutout {
     text-align: right;
     background-image: url(../../images/dog-model.webp);
@@ -19,13 +20,14 @@
     width: 100vw;
     margin-top: 9rem;
 
-    @media not all and (min-resolution:.001dpcm)
-    { @supports (-webkit-appearance:none) {
-      background-image: url(../../images/dog-model.png);
-    }}
+    @media not all and (min-resolution: 0.001dpcm) {
+      @supports (-webkit-appearance: none) {
+        background-image: url(../../images/dog-model.png);
+      }
+    }
 
     @include respond(tab-port) {
-      margin-top: 110px;
+      margin-top: 50px;
       height: 900px;
       width: 100%;
       background-size: cover;
