@@ -4,19 +4,21 @@
   width: 100%;
   padding-top: 250px;
 
+  @include respond(tab-port) {
+    padding-top: 0px;
+  }
+
   &__profile {
     margin-top: 150px;
     margin-bottom: auto;
-    // margin-right: 250px;
     margin-right: 5vw;
     padding-right: 100px;
     padding-bottom: 40px;
     width: 60%;
     height: auto;
     max-width: 1200px;
-    background: #ffffff;
+    background: $color-white;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-
 
     @media only screen and(max-width: 125em) {
       margin-top: 50px;
@@ -34,51 +36,24 @@
       margin-top: 30px;
       padding-right: 30px;
       max-width: 700px;
-
-    }
-  }
-
-  &__road {
-    position: relative;
-    margin-top: -100px;
-    width: 1350px;
-    z-index: 1;
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-
-    @include respond(big-desktop) {
-      // width: 70%;
-      display: none;
     }
 
-    @media only screen and(max-width: 125em) {
-      width: 1250px;
-    }
-
-    @media only screen and(max-width: 110em) {
-      width: 1200px;
-    }
-
-    @media only screen and(max-width: 95em) {
-      width: 1150px;
+    @include respond(tab-port) {
+      width: 90%;
+      margin-top: 0px;
+      margin-left: 5vw;
     }
   }
 
   &__title {
     margin-top: 89px;
     margin-bottom: 5px;
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: bold;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
     font-size: 45px;
     line-height: 53px;
     color: #56bed1;
-
-    // @include respond(big-desktop) {
-    //   margin-bottom: 15px;
-    // }
 
     @media only screen and(max-width: 125em) {
       font-size: 35px;
@@ -90,6 +65,10 @@
 
     @media only screen and(max-width: 95em) {
       font-size: 25px;
+    }
+
+    @include respond(tab-port) {
+      margin-top: 40px;
     }
   }
 
@@ -108,12 +87,12 @@
     margin-bottom: 5px;
     margin-left: 50px;
     word-wrap: break-word;
-    font-family: Rubik;
-    font-style: normal;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
     font-weight: $font-weight-light;
     font-size: 40px;
     line-height: 47px;
-    color: #000000;
+    color: $color-black;
 
     @include respond(big-desktop) {
       margin-bottom: 15px;
@@ -144,12 +123,12 @@
 
   &__iAm {
     margin-bottom: 15px;
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: 500;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
     font-size: 40px;
     line-height: 47px;
-    color: #000000;
+    color: $color-black;
 
     @media only screen and(max-width: 125em) {
       font-size: 30px;
@@ -191,12 +170,12 @@
     margin-bottom: 50px;
     width: 200px;
     height: 50px;
-    font-family: Rubik;
-    font-style: normal;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
     font-weight: 500;
     font-size: 25px;
     line-height: 30px;
-    color: #ffffff;
+    color: $color-white;
     background: #eb8071;
     border: 1px solid #eb8071;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
@@ -230,6 +209,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__topWrapper {
@@ -343,13 +326,13 @@
   }
 
   &__bottomImage {
-    margin-top: 200px;
-    margin-left: 400px;
+    margin-bottom: -500px;
+    margin-left: -1500px;
     align-self: center;
-    border: solid white 50px;
+    border: solid $color-white 45px;
     object-fit: cover;
-    width: 600px;
-    height: 650px;
+    width: 550px;
+    height: 600px;
     border-radius: 100px;
     cursor: pointer;
     transition: 0.3s;
@@ -358,27 +341,27 @@
     }
 
     @media only screen and(max-width: 125em) {
-      border: solid white 40px;
-      margin-top: 100px;
-      margin-left: 100px;
-      width: 500px;
-      height: 550px;
+      border: solid $color-white 40px;
+      margin-bottom: -400px;
+      margin-left: -1300px;
+      width: 450px;
+      height: 500px;
     }
 
     @media only screen and(max-width: 110em) {
-      border: solid white 30px;
-      margin-top: 50px;
-      margin-left: 50px;
+      border: solid $color-white 30px;
+      margin-bottom: -350px;
+      margin-left: -1200px;
       width: 400px;
       height: 450px;
     }
 
     @media only screen and(max-width: 95em) {
-      border: solid white 20px;
-      margin-top: 35px;
-      margin-left: 35px;
-      width: 300px;
-      height: 350px;
+      border: solid $color-white 20px;
+      margin-bottom: -300px;
+      margin-left: -1000px;
+      width: 350px;
+      height: 400px;
     }
   }
 }

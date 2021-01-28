@@ -9,7 +9,10 @@ const ContactPage = () => {
 
     return (
         <div>
-            <img src={require('../../images/pet-gang.jpg')} className="pet-gang" alt="קבוצה של כלבים חתולים וכל מיני חיות אחרות" />
+            <picture>
+                <source srcSet={require('../../images/pet-gang.webp')} type="image/webp" />
+                <img src={require('../../images/pet-gang.jpg')} className="pet-gang" alt="קבוצה של כלבים חתולים וכל מיני חיות אחרות"  />
+            </picture>
             <Contact />
         </div >
     )

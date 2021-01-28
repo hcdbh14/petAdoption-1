@@ -20,12 +20,11 @@
       cursor: pointer;
 
       @include respond(tab-port) {
-        top: 4.5rem;
+        top: 2rem;
         left: 5.6rem;
       }
 
       @include respond(phone) {
-        top: 4rem;
         left: 4rem;
       }
     }
@@ -94,7 +93,7 @@
       &:visited {
         display: inline-block;
         font-size: 3rem;
-        font-family: Rubik;
+        font-family: $default-font-family;
         font-style: $font-style-normal;
         font-weight: $font-weight-normal;
         padding: 1rem 2rem;
@@ -186,11 +185,7 @@
     &:hover &__icon::before {
       width: 2.5rem;
     }
-
-    // &:hover &__icon::after {
-    //   top: 1.2rem;
-    // }
-
+    
     &__checkbox:checked + &__button &__icon {
       background-color: transparent;
     }

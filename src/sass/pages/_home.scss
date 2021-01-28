@@ -4,20 +4,25 @@
   &__title {
     text-align: center;
     padding: 5rem 0 5rem;
-    color: #000;
+    color: $color-black;
   }
 }
 
 .main {
   &__shoutout {
     text-align: right;
-    background-image: url(../../images/dog-model.png);
+    background-image: url(../../images/dog-model.webp);
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
     height: 40vw;
     width: 100vw;
     margin-top: 9rem;
+
+    @media not all and (min-resolution:.001dpcm)
+    { @supports (-webkit-appearance:none) {
+      background-image: url(../../images/dog-model.png);
+    }}
 
     @include respond(tab-port) {
       margin-top: 110px;
@@ -35,7 +40,7 @@
     &__title {
       padding-top: 10vw;
       margin-right: 40vw;
-      font-family: Rubik;
+      font-family: $default-font-family;
       font-style: $font-style-normal;
       font-weight: $font-weight-bold;
       font-size: 4vw;
@@ -54,7 +59,7 @@
       padding-top: 20px;
       padding-bottom: 15vw;
       margin-right: 40vw;
-      font-family: Rubik;
+      font-family: $default-font-family;
       font-style: $font-style-normal;
       font-weight: $font-weight-normal;
       font-size: 2vw;
@@ -73,7 +78,7 @@
   &__title {
     padding-top: 6rem;
     text-align: center;
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-weight: $font-weight-normal;
     font-size: 2rem;
@@ -91,9 +96,9 @@
 
   &__text {
     text-align: center;
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
-    font-weight: normal;
+    font-weight: $font-style-normal;
     font-size: 2.5rem;
     line-height: 53px;
     padding: 6vw 0;
@@ -116,14 +121,14 @@ input:checked + label + .content {
   margin: auto;
   padding-top: 10rem;
   text-align: center;
-  font-family: Rubik;
+  font-family: $default-font-family;
   font-style: $font-style-normal;
   font-size: 3rem;
   line-height: 5.9rem;
   display: flex;
 
   &__text {
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-weight: $font-weight-normal;
     font-size: 60px;
@@ -139,7 +144,7 @@ input:checked + label + .content {
   }
 
   &__colored-text {
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-size: 40px;
     font-weight: $font-weight-normal;
@@ -176,7 +181,7 @@ input:checked + label + .content {
     width: 100%;
     padding-top: 6rem;
     text-align: center;
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-weight: $font-weight-normal;
     font-size: 1.5rem;

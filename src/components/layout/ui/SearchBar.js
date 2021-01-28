@@ -46,12 +46,12 @@ const SearchBar = () => {
             </form>
 
             {window.location.href.includes(SEARCH) ?
-                <button className="searchBar__submit" onClick={loadPets}>
+                <button className="searchBar__submit" onClick={loadPets} aria-label="כפתור חפש לפי שם">
                     <SearchIcon style={style} />
                 </button>
                 :
                 <Link to={SEARCH}>
-                    <button className="searchBar__submit" onClick={searchByName}>
+                    <button className="searchBar__submit" onClick={searchByName} aria-label="כפתור חפש לפי שם">
                         <SearchIcon style={style} />
                     </button>
                 </Link>

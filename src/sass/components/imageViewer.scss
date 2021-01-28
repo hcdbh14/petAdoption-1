@@ -8,8 +8,18 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9);
+  touch-action: manipulation;
+  @include respond(tab-port) {
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: auto;
+    position: relative;
+    background: none;
+    z-index: 1;
+  }
 }
 
 .imageViewerContent {
@@ -17,6 +27,11 @@
   display: block;
   width: 80%;
   max-width: 700px;
+
+  @include respond(tab-port) {
+    margin: 0px;
+    width: 100%;
+  }
 }
 
 #caption {
@@ -29,12 +44,21 @@
   color: #ccc;
   padding: 10px 0;
   height: 150px;
+  
+  @include respond(tab-port) {
+    display: none;
+  }
 }
 
 .imageViewerContent,
 #caption {
   animation-name: zoom;
   animation-duration: 0.6s;
+
+  @include respond(tab-port) {
+    animation-name: none;
+  animation-duration: 0;
+  }
 }
 
 @keyframes zoom {
@@ -61,6 +85,10 @@
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+
+  @include respond(tab-port) {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -69,16 +97,59 @@
   }
 }
 
-.arrow {
+.gallaryWrapper {
+  display: flex;
+}
+
+.arrowRight {
   margin-right: auto;
   margin-left: auto;
   font-size: 60px;
+  padding-right: 5px;
   color: $color-white;
   background: none;
   outline: none;
   border: none;
   cursor: pointer;
+  z-index: 500;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  @include respond(tab-port) {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    font-size: 45px;
+  }
 }
+
+.arrowText { 
+   background-color:rgba(0,0,0,0.4);
+   padding: 5px;
+   margin-bottom: 40px;
+}
+
+.arrowLeft {
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 60px;
+  padding-left: 5px;
+  color: $color-white;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  z-index: 500;
+  transform: scaleX(-1);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    @include respond(tab-port) {
+      height: 100%;
+      position: absolute;
+      left: 0;
+      font-size: 45px;
+    }
+}
+
 
 .numberOfImages {
   font-family: Rubik;
@@ -87,4 +158,8 @@
   margin-bottom: 25px;
   color: $color-white;
   text-align: center;
+
+  @include respond(tab-port) {
+    color: $color-black;
+  }
 }
