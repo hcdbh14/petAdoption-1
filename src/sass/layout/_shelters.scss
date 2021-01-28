@@ -43,7 +43,7 @@
   &__title {
     padding-top: 100px;
     padding-bottom: 50px;
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-weight: $font-weight-bold;
     font-size: 5rem;
@@ -57,8 +57,8 @@
   }
 
   &__content {
-    padding: 10px 10px 10rem;
-    font-family: Rubik;
+    padding: 10px 10px;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-weight: $font-weight-normal;
     font-size: 2.8rem;
@@ -76,6 +76,22 @@
       font-size: 18px;
       line-height: 4rem;
       max-width: 90%;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25px;
+  }
+
+  &__logo {
+    width: 150px;
+    margin: 15px;
+
+    @include respond(tab-port) {
+      width: 75px;
     }
   }
 }

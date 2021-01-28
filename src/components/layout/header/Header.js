@@ -14,7 +14,7 @@ const Header = () => {
             <div className="header__nav__container">
                 <Navigation />
             </div>
-            <Link to="/">
+            <Link to="/" aria-label="דף בית">
                 <Logo />
             </Link>
             <HeaderToggle />

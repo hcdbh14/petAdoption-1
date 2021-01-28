@@ -16,7 +16,7 @@
     background: #e7e3d7;
 
     &__text {
-      font-family: Rubik;
+      font-family: $default-font-family;
       font-style: $font-style-normal;
       font-weight: $font-weight-normal;
       font-size: 3.125rem;
@@ -38,7 +38,7 @@
 
   &__noPets {
     font-size: 2.25rem;
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-weight: $font-weight-normal;
   }
@@ -52,7 +52,7 @@
   }
   &__pageButton {
     margin: 5px;
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-weight: $font-weight-normal;
     font-size: 30px;
@@ -69,7 +69,7 @@
 
   &__currentPageButton {
     margin: 5px;
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-weight: $font-weight-normal;
     font-size: 30px;

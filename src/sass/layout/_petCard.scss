@@ -118,13 +118,19 @@
   &__nameSearch {
     padding-right: 35px;
     text-align: right;
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-weight: $font-weight-bold;
     font-size: 30px;
     line-height: 36px;
     color: #56bed1;
-
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    
     @media screen and (max-width: 2000px) {
       font-size: 28px;
     }
@@ -143,15 +149,22 @@
   &__nameSpotLight {
     padding-right: 45px;
     text-align: right;
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-weight: $font-weight-bold;
     font-size: 30px;
     line-height: 36px;
     color: $color-secondary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 
     @media screen and (max-width: 2000px) {
-      font-size: 28px;
+      font-size: 26px;
+      padding-right: 25px;
     }
 
     @include respond(tab-port) {
@@ -168,7 +181,7 @@
   &__goodWordsBlue {
     padding-right: 35px;
     text-align: right;
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-weight: $font-weight-bold;
     font-size: 28px;
@@ -178,7 +191,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     @media screen and (max-width: 2000px) {
       font-size: 26px;
@@ -192,7 +205,7 @@
   &__goodWordsOrange {
     padding-right: 45px;
     text-align: right;
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-weight: $font-weight-bold;
     font-size: 28px;
@@ -201,11 +214,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 
     @media screen and (max-width: 2000px) {
       font-size: 26px;
+      padding-right: 25px;
     }
 
     @media only screen and(max-width: 100em) {
@@ -216,15 +230,16 @@
   &__region {
     padding-right: 55px;
     text-align: right;
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
-    font-weight: normal;
+    font-weight: $font-style-normal;
     font-size: 25px;
     line-height: 50px;
     color: $color-black;
 
     @media screen and (max-width: 2000px) {
-      font-size: 24px;
+      font-size: 20px;
+      padding-right: 25px;
     }
     @include respond(tab-port) {
       line-height: 25px;
@@ -245,16 +260,17 @@
   &__age {
     padding-right: 55px;
     text-align: right;
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
-    font-weight: normal;
+    font-weight: $font-style-normal;
     font-size: 25px;
     line-height: 50px;
     padding-bottom: 10px;
     color: $color-black;
 
     @media screen and (max-width: 2000px) {
-      font-size: 24px;
+      font-size: 20px;
+      padding-right: 25px;
     }
     @include respond(tab-port) {
       padding-right: 25px;
@@ -273,7 +289,7 @@
 
   &__detailsSearch{
     margin-left: 125px;
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-weight: $font-weight-normal;
     font-size: 25px;
@@ -312,7 +328,7 @@
 
   &__detailsSpotLight {
     margin-left: 90px;
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-weight: $font-weight-normal;
     font-size: 25px;
