@@ -1,7 +1,7 @@
 {
   "name": "pet-five",
   "version": "1.0.0",
-  "homepage": "https://petfive.co.il",
+  "homepage": "*",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
