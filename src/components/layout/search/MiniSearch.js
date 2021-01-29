@@ -10,7 +10,6 @@ const MiniSearch = () => {
     const petsState = useSelector(state => state.petsReducer);
 
     const petTypeHandleChange = (pickedValue) => {
-
         petsState.searchInputs.petType = pickedValue.target.value
         dispatch(updateFilter())
     }
@@ -29,19 +28,19 @@ const MiniSearch = () => {
         petsState.searchInputs.ageGroup = pickedValue.target.value
         dispatch(updateFilter())
     }
-
+    
     const loadPets = () => {
         petsState.searchInputs.name = ""
         dispatch(updateFilter())
         if (petsState.count === 0 || petsState.reload) {
             dispatch(fetchPets(0, 12, 0, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, true, ""))
         }
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 550)
     }
 
     return (
         <div className="miniSearch">
-            
+
             <div className="miniSearch__wrapper">
                 <img src={wave} alt="wave" className="miniSearch__mobile" />
                 <h2 className="miniSearch__title">חיפוש בעלי חיים</h2>
@@ -83,8 +82,8 @@ const MiniSearch = () => {
             </div>
             <div className="miniSearch__animalSide">
                 <picture>
-                <source srcSet={require('../../../images/search-dog.webp')} type="image/webp" />
-                <img src={require('../../../images/search-dog.png')} className="miniSearch__animalSide__image" alt="כלב מרחרח" />
+                    <source srcSet={require('../../../images/search-dog.webp')} type="image/webp" />
+                    <img src={require('../../../images/search-dog.png')} className="miniSearch__animalSide__image" alt="כלב מרחרח" />
                 </picture>
             </div>
             <br />

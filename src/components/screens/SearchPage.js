@@ -4,7 +4,7 @@ import Search from '../layout/search/Search';
 const SearchPage = () => {
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 550)
     }, [])
 
     return (
