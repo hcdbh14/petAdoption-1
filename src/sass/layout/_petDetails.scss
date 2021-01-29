@@ -81,6 +81,11 @@
       width: 25px;
       height: 25px;
     }
+
+    @include respond(tab-port) {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &__detail {

@@ -199,12 +199,12 @@ const PetDetails = () => {
                             </p>
 
                             <p className="petDetails__detail">
-                                <img className="petDetails__icon" src={require('../../../images/location-profile.svg')} style={{ width: '30px', height: '37px' }} alt="אייקון של מיקום" />
+                                <img className="petDetails__icon" src={require('../../../images/location-profile.svg')}  alt="אייקון של מיקום" />
                               אזור:   {detailState.pet.region}
                             </p>
 
                             <p className="petDetails__detail">
-                                <img className="petDetails__icon" src={require('../../../images/phone-profile.svg')} style={{ width: '30px', height: '30px' }} alt="אייקון של טלפון" />
+                                <img className="petDetails__icon" src={require('../../../images/phone-profile.svg')}  alt="אייקון של טלפון" />
                             טלפון: {detailState.pet.phoneNumber}
                             </p>
 
