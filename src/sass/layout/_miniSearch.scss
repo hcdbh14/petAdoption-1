@@ -35,7 +35,7 @@
       right: 0;
       top: 0;
       width: 100vw;
-      max-height: 11rem;
+      max-height: 10rem;
       transform: translateY(-80%);
     }
   }
@@ -51,6 +51,7 @@
     color: $color-primary;
 
     @include respond(tab-port) {
+      font-size: 35px;
       margin-left: 0px;
       padding-top: 0px;
       margin-bottom: 0;
