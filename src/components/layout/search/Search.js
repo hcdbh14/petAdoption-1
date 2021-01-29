@@ -35,19 +35,19 @@ const Search = () => {
 
     const moveToNextPage = (chosenPageNum) => {
         dispatch(fetchPets(chosenPageNum.toString(), pageSize.value, chosenPageNum, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
-        window.scrollTo(0, 500)
+        window.scrollTo(0, 550)
     }
 
     const moveToStart = () => {
         dispatch(fetchPets("0", pageSize.value, 0, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
-        window.scrollTo(0, 500)
+        window.scrollTo(0, 550)
     }
 
     const moveToEnd = () => {
         let lastPage = parseInt(petsState.pageNum)
         lastPage -= 1
         dispatch(fetchPets(lastPage.toString(), pageSize.value, lastPage, petsState.searchInputs.petType, petsState.searchInputs.region, petsState.searchInputs.gender, petsState.searchInputs.ageGroup, false, petsState.searchInputs.name))
-        window.scrollTo(0, 500)
+        window.scrollTo(0, 550)
     }
 
     const range = (start, end) => {
