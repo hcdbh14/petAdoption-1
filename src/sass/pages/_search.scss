@@ -26,6 +26,9 @@
         height: 39px;
       }
     }
+    @include respond(tab-port) {
+      margin-top: -25px;
+    }
   }
 
   &__results {
