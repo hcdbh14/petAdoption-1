@@ -112,7 +112,6 @@
   border: none;
   cursor: pointer;
   z-index: 500;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   @include respond(tab-port) {
     height: 100%;
@@ -140,7 +139,6 @@
   cursor: pointer;
   z-index: 500;
   transform: scaleX(-1);
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     @include respond(tab-port) {
       height: 100%;

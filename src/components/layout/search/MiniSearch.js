@@ -44,7 +44,7 @@ const MiniSearch = () => {
             
             <div className="miniSearch__wrapper">
                 <img src={wave} alt="wave" className="miniSearch__mobile" />
-                <h2 className="miniSearch__title">חיפוש חיות</h2>
+                <h2 className="miniSearch__title">חיפוש בעלי חיים</h2>
 
                 <select className="miniSearch__dropdown" value={petsState.searchInputs.petType} onChange={petTypeHandleChange}>
                     <option value="">כל הסוגים</option>

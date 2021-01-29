@@ -10,11 +10,14 @@
 }
 html,
 body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+
+  background-color: $color-footer-dark;
 
   //make font-size to be 10px 62.5% * 16 = 10
   //so now rem = 10px -> easy to calculate margin/paddin/etc...

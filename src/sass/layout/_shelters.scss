@@ -1,7 +1,6 @@
 .shelters {
   height: auto;
   width: 100%;
-  margin-top: 150px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -11,10 +10,6 @@
   background-position: left, right top;
   background-size: cover;
   background-repeat: no-repeat;
-
-  @include respond(tab-port) {
-    margin-top: 0px;
-  }
 
   &__rightPeekingImage {
     right: -5vw;
@@ -51,6 +46,7 @@
     color: #56bed1;
 
     @include respond(tab-port) {
+      font-size: 30px;
       padding-top: 50px;
       padding-bottom: 25px;
     }
@@ -73,9 +69,7 @@
     margin-left: auto;
 
     @include respond(tab-port) {
-      font-size: 18px;
-      line-height: 4rem;
-      max-width: 90%;
+      display: none;
     }
   }
 

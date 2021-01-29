@@ -9,6 +9,7 @@
 }
 
 .main {
+  background-color: $color-white;
   &__shoutout {
     text-align: right;
     background-image: url(../../images/dog-model.webp);
@@ -19,13 +20,14 @@
     width: 100vw;
     margin-top: 9rem;
 
-    @media not all and (min-resolution:.001dpcm)
-    { @supports (-webkit-appearance:none) {
-      background-image: url(../../images/dog-model.png);
-    }}
+    @media not all and (min-resolution: 0.001dpcm) {
+      @supports (-webkit-appearance: none) {
+        background-image: url(../../images/dog-model.png);
+      }
+    }
 
     @include respond(tab-port) {
-      margin-top: 110px;
+      margin-top: 50px;
       height: 900px;
       width: 100%;
       background-size: cover;
@@ -45,10 +47,11 @@
       font-weight: $font-weight-bold;
       font-size: 4vw;
       line-height: 5vw;
-      color: #fa8e2b;
+      color: $color-secondary;
 
       @include respond(tab-port) {
-        font-size: 32px;
+        padding-top: 100px;
+        font-size: 28px;
         margin-right: auto;
         margin-left: auto;
         text-align: center;
@@ -139,7 +142,7 @@ input:checked + label + .content {
     }
 
     @include respond(phone) {
-      font-size: 32px;
+      font-size: 30px;
     }
   }
 
@@ -156,7 +159,7 @@ input:checked + label + .content {
     }
 
     @include respond(phone) {
-      font-size: 32px;
+      font-size: 30px;
     }
   }
 
@@ -205,7 +208,7 @@ input:checked + label + .content {
     @include respond(phone) {
       position: absolute;
       left: 50%;
-      transform: translate(-58%, 7%);
+      transform: translate(-60%, 7%);
       width: 32rem;
       backface-visibility: hidden;
 

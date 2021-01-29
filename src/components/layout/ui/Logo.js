@@ -1,11 +1,9 @@
 import React from 'react';
 
-const Logo = () => { 
+const Logo = () => {
 
     return (
-        <div className='header__logo'>
-            <div alt="לוגו" className="header__logo" />
-        </div>
+        <div className="header__logo" />
     )
 }
 

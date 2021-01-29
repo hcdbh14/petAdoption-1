@@ -26,6 +26,9 @@
         height: 39px;
       }
     }
+    @include respond(tab-port) {
+      margin-top: -25px;
+    }
   }
 
   &__results {
@@ -46,9 +49,13 @@
   &__pagingWrapper {
     width: 100%;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 200px;
     background: #e7e3d7;
     text-align: center;
+
+    @include respond(tab-port) {
+      padding-bottom: 50px;
+    }
   }
   &__pageButton {
     margin: 5px;
