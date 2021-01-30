@@ -1,29 +1,47 @@
-import React, { useEffect, useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchUsers, postPet } from '../../store/user/actions'
-import SearchSection from '../layout/homePage/SearchSection';
-import PetsToAdoptSection from '../layout/homePage/PetsToAdoptSection';
-import AboutSection from '../layout/homePage/AboutSection';
-const HomePage = () => {
-    const userState = useSelector(state => state.userReducer);
-    const dispatch = useDispatch();
-    // const { userSearchInput, loading, error } = userState;
-    useEffect(() => {
-        // dispatch(fetchUsers())
+import React, { useEffect, useState } from 'react';
+import Shelters from '../layout/homePage/Shelters';
+import Responsibility from '../layout/homePage/Responsibility';
+import MiniSearch from '../layout/search/MiniSearch';
+import SpotLight from '../layout/spotLight/SpotLight';
+import HeaderImage from '../layout/header/HeaderImage';
 
+const HomePage = () => {
+
+    const [recordWidth, setRecordWidth] = useState(window.innerWidth)
+
+    const resize = () => {
+        setRecordWidth(window.innerWidth)
+    }
+
+    useEffect(() => {
+        window.addEventListener("resize", resize);
+        return () => { window.removeEventListener("resize", resize); }
     }, [])
 
-    const handleClick = () => {
-        dispatch(postPet(userState.petToPost, userState.userId))
-    }
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
-        <div>
-            <h1>Homepage</h1>
-            {/* <button onClick={handleClick}>ADD PET</button> */}
-            <SearchSection />
-            <PetsToAdoptSection />
-            <AboutSection />
-        </div>
+        <div className="main">
+            <HeaderImage />
+            <MiniSearch />
+            {recordWidth <= 900 ?
+                <Responsibility />
+                :
+                <div />
+            }
+
+            <SpotLight />
+            {recordWidth > 900 ?
+                <Responsibility />
+                :
+                <div />
+            }
+            <Shelters />
+        </div >
+
     )
 }
 

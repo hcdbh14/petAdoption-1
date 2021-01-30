@@ -1,38 +1,28 @@
 //colors
-$color-primary: #505867;
-$color-primary-light: #667083;
-$color-primary-dark: #282c34;
-$color-primary-purple: #7675e2;
-$color-secondary-light: #ffb900;
+$color-primary: #5ac5d9;
+$color-primary-light: #34bbf7;
+$color-primary-dark: #2998ff;
+$color-secondary: #fa8e2b;
 $color-secondary-dark: #ff7730;
 
-$color-tertiary-light: #2998ff;
-$color-tertiary-dark: #5643fa;
+$color-component-background: #e6e3d7;
 
-$color-grey-light-1: #f7f7f7;
-$color-grey-light-2: #eeee;
-$color-grey-dark: #777;
-$color-grey-dark-2: #999;
-$color-grey-dark-3: #333;
-$color-grey-dark-4: #3d3d3d;
+$color-brown: #433c3cd9;
+$color-grey-light-2: #ececec;
+$color-footer-dark: #252525;
 
-$color-white: #fff;
+$color-white: #ffffff;
 $color-black: #000;
-
-$color-react: #60dbfb;
-$color-react-dark: #008fb4;
-$color-html: #f68157;
-$color-html-dark: #eb6d53;
-$color-js: #f7e017;
-$color-js-dark: #ca9708;
-$color-sass: #ce679b;
-$color-sass-dark: #9e1158;
-$color-redux: #764abc;
-$color-redux-dark: #290b59;
-$color-oop: #83ce95;
-$color-oop-dark: #57b56d;
+$color-black-main: #201b22;
 
 //font
+$default-font-family: Rubik;
+$font-style-normal: normal;
+
+$font-weight-normal: 500;
+$font-weight-bold: 600;
+$font-weight-light: 400;
+
 $defaut-font-size: 1.6rem;
 //grid
 $grid-width: 114rem;

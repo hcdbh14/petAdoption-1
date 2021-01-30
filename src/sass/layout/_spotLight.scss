@@ -1,0 +1,101 @@
+.spotLight {
+  margin-top: 200px;
+
+  @include respond(tab-port) {
+    padding-top: 45px;
+    margin-top: 100px;
+    background: url(../../images/spotLight-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__titleWrapper {
+    margin-left: -250px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+
+    @media only screen and(max-width: 100em) {
+      margin-bottom: 25px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__title {
+    font-family: Rubik;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    font-size: 60px;
+    line-height: 71px;
+    color: $color-black;
+
+    @include respond(tab-port) {
+      font-size: 36px;
+    }
+  }
+
+  &__titleColored {
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    font-size: 60px;
+    line-height: 71px;
+    color: $color-secondary;
+
+    @include respond(tab-port) {
+      font-size: 36px;
+    }
+  }
+
+  &__container {
+    float: left;
+    width: 80vw;
+    margin-right: 20vw;
+    height: auto;
+    border-radius: 0 40px 40px 0;
+    background: #e7e3d7;
+
+    @include respond(tab-port) {
+      width: 100vw;
+      margin-right: 0vw;
+      float: none;
+      border-radius: 0;
+    }
+  }
+
+  &__results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 40px;
+  }
+
+  &__button {
+    margin-bottom: -50vh;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-right: -50px;
+  }
+
+  &__morePets {
+    margin-bottom: 65px;
+    width: 300px;
+    height: 47px;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-white;
+    background: $color-secondary;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.18);
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+}

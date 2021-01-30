@@ -1,0 +1,61 @@
+.loading {
+  padding: 5rem 5rem;
+  width: 100%;
+  z-index: 5;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+  &__steps {
+    position: relative;
+    height: 60vh;
+    @include respond(phone) {
+      height: 30vh;
+    }
+
+    &__paw {
+      &-3 {
+        @include loadingDefault;
+        left: 20%;
+        bottom: 20%;
+        animation-delay: 0s;
+      }
+      &-4 {
+        @include loadingDefault;
+        left: 25%;
+        bottom: 40%;
+        animation-delay: 0.1s;
+      }
+      &-5 {
+        @include loadingDefault;
+        left: 40%;
+        bottom: 40%;
+        animation-delay: 0.2s;
+      }
+      &-6 {
+        @include loadingDefault;
+        left: 45%;
+        bottom: 60%;
+        animation-delay: 0.3s;
+      }
+      &-7 {
+        @include loadingDefault;
+        left: 60%;
+        bottom: 60%;
+        animation-delay: 0.4s;
+      }
+      &-8 {
+        @include loadingDefault;
+        left: 65%;
+        bottom: 80%;
+        animation-delay: 0.5s;
+      }
+      &-9 {
+        @include loadingDefault;
+        left: 80%;
+        bottom: 80%;
+        animation-delay: 0.6s;
+      }
+    }
+  }
+}

@@ -1,9 +1,6 @@
 export const HOME = '/';
-export const SIGN_UP = '/signup';
-export const SIGN_IN = '/signin';
-export const PET = '/pet';
-export const ACCOUNT = '/account';
-export const ADMIN = '/admin';
-export const PASSWORD_FORGET = '/pw-forget';
-
+export const ABOUT = '/about';
 export const SearchResults = '/results';
+export const SEARCH = '/search';
+export const CONTACT = '/contact';
+export const DETAILS = '/details';

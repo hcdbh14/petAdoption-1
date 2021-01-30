@@ -1,0 +1,375 @@
+.petCard {
+
+  &__search {
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 377px;
+    height: 633px;
+    background: $color-white;
+    box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-right: 2.66vw;
+    margin-left: 2.7vw;
+
+    @media screen and (max-width: 2000px) {
+      width: 347px;
+      height: 603px;
+      margin-right: 1.5vw;
+      margin-left: 1.5vw;
+    }
+
+    @include respond(tab-port) {
+      height: 425px;
+       width: 200px;
+       margin: 15px;
+    }
+
+    @media only screen and(max-width: 30em) {
+      margin-right: 5px;
+      height: 400px;
+      width: 160px;
+   }
+  }
+
+  &__spotLight {
+    display: flexbox;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 347px;
+    height: 633px;
+    background: $color-white;
+    box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-right: 1.5%;
+    margin-left: 1.5vw;
+
+    @media screen and (max-width: 2000px) {
+      width: 290px;
+      height: 603px;
+    }
+
+    @media only screen and(max-width: 100em) {
+      width: 200px;
+      height: 450px;
+    }
+   
+    @include respond(tab-port) {
+      height: 425px;
+       margin: 15px;
+    }
+
+    @media only screen and(max-width: 30em) {
+      margin-right: 5px;
+      height: 400px;
+      width: 160px;
+   }
+  }
+
+  &__image {
+    margin-top: 25px;
+    object-fit: cover;
+    width: 316px;
+    height: 344px;
+    border-radius: 10px;
+
+    @media screen and (max-width: 2000px) {
+      width: 296px;
+      height: 324px;
+    }
+    
+    @include respond(tab-port) {
+      margin-top: 10px;
+      width: 170px;
+      height: 233px;
+    }
+    
+    @media only screen and(max-width: 30em) {
+      width: 140px;
+      height: 203px;
+   }
+  }
+
+  &__spotLightImage {
+    margin-top: 25px;
+    object-fit: cover;
+    width: 316px;
+    height: 344px;
+    border-radius: 10px;
+
+    @media screen and (max-width: 2000px) {
+      width: 256px;
+      height: 304px;
+    }
+
+    @media only screen and(max-width: 100em) {
+      margin-top: 10px;
+      width: 170px;
+      height: 233px;
+    }
+
+    @media only screen and(max-width: 30em) {
+      width: 140px;
+      height: 203px;
+   }
+  }
+
+  &__nameSearch {
+    padding-right: 35px;
+    text-align: right;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: #56bed1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    
+    @media screen and (max-width: 2000px) {
+      font-size: 28px;
+    }
+
+    @include respond(tab-port) {
+      padding-right: 25px;
+      font-size: 22px;
+    }
+
+    @media only screen and(max-width: 30em) {
+      padding-right: 20px;
+      font-size: 20px;
+   }
+  }
+
+  &__nameSpotLight {
+    padding-right: 45px;
+    text-align: right;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: $color-secondary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
+    @media screen and (max-width: 2000px) {
+      font-size: 26px;
+      padding-right: 25px;
+    }
+
+    @include respond(tab-port) {
+      padding-right: 25px;
+      font-size: 22px;
+    }
+
+    @media only screen and(max-width: 30em) {
+      padding-right: 20px;
+      font-size: 20px;
+   }
+  }
+
+  &__goodWordsBlue {
+    padding-right: 35px;
+    text-align: right;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
+    font-size: 28px;
+    line-height: 36px;
+    color: #56bed1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    @media screen and (max-width: 2000px) {
+      font-size: 26px;
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__goodWordsOrange {
+    padding-right: 45px;
+    text-align: right;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
+    font-size: 28px;
+    line-height: 36px;
+    color: $color-secondary;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
+    @media screen and (max-width: 2000px) {
+      font-size: 26px;
+      padding-right: 25px;
+    }
+
+    @media only screen and(max-width: 100em) {
+      display: none;
+    }
+  }
+
+  &__region {
+    padding-right: 55px;
+    text-align: right;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-style-normal;
+    font-size: 25px;
+    line-height: 50px;
+    color: $color-black;
+
+    @media screen and (max-width: 2000px) {
+      font-size: 20px;
+      padding-right: 25px;
+    }
+    @include respond(tab-port) {
+      line-height: 25px;
+      padding-right: 25px;
+      font-size: 18px;
+    }
+
+    @media only screen and(max-width: 30em) {
+      padding-right: 20px;
+      font-size: 16px;
+   }
+  }
+
+  &__houseIcon {
+    margin-left: 5px;
+
+    @include respond(tab-port) {
+      width: 13px;
+    }
+  }
+
+  &__age {
+    padding-right: 55px;
+    text-align: right;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-style-normal;
+    font-size: 25px;
+    line-height: 50px;
+    padding-bottom: 10px;
+    color: $color-black;
+
+    @media screen and (max-width: 2000px) {
+      font-size: 20px;
+      padding-right: 25px;
+    }
+    @include respond(tab-port) {
+      padding-right: 25px;
+      font-size: 18px;
+    }
+
+    @media only screen and(max-width: 30em) {
+      padding-right: 20px;
+      font-size: 16px;
+   }
+  }
+
+  &__calendarIcon {
+    margin-left: 5px;
+
+    @include respond(tab-port) {
+      width: 13px;
+    }
+  }
+
+  &__detailsSearch{
+    margin-left: 125px;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: $color-white;
+    width: 202px;
+    height: 50px;
+    background: #EB8071;
+    border: 1px solid #EB8071;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    @media screen and (max-width: 2000px) {
+      margin-left: 50px;
+      font-size: 23px;
+      width: 182px;
+      height: 45px;
+    }
+
+    @media only screen and(max-width: 100em) {
+      font-size: 16px;
+      width: 142px;
+      height: 35px;
+      margin-left: 0px;
+    }
+    @media only screen and(max-width: 30em) {
+      font-size: 15px;
+      width: 132px;
+      margin-left: 0px;
+   }
+  }
+
+  &__detailsSpotLight {
+    margin-left: 90px;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: $color-white;
+    width: 202px;
+    height: 50px;
+    background: #EB8071;
+    border: 1px solid #EB8071;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    @media screen and (max-width: 2000px) {
+      margin-left: 50px;
+      font-size: 23px;
+      width: 182px;
+      height: 45px;
+    }
+
+    @media only screen and(max-width: 100em) {
+      font-size: 16px;
+      width: 142px;
+      height: 35px;
+      margin-left: 0px;
+    }
+    @media only screen and(max-width: 30em) {
+      font-size: 15px;
+      width: 132px;
+      margin-left: 0px;
+   }
+  }
+}

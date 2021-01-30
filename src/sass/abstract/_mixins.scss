@@ -12,7 +12,28 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@mixin responsibility {
+  width: 35%;
+  object-fit: contain;
+  animation-fill-mode: backwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
+@mixin buttonHover {
+  transform: translate(0.2rem, -0.15rem);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+@mixin loadingDefault {
+  filter: blur(2px);
+  position: absolute;
+  opacity: 0;
+  transform: rotate(61deg);
+  animation: loading 1.7s infinite forwards;
+}
 //Media query manager
 /*
 0-600px : phone

@@ -1,16 +1,27 @@
 @import "abstract/mixins";
 @import "abstract/variables";
 
+@import "components/imageViewer.scss";
+@import "components/contactLoading";
+@import "components/favIcon";
+@import "components/loading";
+
 @import "base/animations";
 @import "base/base";
 @import "base/typogrophy";
 @import "base/utilities";
 
-// @import "components/mainBtn";
-
-// @import "layout/header";
-// @import "layout/grid";
-// @import "layout/footer";
-// @import "layout/navigation";
-
+@import "layout/shelterDetails";
+@import "layout/petDetails";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/footer";
+@import "layout/contact";
+@import "layout/gang";
+@import "layout/miniSearch";
+@import "layout/petCard";
+@import "layout/spotLight";
+@import "layout/shelters";
+@import "pages/about";
+@import "pages/search";
 @import "pages/home";

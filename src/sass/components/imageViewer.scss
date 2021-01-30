@@ -1,0 +1,163 @@
+.imageViewer {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  touch-action: manipulation;
+  @include respond(tab-port) {
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: auto;
+    position: relative;
+    background: none;
+    z-index: 1;
+  }
+}
+
+.imageViewerContent {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+
+  @include respond(tab-port) {
+    margin: 0px;
+    width: 100%;
+  }
+}
+
+#caption {
+  font-size: 5rem;
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+  
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+.imageViewerContent,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+
+  @include respond(tab-port) {
+    animation-name: none;
+  animation-duration: 0;
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .imageViewerContent {
+    width: 100%;
+  }
+}
+
+.gallaryWrapper {
+  display: flex;
+}
+
+.arrowRight {
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 60px;
+  padding-right: 5px;
+  color: $color-white;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  z-index: 500;
+
+  @include respond(tab-port) {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    font-size: 45px;
+  }
+}
+
+.arrowText { 
+   background-color:rgba(0,0,0,0.4);
+   padding: 5px;
+   margin-bottom: 40px;
+}
+
+.arrowLeft {
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 60px;
+  padding-left: 5px;
+  color: $color-white;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  z-index: 500;
+  transform: scaleX(-1);
+
+    @include respond(tab-port) {
+      height: 100%;
+      position: absolute;
+      left: 0;
+      font-size: 45px;
+    }
+}
+
+
+.numberOfImages {
+  font-family: Rubik;
+  font-style: $font-style-normal;
+  font-weight: $font-weight-normal;
+  margin-bottom: 25px;
+  color: $color-white;
+  text-align: center;
+
+  @include respond(tab-port) {
+    color: $color-black;
+  }
+}

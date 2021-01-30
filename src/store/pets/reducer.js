@@ -1,36 +1,27 @@
 import { petsTypes } from './petsTypes';
-import { petData } from '../../mockdata/pet'
-import { SearchResults } from '../../mockdata/searchResults';
+
 const initialState = {
+    count: 0,
+    pageNum: 0,
+    currentPage: 0,
     searchResults: [],
     searchInputs: {
-        age: '',
+        petType: '',
         region: '',
         gender: '',
-        type: '',
-        vaccinated: '',
-        poopTrained: '',
-        size: '',
-        race: '',
+        ageGroup: '',
+        name: ''
     },
-    currentPetID: 0,
-    currentPet: petData,
-
-    loading: false,
+    reload: false,
+    loading: true,
     error: ""
 };
 
 const petReducer = (state = initialState, action) => {
     switch (action.type) {
-        case petsTypes.SET_SEARCH_INPUTS:
-            return { ...state, searchInputs: action.searchInputs }
-
-        case petsTypes.CLEAR_SEARCH_RESULTS:
-            return { ...state, searchResults: [] }
-
 
         case petsTypes.SEARCH_PETS_START:
-            return { ...state, loading: true, error: '' }
+            return { ...state, loading: true, error: '', currentPage: action.currentPage }
 
         case petsTypes.SEARCH_PETS_FAIL:
             return { ...state, loading: false, error: action.err }
@@ -38,11 +29,14 @@ const petReducer = (state = initialState, action) => {
         case petsTypes.SEARCH_PETS_SUCCESS:
             return { ...state, loading: false, searchResults: action.pets }
 
-        case petsTypes.SEARCH_PET_SUCCESS:
-            return { ...state, loading: false, currentPet: action.pet }
+        case petsTypes.SEARCH_PETS_AND_COUNT_SUCCESS:
+            return { ...state, loading: false, searchResults: action.pets, count: action.count, pageNum: action.pageNum }
+
+        case petsTypes.SEARCH_PETS_UPDATE_FILTER:
+            return { ...state, reload: true }
+
         default:
             return state;
     }
-
 }
 export default petReducer;

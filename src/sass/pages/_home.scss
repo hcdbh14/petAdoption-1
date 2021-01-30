@@ -1,0 +1,439 @@
+.pets-section {
+  direction: ltr;
+
+  &__title {
+    text-align: center;
+    padding: 5rem 0 5rem;
+    color: $color-black;
+  }
+}
+
+.main {
+  background-color: $color-white;
+  &__shoutout {
+    text-align: right;
+    background-image: url(../../images/dog-model.webp);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 40vw;
+    width: 100vw;
+    margin-top: 9rem;
+
+    @media not all and (min-resolution: 0.001dpcm) {
+      @supports (-webkit-appearance: none) {
+        background-image: url(../../images/dog-model.png);
+      }
+    }
+
+    @include respond(tab-port) {
+      margin-top: 50px;
+      height: 900px;
+      width: 100%;
+      background-size: cover;
+      background-image: url(../../images/dog-model-mobile.svg);
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      vertical-align: middle;
+      justify-content: center;
+    }
+
+    &__title {
+      padding-top: 10vw;
+      margin-right: 40vw;
+      font-family: $default-font-family;
+      font-style: $font-style-normal;
+      font-weight: $font-weight-bold;
+      font-size: 4vw;
+      line-height: 5vw;
+      color: $color-secondary;
+
+      @include respond(tab-port) {
+        padding-top: 100px;
+        font-size: 28px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+      }
+    }
+
+    &__text {
+      padding-top: 20px;
+      padding-bottom: 15vw;
+      margin-right: 40vw;
+      font-family: $default-font-family;
+      font-style: $font-style-normal;
+      font-weight: $font-weight-normal;
+      font-size: 2vw;
+      color: $color-black;
+
+      @include respond(tab-port) {
+        font-size: 18px;
+        margin-bottom: 400px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+      }
+    }
+  }
+
+  &__title {
+    padding-top: 6rem;
+    text-align: center;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    font-size: 2rem;
+    line-height: 59px;
+
+    @include respond(phone) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__image {
+    width: 70vw;
+    margin-right: 15vw;
+  }
+
+  &__text {
+    text-align: center;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-style-normal;
+    font-size: 2.5rem;
+    line-height: 53px;
+    padding: 6vw 0;
+    color: $color-white;
+  }
+}
+//ACCORDION CSS NO JS TRICK
+input + label + .content {
+  display: block;
+  @media (max-width: 69.7em) {
+    display: none;
+  }
+}
+input:checked + label + .content {
+  display: block;
+}
+
+.responsibility {
+  max-width: 1;
+  margin: auto;
+  padding-top: 10rem;
+  text-align: center;
+  font-family: $default-font-family;
+  font-style: $font-style-normal;
+  font-size: 3rem;
+  line-height: 5.9rem;
+  display: flex;
+
+  &__text {
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    font-size: 60px;
+    line-height: 71px;
+
+    @include respond(tab-port) {
+      font-size: 6rem;
+    }
+
+    @include respond(phone) {
+      font-size: 30px;
+    }
+  }
+
+  &__colored-text {
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-size: 40px;
+    font-weight: $font-weight-normal;
+    font-size: 60px;
+    line-height: 71px;
+    color: #eb8071;
+    @include respond(tab-port) {
+      font-size: 6rem;
+    }
+
+    @include respond(phone) {
+      font-size: 30px;
+    }
+  }
+
+  @include respond(phone) {
+    padding-top: 3rem;
+  }
+
+  @media (max-width: 100em) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 91.25em) {
+    font-size: 2rem;
+  }
+  @media (max-width: 69.7em) {
+    font-size: 1.5rem;
+    justify-content: space-between;
+  }
+
+  &__title {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 6rem;
+    text-align: center;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-normal;
+    font-size: 1.5rem;
+    line-height: 59px;
+  }
+  &__info {
+    display: flex;
+    margin: auto;
+  }
+
+  &__centerImage {
+    &.is-visible {
+      animation: moveInTop 0.5s;
+      animation-delay: 0.3s;
+      animation-fill-mode: backwards;
+      backface-visibility: hidden;
+    }
+
+    @include responsibility;
+    width: 30%;
+    @include respond(phone) {
+      position: absolute;
+      left: 50%;
+      transform: translate(-60%, 7%);
+      width: 32rem;
+      backface-visibility: hidden;
+
+      &.is-visible {
+        animation: none;
+      }
+    }
+  }
+
+  &__right {
+    @include responsibility;
+
+    &-top {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+      &.is-visible {
+        animation: moveInRight 0.7s;
+        animation-delay: 0.3s;
+        animation-fill-mode: backwards;
+      }
+
+      &-image {
+        padding-right: 5rem;
+
+        @include respond(tab-port) {
+          width: 5rem;
+          padding-right: 1rem;
+          padding-top: 2rem;
+        }
+      }
+      &-text {
+        transition: all 0.5s;
+
+        margin-bottom: 3rem;
+        &:hover {
+          transform: scale(1.15);
+        }
+
+        @include respond(tab-port) {
+          font-size: 3.5rem;
+        }
+        @include respond(phone) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    &-center {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+
+      &.is-visible {
+        animation: moveInRight 0.7s;
+        animation-delay: 0.6s;
+        animation-fill-mode: backwards;
+      }
+
+      &-image {
+        padding-right: 8rem;
+        @include respond(tab-port) {
+          width: 5rem;
+          padding-right: 1rem;
+        }
+      }
+      &-text {
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.15);
+        }
+
+        @include respond(tab-port) {
+          font-size: 3.5rem;
+        }
+        @include respond(phone) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+    &-bottom {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-end;
+
+      &.is-visible {
+        animation: moveInRight 0.7s;
+        animation-delay: 0.9s;
+        animation-fill-mode: backwards;
+      }
+
+      &-image {
+        padding-right: 4rem;
+        @include respond(tab-port) {
+          width: 5rem;
+          padding: 0;
+        }
+        @include respond(phone) {
+          padding-bottom: 5rem;
+        }
+      }
+
+      &-text {
+        margin-bottom: -3rem;
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.15);
+        }
+        @include respond(tab-port) {
+          font-size: 3.5rem;
+        }
+        @include respond(phone) {
+          margin-bottom: 0rem;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  &__left {
+    width: 33%;
+
+    @include responsibility;
+
+    &-top {
+      display: flex;
+      align-items: flex-start;
+
+      &.is-visible {
+        animation: moveInLeft 0.7s;
+        animation-delay: 0.3s;
+        animation-fill-mode: backwards;
+      }
+
+      &-image {
+        padding-right: 5rem;
+        transform: rotateY(180deg);
+        @include respond(tab-port) {
+          width: 5rem;
+          padding-right: 1rem;
+          padding-top: 1.8rem;
+        }
+      }
+      &-text {
+        margin-bottom: 3rem;
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.15);
+        }
+
+        @include respond(tab-port) {
+          font-size: 3.5rem;
+        }
+        @include respond(phone) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    &-center {
+      display: flex;
+      align-items: center;
+
+      &.is-visible {
+        animation: moveInLeft 0.7s;
+        animation-delay: 0.6s;
+        animation-fill-mode: backwards;
+      }
+
+      &-image {
+        padding-right: 8rem;
+        transform: rotateY(180deg);
+        @include respond(tab-port) {
+          width: 5rem;
+          padding-right: 1rem;
+        }
+      }
+      &-text {
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.15);
+        }
+        @include respond(tab-port) {
+          font-size: 3.5rem;
+        }
+        @include respond(phone) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+    &-bottom {
+      display: flex;
+      align-items: flex-end;
+
+      &.is-visible {
+        animation: moveInLeft 0.7s;
+        animation-delay: 0.9s;
+        animation-fill-mode: backwards;
+      }
+
+      &-image {
+        transform: rotateY(180deg);
+        @include respond(tab-port) {
+          width: 5rem;
+          padding: 0;
+        }
+        @include respond(phone) {
+          padding-bottom: 5rem;
+        }
+      }
+
+      &-text {
+        margin-bottom: -3rem;
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.15);
+        }
+        @include respond(tab-port) {
+          font-size: 3.5rem;
+        }
+        @include respond(phone) {
+          margin-bottom: 0rem;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
